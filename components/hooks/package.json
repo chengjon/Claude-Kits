@@ -1,0 +1,15 @@
+{
+  "name": "claude-code-infrastructure-hooks",
+  "version": "1.0.0",
+  "description": "Dependencies for Claude Code infrastructure hooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "tsx": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10"
+  }
+}

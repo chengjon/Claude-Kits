@@ -1,0 +1,29 @@
+name: Security Engineer
+description: Security auditing, vulnerability scanning, and secure coding practices
+role: security-engineer
+
+agents:
+  - name: security-auditor
+    reason: Expert in detecting OWASP Top 10 vulnerabilities and security issues
+  - name: architect-review
+    reason: Review architecture for security concerns
+  - name: debugger
+    reason: Debug security-related issues and vulnerabilities
+
+skills:
+  - name: error-handling-patterns
+    reason: Secure error handling without information leakage
+  - name: code-review-excellence
+    reason: Security-focused code review practices
+  - name: debugging-strategies
+    reason: Debug and analyze security vulnerabilities
+
+commands:
+  - name: security-sast
+    reason: Static application security testing
+  - name: review
+    reason: Security-focused code review
+  - name: smart-debug
+    reason: Debug security issues and exploits
+  - name: tech-debt
+    reason: Identify security-related technical debt

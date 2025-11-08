@@ -1,0 +1,45 @@
+name: Full-Stack Developer
+description: Comprehensive toolkit for full-stack web development
+role: fullstack-developer
+
+agents:
+  - name: backend-architect
+    reason: Design and review backend architecture
+  - name: frontend-developer
+    reason: Build modern frontend applications
+  - name: api-designer
+    reason: Design APIs connecting frontend and backend
+  - name: database-optimizer
+    reason: Optimize database queries and schema design
+  - name: test-writer
+    reason: Write tests across the entire stack
+  - name: architect-review
+    reason: Review overall system architecture
+
+skills:
+  - name: typescript-advanced-types
+    reason: Type-safe development across the stack
+  - name: e2e-testing-patterns
+    reason: End-to-end testing of full-stack applications
+  - name: sql-optimization-patterns
+    reason: Database optimization and query tuning
+  - name: error-handling-patterns
+    reason: Consistent error handling patterns
+  - name: code-review-excellence
+    reason: Review code across frontend and backend
+  - name: git-advanced-workflows
+    reason: Advanced Git workflows for team collaboration
+  - name: debugging-strategies
+    reason: Debug issues across the entire stack
+
+commands:
+  - name: review
+    reason: Comprehensive code review
+  - name: test-generate
+    reason: Generate tests for any layer
+  - name: docs
+    reason: Generate project documentation
+  - name: smart-debug
+    reason: Debug complex full-stack issues
+  - name: refactor-clean
+    reason: Refactor and clean up codebase

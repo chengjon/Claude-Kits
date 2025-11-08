@@ -1,0 +1,2112 @@
+{
+  "last_scan": "2025-11-08T16:45:58.827481",
+  "components": {
+    "agents": {
+      "api-designer": {
+        "file": "api-designer.md",
+        "path": "components/agents/api-designer.md",
+        "hash": "456c0476a4ff36a8c406e61fc413e302",
+        "name": "api-designer",
+        "description": "Expert agent for designing RESTful APIs, GraphQL schemas, and API documentation. Use when you need to create API endpoints, design request/response formats, write OpenAPI/Swagger specs, or improve API architecture. Ensures consistency, best practices, and proper documentation.",
+        "model": "sonnet"
+      },
+      "network-engineer": {
+        "file": "network-engineer.md",
+        "path": "components/agents/network-engineer.md",
+        "hash": "f9175a9e4bdf679151643d284119a104",
+        "name": "network-engineer",
+        "description": "Expert network engineer specializing in modern cloud networking, security architectures, and performance optimization. Masters multi-cloud connectivity, service mesh, zero-trust networking, SSL/TLS, global load balancing, and advanced troubleshooting. Handles CDN optimization, network automation, and compliance. Use PROACTIVELY for network design, connectivity issues, or performance optimization.",
+        "model": "haiku"
+      },
+      "kubernetes-architect": {
+        "file": "kubernetes-architect.md",
+        "path": "components/agents/kubernetes-architect.md",
+        "hash": "61b6729794a445923897854d4facad97",
+        "name": "kubernetes-architect",
+        "description": "Expert Kubernetes architect specializing in cloud-native infrastructure, advanced GitOps workflows (ArgoCD/Flux), and enterprise container orchestration. Masters EKS/AKS/GKE, service mesh (Istio/Linkerd), progressive delivery, multi-tenancy, and platform engineering. Handles security, observability, cost optimization, and developer experience. Use PROACTIVELY for K8s architecture, GitOps implementation, or cloud-native platform design.",
+        "model": "sonnet"
+      },
+      "frontend-security-coder": {
+        "file": "frontend-security-coder.md",
+        "path": "components/agents/frontend-security-coder.md",
+        "hash": "1b366d55c1a8cadcdf4a216bbb750f5a",
+        "name": "frontend-security-coder",
+        "description": "Expert in secure frontend coding practices specializing in XSS prevention, output sanitization, and client-side security patterns. Use PROACTIVELY for frontend security implementations or client-side security code reviews.",
+        "model": "sonnet"
+      },
+      "minecraft-bukkit-pro": {
+        "file": "minecraft-bukkit-pro.md",
+        "path": "components/agents/minecraft-bukkit-pro.md",
+        "hash": "13c314d99a56a194f74caf8a8192f88d",
+        "name": "minecraft-bukkit-pro",
+        "description": "Master Minecraft server plugin development with Bukkit, Spigot, and Paper APIs. Specializes in event-driven architecture, command systems, world manipulation, player management, and performance optimization. Use PROACTIVELY for plugin architecture, gameplay mechanics, server-side features, or cross-version compatibility.",
+        "model": "sonnet"
+      },
+      "fastapi-pro": {
+        "file": "fastapi-pro.md",
+        "path": "components/agents/fastapi-pro.md",
+        "hash": "b5570cbdfb61f147fa5c156dab6754a3",
+        "name": "fastapi-pro",
+        "description": "Build high-performance async APIs with FastAPI, SQLAlchemy 2.0, and Pydantic V2. Master microservices, WebSockets, and modern Python async patterns. Use PROACTIVELY for FastAPI development, async optimization, or API architecture.",
+        "model": "sonnet"
+      },
+      "seo-cannibalization-detector": {
+        "file": "seo-cannibalization-detector.md",
+        "path": "components/agents/seo-cannibalization-detector.md",
+        "hash": "e2b6b7bc9169b9e3d06892e5b8ce599d",
+        "name": "seo-cannibalization-detector",
+        "description": "Analyzes multiple provided pages to identify keyword overlap and potential cannibalization issues. Suggests differentiation strategies. Use PROACTIVELY when reviewing similar content.",
+        "model": "haiku"
+      },
+      "deployment-engineer": {
+        "file": "deployment-engineer.md",
+        "path": "components/agents/deployment-engineer.md",
+        "hash": "3e2404712a493eaabc9036cc8a6860b5",
+        "name": "deployment-engineer",
+        "description": "Expert deployment engineer specializing in modern CI/CD pipelines, GitOps workflows, and advanced deployment automation. Masters GitHub Actions, ArgoCD/Flux, progressive delivery, container security, and platform engineering. Handles zero-downtime deployments, security scanning, and developer experience optimization. Use PROACTIVELY for CI/CD design, GitOps implementation, or deployment automation.",
+        "model": "haiku"
+      },
+      "golang-pro": {
+        "file": "golang-pro.md",
+        "path": "components/agents/golang-pro.md",
+        "hash": "b1dde4be5e1a56dbe3e772841c5e4d3e",
+        "name": "golang-pro",
+        "description": "Master Go 1.21+ with modern patterns, advanced concurrency, performance optimization, and production-ready microservices. Expert in the latest Go ecosystem including generics, workspaces, and cutting-edge frameworks. Use PROACTIVELY for Go development, architecture design, or performance optimization.",
+        "model": "sonnet"
+      },
+      "incident-responder": {
+        "file": "incident-responder.md",
+        "path": "components/agents/incident-responder.md",
+        "hash": "e3d9b348ae97816c6c042ab26f6b3543",
+        "name": "incident-responder",
+        "description": "Expert SRE incident responder specializing in rapid problem resolution, modern observability, and comprehensive incident management. Masters incident command, blameless post-mortems, error budget management, and system reliability patterns. Handles critical outages, communication strategies, and continuous improvement. Use IMMEDIATELY for production incidents or SRE practices.",
+        "model": "sonnet"
+      },
+      "risk-manager": {
+        "file": "risk-manager.md",
+        "path": "components/agents/risk-manager.md",
+        "hash": "734594712e69bc2c1b2d325c628e0d82",
+        "name": "risk-manager",
+        "description": "Monitor portfolio risk, R-multiples, and position limits. Creates hedging strategies, calculates expectancy, and implements stop-losses. Use PROACTIVELY for risk assessment, trade tracking, or portfolio protection.",
+        "model": "haiku"
+      },
+      "csharp-pro": {
+        "file": "csharp-pro.md",
+        "path": "components/agents/csharp-pro.md",
+        "hash": "f85e049d0447b3554f024ff239e30161",
+        "name": "csharp-pro",
+        "description": "Write modern C# code with advanced features like records, pattern matching, and async/await. Optimizes .NET applications, implements enterprise patterns, and ensures comprehensive testing. Use PROACTIVELY for C# refactoring, performance optimization, or complex .NET solutions.",
+        "model": "sonnet"
+      },
+      "mlops-engineer": {
+        "file": "mlops-engineer.md",
+        "path": "components/agents/mlops-engineer.md",
+        "hash": "18ffced64056da2ec896bf9487681962",
+        "name": "mlops-engineer",
+        "description": "Build comprehensive ML pipelines, experiment tracking, and model registries with MLflow, Kubeflow, and modern MLOps tools. Implements automated training, deployment, and monitoring across cloud platforms. Use PROACTIVELY for ML infrastructure, experiment management, or pipeline automation.",
+        "model": "sonnet"
+      },
+      "seo-snippet-hunter": {
+        "file": "seo-snippet-hunter.md",
+        "path": "components/agents/seo-snippet-hunter.md",
+        "hash": "6bc3038d2a5a74fd687d81944f66bcfb",
+        "name": "seo-snippet-hunter",
+        "description": "Formats content to be eligible for featured snippets and SERP features. Creates snippet-optimized content blocks based on best practices. Use PROACTIVELY for question-based content.",
+        "model": "haiku"
+      },
+      "seo-structure-architect": {
+        "file": "seo-structure-architect.md",
+        "path": "components/agents/seo-structure-architect.md",
+        "hash": "b3e7534eb0d9d239ac45332c9d9ba7f8",
+        "name": "seo-structure-architect",
+        "description": "Analyzes and optimizes content structure including header hierarchy, suggests schema markup, and internal linking opportunities. Creates search-friendly content organization. Use PROACTIVELY for content structuring.",
+        "model": "haiku"
+      },
+      "dx-optimizer": {
+        "file": "dx-optimizer.md",
+        "path": "components/agents/dx-optimizer.md",
+        "hash": "f9d669d511c36104d549b4efa55fce6a",
+        "name": "dx-optimizer",
+        "description": "Developer Experience specialist. Improves tooling, setup, and workflows. Use PROACTIVELY when setting up new projects, after team feedback, or when development friction is noticed.",
+        "model": "haiku"
+      },
+      "seo-authority-builder": {
+        "file": "seo-authority-builder.md",
+        "path": "components/agents/seo-authority-builder.md",
+        "hash": "e2678cc43dbc92bd1d2b1d12006fe077",
+        "name": "seo-authority-builder",
+        "description": "Analyzes content for E-E-A-T signals and suggests improvements to build authority and trust. Identifies missing credibility elements. Use PROACTIVELY for YMYL topics.",
+        "model": "sonnet"
+      },
+      "data-scientist": {
+        "file": "data-scientist.md",
+        "path": "components/agents/data-scientist.md",
+        "hash": "82e29d019ec0a39a6ac3d769c12bbb83",
+        "name": "data-scientist",
+        "description": "Expert data scientist for advanced analytics, machine learning, and statistical modeling. Handles complex data analysis, predictive modeling, and business intelligence. Use PROACTIVELY for data analysis tasks, ML modeling, statistical analysis, and data-driven insights.",
+        "model": "sonnet"
+      },
+      "content-marketer": {
+        "file": "content-marketer.md",
+        "path": "components/agents/content-marketer.md",
+        "hash": "c9a9493c3c9d93f3da1ddadd00556c7a",
+        "name": "content-marketer",
+        "description": "Elite content marketing strategist specializing in AI-powered content creation, omnichannel distribution, SEO optimization, and data-driven performance marketing. Masters modern content tools, social media automation, and conversion optimization with 2024/2025 best practices. Use PROACTIVELY for comprehensive content marketing.",
+        "model": "haiku"
+      },
+      "ui-ux-designer": {
+        "file": "ui-ux-designer.md",
+        "path": "components/agents/ui-ux-designer.md",
+        "hash": "95b24cef51d76844c9d3b3c1f50a2604",
+        "name": "ui-ux-designer",
+        "description": "Create interface designs, wireframes, and design systems. Masters user research, accessibility standards, and modern design tools. Specializes in design tokens, component libraries, and inclusive design. Use PROACTIVELY for design systems, user flows, or interface optimization.",
+        "model": "sonnet"
+      },
+      "mermaid-expert": {
+        "file": "mermaid-expert.md",
+        "path": "components/agents/mermaid-expert.md",
+        "hash": "2c49b4db3022b5e256c72114066b1763",
+        "name": "mermaid-expert",
+        "description": "Create Mermaid diagrams for flowcharts, sequences, ERDs, and architectures. Masters syntax for all diagram types and styling. Use PROACTIVELY for visual documentation, system diagrams, or process flows.",
+        "model": "haiku"
+      },
+      "README": {
+        "file": "README.md",
+        "path": "components/agents/README.md",
+        "hash": "2b2111cb7002d9f67becf1111342fa93",
+        "name": "README",
+        "description": "README agent - please update this description",
+        "model": "sonnet"
+      },
+      "seo-content-refresher": {
+        "file": "seo-content-refresher.md",
+        "path": "components/agents/seo-content-refresher.md",
+        "hash": "6e73676ac39a75015174822e38fd466e",
+        "name": "seo-content-refresher",
+        "description": "Identifies outdated elements in provided content and suggests updates to maintain freshness. Finds statistics, dates, and examples that need updating. Use PROACTIVELY for older content.",
+        "model": "haiku"
+      },
+      "test-writer": {
+        "file": "test-writer.md",
+        "path": "components/agents/test-writer.md",
+        "hash": "2ad2bf23897e4d2bf2cd064e32cb8b6a",
+        "name": "test-writer",
+        "description": "Specialized agent for writing comprehensive test suites. Use when you need to create unit tests, integration tests, end-to-end tests, or improve test coverage. Analyzes code to generate meaningful test cases covering edge cases, error conditions, and happy paths.",
+        "model": "sonnet"
+      },
+      "performance-engineer": {
+        "file": "performance-engineer.md",
+        "path": "components/agents/performance-engineer.md",
+        "hash": "4648d106b130c5b6b8144e128da792a2",
+        "name": "performance-engineer",
+        "description": "Expert performance engineer specializing in modern observability, application optimization, and scalable system performance. Masters OpenTelemetry, distributed tracing, load testing, multi-tier caching, Core Web Vitals, and performance monitoring. Handles end-to-end optimization, real user monitoring, and scalability patterns. Use PROACTIVELY for performance optimization, observability, or scalability challenges.",
+        "model": "sonnet"
+      },
+      "unity-developer": {
+        "file": "unity-developer.md",
+        "path": "components/agents/unity-developer.md",
+        "hash": "1a012080a5b97703b2f8a0d0d56d1a77",
+        "name": "unity-developer",
+        "description": "Build Unity games with optimized C# scripts, efficient rendering, and proper asset management. Masters Unity 6 LTS, URP/HDRP pipelines, and cross-platform deployment. Handles gameplay systems, UI implementation, and platform optimization. Use PROACTIVELY for Unity performance issues, game mechanics, or cross-platform builds.",
+        "model": "sonnet"
+      },
+      "backend-security-coder": {
+        "file": "backend-security-coder.md",
+        "path": "components/agents/backend-security-coder.md",
+        "hash": "1037a8d37784e8faba08c1de67a3ac74",
+        "name": "backend-security-coder",
+        "description": "Expert in secure backend coding practices specializing in input validation, authentication, and API security. Use PROACTIVELY for backend security implementations or security code reviews.",
+        "model": "sonnet"
+      },
+      "legal-advisor": {
+        "file": "legal-advisor.md",
+        "path": "components/agents/legal-advisor.md",
+        "hash": "8dce5b30174e797e74afd059a528e91a",
+        "name": "legal-advisor",
+        "description": "Draft privacy policies, terms of service, disclaimers, and legal notices. Creates GDPR-compliant texts, cookie policies, and data processing agreements. Use PROACTIVELY for legal documentation, compliance texts, or regulatory requirements.",
+        "model": "sonnet"
+      },
+      "tutorial-engineer": {
+        "file": "tutorial-engineer.md",
+        "path": "components/agents/tutorial-engineer.md",
+        "hash": "35d1fa2baf6158f9f4935310259343a6",
+        "name": "tutorial-engineer",
+        "description": "Creates step-by-step tutorials and educational content from code. Transforms complex concepts into progressive learning experiences with hands-on examples. Use PROACTIVELY for onboarding guides, feature tutorials, or concept explanations.",
+        "model": "haiku"
+      },
+      "backend-architect": {
+        "file": "backend-architect.md",
+        "path": "components/agents/backend-architect.md",
+        "hash": "9d2004756d90b73e475d5f3f32b906f8",
+        "name": "backend-architect",
+        "description": "Expert backend architect specializing in scalable API design, microservices architecture, and distributed systems. Masters REST/GraphQL/gRPC APIs, event-driven architectures, service mesh patterns, and modern backend frameworks. Handles service boundary definition, inter-service communication, resilience patterns, and observability. Use PROACTIVELY when creating new backend services or APIs.",
+        "model": "sonnet"
+      },
+      "bash-pro": {
+        "file": "bash-pro.md",
+        "path": "components/agents/bash-pro.md",
+        "hash": "bc336587010f608c7f73c86f12be1567",
+        "name": "bash-pro",
+        "description": "Master of defensive Bash scripting for production automation, CI/CD pipelines, and system utilities. Expert in safe, portable, and testable shell scripts.",
+        "model": "sonnet"
+      },
+      "ruby-pro": {
+        "file": "ruby-pro.md",
+        "path": "components/agents/ruby-pro.md",
+        "hash": "3bc37c7e08a5d0cf6855e0137590f694",
+        "name": "ruby-pro",
+        "description": "Write idiomatic Ruby code with metaprogramming, Rails patterns, and performance optimization. Specializes in Ruby on Rails, gem development, and testing frameworks. Use PROACTIVELY for Ruby refactoring, optimization, or complex Ruby features.",
+        "model": "sonnet"
+      },
+      "database-admin": {
+        "file": "database-admin.md",
+        "path": "components/agents/database-admin.md",
+        "hash": "5f0801d5f972480a22867d1d570da2ec",
+        "name": "database-admin",
+        "description": "Expert database administrator specializing in modern cloud databases, automation, and reliability engineering. Masters AWS/Azure/GCP database services, Infrastructure as Code, high availability, disaster recovery, performance optimization, and compliance. Handles multi-cloud strategies, container databases, and cost optimization. Use PROACTIVELY for database architecture, operations, or reliability engineering.",
+        "model": "haiku"
+      },
+      "javascript-pro": {
+        "file": "javascript-pro.md",
+        "path": "components/agents/javascript-pro.md",
+        "hash": "fcb434716c9f6846d1fe00ca2085d895",
+        "name": "javascript-pro",
+        "description": "Master modern JavaScript with ES6+, async patterns, and Node.js APIs. Handles promises, event loops, and browser/Node compatibility. Use PROACTIVELY for JavaScript optimization, async debugging, or complex JS patterns.",
+        "model": "sonnet"
+      },
+      "database-architect": {
+        "file": "database-architect.md",
+        "path": "components/agents/database-architect.md",
+        "hash": "e638059810aa265157a0c2c2b5d8b710",
+        "name": "database-architect",
+        "description": "Expert database architect specializing in data layer design from scratch, technology selection, schema modeling, and scalable database architectures. Masters SQL/NoSQL/TimeSeries database selection, normalization strategies, migration planning, and performance-first design. Handles both greenfield architectures and re-architecture of existing systems. Use PROACTIVELY for database architecture, technology selection, or data modeling decisions.",
+        "model": "sonnet"
+      },
+      "data-engineer": {
+        "file": "data-engineer.md",
+        "path": "components/agents/data-engineer.md",
+        "hash": "50f4a799e8ac7c4e31149ce130c8678f",
+        "name": "data-engineer",
+        "description": "Build scalable data pipelines, modern data warehouses, and real-time streaming architectures. Implements Apache Spark, dbt, Airflow, and cloud-native data platforms. Use PROACTIVELY for data pipeline design, analytics infrastructure, or modern data stack implementation.",
+        "model": "sonnet"
+      },
+      "ios-developer": {
+        "file": "ios-developer.md",
+        "path": "components/agents/ios-developer.md",
+        "hash": "6745c8fa7f58ba9647f6e4294e41f3ae",
+        "name": "ios-developer",
+        "description": "Develop native iOS applications with Swift/SwiftUI. Masters iOS 18, SwiftUI, UIKit integration, Core Data, networking, and App Store optimization. Use PROACTIVELY for iOS-specific features, App Store optimization, or native iOS development.",
+        "model": "sonnet"
+      },
+      "observability-engineer": {
+        "file": "observability-engineer.md",
+        "path": "components/agents/observability-engineer.md",
+        "hash": "1c80fcec5d9aa027b1d16da3ad33ec3d",
+        "name": "observability-engineer",
+        "description": "Build production-ready monitoring, logging, and tracing systems. Implements comprehensive observability strategies, SLI/SLO management, and incident response workflows. Use PROACTIVELY for monitoring infrastructure, performance optimization, or production reliability.",
+        "model": "sonnet"
+      },
+      "seo-meta-optimizer": {
+        "file": "seo-meta-optimizer.md",
+        "path": "components/agents/seo-meta-optimizer.md",
+        "hash": "5f7eeab58a5c459db9ed850600950377",
+        "name": "seo-meta-optimizer",
+        "description": "Creates optimized meta titles, descriptions, and URL suggestions based on character limits and best practices. Generates compelling, keyword-rich metadata. Use PROACTIVELY for new content.",
+        "model": "haiku"
+      },
+      "php-pro": {
+        "file": "php-pro.md",
+        "path": "components/agents/php-pro.md",
+        "hash": "927b0e0c5dc700e4b841307b9bfe049a",
+        "name": "php-pro",
+        "description": "Write idiomatic PHP code with generators, iterators, SPL data structures, and modern OOP features. Use PROACTIVELY for high-performance PHP applications.",
+        "model": "sonnet"
+      },
+      "ai-engineer": {
+        "file": "ai-engineer.md",
+        "path": "components/agents/ai-engineer.md",
+        "hash": "415120d26e25e1938c7f8ed1d58a035e",
+        "name": "ai-engineer",
+        "description": "Build production-ready LLM applications, advanced RAG systems, and intelligent agents. Implements vector search, multimodal AI, agent orchestration, and enterprise AI integrations. Use PROACTIVELY for LLM features, chatbots, AI agents, or AI-powered applications.",
+        "model": "sonnet"
+      },
+      "context-manager": {
+        "file": "context-manager.md",
+        "path": "components/agents/context-manager.md",
+        "hash": "47de3252642a46e6e5166a64834cc681",
+        "name": "context-manager",
+        "description": "Elite AI context engineering specialist mastering dynamic context management, vector databases, knowledge graphs, and intelligent memory systems. Orchestrates context across multi-agent workflows, enterprise AI systems, and long-running projects with 2024/2025 best practices. Use PROACTIVELY for complex AI orchestration.",
+        "model": "haiku"
+      },
+      "terraform-specialist": {
+        "file": "terraform-specialist.md",
+        "path": "components/agents/terraform-specialist.md",
+        "hash": "445f24e912940ece77b45c11e0de2bd6",
+        "name": "terraform-specialist",
+        "description": "Expert Terraform/OpenTofu specialist mastering advanced IaC automation, state management, and enterprise infrastructure patterns. Handles complex module design, multi-cloud deployments, GitOps workflows, policy as code, and CI/CD integration. Covers migration strategies, security best practices, and modern IaC ecosystems. Use PROACTIVELY for advanced IaC, state management, or infrastructure automation.",
+        "model": "sonnet"
+      },
+      "seo-content-writer": {
+        "file": "seo-content-writer.md",
+        "path": "components/agents/seo-content-writer.md",
+        "hash": "1906ab8e1b134d2db67d9772e1d28a20",
+        "name": "seo-content-writer",
+        "description": "Writes SEO-optimized content based on provided keywords and topic briefs. Creates engaging, comprehensive content following best practices. Use PROACTIVELY for content creation tasks.",
+        "model": "sonnet"
+      },
+      "reference-builder": {
+        "file": "reference-builder.md",
+        "path": "components/agents/reference-builder.md",
+        "hash": "0a4ab69ae120b9d085d19c17855b0c6c",
+        "name": "reference-builder",
+        "description": "Creates exhaustive technical references and API documentation. Generates comprehensive parameter listings, configuration guides, and searchable reference materials. Use PROACTIVELY for API docs, configuration references, or complete technical specifications.",
+        "model": "haiku"
+      },
+      "julia-pro": {
+        "file": "julia-pro.md",
+        "path": "components/agents/julia-pro.md",
+        "hash": "113999d5e4b59d55fa82356bfd9e8dc7",
+        "name": "julia-pro",
+        "description": "Master Julia 1.10+ with modern features, performance optimization, multiple dispatch, and production-ready practices. Expert in the Julia ecosystem including package management, scientific computing, and high-performance numerical code. Use PROACTIVELY for Julia development, optimization, or advanced Julia patterns.",
+        "model": "sonnet"
+      },
+      "debugger": {
+        "file": "debugger.md",
+        "path": "components/agents/debugger.md",
+        "hash": "03bc91df07f52e1f511f4326351369f2",
+        "name": "debugger",
+        "description": "Debugging specialist for errors, test failures, and unexpected behavior. Use proactively when encountering any issues.",
+        "model": "haiku"
+      },
+      "architect-review": {
+        "file": "architect-review.md",
+        "path": "components/agents/architect-review.md",
+        "hash": "0f3755140aaa901f6e1b819da8df0099",
+        "name": "architect-review",
+        "description": "Master software architect specializing in modern architecture patterns, clean architecture, microservices, event-driven systems, and DDD. Reviews system designs and code changes for architectural integrity, scalability, and maintainability. Use PROACTIVELY for architectural decisions.",
+        "model": "sonnet"
+      },
+      "rust-pro": {
+        "file": "rust-pro.md",
+        "path": "components/agents/rust-pro.md",
+        "hash": "29e5fd8bd82559fa3aec2a892c74bd93",
+        "name": "rust-pro",
+        "description": "Master Rust 1.75+ with modern async patterns, advanced type system features, and production-ready systems programming. Expert in the latest Rust ecosystem including Tokio, axum, and cutting-edge crates. Use PROACTIVELY for Rust development, performance optimization, or systems programming.",
+        "model": "sonnet"
+      },
+      "django-pro": {
+        "file": "django-pro.md",
+        "path": "components/agents/django-pro.md",
+        "hash": "a8e93ca3518b49fb56c275015c796f0c",
+        "name": "django-pro",
+        "description": "Master Django 5.x with async views, DRF, Celery, and Django Channels. Build scalable web applications with proper architecture, testing, and deployment. Use PROACTIVELY for Django development, ORM optimization, or complex Django patterns.",
+        "model": "sonnet"
+      },
+      "seo-keyword-strategist": {
+        "file": "seo-keyword-strategist.md",
+        "path": "components/agents/seo-keyword-strategist.md",
+        "hash": "68ecea4d96ac879e405d297ebc304a8f",
+        "name": "seo-keyword-strategist",
+        "description": "Analyzes keyword usage in provided content, calculates density, suggests semantic variations and LSI keywords based on the topic. Prevents over-optimization. Use PROACTIVELY for content optimization.",
+        "model": "haiku"
+      },
+      "security-auditor": {
+        "file": "security-auditor.md",
+        "path": "components/agents/security-auditor.md",
+        "hash": "82b7b3fc2549a11983b1da45faeb335f",
+        "name": "security-auditor",
+        "description": "Expert security auditor specializing in DevSecOps, comprehensive cybersecurity, and compliance frameworks. Masters vulnerability assessment, threat modeling, secure authentication (OAuth2/OIDC), OWASP standards, cloud security, and security automation. Handles DevSecOps integration, compliance (GDPR/HIPAA/SOC2), and incident response. Use PROACTIVELY for security audits, DevSecOps, or compliance implementation.",
+        "model": "sonnet"
+      },
+      "seo-content-planner": {
+        "file": "seo-content-planner.md",
+        "path": "components/agents/seo-content-planner.md",
+        "hash": "d6c2e5932abee8a7a1beb9ab1fbbffb6",
+        "name": "seo-content-planner",
+        "description": "Creates comprehensive content outlines and topic clusters for SEO. Plans content calendars and identifies topic gaps. Use PROACTIVELY for content strategy and planning.",
+        "model": "haiku"
+      },
+      "c-pro": {
+        "file": "c-pro.md",
+        "path": "components/agents/c-pro.md",
+        "hash": "35391dced03ed5050df270b094d4d58a",
+        "name": "c-pro",
+        "description": "Write efficient C code with proper memory management, pointer arithmetic, and system calls. Handles embedded systems, kernel modules, and performance-critical code. Use PROACTIVELY for C optimization, memory issues, or system programming.",
+        "model": "sonnet"
+      },
+      "payment-integration": {
+        "file": "payment-integration.md",
+        "path": "components/agents/payment-integration.md",
+        "hash": "bcfb8b3f08e6f523505a00908b9aa5b8",
+        "name": "payment-integration",
+        "description": "Integrate Stripe, PayPal, and payment processors. Handles checkout flows, subscriptions, webhooks, and PCI compliance. Use PROACTIVELY when implementing payments, billing, or subscription features.",
+        "model": "haiku"
+      },
+      "error-detective": {
+        "file": "error-detective.md",
+        "path": "components/agents/error-detective.md",
+        "hash": "384852532b914e5c29543f8c30ce5f5b",
+        "name": "error-detective",
+        "description": "Search logs and codebases for error patterns, stack traces, and anomalies. Correlates errors across systems and identifies root causes. Use PROACTIVELY when debugging issues, analyzing logs, or investigating production errors.",
+        "model": "haiku"
+      },
+      "blockchain-developer": {
+        "file": "blockchain-developer.md",
+        "path": "components/agents/blockchain-developer.md",
+        "hash": "3dfe66a37d558f96e9104a13462e5f18",
+        "name": "blockchain-developer",
+        "description": "Build production-ready Web3 applications, smart contracts, and decentralized systems. Implements DeFi protocols, NFT platforms, DAOs, and enterprise blockchain integrations. Use PROACTIVELY for smart contracts, Web3 apps, DeFi protocols, or blockchain infrastructure.",
+        "model": "sonnet"
+      },
+      "cpp-pro": {
+        "file": "cpp-pro.md",
+        "path": "components/agents/cpp-pro.md",
+        "hash": "b32c7357eaf746c0087814079bdc55a7",
+        "name": "cpp-pro",
+        "description": "Write idiomatic C++ code with modern features, RAII, smart pointers, and STL algorithms. Handles templates, move semantics, and performance optimization. Use PROACTIVELY for C++ refactoring, memory safety, or complex C++ patterns.",
+        "model": "sonnet"
+      },
+      "hybrid-cloud-architect": {
+        "file": "hybrid-cloud-architect.md",
+        "path": "components/agents/hybrid-cloud-architect.md",
+        "hash": "3c511eaf285c3f6834ccfe63017c154a",
+        "name": "hybrid-cloud-architect",
+        "description": "Expert hybrid cloud architect specializing in complex multi-cloud solutions across AWS/Azure/GCP and private clouds (OpenStack/VMware). Masters hybrid connectivity, workload placement optimization, edge computing, and cross-cloud automation. Handles compliance, cost optimization, disaster recovery, and migration strategies. Use PROACTIVELY for hybrid architecture, multi-cloud strategy, or complex infrastructure integration.",
+        "model": "sonnet"
+      },
+      "flutter-expert": {
+        "file": "flutter-expert.md",
+        "path": "components/agents/flutter-expert.md",
+        "hash": "1a937aab7bf446ed544decddb082c96a",
+        "name": "flutter-expert",
+        "description": "Master Flutter development with Dart 3, advanced widgets, and multi-platform deployment. Handles state management, animations, testing, and performance optimization for mobile, web, desktop, and embedded platforms. Use PROACTIVELY for Flutter architecture, UI implementation, or cross-platform features.",
+        "model": "sonnet"
+      },
+      "test-automator": {
+        "file": "test-automator.md",
+        "path": "components/agents/test-automator.md",
+        "hash": "04ca2e47d1ee2b3f2acb2b3c1a329be1",
+        "name": "test-automator",
+        "description": "Master AI-powered test automation with modern frameworks, self-healing tests, and comprehensive quality engineering. Build scalable testing strategies with advanced CI/CD integration. Use PROACTIVELY for testing automation or quality assurance.",
+        "model": "haiku"
+      },
+      "scala-pro": {
+        "file": "scala-pro.md",
+        "path": "components/agents/scala-pro.md",
+        "hash": "ed4ded0cd0e85b264d5ebb004fe88107",
+        "name": "scala-pro",
+        "description": "Master enterprise-grade Scala development with functional programming, distributed systems, and big data processing. Expert in Apache Pekko, Akka, Spark, ZIO/Cats Effect, and reactive architectures. Use PROACTIVELY for Scala system design, performance optimization, or enterprise integration.",
+        "model": "sonnet"
+      },
+      "devops-troubleshooter": {
+        "file": "devops-troubleshooter.md",
+        "path": "components/agents/devops-troubleshooter.md",
+        "hash": "bce4e3db85eebbc61500f29cd221d1fe",
+        "name": "devops-troubleshooter",
+        "description": "Expert DevOps troubleshooter specializing in rapid incident response, advanced debugging, and modern observability. Masters log analysis, distributed tracing, Kubernetes debugging, performance optimization, and root cause analysis. Handles production outages, system reliability, and preventive monitoring. Use PROACTIVELY for debugging, incident response, or system troubleshooting.",
+        "model": "haiku"
+      },
+      "customer-support": {
+        "file": "customer-support.md",
+        "path": "components/agents/customer-support.md",
+        "hash": "98e25eec4402cf3f98053156e726cc56",
+        "name": "customer-support",
+        "description": "Elite AI-powered customer support specialist mastering conversational AI, automated ticketing, sentiment analysis, and omnichannel support experiences. Integrates modern support tools, chatbot platforms, and CX optimization with 2024/2025 best practices. Use PROACTIVELY for comprehensive customer experience management.",
+        "model": "haiku"
+      },
+      "typescript-pro": {
+        "file": "typescript-pro.md",
+        "path": "components/agents/typescript-pro.md",
+        "hash": "33acf62b84831d21cb146b1a37c4a3fa",
+        "name": "typescript-pro",
+        "description": "Master TypeScript with advanced types, generics, and strict type safety. Handles complex type systems, decorators, and enterprise-grade patterns. Use PROACTIVELY for TypeScript architecture, type inference optimization, or advanced typing patterns.",
+        "model": "sonnet"
+      },
+      "python-pro": {
+        "file": "python-pro.md",
+        "path": "components/agents/python-pro.md",
+        "hash": "805367fe30a9eb7186d93644932379ff",
+        "name": "python-pro",
+        "description": "Master Python 3.12+ with modern features, async programming, performance optimization, and production-ready practices. Expert in the latest Python ecosystem including uv, ruff, pydantic, and FastAPI. Use PROACTIVELY for Python development, optimization, or advanced Python patterns.",
+        "model": "sonnet"
+      },
+      "graphql-architect": {
+        "file": "graphql-architect.md",
+        "path": "components/agents/graphql-architect.md",
+        "hash": "fb6af8b37ad534e5697092673fd3375d",
+        "name": "graphql-architect",
+        "description": "Master modern GraphQL with federation, performance optimization, and enterprise security. Build scalable schemas, implement advanced caching, and design real-time systems. Use PROACTIVELY for GraphQL architecture or performance optimization.",
+        "model": "sonnet"
+      },
+      "legacy-modernizer": {
+        "file": "legacy-modernizer.md",
+        "path": "components/agents/legacy-modernizer.md",
+        "hash": "3ccaec7d9949fed367294d55b5183dc1",
+        "name": "legacy-modernizer",
+        "description": "Refactor legacy codebases, migrate outdated frameworks, and implement gradual modernization. Handles technical debt, dependency updates, and backward compatibility. Use PROACTIVELY for legacy system updates, framework migrations, or technical debt reduction.",
+        "model": "haiku"
+      },
+      "database-optimizer": {
+        "file": "database-optimizer.md",
+        "path": "components/agents/database-optimizer.md",
+        "hash": "7c04bbed09b32c86366afe1e634e417b",
+        "name": "database-optimizer",
+        "description": "Expert database optimizer specializing in modern performance tuning, query optimization, and scalable architectures. Masters advanced indexing, N+1 resolution, multi-tier caching, partitioning strategies, and cloud database optimization. Handles complex query analysis, migration strategies, and performance monitoring. Use PROACTIVELY for database optimization, performance issues, or scalability challenges.",
+        "model": "haiku"
+      },
+      "quant-analyst": {
+        "file": "quant-analyst.md",
+        "path": "components/agents/quant-analyst.md",
+        "hash": "8a9ad4934dc4ab579633657512a0c42a",
+        "name": "quant-analyst",
+        "description": "Build financial models, backtest trading strategies, and analyze market data. Implements risk metrics, portfolio optimization, and statistical arbitrage. Use PROACTIVELY for quantitative finance, trading algorithms, or risk analysis.",
+        "model": "sonnet"
+      },
+      "mobile-security-coder": {
+        "file": "mobile-security-coder.md",
+        "path": "components/agents/mobile-security-coder.md",
+        "hash": "7b0eef17b8775712b42172834a1d4cc1",
+        "name": "mobile-security-coder",
+        "description": "Expert in secure mobile coding practices specializing in input validation, WebView security, and mobile-specific security patterns. Use PROACTIVELY for mobile security implementations or mobile security code reviews.",
+        "model": "sonnet"
+      },
+      "tdd-orchestrator": {
+        "file": "tdd-orchestrator.md",
+        "path": "components/agents/tdd-orchestrator.md",
+        "hash": "96b8f856c5db830349c8b2f5775208b8",
+        "name": "tdd-orchestrator",
+        "description": "Master TDD orchestrator specializing in red-green-refactor discipline, multi-agent workflow coordination, and comprehensive test-driven development practices. Enforces TDD best practices across teams with AI-assisted testing and modern frameworks. Use PROACTIVELY for TDD implementation and governance.",
+        "model": "sonnet"
+      },
+      "search-specialist": {
+        "file": "search-specialist.md",
+        "path": "components/agents/search-specialist.md",
+        "hash": "7f4f0be3e144f3248c557a8b93ea5dd8",
+        "name": "search-specialist",
+        "description": "Expert web researcher using advanced search techniques and synthesis. Masters search operators, result filtering, and multi-source verification. Handles competitive analysis and fact-checking. Use PROACTIVELY for deep research, information gathering, or trend analysis.",
+        "model": "haiku"
+      },
+      "mobile-developer": {
+        "file": "mobile-developer.md",
+        "path": "components/agents/mobile-developer.md",
+        "hash": "1b02199b4b6e58b94ee1f0becd21c480",
+        "name": "mobile-developer",
+        "description": "Develop React Native, Flutter, or native mobile apps with modern architecture patterns. Masters cross-platform development, native integrations, offline sync, and app store optimization. Use PROACTIVELY for mobile features, cross-platform code, or app optimization.",
+        "model": "sonnet"
+      },
+      "sales-automator": {
+        "file": "sales-automator.md",
+        "path": "components/agents/sales-automator.md",
+        "hash": "bf583971084ab2d449ddfc38560d6da8",
+        "name": "sales-automator",
+        "description": "Draft cold emails, follow-ups, and proposal templates. Creates pricing pages, case studies, and sales scripts. Use PROACTIVELY for sales outreach or lead nurturing.",
+        "model": "haiku"
+      },
+      "code-reviewer": {
+        "file": "code-reviewer.md",
+        "path": "components/agents/code-reviewer.md",
+        "hash": "9d4be33b2d491355697255ae4e54250a",
+        "name": "code-reviewer",
+        "description": "Elite code review expert specializing in modern AI-powered code analysis, security vulnerabilities, performance optimization, and production reliability. Masters static analysis tools, security scanning, and configuration review with 2024/2025 best practices. Use PROACTIVELY for code quality assurance.",
+        "model": "sonnet"
+      },
+      "seo-content-auditor": {
+        "file": "seo-content-auditor.md",
+        "path": "components/agents/seo-content-auditor.md",
+        "hash": "1aec49275e290c68575726a0cde16911",
+        "name": "seo-content-auditor",
+        "description": "Analyzes provided content for quality, E-E-A-T signals, and SEO best practices. Scores content and provides improvement recommendations based on established guidelines. Use PROACTIVELY for content review.",
+        "model": "sonnet"
+      },
+      "docs-architect": {
+        "file": "docs-architect.md",
+        "path": "components/agents/docs-architect.md",
+        "hash": "1088c0f106e655c907998fe942a0ad7f",
+        "name": "docs-architect",
+        "description": "Creates comprehensive technical documentation from existing codebases. Analyzes architecture, design patterns, and implementation details to produce long-form technical manuals and ebooks. Use PROACTIVELY for system documentation, architecture guides, or technical deep-dives.",
+        "model": "sonnet"
+      },
+      "business-analyst": {
+        "file": "business-analyst.md",
+        "path": "components/agents/business-analyst.md",
+        "hash": "684946e18da0d65295b908845f496213",
+        "name": "business-analyst",
+        "description": "Master modern business analysis with AI-powered analytics, real-time dashboards, and data-driven insights. Build comprehensive KPI frameworks, predictive models, and strategic recommendations. Use PROACTIVELY for business intelligence or strategic analysis.",
+        "model": "haiku"
+      },
+      "agent-template": {
+        "file": "agent-template.md",
+        "path": "components/agents/agent-template.md",
+        "hash": "f47580e530066140ac5a098d96516ed1",
+        "name": "agent-template",
+        "description": "Template for creating specialized AI agents. Use when you need to create a custom agent for specific tasks like code review, debugging, data analysis, or any specialized workflow.",
+        "model": "sonnet"
+      },
+      "elixir-pro": {
+        "file": "elixir-pro.md",
+        "path": "components/agents/elixir-pro.md",
+        "hash": "50a190e2d94e1ca8e60f6b5dbd41eb0e",
+        "name": "elixir-pro",
+        "description": "Write idiomatic Elixir code with OTP patterns, supervision trees, and Phoenix LiveView. Masters concurrency, fault tolerance, and distributed systems. Use PROACTIVELY for Elixir refactoring, OTP design, or complex BEAM optimizations.",
+        "model": "sonnet"
+      },
+      "hr-pro": {
+        "file": "hr-pro.md",
+        "path": "components/agents/hr-pro.md",
+        "hash": "6db3b938bd08c616e8da26ccd89b9750",
+        "name": "hr-pro",
+        "description": "Professional, ethical HR partner for hiring, onboarding/offboarding, PTO and leave, performance, compliant policies, and employee relations. Ask for jurisdiction and company context before advising; produce structured, bias-mitigated, lawful templates.",
+        "model": "sonnet"
+      },
+      "sql-pro": {
+        "file": "sql-pro.md",
+        "path": "components/agents/sql-pro.md",
+        "hash": "2777b5fb37d7ee056363079abce143b8",
+        "name": "sql-pro",
+        "description": "Master modern SQL with cloud-native databases, OLTP/OLAP optimization, and advanced query techniques. Expert in performance tuning, data modeling, and hybrid analytical systems. Use PROACTIVELY for database optimization or complex analysis.",
+        "model": "haiku"
+      },
+      "posix-shell-pro": {
+        "file": "posix-shell-pro.md",
+        "path": "components/agents/posix-shell-pro.md",
+        "hash": "973972e121754db44d3dfa30536a95bb",
+        "name": "posix-shell-pro",
+        "description": "Expert in strict POSIX sh scripting for maximum portability across Unix-like systems. Specializes in shell scripts that run on any POSIX-compliant shell (dash, ash, sh, bash --posix).",
+        "model": "sonnet"
+      },
+      "prompt-engineer": {
+        "file": "prompt-engineer.md",
+        "path": "components/agents/prompt-engineer.md",
+        "hash": "d1af98745247c6e23e82cc03d7fbb584",
+        "name": "prompt-engineer",
+        "description": "Expert prompt engineer specializing in advanced prompting techniques, LLM optimization, and AI system design. Masters chain-of-thought, constitutional AI, and production prompt strategies. Use when building AI features, improving agent performance, or crafting system prompts.",
+        "model": "sonnet"
+      },
+      "ml-engineer": {
+        "file": "ml-engineer.md",
+        "path": "components/agents/ml-engineer.md",
+        "hash": "2ec84de1dc5a8cbc119192f4ffabfd98",
+        "name": "ml-engineer",
+        "description": "Build production ML systems with PyTorch 2.x, TensorFlow, and modern ML frameworks. Implements model serving, feature engineering, A/B testing, and monitoring. Use PROACTIVELY for ML model deployment, inference optimization, or production ML infrastructure.",
+        "model": "sonnet"
+      },
+      "java-pro": {
+        "file": "java-pro.md",
+        "path": "components/agents/java-pro.md",
+        "hash": "35499c8e09ead854b947298b614f0fda",
+        "name": "java-pro",
+        "description": "Master Java 21+ with modern features like virtual threads, pattern matching, and Spring Boot 3.x. Expert in the latest Java ecosystem including GraalVM, Project Loom, and cloud-native patterns. Use PROACTIVELY for Java development, microservices architecture, or performance optimization.",
+        "model": "sonnet"
+      },
+      "frontend-developer": {
+        "file": "frontend-developer.md",
+        "path": "components/agents/frontend-developer.md",
+        "hash": "94944660183583a33db34d722cd15624",
+        "name": "frontend-developer",
+        "description": "Build React components, implement responsive layouts, and handle client-side state management. Masters React 19, Next.js 15, and modern frontend architecture. Optimizes performance and ensures accessibility. Use PROACTIVELY when creating UI components or fixing frontend issues.",
+        "model": "sonnet"
+      },
+      "api-documenter": {
+        "file": "api-documenter.md",
+        "path": "components/agents/api-documenter.md",
+        "hash": "e260ec7533dc113b79a42dd1e67f0a3c",
+        "name": "api-documenter",
+        "description": "Master API documentation with OpenAPI 3.1, AI-powered tools, and modern developer experience practices. Create interactive docs, generate SDKs, and build comprehensive developer portals. Use PROACTIVELY for API documentation or developer portal creation.",
+        "model": "haiku"
+      },
+      "arm-cortex-expert": {
+        "file": "arm-cortex-expert.md",
+        "path": "components/agents/arm-cortex-expert.md",
+        "hash": "54eb4fa830628440cd4c8472e8b30391",
+        "name": "arm-cortex-expert",
+        "description": "Senior embedded software engineer specializing in firmware and driver development for ARM Cortex-M microcontrollers (Teensy, STM32, nRF52, SAMD). Decades of experience writing reliable, optimized, and maintainable embedded code with deep expertise in memory barriers, DMA/cache coherency, interrupt-driven I/O, and peripheral drivers.\n",
+        "model": "sonnet"
+      },
+      "cloud-architect": {
+        "file": "cloud-architect.md",
+        "path": "components/agents/cloud-architect.md",
+        "hash": "6b9aff67dc448e45663f921b5ccd54bb",
+        "name": "cloud-architect",
+        "description": "Expert cloud architect specializing in AWS/Azure/GCP multi-cloud infrastructure design, advanced IaC (Terraform/OpenTofu/CDK), FinOps cost optimization, and modern architectural patterns. Masters serverless, microservices, security, compliance, and disaster recovery. Use PROACTIVELY for cloud architecture, cost optimization, migration planning, or multi-cloud strategies.",
+        "model": "sonnet"
+      },
+      "ui-visual-validator": {
+        "file": "ui-visual-validator.md",
+        "path": "components/agents/ui-visual-validator.md",
+        "hash": "8436a5c3b504a2cac0c3f4820a9d078c",
+        "name": "ui-visual-validator",
+        "description": "Rigorous visual validation expert specializing in UI testing, design system compliance, and accessibility verification. Masters screenshot analysis, visual regression testing, and component validation. Use PROACTIVELY to verify UI modifications have achieved their intended goals through comprehensive visual analysis.",
+        "model": "sonnet"
+      },
+      "legal-compliance-checker": {
+        "file": "legal-compliance-checker.md",
+        "path": "components/agents/legal-compliance-checker.md",
+        "hash": "a06a0a39a73a6c1606c694846134b4c6",
+        "name": "legal-compliance-checker",
+        "description": "Expert agent for legal compliance review of terms of service, privacy policies, regulatory compliance, GDPR, HIPAA, COPPA, and app store policies. Use when reviewing legal documents, ensuring regulatory compliance, implementing privacy controls, handling user data, or navigating platform requirements. Specializes in privacy laws, accessibility requirements, and international regulations.",
+        "model": "sonnet"
+      },
+      "app-store-optimizer": {
+        "file": "app-store-optimizer.md",
+        "path": "components/agents/app-store-optimizer.md",
+        "hash": "9360f8dd643d3103879897019e122d82",
+        "name": "app-store-optimizer",
+        "description": "app-store-optimizer agent - please update this description",
+        "model": "sonnet"
+      },
+      "tiktok-strategist": {
+        "file": "tiktok-strategist.md",
+        "path": "components/agents/tiktok-strategist.md",
+        "hash": "4773b4246026778444e4a3360725a945",
+        "name": "tiktok-strategist",
+        "description": "tiktok-strategist agent - please update this description",
+        "model": "sonnet"
+      },
+      "visual-storyteller": {
+        "file": "visual-storyteller.md",
+        "path": "components/agents/visual-storyteller.md",
+        "hash": "0bf3a26f94d26b0f8c19045cc465c6a3",
+        "name": "visual-storyteller",
+        "description": "visual-storyteller agent - please update this description",
+        "model": "sonnet"
+      },
+      "twitter-engager": {
+        "file": "twitter-engager.md",
+        "path": "components/agents/twitter-engager.md",
+        "hash": "5b5493c3c27079a214a4b723bfcce7a8",
+        "name": "twitter-engager",
+        "description": "当你需要进行实时社交媒体互动、利用热门话题或创建病毒式推文时，请调用此代理。此代理精通简洁沟通的艺术、线索式叙事以及通过在Twitter/X平台上进行战略性互动来建立社区。",
+        "model": "sonnet"
+      },
+      "test-writer-fixer": {
+        "file": "test-writer-fixer.md",
+        "path": "components/agents/test-writer-fixer.md",
+        "hash": "89292fce52cd64117349790d78dff985",
+        "name": "test-writer-fixer",
+        "description": "test-writer-fixer agent - please update this description",
+        "model": "sonnet"
+      },
+      "performance-optimizer": {
+        "file": "performance-optimizer.md",
+        "path": "components/agents/performance-optimizer.md",
+        "hash": "545ddd201a6eeb9f7f711d0b5c51b606",
+        "name": "performance-optimizer",
+        "description": "每当用户报告系统缓慢、云成本高昂或存在扩展问题时，必须使用此代理。在流量高峰来临前应主动使用。它能识别瓶颈，分析工作负载，并应用优化措施，以打造极速系统。",
+        "model": "sonnet"
+      },
+      "workflow-optimizer": {
+        "file": "workflow-optimizer.md",
+        "path": "components/agents/workflow-optimizer.md",
+        "hash": "9369583b4f89c0ba1a624c374aeb8561",
+        "name": "workflow-optimizer",
+        "description": "workflow-optimizer agent - please update this description",
+        "model": "sonnet"
+      },
+      "vue-state-manager": {
+        "file": "vue-state-manager.md",
+        "path": "components/agents/vue-state-manager.md",
+        "hash": "ad9d4c7bdfa2971ba03f2e4ac56b0f2e",
+        "name": "vue-component-architect",
+        "description": "Expert Vue.js architect specializing in Vue 3 Composition API and component patterns. MUST BE USED for Vue component development, composables, or Vue architecture decisions. Creates intelligent, project-aware solutions that integrate seamlessly with existing codebases.",
+        "model": "sonnet"
+      },
+      "rails-api-developer": {
+        "file": "rails-api-developer.md",
+        "path": "components/agents/rails-api-developer.md",
+        "hash": "44b784902a38760a3a586e0d4431182c",
+        "name": "rails-api-developer",
+        "description": "Expert Rails API developer specializing in RESTful APIs and GraphQL. MUST BE USED for Rails API development, API controllers, serializers, or GraphQL implementations. Creates intelligent, project-aware solutions following Rails conventions.",
+        "model": "sonnet"
+      },
+      "team-configurator": {
+        "file": "team-configurator.md",
+        "path": "components/agents/team-configurator.md",
+        "hash": "7997ff7ba2bc833302e21c78b40ea0b8",
+        "name": "team-configurator",
+        "description": "必须用于为当前项目设置或刷新AI开发团队。在新仓库中、技术栈发生重大变化后或用户要求配置AI团队时，主动使用它。它会检测技术栈，选择最佳的专业子代理，并更新CLAUDE.md文件，添加“AI团队配置”部分。",
+        "model": "sonnet"
+      },
+      "test-results-analyzer": {
+        "file": "test-results-analyzer.md",
+        "path": "components/agents/test-results-analyzer.md",
+        "hash": "b08bba6567a50f36c220a2f707b5c664",
+        "name": "test-results-analyzer",
+        "description": "test-results-analyzer agent - please update this description",
+        "model": "sonnet"
+      },
+      "analytics-reporter": {
+        "file": "analytics-reporter.md",
+        "path": "components/agents/analytics-reporter.md",
+        "hash": "cc42ef876f5a369a233c2cf2c3c29330",
+        "name": "analytics-reporter",
+        "description": "analytics-reporter agent - please update this description",
+        "model": "sonnet"
+      },
+      "trend-researcher": {
+        "file": "trend-researcher.md",
+        "path": "components/agents/trend-researcher.md",
+        "hash": "3eb367ee9948509d352287c878b10e93",
+        "name": "trend-researcher",
+        "description": "trend-researcher agent - please update this description",
+        "model": "sonnet"
+      },
+      "api-architect": {
+        "file": "api-architect.md",
+        "path": "components/agents/api-architect.md",
+        "hash": "64b8a32df64bcbee39cb470b477b7915",
+        "name": "api-architect",
+        "description": "Universal API designer specializing in RESTful design, GraphQL schemas, and modern contract standards. **MUST BE USED** proactively whenever a project needs a new or revised API contract. Produces clear resource models, OpenAPI/GraphQL specs, and guidance on auth, versioning, pagination, and error formats—without prescribing any specific backend technology.",
+        "model": "sonnet"
+      },
+      "laravel-eloquent-expert": {
+        "file": "laravel-eloquent-expert.md",
+        "path": "components/agents/laravel-eloquent-expert.md",
+        "hash": "5a207517b3d52cad90a411e6a7fd1280",
+        "name": "laravel-eloquent-expert",
+        "description": "laravel-eloquent-expert agent - please update this description",
+        "model": "sonnet"
+      },
+      "support-responder": {
+        "file": "support-responder.md",
+        "path": "components/agents/support-responder.md",
+        "hash": "6e1690bf410f996bdb5d6df167a6e67b",
+        "name": "support-responder",
+        "description": "support-responder agent - please update this description",
+        "model": "sonnet"
+      },
+      "spec-tester": {
+        "file": "spec-tester.md",
+        "path": "components/agents/spec-tester.md",
+        "hash": "48206680b1a21b8e73fe9f6301757980",
+        "name": "spec-tester",
+        "description": "综合测试专家，创建并执行测试套件。编写单元测试、集成测试和端到端测试。执行安全测试、性能测试，并确保代码覆盖率符合标准。与 spec-developer 紧密合作以维持质量。",
+        "model": "sonnet"
+      },
+      "django-orm-expert": {
+        "file": "django-orm-expert.md",
+        "path": "components/agents/django-orm-expert.md",
+        "hash": "b75b9b4566b97e9023c87ee7318daf38",
+        "name": "django-orm-expert",
+        "description": "Expert in Django ORM optimization, complex queries, and database performance. Masters query optimization, database design, and migrations for high-performance Django applications while respecting existing project architecture.",
+        "model": "sonnet"
+      },
+      "laravel-backend-expert": {
+        "file": "laravel-backend-expert.md",
+        "path": "components/agents/laravel-backend-expert.md",
+        "hash": "5797e618fac77a113e06cd37e13de064",
+        "name": "laravel-backend-expert",
+        "description": "Laravel backend specialist for any Laravel architecture. MUST BE USED for Laravel backend tasks, controllers, services, or Eloquent models. Handles traditional MVC, Inertia.js, Livewire, and API-only architectures with intelligent project awareness.",
+        "model": "sonnet"
+      },
+      "tool-evaluator": {
+        "file": "tool-evaluator.md",
+        "path": "components/agents/tool-evaluator.md",
+        "hash": "d55a3817117e901204750b55c94a448b",
+        "name": "tool-evaluator",
+        "description": "tool-evaluator agent - please update this description",
+        "model": "sonnet"
+      },
+      "studio-coach": {
+        "file": "studio-coach.md",
+        "path": "components/agents/studio-coach.md",
+        "hash": "9076b0adb14a89e12b3f087f5da51034",
+        "name": "studio-coach",
+        "description": "studio-coach agent - please update this description",
+        "model": "sonnet"
+      },
+      "experiment-tracker": {
+        "file": "experiment-tracker.md",
+        "path": "components/agents/experiment-tracker.md",
+        "hash": "7c72d895eab0f6586c307dd4dc87e6a4",
+        "name": "experiment-tracker",
+        "description": "experiment-tracker agent - please update this description",
+        "model": "sonnet"
+      },
+      "content-creator": {
+        "file": "content-creator.md",
+        "path": "components/agents/content-creator.md",
+        "hash": "7c42178874efc68f204f7445a5e502b4",
+        "name": "content-creator",
+        "description": "内容创作者专注于跨平台内容生成，从长篇博客文章到引人入胜的视频脚本和社交媒体内容。此代理了解如何在不同格式之间调整信息，同时保持品牌一致性并最大限度地发挥每种平台独特要求的影响力。",
+        "model": "sonnet"
+      },
+      "sprint-prioritizer": {
+        "file": "sprint-prioritizer.md",
+        "path": "components/agents/sprint-prioritizer.md",
+        "hash": "37c01af002cb4223c7cbe0547de58a2d",
+        "name": "sprint-prioritizer",
+        "description": "sprint-prioritizer agent - please update this description",
+        "model": "sonnet"
+      },
+      "vue-nuxt-expert": {
+        "file": "vue-nuxt-expert.md",
+        "path": "components/agents/vue-nuxt-expert.md",
+        "hash": "968b1db0f03267162c42a0c7c0f16469",
+        "name": "vue-nuxt-expert",
+        "description": "Expert in Nuxt.js framework specializing in SSR, SSG, and full-stack Vue applications. Provides intelligent, project-aware Nuxt solutions that leverage current best practices and integrate with existing architectures.",
+        "model": "sonnet"
+      },
+      "tech-lead-orchestrator": {
+        "file": "tech-lead-orchestrator.md",
+        "path": "components/agents/tech-lead-orchestrator.md",
+        "hash": "c16d2a3e1e93f4e272aa8645ac1d1277",
+        "name": "tech-lead-orchestrator",
+        "description": "高级技术主管，负责分析复杂的软件项目并提供战略性建议。必须用于任何多步骤开发任务、功能实现或架构决策。返回结构化发现和任务分解，以实现最佳的代理协调。",
+        "model": "opus"
+      },
+      "growth-hacker": {
+        "file": "growth-hacker.md",
+        "path": "components/agents/growth-hacker.md",
+        "hash": "72cb028864d30a60ed7867b42228b467",
+        "name": "growth-hacker",
+        "description": "增长黑客专注于快速用户获取、病毒式循环创建和数据驱动的增长实验。该代理结合了市场营销、产品和数据分析技能，以识别和利用增长机会，创建可扩展的系统，从而推动用户呈指数级增长。",
+        "model": "sonnet"
+      },
+      "spec-planner": {
+        "file": "spec-planner.md",
+        "path": "components/agents/spec-planner.md",
+        "hash": "729daa82284f5a4c624499291d485f1e",
+        "name": "spec-planner",
+        "description": "实现计划专家，将架构设计分解为可操作的任务。创建详细的任务列表、估算复杂性、定义实现顺序，并规划全面的测试策略。弥合设计与开发之间的差距。",
+        "model": "sonnet"
+      },
+      "studio-producer": {
+        "file": "studio-producer.md",
+        "path": "components/agents/studio-producer.md",
+        "hash": "1a29fe3728e04a4e2a8973e416c5b63b",
+        "name": "studio-producer",
+        "description": "studio-producer agent - please update this description",
+        "model": "sonnet"
+      },
+      "whimsy-injector": {
+        "file": "whimsy-injector.md",
+        "path": "components/agents/whimsy-injector.md",
+        "hash": "090773fc9d56159814dff3421d599d2a",
+        "name": "whimsy-injector",
+        "description": "whimsy-injector agent - please update this description",
+        "model": "sonnet"
+      },
+      "rails-backend-expert": {
+        "file": "rails-backend-expert.md",
+        "path": "components/agents/rails-backend-expert.md",
+        "hash": "0a7232d4e35b5d77c60ac8e9a158f386",
+        "name": "rails-backend-expert",
+        "description": "rails-backend-expert agent - please update this description",
+        "model": "sonnet"
+      },
+      "react-component-architect": {
+        "file": "react-component-architect.md",
+        "path": "components/agents/react-component-architect.md",
+        "hash": "96e176f3a30924b892fa5b056d2efb04",
+        "name": "react-component-architect",
+        "description": "Expert React architect specializing in modern patterns and component design. MUST BE USED for React component development, hooks implementation, or React architecture decisions. Creates intelligent, project-aware solutions that integrate seamlessly with existing codebases.",
+        "model": "sonnet"
+      },
+      "spec-validator": {
+        "file": "spec-validator.md",
+        "path": "components/agents/spec-validator.md",
+        "hash": "c6db4a900e07b5ab6f74f1483589b754",
+        "name": "spec-validator",
+        "description": "最终质量验证专家，确保符合要求和生产就绪。验证所有要求是否满足，架构是否正确实施，测试是否通过，以及质量标准是否达到。生成全面的验证报告和质量分数。",
+        "model": "sonnet"
+      },
+      "reddit-community-builder": {
+        "file": "reddit-community-builder.md",
+        "path": "components/agents/reddit-community-builder.md",
+        "hash": "8fcc0911ae29b90acbb511cbb526f759",
+        "name": "reddit-community-builder",
+        "description": "当你需要进行真实的社区互动、通过有价值的参与实现有机增长以及驾驭Reddit独特的文化时，请调用此代理。此代理理解优先提供价值、建立真诚关系以及尊重社区规范的重要性，同时战略性地发展品牌影响力。",
+        "model": "sonnet"
+      },
+      "rapid-prototyper": {
+        "file": "rapid-prototyper.md",
+        "path": "components/agents/rapid-prototyper.md",
+        "hash": "ef2f6d10908946c03bbf71bc7f493c11",
+        "name": "rapid-prototyper",
+        "description": "rapid-prototyper agent - please update this description",
+        "model": "sonnet"
+      },
+      "instagram-curator": {
+        "file": "instagram-curator.md",
+        "path": "components/agents/instagram-curator.md",
+        "hash": "2334206de326fc48c0a5b16ca759b1ce",
+        "name": "instagram-curator",
+        "description": "当你需要制定视觉内容策略、规划快拍（Stories）和短视频（Reels）、实施Instagram增长策略或优化Instagram算法时，请使用此代理。此代理专门理解平台的算法、视觉美学和互动模式，以创建引人注目的内容策略，从而推动粉丝增长、互动和转化。",
+        "model": "sonnet"
+      },
+      "infrastructure-maintainer": {
+        "file": "infrastructure-maintainer.md",
+        "path": "components/agents/infrastructure-maintainer.md",
+        "hash": "9a4c60755cb8c45b6181ed4929e44605",
+        "name": "infrastructure-maintainer",
+        "description": "infrastructure-maintainer agent - please update this description",
+        "model": "sonnet"
+      },
+      "ui-ux-master": {
+        "file": "ui-ux-master.md",
+        "path": "components/agents/ui-ux-master.md",
+        "hash": "9d337d8235adebfb441c4b5aef937cfc",
+        "name": "ui-ux-master",
+        "description": "经验丰富的UI/UX设计代理，拥有10年以上创建屡获殊荣用户体验的经验。专注于AI协作设计工作流，生成可立即实施的规范，实现从创意愿景到生产代码的无缝转换。精通设计思维和技术实现，弥合美学与工程之间的鸿沟。",
+        "model": "sonnet"
+      },
+      "spec-architect": {
+        "file": "spec-architect.md",
+        "path": "components/agents/spec-architect.md",
+        "hash": "be6afa5872d418e88b0148ca675c9f6b",
+        "name": "spec-architect",
+        "description": "专门从事技术设计和架构的系统架构师。创建全面的系统设计、技术栈推荐、API规范和数据模型。确保可扩展性、安全性、可维护性，同时与业务需求保持一致。",
+        "model": "sonnet"
+      },
+      "integration-test-fixer": {
+        "file": "integration-test-fixer.md",
+        "path": "components/agents/integration-test-fixer.md",
+        "hash": "09a792aa441931aadfcc9be7927f71e8",
+        "name": "integration-test-fixer",
+        "description": "integration-test-fixer agent - please update this description",
+        "model": "sonnet"
+      },
+      "code-archaeologist": {
+        "file": "code-archaeologist.md",
+        "path": "components/agents/code-archaeologist.md",
+        "hash": "bd851fe40a81ef4a57e1d94f14f213b6",
+        "name": "code-archaeologist",
+        "description": "必须用于探索和记录不熟悉、遗留或复杂的代码库。在重构、新成员上手、审计或风险评估前应主动使用。它会生成一份完整的报告——包括架构、指标、风险和一份其他子代理可以执行的优先级行动计划。",
+        "model": "sonnet"
+      },
+      "vue-component-architect": {
+        "file": "vue-component-architect.md",
+        "path": "components/agents/vue-component-architect.md",
+        "hash": "a872b7881d064c9a08cef46f5bd14554",
+        "name": "vue-component-architect",
+        "description": "Vue 3 expert specializing in Composition API, scalable component architecture, and modern Vue tooling. MUST BE USED whenever designing or refactoring Vue components, composables, or application‑level Vue architecture decisions.",
+        "model": "sonnet"
+      },
+      "ux-researcher": {
+        "file": "ux-researcher.md",
+        "path": "components/agents/ux-researcher.md",
+        "hash": "fd6fd5f83d964624a25d0483606e63bf",
+        "name": "ux-researcher",
+        "description": "ux-researcher agent - please update this description",
+        "model": "sonnet"
+      },
+      "rails-activerecord-expert": {
+        "file": "rails-activerecord-expert.md",
+        "path": "components/agents/rails-activerecord-expert.md",
+        "hash": "6f86086c3d1ebb0f6642b2f3db3268cb",
+        "name": "rails-activerecord-expert",
+        "description": "Expert in Rails ActiveRecord optimization, complex queries, and database performance. Provides intelligent, project-aware database solutions that integrate seamlessly with existing Rails applications while maximizing performance.",
+        "model": "sonnet"
+      },
+      "senior-backend-architect": {
+        "file": "senior-backend-architect.md",
+        "path": "components/agents/senior-backend-architect.md",
+        "hash": "7cc8fffb1521a811b013ac1baf6e0040",
+        "name": "senior-backend-architect",
+        "description": "资深后端工程师和系统架构师，拥有超过10年的谷歌工作经验，领导过多个千万级用户的产品。精通Go和TypeScript，专长于分布式系统、高性能API和生产级基础设施。兼具技术实现和系统设计能力，拥有零停机部署和极少生产事故的辉煌记录。",
+        "model": "sonnet"
+      },
+      "spec-reviewer": {
+        "file": "spec-reviewer.md",
+        "path": "components/agents/spec-reviewer.md",
+        "hash": "9475adf6284d43950e2b64cbad606adb",
+        "name": "spec-reviewer",
+        "description": "高级代码评审员，专注于代码质量、最佳实践和安全性。评审代码的可维护性、性能优化和潜在漏洞。提供可操作的反馈，并能直接重构代码。与所有专业代理协作，确保一致的质量。",
+        "model": "sonnet"
+      },
+      "api-tester": {
+        "file": "api-tester.md",
+        "path": "components/agents/api-tester.md",
+        "hash": "7be8eb44d5a2a8f427fbe106b01fc332",
+        "name": "api-tester",
+        "description": "api-tester agent - please update this description",
+        "model": "sonnet"
+      },
+      "refactor-agent": {
+        "file": "refactor-agent.md",
+        "path": "components/agents/refactor-agent.md",
+        "hash": "7ce40e19814969789d403888421a8428",
+        "name": "refactor-agent",
+        "description": "refactor-agent agent - please update this description",
+        "model": "sonnet"
+      },
+      "spec-task-reviewer": {
+        "file": "spec-task-reviewer.md",
+        "path": "components/agents/spec-task-reviewer.md",
+        "hash": "a6fd790a2cc7d6f9b5c69a1ce7968a6a",
+        "name": "spec-task-reviewer",
+        "description": "当您需要审查开发任务完成状态并确保规范中的所有任务都正确执行时使用此代理。示例：<example>背景：用户一直在进行功能实现，并希望验证所有任务都已完成。用户：‘我想我已完成用户认证功能的实现’助手：‘让我使用 spec-task-reviewer 代理检查规范中的所有任务是否已完成’<commentary>由于用户认为他们已完成某项功能，因此使用 spec-task-reviewer 代理来验证所有任务是否已完成，并识别任何未完成的任务。</commentary></example> <example>背景：用户处于开发阶段的末尾，需要进行任务验证。用户：‘你能检查一下支付处理模块的所有工作是否都已完成吗？’助手：‘我将使用 spec-task-reviewer 代理审查支付处理模块的任务完成状态’<commentary>用户请求任务完成验证，因此使用 spec-task-reviewer 代理来审计任务。</commentary></example>",
+        "model": "sonnet"
+      },
+      "senior-frontend-architect": {
+        "file": "senior-frontend-architect.md",
+        "path": "components/agents/senior-frontend-architect.md",
+        "hash": "b183e3881b41ce5bb9737b268bfcec82",
+        "name": "senior-frontend-architect",
+        "description": "资深前端工程师和架构师，拥有超过10年的Meta工作经验，领导过多个千万级用户的产品。精通TypeScript、React、Next.js、Vue和Astro生态系统。专长于性能优化、跨平台开发、响应式设计，并能与UI/UX设计师和后端工程师无缝协作。拥有交付像素级精准、性能卓越且用户体验出色的应用的辉煌记录。",
+        "model": "sonnet"
+      },
+      "django-backend-expert": {
+        "file": "django-backend-expert.md",
+        "path": "components/agents/django-backend-expert.md",
+        "hash": "ca1f1de88ed6f07250c294fcda0a5304",
+        "name": "django-backend-expert",
+        "description": "Expert Django backend developer specializing in models, views, services, and Django-specific implementations. MUST BE USED for Django backend development tasks. Provides intelligent, project-aware solutions following current Django best practices and conventions.",
+        "model": "sonnet"
+      },
+      "documentation-specialist": {
+        "file": "documentation-specialist.md",
+        "path": "components/agents/documentation-specialist.md",
+        "hash": "90532fe5fbda11dd676860c58a35d6d9",
+        "name": "documentation-specialist",
+        "description": "必须用于撰写或更新项目文档。在重大功能发布、API 变更或新开发人员上手时应主动使用。它会生成 README、API 规范、架构指南和用户手册；并将深度的技术细节问题委派给其他代理。",
+        "model": "sonnet"
+      },
+      "finance-tracker": {
+        "file": "finance-tracker.md",
+        "path": "components/agents/finance-tracker.md",
+        "hash": "64c87e0908be77c2da9239856b421e78",
+        "name": "finance-tracker",
+        "description": "finance-tracker agent - please update this description",
+        "model": "sonnet"
+      },
+      "mobile-app-builder": {
+        "file": "mobile-app-builder.md",
+        "path": "components/agents/mobile-app-builder.md",
+        "hash": "5ef6e1f8f205035ea09ef283e48d1988",
+        "name": "mobile-app-builder",
+        "description": "mobile-app-builder agent - please update this description",
+        "model": "sonnet"
+      },
+      "react-nextjs-expert": {
+        "file": "react-nextjs-expert.md",
+        "path": "components/agents/react-nextjs-expert.md",
+        "hash": "3d3867b77ea5352dcec80b9531d0344b",
+        "name": "react-nextjs-expert",
+        "description": "Expert in Next.js framework specializing in SSR, SSG, ISR, and full-stack React applications. Provides intelligent, project-aware Next.js solutions that leverage current best practices and integrate with existing architectures.",
+        "model": "sonnet"
+      },
+      "tailwind-css-expert": {
+        "file": "tailwind-css-expert.md",
+        "path": "components/agents/tailwind-css-expert.md",
+        "hash": "1f8b08cbc9c17f27c32d8bc528e390ca",
+        "name": "tailwind-frontend-expert",
+        "description": "MUST BE USED for any Tailwind‑CSS styling, utility‑first refactors, or responsive component work. Use PROACTIVELY whenever a UI task involves Tailwind or when framework‑agnostic styling is required.",
+        "model": "sonnet"
+      },
+      "feedback-synthesizer": {
+        "file": "feedback-synthesizer.md",
+        "path": "components/agents/feedback-synthesizer.md",
+        "hash": "fc4e0c859b86016d040b223e0d3c05b4",
+        "name": "feedback-synthesizer",
+        "description": "feedback-synthesizer agent - please update this description",
+        "model": "sonnet"
+      },
+      "spec-analyst": {
+        "file": "spec-analyst.md",
+        "path": "components/agents/spec-analyst.md",
+        "hash": "a07cd991233250316b3916fcda16cf87",
+        "name": "spec-analyst",
+        "description": "需求分析师和项目范围专家。擅长获取全面的需求、创建带有验收标准的用户故事以及生成项目简报。与利益相关者合作，澄清需求并以结构化格式记录功能/非功能需求。",
+        "model": "sonnet"
+      },
+      "performance-benchmarker": {
+        "file": "performance-benchmarker.md",
+        "path": "components/agents/performance-benchmarker.md",
+        "hash": "ee763c6d43810d0beb3b35e9d82219cc",
+        "name": "performance-benchmarker",
+        "description": "performance-benchmarker agent - please update this description",
+        "model": "sonnet"
+      },
+      "backend-developer": {
+        "file": "backend-developer.md",
+        "path": "components/agents/backend-developer.md",
+        "hash": "3ec5bac069434f97b7b01686fbf02c3f",
+        "name": "backend-developer",
+        "description": "MUST BE USED whenever server‑side code must be written, extended, or refactored and no framework‑specific sub‑agent exists. Use PROACTIVELY to ship production‑ready features across any language or stack, automatically detecting project tech and following best‑practice patterns.",
+        "model": "sonnet"
+      },
+      "project-analyst": {
+        "file": "project-analyst.md",
+        "path": "components/agents/project-analyst.md",
+        "hash": "2067999ece5e1c65ba67ce734cbc6081",
+        "name": "project-analyst",
+        "description": "必须用于分析任何新的或不熟悉的代码库。主动使用它来检测框架、技术栈和架构，以便正确地分派专家。",
+        "model": "sonnet"
+      },
+      "joker": {
+        "file": "joker.md",
+        "path": "components/agents/joker.md",
+        "hash": "f58442340ec77ea8e98949d0ebecee68",
+        "name": "joker",
+        "description": "joker agent - please update this description",
+        "model": "sonnet"
+      },
+      "devops-automator": {
+        "file": "devops-automator.md",
+        "path": "components/agents/devops-automator.md",
+        "hash": "6fb135351ba3bd01904d96ef1ba31ee8",
+        "name": "devops-automator",
+        "description": "devops-automator agent - please update this description",
+        "model": "sonnet"
+      },
+      "spec-developer": {
+        "file": "spec-developer.md",
+        "path": "components/agents/spec-developer.md",
+        "hash": "c8499783e534f9ef9b039e91bd61c190",
+        "name": "spec-developer",
+        "description": "专门根据规范实现功能的专家开发人员。编写遵循架构模式和最佳实践的干净、可维护的代码。创建单元测试，处理错误情况，并确保代码满足性能要求。",
+        "model": "sonnet"
+      },
+      "brand-guardian": {
+        "file": "brand-guardian.md",
+        "path": "components/agents/brand-guardian.md",
+        "hash": "ea2ec310570f2e7be3a789631658bf0b",
+        "name": "brand-guardian",
+        "description": "brand-guardian agent - please update this description",
+        "model": "sonnet"
+      },
+      "django-api-developer": {
+        "file": "django-api-developer.md",
+        "path": "components/agents/django-api-developer.md",
+        "hash": "341a55d4e0df45c3a13d103a59996245",
+        "name": "django-api-developer",
+        "description": "Expert Django API developer specializing in Django REST Framework and GraphQL. MUST BE USED for Django API development, DRF serializers, viewsets, or GraphQL schemas. Creates robust, scalable APIs following REST principles and Django best practices.",
+        "model": "sonnet"
+      },
+      "spec-orchestrator": {
+        "file": "spec-orchestrator.md",
+        "path": "components/agents/spec-orchestrator.md",
+        "hash": "7c744d240906f4ed3ce031bc72894bed",
+        "name": "spec-orchestrator",
+        "description": "多层智能代理协调系统的总指挥官。负责读取Kiro规格文件，智能选择和组建专业代理团队，协调三层代理执行架构，管理统一的TODO任务列表，监督整个项目执行进度。支持基于需求的代理匹配、Hook驱动的自动化流程和实时状态追踪。",
+        "model": "sonnet"
+      },
+      "project-shipper": {
+        "file": "project-shipper.md",
+        "path": "components/agents/project-shipper.md",
+        "hash": "152d7bd3e43ce13591cd7baaa22875c3",
+        "name": "project-shipper",
+        "description": "project-shipper agent - please update this description",
+        "model": "sonnet"
+      },
+      "ui-designer": {
+        "file": "ui-designer.md",
+        "path": "components/agents/ui-designer.md",
+        "hash": "71756b7b3683b7cc4f47311b8bf011a8",
+        "name": "ui-designer",
+        "description": "ui-designer agent - please update this description",
+        "model": "sonnet"
+      }
+    },
+    "commands": {
+      "standup-notes": {
+        "file": "standup-notes.md",
+        "path": "components/commands/standup-notes.md",
+        "hash": "335c1345d221f807da22fdcf2ad8dcb1",
+        "description": ""
+      },
+      "compliance-check": {
+        "file": "compliance-check.md",
+        "path": "components/commands/compliance-check.md",
+        "hash": "8f1abe2564b75d4dd7792de06796b85d",
+        "description": ""
+      },
+      "git-workflow": {
+        "file": "git-workflow.md",
+        "path": "components/commands/git-workflow.md",
+        "hash": "956fe508d2b69cacee299d71cc427fb7",
+        "description": ""
+      },
+      "ai-assistant": {
+        "file": "ai-assistant.md",
+        "path": "components/commands/ai-assistant.md",
+        "hash": "5c5806625d167de8fe2d154876bcdd43",
+        "description": ""
+      },
+      "xss-scan": {
+        "file": "xss-scan.md",
+        "path": "components/commands/xss-scan.md",
+        "hash": "6aa582aa27f501f2b293b4a81e2190b7",
+        "description": ""
+      },
+      "migration-observability": {
+        "file": "migration-observability.md",
+        "path": "components/commands/migration-observability.md",
+        "hash": "dec5ee18d5dc90e156c6bb7912b18dd3",
+        "description": "Migration monitoring, CDC, and observability infrastructure"
+      },
+      "review": {
+        "file": "review.md",
+        "path": "components/commands/review.md",
+        "hash": "27f4579793b3dce832caf69b8df200f8",
+        "description": "Perform a comprehensive code review of recent changes, checking for bugs, security issues, performance problems, and best practices. Reviews git diff or staged changes."
+      },
+      "python-scaffold": {
+        "file": "python-scaffold.md",
+        "path": "components/commands/python-scaffold.md",
+        "hash": "d6d43a58985e8b735666224ef939a9d8",
+        "description": ""
+      },
+      "slo-implement": {
+        "file": "slo-implement.md",
+        "path": "components/commands/slo-implement.md",
+        "hash": "d003aa615e4b7f0294ae1de5648738d0",
+        "description": ""
+      },
+      "data-pipeline": {
+        "file": "data-pipeline.md",
+        "path": "components/commands/data-pipeline.md",
+        "hash": "409d0d0c01c8e12be6c5d4eeeb99f408",
+        "description": ""
+      },
+      "legacy-modernize": {
+        "file": "legacy-modernize.md",
+        "path": "components/commands/legacy-modernize.md",
+        "hash": "6c7825436abe209f779185c7b4e8cfea",
+        "description": ""
+      },
+      "README": {
+        "file": "README.md",
+        "path": "components/commands/README.md",
+        "hash": "4b081959c974765312704269f3d411da",
+        "description": ""
+      },
+      "tech-debt": {
+        "file": "tech-debt.md",
+        "path": "components/commands/tech-debt.md",
+        "hash": "dc116cd0f1462bde3bc57b7b5fceae42",
+        "description": ""
+      },
+      "typescript-scaffold": {
+        "file": "typescript-scaffold.md",
+        "path": "components/commands/typescript-scaffold.md",
+        "hash": "502438a0402e10658d504114c4e2c488",
+        "description": ""
+      },
+      "monitor-setup": {
+        "file": "monitor-setup.md",
+        "path": "components/commands/monitor-setup.md",
+        "hash": "6354b72ee43a3fc8be604c2044e95969",
+        "description": ""
+      },
+      "multi-agent-optimize": {
+        "file": "multi-agent-optimize.md",
+        "path": "components/commands/multi-agent-optimize.md",
+        "hash": "ac750dda661447f5814b4b59ef300e6c",
+        "description": ""
+      },
+      "tdd-red": {
+        "file": "tdd-red.md",
+        "path": "components/commands/tdd-red.md",
+        "hash": "e4a6c85bb199849ebfe7b34be46fb4aa",
+        "description": ""
+      },
+      "code-explain": {
+        "file": "code-explain.md",
+        "path": "components/commands/code-explain.md",
+        "hash": "88b01a7fb9159fb38567058dd25dd48c",
+        "description": ""
+      },
+      "sql-migrations": {
+        "file": "sql-migrations.md",
+        "path": "components/commands/sql-migrations.md",
+        "hash": "8bd82d3a99f0ef49dd5d721d01f2a0e2",
+        "description": "SQL database migrations with zero-downtime strategies for PostgreSQL, MySQL, SQL Server"
+      },
+      "context-restore": {
+        "file": "context-restore.md",
+        "path": "components/commands/context-restore.md",
+        "hash": "6054807b02caa4f08f854e72b1e4fa46",
+        "description": ""
+      },
+      "issue": {
+        "file": "issue.md",
+        "path": "components/commands/issue.md",
+        "hash": "5b944edd3f91d8ad78dbd6dfcfffbfc0",
+        "description": ""
+      },
+      "langchain-agent": {
+        "file": "langchain-agent.md",
+        "path": "components/commands/langchain-agent.md",
+        "hash": "ca7f6a9cce67254477f85dc39a455b42",
+        "description": ""
+      },
+      "cost-optimize": {
+        "file": "cost-optimize.md",
+        "path": "components/commands/cost-optimize.md",
+        "hash": "c7fbd49371a542f5a9f7f59878fb764a",
+        "description": ""
+      },
+      "docs": {
+        "file": "docs.md",
+        "path": "components/commands/docs.md",
+        "hash": "e93f3f3a02fb7a110943993e5fd81e19",
+        "description": "Generate comprehensive documentation for code, APIs, or project components. Creates README files, API docs, function documentation, and usage guides with examples."
+      },
+      "command-template": {
+        "file": "command-template.md",
+        "path": "components/commands/command-template.md",
+        "hash": "a7ba849646fb6e55245a5fcff1a8c032",
+        "description": ""
+      },
+      "performance-optimization": {
+        "file": "performance-optimization.md",
+        "path": "components/commands/performance-optimization.md",
+        "hash": "c42c8281cf6cbd8aca2765632435e840",
+        "description": ""
+      },
+      "feature-development": {
+        "file": "feature-development.md",
+        "path": "components/commands/feature-development.md",
+        "hash": "7cb772206fd7c40be483287f52a16912",
+        "description": ""
+      },
+      "workflow-automate": {
+        "file": "workflow-automate.md",
+        "path": "components/commands/workflow-automate.md",
+        "hash": "7f483111af33a66b903085901b94f4b3",
+        "description": ""
+      },
+      "tdd-cycle": {
+        "file": "tdd-cycle.md",
+        "path": "components/commands/tdd-cycle.md",
+        "hash": "0616f790bd478218b4c0d5150f0d284d",
+        "description": ""
+      },
+      "prompt-optimize": {
+        "file": "prompt-optimize.md",
+        "path": "components/commands/prompt-optimize.md",
+        "hash": "1f1946767314b10cd056822012890a08",
+        "description": ""
+      },
+      "error-trace": {
+        "file": "error-trace.md",
+        "path": "components/commands/error-trace.md",
+        "hash": "fd1b8ccae886a039a91e986fc0ab7723",
+        "description": ""
+      },
+      "smart-debug": {
+        "file": "smart-debug.md",
+        "path": "components/commands/smart-debug.md",
+        "hash": "ec31a1702471da8741b2fcacc23318f0",
+        "description": ""
+      },
+      "doc-generate": {
+        "file": "doc-generate.md",
+        "path": "components/commands/doc-generate.md",
+        "hash": "504e0fcbd07ffdf42be9b805939550bb",
+        "description": ""
+      },
+      "tdd-refactor": {
+        "file": "tdd-refactor.md",
+        "path": "components/commands/tdd-refactor.md",
+        "hash": "c059dc06471aaf45e8ca0de5583ddd7c",
+        "description": ""
+      },
+      "multi-platform": {
+        "file": "multi-platform.md",
+        "path": "components/commands/multi-platform.md",
+        "hash": "19dd5e9a02a69d7db64f045e05a577c3",
+        "description": ""
+      },
+      "smart-fix": {
+        "file": "smart-fix.md",
+        "path": "components/commands/smart-fix.md",
+        "hash": "5ae7b137409a2489377616816b526b94",
+        "description": ""
+      },
+      "security-dependencies": {
+        "file": "security-dependencies.md",
+        "path": "components/commands/security-dependencies.md",
+        "hash": "9264736aa5b948fc6668e081cce9e9df",
+        "description": ""
+      },
+      "deps-audit": {
+        "file": "deps-audit.md",
+        "path": "components/commands/deps-audit.md",
+        "hash": "86fc638fbb68771f69cf5bfd07d43ec0",
+        "description": ""
+      },
+      "full-review": {
+        "file": "full-review.md",
+        "path": "components/commands/full-review.md",
+        "hash": "5f92fc502a4c91fe48d07d876796ada4",
+        "description": ""
+      },
+      "security-sast": {
+        "file": "security-sast.md",
+        "path": "components/commands/security-sast.md",
+        "hash": "ab88fadaa20d68c641441ea240fa31b9",
+        "description": "Static Application Security Testing (SAST) for code vulnerability analysis across multiple languages and frameworks"
+      },
+      "accessibility-audit": {
+        "file": "accessibility-audit.md",
+        "path": "components/commands/accessibility-audit.md",
+        "hash": "4b72bcc0679c67b7a7dd15a4406b8ce5",
+        "description": ""
+      },
+      "code-migrate": {
+        "file": "code-migrate.md",
+        "path": "components/commands/code-migrate.md",
+        "hash": "04fb9d515565a6f5fb51792ecd05f84e",
+        "description": ""
+      },
+      "debug-trace": {
+        "file": "debug-trace.md",
+        "path": "components/commands/debug-trace.md",
+        "hash": "dae23074471c4360e47ae7a6b88bfdce",
+        "description": ""
+      },
+      "rust-project": {
+        "file": "rust-project.md",
+        "path": "components/commands/rust-project.md",
+        "hash": "5994781f6f24df821f9108396aedf8ba",
+        "description": ""
+      },
+      "full-stack-feature": {
+        "file": "full-stack-feature.md",
+        "path": "components/commands/full-stack-feature.md",
+        "hash": "51c158a7366ecdf528c540261dd40fd5",
+        "description": ""
+      },
+      "security-hardening": {
+        "file": "security-hardening.md",
+        "path": "components/commands/security-hardening.md",
+        "hash": "79e0a8e60e8e9bfe5152581e934b19c3",
+        "description": ""
+      },
+      "test-generate": {
+        "file": "test-generate.md",
+        "path": "components/commands/test-generate.md",
+        "hash": "5cff2d3a17f3b0f374c707d70291b581",
+        "description": ""
+      },
+      "deps-upgrade": {
+        "file": "deps-upgrade.md",
+        "path": "components/commands/deps-upgrade.md",
+        "hash": "daf5fdbbbae5d38ab3c5efd3aa23ba42",
+        "description": ""
+      },
+      "tdd-green": {
+        "file": "tdd-green.md",
+        "path": "components/commands/tdd-green.md",
+        "hash": "e2ef6664c5442079caed404cc9462a80",
+        "description": ""
+      },
+      "refactor-clean": {
+        "file": "refactor-clean.md",
+        "path": "components/commands/refactor-clean.md",
+        "hash": "a1642600965ab94a4e533d54e3483356",
+        "description": ""
+      },
+      "component-scaffold": {
+        "file": "component-scaffold.md",
+        "path": "components/commands/component-scaffold.md",
+        "hash": "bebbc6691dde899eeb3004f3d8b3d124",
+        "description": ""
+      },
+      "error-analysis": {
+        "file": "error-analysis.md",
+        "path": "components/commands/error-analysis.md",
+        "hash": "83bf433549eda14842cc73f77cd7948a",
+        "description": ""
+      },
+      "pr-enhance": {
+        "file": "pr-enhance.md",
+        "path": "components/commands/pr-enhance.md",
+        "hash": "d3fcc4edc0a1851f4598dc9079c2b6f4",
+        "description": ""
+      },
+      "context-save": {
+        "file": "context-save.md",
+        "path": "components/commands/context-save.md",
+        "hash": "fcee638b1f900224e72aca4b1de8ef70",
+        "description": ""
+      },
+      "data-driven-feature": {
+        "file": "data-driven-feature.md",
+        "path": "components/commands/data-driven-feature.md",
+        "hash": "d8f511b482d03651ded949adc389cbdd",
+        "description": ""
+      },
+      "config-validate": {
+        "file": "config-validate.md",
+        "path": "components/commands/config-validate.md",
+        "hash": "446d4992c4ac44f409f4ad51918b7f4e",
+        "description": ""
+      },
+      "multi-agent-review": {
+        "file": "multi-agent-review.md",
+        "path": "components/commands/multi-agent-review.md",
+        "hash": "2cc3d01685d00fbdde9e5fd995a881cb",
+        "description": ""
+      },
+      "ai-review": {
+        "file": "ai-review.md",
+        "path": "components/commands/ai-review.md",
+        "hash": "70ba09cb6a6681ea03b445d355bc37cb",
+        "description": ""
+      },
+      "incident-response": {
+        "file": "incident-response.md",
+        "path": "components/commands/incident-response.md",
+        "hash": "bd3325cb57f38006ccb259b3149e5be9",
+        "description": ""
+      },
+      "improve-agent": {
+        "file": "improve-agent.md",
+        "path": "components/commands/improve-agent.md",
+        "hash": "abf0e3a07d0345d6244de2444cf4be03",
+        "description": ""
+      },
+      "onboard": {
+        "file": "onboard.md",
+        "path": "components/commands/onboard.md",
+        "hash": "457e84ea1eb14e8127918bd35c15c082",
+        "description": ""
+      },
+      "api-mock": {
+        "file": "api-mock.md",
+        "path": "components/commands/api-mock.md",
+        "hash": "3da71e8eb59cbb66de837b5c1cb657d7",
+        "description": ""
+      },
+      "ml-pipeline": {
+        "file": "ml-pipeline.md",
+        "path": "components/commands/ml-pipeline.md",
+        "hash": "f4e20b058339e2732d0fbee244594851",
+        "description": ""
+      }
+    },
+    "skills": {
+      "slo-implementation": {
+        "dir": "slo-implementation",
+        "path": "components/skills/slo-implementation",
+        "hash": "df30803d68209a044921d117dfab9bd3",
+        "name": "slo-implementation",
+        "description": "Define and implement Service Level Indicators (SLIs) and Service Level Objectives (SLOs) with error budgets and alerting. Use when establishing reliability targets, implementing SRE practices, or measuring service performance."
+      },
+      "uv-package-manager": {
+        "dir": "uv-package-manager",
+        "path": "components/skills/uv-package-manager",
+        "hash": "696aa1c22b7e314f256c53425f04c34f",
+        "description": "Master the uv package manager for fast Python dependency management, virtual environments, and modern Python project workflows. Use when setting up Python projects, managing dependencies, or optimizing Python development workflows with uv.",
+        "name": "uv-package-manager"
+      },
+      "nft-standards": {
+        "dir": "nft-standards",
+        "path": "components/skills/nft-standards",
+        "hash": "976a4087864fce6edc47df8970e68af3",
+        "name": "nft-standards",
+        "description": "Implement NFT standards (ERC-721, ERC-1155) with proper metadata handling, minting strategies, and marketplace integration. Use when creating NFT contracts, building NFT marketplaces, or implementing digital asset systems."
+      },
+      "async-python-patterns": {
+        "dir": "async-python-patterns",
+        "path": "components/skills/async-python-patterns",
+        "hash": "3fc05df23d78c52f0d5ede9ff8aa9034",
+        "description": "Master Python asyncio, concurrent programming, and async/await patterns for high-performance applications. Use when building async APIs, concurrent systems, or I/O-bound applications requiring non-blocking operations.",
+        "name": "async-python-patterns"
+      },
+      "e2e-testing-patterns": {
+        "dir": "e2e-testing-patterns",
+        "path": "components/skills/e2e-testing-patterns",
+        "hash": "018e38c01acb7a5ee585a78f7446410d",
+        "description": "Master end-to-end testing with Playwright and Cypress to build reliable test suites that catch bugs, improve confidence, and enable fast deployment. Use when implementing E2E tests, debugging flaky tests, or establishing testing standards.",
+        "name": "e2e-testing-patterns"
+      },
+      "rag-implementation": {
+        "dir": "rag-implementation",
+        "path": "components/skills/rag-implementation",
+        "hash": "a1041e86de8f4ae61f55ba3735bfb684",
+        "name": "rag-implementation",
+        "description": "Build Retrieval-Augmented Generation (RAG) systems for LLM applications with vector databases and semantic search. Use when implementing knowledge-grounded AI, building document Q&A systems, or integrating LLMs with external knowledge bases."
+      },
+      "cost-optimization": {
+        "dir": "cost-optimization",
+        "path": "components/skills/cost-optimization",
+        "hash": "1cda1375da324cc884cbb712142d6d91",
+        "name": "cost-optimization",
+        "description": "Optimize cloud costs through resource rightsizing, tagging strategies, reserved instances, and spending analysis. Use when reducing cloud expenses, analyzing infrastructure costs, or implementing cost governance policies."
+      },
+      "code-reviewer": {
+        "dir": "code-reviewer",
+        "path": "components/skills/code-reviewer",
+        "hash": "178832ff7a2cfde4b3b7ec58330dce7c",
+        "name": "code-reviewer",
+        "description": "Expert code review for quality, security, and maintainability. Use when reviewing code, checking pull requests, analyzing code quality, finding bugs, security vulnerabilities, improving code structure, or providing refactoring guidance. Ideal for pre-commit reviews, PR reviews, security audits, code quality checks, and refactoring suggestions."
+      },
+      "typescript-advanced-types": {
+        "dir": "typescript-advanced-types",
+        "path": "components/skills/typescript-advanced-types",
+        "hash": "7ffc4eaf3dfa8b91ab9d5476ac3069d3",
+        "description": "Master TypeScript's advanced type system including generics, conditional types, mapped types, template literals, and utility types for building type-safe applications. Use when implementing complex type logic, creating reusable type utilities, or ensuring compile-time type safety in TypeScript projects.",
+        "name": "typescript-advanced-types"
+      },
+      "solidity-security": {
+        "dir": "solidity-security",
+        "path": "components/skills/solidity-security",
+        "hash": "4047653202baa080c6917cfa38a7d883",
+        "description": "Master smart contract security best practices to prevent common vulnerabilities and implement secure Solidity patterns. Use when writing smart contracts, auditing existing contracts, or implementing security measures for blockchain applications.",
+        "name": "solidity-security"
+      },
+      "architecture-patterns": {
+        "dir": "architecture-patterns",
+        "path": "components/skills/architecture-patterns",
+        "hash": "97408b736f2880feae3dc7328e3d3bd8",
+        "name": "architecture-patterns",
+        "description": "Implement proven backend architecture patterns including Clean Architecture, Hexagonal Architecture, and Domain-Driven Design. Use when architecting complex backend systems or refactoring existing applications for better maintainability."
+      },
+      "terraform-module-library": {
+        "dir": "terraform-module-library",
+        "path": "components/skills/terraform-module-library",
+        "hash": "2852c0fd5a426630de75c909aefcd456",
+        "name": "terraform-module-library",
+        "description": "Build reusable Terraform modules for AWS, Azure, and GCP infrastructure following infrastructure-as-code best practices. Use when creating infrastructure modules, standardizing cloud provisioning, or implementing reusable IaC components."
+      },
+      "gitops-workflow": {
+        "dir": "gitops-workflow",
+        "path": "components/skills/gitops-workflow",
+        "hash": "cfa82bf8d71cfee9950a895c6145c905",
+        "name": "gitops-workflow",
+        "description": "Implement GitOps workflows with ArgoCD and Flux for automated, declarative Kubernetes deployments with continuous reconciliation. Use when implementing GitOps practices, automating Kubernetes deployments, or setting up declarative infrastructure management."
+      },
+      "sql-optimization-patterns": {
+        "dir": "sql-optimization-patterns",
+        "path": "components/skills/sql-optimization-patterns",
+        "hash": "fcfb8fa25409d19e6762e2fea0737f45",
+        "name": "sql-optimization-patterns",
+        "description": "Master SQL query optimization, indexing strategies, and EXPLAIN analysis to dramatically improve database performance and eliminate slow queries. Use when debugging slow queries, designing database schemas, or optimizing application performance."
+      },
+      "prometheus-configuration": {
+        "dir": "prometheus-configuration",
+        "path": "components/skills/prometheus-configuration",
+        "hash": "d2c5e043ba4a7c34e5ca0f8de3917afe",
+        "name": "prometheus-configuration",
+        "description": "Set up Prometheus for comprehensive metric collection, storage, and monitoring of infrastructure and applications. Use when implementing metrics collection, setting up monitoring infrastructure, or configuring alerting systems."
+      },
+      "javascript-testing-patterns": {
+        "dir": "javascript-testing-patterns",
+        "path": "components/skills/javascript-testing-patterns",
+        "hash": "28002481621f91d76ea91c8344ec2c64",
+        "description": "Implement comprehensive testing strategies using Jest, Vitest, and Testing Library for unit tests, integration tests, and end-to-end testing with mocking, fixtures, and test-driven development. Use when writing JavaScript/TypeScript tests, setting up test infrastructure, or implementing TDD/BDD workflows.",
+        "name": "javascript-testing-patterns"
+      },
+      "bats-testing-patterns": {
+        "dir": "bats-testing-patterns",
+        "path": "components/skills/bats-testing-patterns",
+        "hash": "7b1d0ac128247da57fe235b7423a6525",
+        "description": "Master Bash Automated Testing System (Bats) for comprehensive shell script testing. Use when writing tests for shell scripts, CI/CD pipelines, or requiring test-driven development of shell utilities.",
+        "name": "bats-testing-patterns"
+      },
+      "deployment-pipeline-design": {
+        "dir": "deployment-pipeline-design",
+        "path": "components/skills/deployment-pipeline-design",
+        "hash": "95cc3bd38079c904434b017faede85c1",
+        "name": "deployment-pipeline-design",
+        "description": "Design multi-stage CI/CD pipelines with approval gates, security checks, and deployment orchestration. Use when architecting deployment workflows, setting up continuous delivery, or implementing GitOps practices."
+      },
+      "gitlab-ci-patterns": {
+        "dir": "gitlab-ci-patterns",
+        "path": "components/skills/gitlab-ci-patterns",
+        "hash": "42deae08f27f8a9e2bfa27418bc35e70",
+        "name": "gitlab-ci-patterns",
+        "description": "Build GitLab CI/CD pipelines with multi-stage workflows, caching, and distributed runners for scalable automation. Use when implementing GitLab CI/CD, optimizing pipeline performance, or setting up automated testing and deployment."
+      },
+      "github-actions-templates": {
+        "dir": "github-actions-templates",
+        "path": "components/skills/github-actions-templates",
+        "hash": "a5a63f7df34ece87c252a139d88358b2",
+        "name": "github-actions-templates",
+        "description": "Create production-ready GitHub Actions workflows for automated testing, building, and deploying applications. Use when setting up CI/CD with GitHub Actions, automating development workflows, or creating reusable workflow templates."
+      },
+      "billing-automation": {
+        "dir": "billing-automation",
+        "path": "components/skills/billing-automation",
+        "hash": "e9ece783666e31ed59dd04beae065802",
+        "description": "Build automated billing systems for recurring payments, invoicing, subscription lifecycle, and dunning management. Use when implementing subscription billing, automating invoicing, or managing recurring payment systems.",
+        "name": "billing-automation"
+      },
+      "helm-chart-scaffolding": {
+        "dir": "helm-chart-scaffolding",
+        "path": "components/skills/helm-chart-scaffolding",
+        "hash": "ac444a5031d9fcc5ac2348fe08921391",
+        "description": "Design, organize, and manage Helm charts for templating and packaging Kubernetes applications with reusable configurations. Use when creating Helm charts, packaging Kubernetes applications, or implementing templated deployments.",
+        "name": "helm-chart-scaffolding"
+      },
+      "debugging-strategies": {
+        "dir": "debugging-strategies",
+        "path": "components/skills/debugging-strategies",
+        "hash": "3658185facd9921092088894a33f4060",
+        "description": "Master systematic debugging techniques, profiling tools, and root cause analysis to efficiently track down bugs across any codebase or technology stack. Use when investigating bugs, performance issues, or unexpected behavior.",
+        "name": "debugging-strategies"
+      },
+      "ml-pipeline-workflow": {
+        "dir": "ml-pipeline-workflow",
+        "path": "components/skills/ml-pipeline-workflow",
+        "hash": "fae7109b888744055617d0437efeaa2f",
+        "name": "ml-pipeline-workflow",
+        "description": "Build end-to-end MLOps pipelines from data preparation through model training, validation, and production deployment. Use when creating ML pipelines, implementing MLOps practices, or automating model training and deployment workflows."
+      },
+      "python-performance-optimization": {
+        "dir": "python-performance-optimization",
+        "path": "components/skills/python-performance-optimization",
+        "hash": "9fbab04a18900ff1ef3b81bcf087e4d0",
+        "description": "Profile and optimize Python code using cProfile, memory profilers, and performance best practices. Use when debugging slow Python code, optimizing bottlenecks, or improving application performance.",
+        "name": "python-performance-optimization"
+      },
+      "langchain-architecture": {
+        "dir": "langchain-architecture",
+        "path": "components/skills/langchain-architecture",
+        "hash": "4823196142fec4cf7ec3ed8b11622c8d",
+        "name": "langchain-architecture",
+        "description": "Design LLM applications using the LangChain framework with agents, memory, and tool integration patterns. Use when building LangChain applications, implementing AI agents, or creating complex LLM workflows."
+      },
+      "git-advanced-workflows": {
+        "dir": "git-advanced-workflows",
+        "path": "components/skills/git-advanced-workflows",
+        "hash": "55be90573f3e5b825a818c3193615eaf",
+        "name": "git-advanced-workflows",
+        "description": "Master advanced Git workflows including rebasing, cherry-picking, bisect, worktrees, and reflog to maintain clean history and recover from any situation. Use when managing complex Git histories, collaborating on feature branches, or troubleshooting repository issues."
+      },
+      "prompt-engineering-patterns": {
+        "dir": "prompt-engineering-patterns",
+        "path": "components/skills/prompt-engineering-patterns",
+        "hash": "ad62323a36480240d27406ea95bdbde3",
+        "name": "prompt-engineering-patterns",
+        "description": "Master advanced prompt engineering techniques to maximize LLM performance, reliability, and controllability in production. Use when optimizing prompts, improving LLM outputs, or designing production prompt templates."
+      },
+      "python-testing-patterns": {
+        "dir": "python-testing-patterns",
+        "path": "components/skills/python-testing-patterns",
+        "hash": "c13ad7ffe9be2d9ae011445ecffc3c7a",
+        "description": "Implement comprehensive testing strategies with pytest, fixtures, mocking, and test-driven development. Use when writing Python tests, setting up test suites, or implementing testing best practices.",
+        "name": "python-testing-patterns"
+      },
+      "nodejs-backend-patterns": {
+        "dir": "nodejs-backend-patterns",
+        "path": "components/skills/nodejs-backend-patterns",
+        "hash": "6942ddb59e48991d2cc31c5ff98c6ed1",
+        "description": "Build production-ready Node.js backend services with Express/Fastify, implementing middleware patterns, error handling, authentication, database integration, and API design best practices. Use when creating Node.js servers, REST APIs, GraphQL backends, or microservices architectures.",
+        "name": "nodejs-backend-patterns"
+      },
+      "api-design-principles": {
+        "dir": "api-design-principles",
+        "path": "components/skills/api-design-principles",
+        "hash": "e0bfe2fac9869faeeabfa03532b94bc3",
+        "description": "Master REST and GraphQL API design principles to build intuitive, scalable, and maintainable APIs that delight developers. Use when designing new APIs, reviewing API specifications, or establishing API design standards.",
+        "name": "api-design-principles"
+      },
+      "fastapi-templates": {
+        "dir": "fastapi-templates",
+        "path": "components/skills/fastapi-templates",
+        "hash": "078c387f077eed90e253caa69b9e3cd2",
+        "description": "Create production-ready FastAPI projects with async patterns, dependency injection, and comprehensive error handling. Use when building new FastAPI applications or setting up backend API projects.",
+        "name": "fastapi-templates"
+      },
+      "monorepo-management": {
+        "dir": "monorepo-management",
+        "path": "components/skills/monorepo-management",
+        "hash": "91d9fc4b6a3f025ef713c6cb70902a55",
+        "description": "Master monorepo management with Turborepo, Nx, and pnpm workspaces to build efficient, scalable multi-package repositories with optimized builds and dependency management. Use when setting up monorepos, optimizing builds, or managing shared dependencies.",
+        "name": "monorepo-management"
+      },
+      "hybrid-cloud-networking": {
+        "dir": "hybrid-cloud-networking",
+        "path": "components/skills/hybrid-cloud-networking",
+        "hash": "db8e1b269cff0d2220f670012db28fe7",
+        "name": "hybrid-cloud-networking",
+        "description": "Configure secure, high-performance connectivity between on-premises infrastructure and cloud platforms using VPN and dedicated connections. Use when building hybrid cloud architectures, connecting data centers to cloud, or implementing secure cross-premises networking."
+      },
+      "bash-defensive-patterns": {
+        "dir": "bash-defensive-patterns",
+        "path": "components/skills/bash-defensive-patterns",
+        "hash": "ea3121696f7515dc074e5f78f97a0e14",
+        "description": "Master defensive Bash programming techniques for production-grade scripts. Use when writing robust shell scripts, CI/CD pipelines, or system utilities requiring fault tolerance and safety.",
+        "name": "bash-defensive-patterns"
+      },
+      "secrets-management": {
+        "dir": "secrets-management",
+        "path": "components/skills/secrets-management",
+        "hash": "f72110c6f2ec088a23274a812199a853",
+        "name": "secrets-management",
+        "description": "Implement secure secrets management for CI/CD pipelines using Vault, AWS Secrets Manager, or native platform solutions. Use when handling sensitive credentials, rotating secrets, or securing CI/CD environments."
+      },
+      "sast-configuration": {
+        "dir": "sast-configuration",
+        "path": "components/skills/sast-configuration",
+        "hash": "f1aa2a11ed8831669c3eeb0e4cecca58",
+        "name": "sast-configuration",
+        "description": "Configure Static Application Security Testing (SAST) tools for automated vulnerability detection in application code. Use when setting up security scanning, implementing DevSecOps practices, or automating code vulnerability detection."
+      },
+      "web3-testing": {
+        "dir": "web3-testing",
+        "path": "components/skills/web3-testing",
+        "hash": "9fcbc978649e8fb06f8f7cffba05e74f",
+        "name": "web3-testing",
+        "description": "Test smart contracts comprehensively using Hardhat and Foundry with unit tests, integration tests, and mainnet forking. Use when testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols."
+      },
+      "modern-javascript-patterns": {
+        "dir": "modern-javascript-patterns",
+        "path": "components/skills/modern-javascript-patterns",
+        "hash": "2551b7345a02c2cecda72e9a3d23f17e",
+        "description": "Master ES6+ features including async/await, destructuring, spread operators, arrow functions, promises, modules, iterators, generators, and functional programming patterns for writing clean, efficient JavaScript code. Use when refactoring legacy code, implementing modern patterns, or optimizing JavaScript applications.",
+        "name": "modern-javascript-patterns"
+      },
+      "k8s-security-policies": {
+        "dir": "k8s-security-policies",
+        "path": "components/skills/k8s-security-policies",
+        "hash": "263ed630d0523c369702de14ca534815",
+        "name": "k8s-security-policies",
+        "description": "Implement Kubernetes security policies including NetworkPolicy, PodSecurityPolicy, and RBAC for production-grade security. Use when securing Kubernetes clusters, implementing network isolation, or enforcing pod security standards."
+      },
+      "pci-compliance": {
+        "dir": "pci-compliance",
+        "path": "components/skills/pci-compliance",
+        "hash": "223360f5eb346b31cf693ffdaaa4b3ea",
+        "name": "pci-compliance",
+        "description": "Implement PCI DSS compliance requirements for secure handling of payment card data and payment systems. Use when securing payment processing, achieving PCI compliance, or implementing payment card security measures."
+      },
+      "skill-template": {
+        "dir": "skill-template",
+        "path": "components/skills/skill-template",
+        "hash": "b300e45e6937cabfb07c597463af7e63",
+        "name": "skill-template",
+        "description": "Template for creating new Claude Code skills. Use when you need to create a modular, reusable skill that follows Claude Code best practices including the 500-line rule, progressive disclosure, and clear trigger keywords. Ideal for developers setting up new skills for code review, data analysis, documentation generation, testing automation, or any specialized development task."
+      },
+      "react-modernization": {
+        "dir": "react-modernization",
+        "path": "components/skills/react-modernization",
+        "hash": "b6d2202647de0ea9f87875eeb75cdd1d",
+        "description": "Upgrade React applications to latest versions, migrate from class components to hooks, and adopt concurrent features. Use when modernizing React codebases, migrating to React Hooks, or upgrading to latest React versions.",
+        "name": "react-modernization"
+      },
+      "python-packaging": {
+        "dir": "python-packaging",
+        "path": "components/skills/python-packaging",
+        "hash": "95c809c2acdb7f50828af87931695cfe",
+        "description": "Create distributable Python packages with proper project structure, setup.py/pyproject.toml, and publishing to PyPI. Use when packaging Python libraries, creating CLI tools, or distributing Python code.",
+        "name": "python-packaging"
+      },
+      "dependency-upgrade": {
+        "dir": "dependency-upgrade",
+        "path": "components/skills/dependency-upgrade",
+        "hash": "af411aff783445c0d252b7769cd0acbd",
+        "name": "dependency-upgrade",
+        "description": "Manage major dependency version upgrades with compatibility analysis, staged rollout, and comprehensive testing. Use when upgrading framework versions, updating major dependencies, or managing breaking changes in libraries."
+      },
+      "auth-implementation-patterns": {
+        "dir": "auth-implementation-patterns",
+        "path": "components/skills/auth-implementation-patterns",
+        "hash": "da6fd483ac4fe2cf8e57d798c5fc407c",
+        "description": "Master authentication and authorization patterns including JWT, OAuth2, session management, and RBAC to build secure, scalable access control systems. Use when implementing auth systems, securing APIs, or debugging security issues.",
+        "name": "auth-implementation-patterns"
+      },
+      "k8s-manifest-generator": {
+        "dir": "k8s-manifest-generator",
+        "path": "components/skills/k8s-manifest-generator",
+        "hash": "9cdf4bf1075e4e323a2ea1e6c9ae04c1",
+        "description": "Create production-ready Kubernetes manifests for Deployments, Services, ConfigMaps, and Secrets following best practices and security standards. Use when generating Kubernetes YAML manifests, creating K8s resources, or implementing production-grade Kubernetes configurations.",
+        "name": "k8s-manifest-generator"
+      },
+      "llm-evaluation": {
+        "dir": "llm-evaluation",
+        "path": "components/skills/llm-evaluation",
+        "hash": "db9f98c9b7c93aa3f0af3ce937ac7a9a",
+        "name": "llm-evaluation",
+        "description": "Implement comprehensive evaluation strategies for LLM applications using automated metrics, human feedback, and benchmarking. Use when testing LLM performance, measuring AI application quality, or establishing evaluation frameworks."
+      },
+      "code-review-excellence": {
+        "dir": "code-review-excellence",
+        "path": "components/skills/code-review-excellence",
+        "hash": "c0a75b73834fc8313e25f506e93814fa",
+        "description": "Master effective code review practices to provide constructive feedback, catch bugs early, and foster knowledge sharing while maintaining team morale. Use when reviewing pull requests, establishing review standards, or mentoring developers.",
+        "name": "code-review-excellence"
+      },
+      "defi-protocol-templates": {
+        "dir": "defi-protocol-templates",
+        "path": "components/skills/defi-protocol-templates",
+        "hash": "92a03cfeeb9b53155c56523441e4a185",
+        "name": "defi-protocol-templates",
+        "description": "Implement DeFi protocols with production-ready templates for staking, AMMs, governance, and lending systems. Use when building decentralized finance applications or smart contract protocols."
+      },
+      "stripe-integration": {
+        "dir": "stripe-integration",
+        "path": "components/skills/stripe-integration",
+        "hash": "8ae001a4caaa6fe1dc0f2819ea9035c8",
+        "name": "stripe-integration",
+        "description": "Implement Stripe payment processing for robust, PCI-compliant payment flows including checkout, subscriptions, and webhooks. Use when integrating Stripe payments, building subscription systems, or implementing secure checkout flows."
+      },
+      "shellcheck-configuration": {
+        "dir": "shellcheck-configuration",
+        "path": "components/skills/shellcheck-configuration",
+        "hash": "e4f1a1a652270fd5515e8a58f6d0912d",
+        "name": "shellcheck-configuration",
+        "description": "Master ShellCheck static analysis configuration and usage for shell script quality. Use when setting up linting infrastructure, fixing code issues, or ensuring script portability."
+      },
+      "multi-cloud-architecture": {
+        "dir": "multi-cloud-architecture",
+        "path": "components/skills/multi-cloud-architecture",
+        "hash": "36f1fc562fea6a0b62ddeae517aa9df4",
+        "name": "multi-cloud-architecture",
+        "description": "Design multi-cloud architectures using a decision framework to select and integrate services across AWS, Azure, and GCP. Use when building multi-cloud systems, avoiding vendor lock-in, or leveraging best-of-breed services from multiple providers."
+      },
+      "database-migration": {
+        "dir": "database-migration",
+        "path": "components/skills/database-migration",
+        "hash": "575f1208d2056a887a8c7cb4ac568bd0",
+        "name": "database-migration",
+        "description": "Execute database migrations across ORMs and platforms with zero-downtime strategies, data transformation, and rollback procedures. Use when migrating databases, changing schemas, performing data transformations, or implementing zero-downtime deployment strategies."
+      },
+      "error-handling-patterns": {
+        "dir": "error-handling-patterns",
+        "path": "components/skills/error-handling-patterns",
+        "hash": "91e748acb2c2490b7e1cea60e2c98ef1",
+        "description": "Master error handling patterns across languages including exceptions, Result types, error propagation, and graceful degradation to build resilient applications. Use when implementing error handling, designing APIs, or improving application reliability.",
+        "name": "error-handling-patterns"
+      },
+      "paypal-integration": {
+        "dir": "paypal-integration",
+        "path": "components/skills/paypal-integration",
+        "hash": "094ad066991f9e47c8bf900da039abb5",
+        "name": "paypal-integration",
+        "description": "Integrate PayPal payment processing with support for express checkout, subscriptions, and refund management. Use when implementing PayPal payments, processing online transactions, or building e-commerce checkout flows."
+      },
+      "grafana-dashboards": {
+        "dir": "grafana-dashboards",
+        "path": "components/skills/grafana-dashboards",
+        "hash": "00d49b8e7987f2294ab9f24057a6c5e9",
+        "name": "grafana-dashboards",
+        "description": "Create and manage production Grafana dashboards for real-time visualization of system and application metrics. Use when building monitoring dashboards, visualizing metrics, or creating operational observability interfaces."
+      },
+      "angular-migration": {
+        "dir": "angular-migration",
+        "path": "components/skills/angular-migration",
+        "hash": "adf4f6f179b448f5b136a94eea53c95b",
+        "name": "angular-migration",
+        "description": "Migrate from AngularJS to Angular using hybrid mode, incremental component rewriting, and dependency injection updates. Use when upgrading AngularJS applications, planning framework migrations, or modernizing legacy Angular code."
+      },
+      "distributed-tracing": {
+        "dir": "distributed-tracing",
+        "path": "components/skills/distributed-tracing",
+        "hash": "a3028e05273200348ab3204cb59a74fa",
+        "name": "distributed-tracing",
+        "description": "Implement distributed tracing with Jaeger and Tempo to track requests across microservices and identify performance bottlenecks. Use when debugging microservices, analyzing request flows, or implementing observability for distributed systems."
+      },
+      "microservices-patterns": {
+        "dir": "microservices-patterns",
+        "path": "components/skills/microservices-patterns",
+        "hash": "57bf199ab90f72219b70f8c01843467d",
+        "description": "Design microservices architectures with service boundaries, event-driven communication, and resilience patterns. Use when building distributed systems, decomposing monoliths, or implementing microservices.",
+        "name": "microservices-patterns"
+      }
+    },
+    "hooks": {}
+  },
+  "metadata": {
+    "total_agents": 162,
+    "total_commands": 63,
+    "total_skills": 60,
+    "total_hooks": 0
+  }
+}
