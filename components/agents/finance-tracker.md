@@ -1,5 +1,5 @@
 ---
-description: finance-tracker agent - please update this description
+description: 财务管理与预算规划专家，专注成本分析、收入预测和投资回报率分析。为工作室创建可持续的商业模式，优化资源配置和盈利能力。
 model: sonnet
 name: finance-tracker
 ---

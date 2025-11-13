@@ -1,0 +1,451 @@
+{
+  "seo-cannibalization-detector": {
+    "name": "seo-cannibalization-detector",
+    "keywords": [
+      "anchor text",
+      "audit",
+      "cannibalization",
+      "content",
+      "description",
+      "internal linking",
+      "keyword",
+      "meta",
+      "ranking",
+      "search",
+      "strategy",
+      "structure",
+      "title"
+    ],
+    "trigger_scenarios": [
+      "Use PROACTIVELY when reviewing similar content"
+    ],
+    "core_functions": [
+      "Focus Areas",
+      "Cannibalization Types",
+      "Prevention Strategy",
+      "Approach",
+      "Output",
+      "Keyword overlap detection",
+      "Topic similarity analysis",
+      "Search intent comparison",
+      "Title and meta conflicts",
+      "Content duplication issues",
+      "Differentiation opportunities",
+      "Consolidation recommendations",
+      "Topic clustering suggestions",
+      "Similar page titles",
+      "Duplicate meta descriptions"
+    ],
+    "description": "Analyzes multiple provided pages to identify keyword overlap and potential cannibalization issues. Suggests differentiation strategies. Use PROACTIVELY when reviewing similar content.",
+    "body_length": 2377,
+    "tools_mentioned": []
+  },
+  "seo-snippet-hunter": {
+    "name": "seo-snippet-hunter",
+    "keywords": [
+      "content",
+      "description",
+      "featured snippet",
+      "keyword",
+      "optimization",
+      "schema",
+      "search",
+      "serp",
+      "snippet",
+      "strategy",
+      "structure"
+    ],
+    "trigger_scenarios": [
+      "Use PROACTIVELY for question-based content"
+    ],
+    "core_functions": [
+      "Focus Areas",
+      "Snippet Types & Formats",
+      "Snippet Optimization Strategy",
+      "Approach",
+      "Output",
+      "[Exact Question from SERP]",
+      "Supporting Details:",
+      "Featured snippet content formatting",
+      "Question-answer structure",
+      "Definition optimization",
+      "List and step formatting",
+      "Table structure for comparisons",
+      "Concise, direct answers",
+      "FAQ content optimization",
+      "Direct answer in opening sentence",
+      "Question-based headers",
+      "Clear, concise definitions"
+    ],
+    "description": "Formats content to be eligible for featured snippets and SERP features. Creates snippet-optimized content blocks based on best practices. Use PROACTIVELY for question-based content.",
+    "body_length": 2222,
+    "tools_mentioned": [
+      "Schema.org"
+    ]
+  },
+  "seo-structure-architect": {
+    "name": "seo-structure-architect",
+    "keywords": [
+      "content",
+      "featured snippet",
+      "internal linking",
+      "keyword",
+      "optimization",
+      "schema",
+      "search",
+      "seo",
+      "sitemap",
+      "snippet",
+      "strategy",
+      "structure",
+      "technical",
+      "url structure"
+    ],
+    "trigger_scenarios": [
+      "Use PROACTIVELY for content structuring"
+    ],
+    "core_functions": [
+      "Focus Areas",
+      "Header Tag Best Practices",
+      "Siloing Strategy",
+      "Schema Markup Priority",
+      "Approach",
+      "Output",
+      "Header tag hierarchy (H1-H6) analysis",
+      "Content organization and flow",
+      "Schema markup suggestions",
+      "Internal linking opportunities",
+      "Table of contents structure",
+      "Content depth assessment",
+      "Logical information flow",
+      "One H1 per page matching main topic",
+      "H2s for main sections with variations",
+      "H3s for subsections with related terms"
+    ],
+    "description": "Analyzes and optimizes content structure including header hierarchy, suggests schema markup, and internal linking opportunities. Creates search-friendly content organization. Use PROACTIVELY for content structuring.",
+    "body_length": 2084,
+    "tools_mentioned": [
+      "JSON-LD"
+    ]
+  },
+  "seo-authority-builder": {
+    "name": "seo-authority-builder",
+    "keywords": [
+      "audit",
+      "authority",
+      "content",
+      "google",
+      "internal linking",
+      "keyword",
+      "optimization",
+      "schema",
+      "search",
+      "strategy",
+      "structure",
+      "technical"
+    ],
+    "trigger_scenarios": [
+      "Use PROACTIVELY for YMYL topics"
+    ],
+    "core_functions": [
+      "Focus Areas",
+      "E-E-A-T Framework",
+      "Approach",
+      "Output",
+      "E-E-A-T signal optimization (Experience, Expertise, Authority, Trust)",
+      "Author bio and credentials",
+      "Trust signals and social proof",
+      "Topical authority building",
+      "Citation and source quality",
+      "Brand entity development",
+      "Expertise demonstration",
+      "Transparency and credibility",
+      "First-hand experience indicators",
+      "Case studies and examples"
+    ],
+    "description": "Analyzes content for E-E-A-T signals and suggests improvements to build authority and trust. Identifies missing credibility elements. Use PROACTIVELY for YMYL topics.",
+    "body_length": 2724,
+    "tools_mentioned": []
+  },
+  "seo-content-refresher": {
+    "name": "seo-content-refresher",
+    "keywords": [
+      "content",
+      "meta",
+      "optimization",
+      "ranking",
+      "schema",
+      "sitemap",
+      "title"
+    ],
+    "trigger_scenarios": [
+      "Use PROACTIVELY for older content"
+    ],
+    "core_functions": [
+      "Focus Areas",
+      "Content Freshness Guidelines",
+      "Refresh Priority Matrix",
+      "Approach",
+      "Output",
+      "Outdated dates and statistics",
+      "Old examples and case studies",
+      "Missing recent developments",
+      "Seasonal content updates",
+      "Expired links or references",
+      "Dated terminology or trends",
+      "Content expansion opportunities",
+      "Freshness signal optimization",
+      "Statistics older than 2 years",
+      "Dates in titles and content"
+    ],
+    "description": "Identifies outdated elements in provided content and suggests updates to maintain freshness. Finds statistics, dates, and examples that need updating. Use PROACTIVELY for older content.",
+    "body_length": 2291,
+    "tools_mentioned": []
+  },
+  "seo-meta-optimizer": {
+    "name": "seo-meta-optimizer",
+    "keywords": [
+      "content",
+      "description",
+      "keyword",
+      "meta",
+      "optimization",
+      "schema",
+      "seo",
+      "strategy",
+      "structure",
+      "title",
+      "url structure"
+    ],
+    "trigger_scenarios": [
+      "Use PROACTIVELY for new content"
+    ],
+    "core_functions": [
+      "Focus Areas",
+      "Optimization Rules",
+      "Approach",
+      "Output",
+      "URL structure recommendations",
+      "Title tag optimization with emotional triggers",
+      "Meta description compelling copy",
+      "Character and pixel limit compliance",
+      "Keyword integration strategies",
+      "Call-to-action optimization",
+      "Mobile truncation considerations",
+      "Keep under 60 characters",
+      "Use hyphens, lowercase only",
+      "Include primary keyword early"
+    ],
+    "description": "Creates optimized meta titles, descriptions, and URL suggestions based on character limits and best practices. Generates compelling, keyword-rich metadata. Use PROACTIVELY for new content.",
+    "body_length": 1937,
+    "tools_mentioned": [
+      "Yoast"
+    ]
+  },
+  "seo-content-writer": {
+    "name": "seo-content-writer",
+    "keywords": [
+      "content",
+      "description",
+      "internal linking",
+      "keyword",
+      "meta",
+      "search",
+      "seo",
+      "title"
+    ],
+    "trigger_scenarios": [
+      "Use PROACTIVELY for content creation tasks"
+    ],
+    "core_functions": [
+      "Focus Areas",
+      "Content Creation Framework",
+      "Approach",
+      "Output",
+      "Comprehensive topic coverage",
+      "Natural keyword integration",
+      "Engaging introduction hooks",
+      "Clear, scannable formatting",
+      "E-E-A-T signal inclusion",
+      "User-focused value delivery",
+      "Semantic keyword usage",
+      "Call-to-action integration",
+      "Hook the reader immediately",
+      "State the value proposition"
+    ],
+    "description": "Writes SEO-optimized content based on provided keywords and topic briefs. Creates engaging, comprehensive content following best practices. Use PROACTIVELY for content creation tasks.",
+    "body_length": 1770,
+    "tools_mentioned": []
+  },
+  "seo-keyword-strategist": {
+    "name": "seo-keyword-strategist",
+    "keywords": [
+      "authority",
+      "content",
+      "featured snippet",
+      "keyword",
+      "optimization",
+      "schema",
+      "search",
+      "seo",
+      "snippet",
+      "strategy"
+    ],
+    "trigger_scenarios": [
+      "Use PROACTIVELY for content optimization"
+    ],
+    "core_functions": [
+      "Focus Areas",
+      "Keyword Density Guidelines",
+      "Entity Analysis Framework",
+      "Approach",
+      "Output",
+      "Primary/secondary keyword identification",
+      "Keyword density calculation and optimization",
+      "Entity and topical relevance analysis",
+      "LSI keyword generation from content",
+      "Semantic variation suggestions",
+      "Natural language patterns",
+      "Over-optimization detection",
+      "Primary keyword: 0.5-1.5% density",
+      "Avoid keyword stuffing",
+      "Natural placement throughout content"
+    ],
+    "description": "Analyzes keyword usage in provided content, calculates density, suggests semantic variations and LSI keywords based on the topic. Prevents over-optimization. Use PROACTIVELY for content optimization.",
+    "body_length": 1974,
+    "tools_mentioned": []
+  },
+  "seo-content-planner": {
+    "name": "seo-content-planner",
+    "keywords": [
+      "authority",
+      "content",
+      "internal linking",
+      "keyword",
+      "planning",
+      "search",
+      "seo",
+      "strategy",
+      "structure",
+      "title"
+    ],
+    "trigger_scenarios": [
+      "Use PROACTIVELY for content strategy and planning"
+    ],
+    "core_functions": [
+      "Focus Areas",
+      "Planning Framework",
+      "Approach",
+      "Output",
+      "Topic cluster planning",
+      "Content gap identification",
+      "Comprehensive outline creation",
+      "Content calendar development",
+      "Search intent mapping",
+      "Topic depth analysis",
+      "Pillar content strategy",
+      "Supporting content ideas",
+      "Main topic and angle",
+      "Target audience definition"
+    ],
+    "description": "Creates comprehensive content outlines and topic clusters for SEO. Plans content calendars and identifies topic gaps. Use PROACTIVELY for content strategy and planning.",
+    "body_length": 1798,
+    "tools_mentioned": []
+  },
+  "seo-content-auditor": {
+    "name": "seo-content-auditor",
+    "keywords": [
+      "audit",
+      "content",
+      "internal linking",
+      "keyword",
+      "optimization",
+      "ranking",
+      "search",
+      "seo",
+      "serp",
+      "structure",
+      "technical"
+    ],
+    "trigger_scenarios": [
+      "Use PROACTIVELY for content review"
+    ],
+    "core_functions": [
+      "Focus Areas",
+      "What I Can Analyze",
+      "What I Cannot Do",
+      "Approach",
+      "Output",
+      "Content depth and comprehensiveness",
+      "E-E-A-T signals visible in the content",
+      "Readability and user experience",
+      "Keyword usage and semantic relevance",
+      "Content structure and formatting",
+      "Trust indicators and credibility",
+      "Unique value proposition",
+      "Text quality, depth, and originality",
+      "Presence of data, statistics, citations",
+      "Author expertise indicators in content"
+    ],
+    "description": "Analyzes provided content for quality, E-E-A-T signals, and SEO best practices. Scores content and provides improvement recommendations based on established guidelines. Use PROACTIVELY for content review.",
+    "body_length": 1750,
+    "tools_mentioned": []
+  },
+  "seo-specialist": {
+    "name": "seo-specialist",
+    "keywords": [
+      "analytics",
+      "audit",
+      "authority",
+      "backlink",
+      "content",
+      "core web vitals",
+      "crawlability",
+      "google",
+      "keyword",
+      "off-page",
+      "on-page",
+      "optimization",
+      "ranking",
+      "schema",
+      "search",
+      "seo",
+      "site architecture",
+      "sitemap",
+      "strategy",
+      "structure",
+      "technical"
+    ],
+    "trigger_scenarios": [
+      "Masters both on-page and off-page optimization, structured data implementation, and performance metrics to drive organic traffic and improve search visibility"
+    ],
+    "core_functions": [
+      "Communication Protocol",
+      "Required Initial Step: SEO Context Gathering",
+      "Execution Flow",
+      "1. Context Discovery",
+      "2. Optimization Execution",
+      "3. Handoff and Documentation",
+      "Current search rankings and traffic",
+      "Site architecture and technical setup",
+      "Content inventory and gaps",
+      "Competitor analysis",
+      "Backlink profile",
+      "Leverage analytics data before recommendations",
+      "Focus on measurable SEO metrics",
+      "Validate technical implementation",
+      "Request only critical missing data",
+      "Conducting technical SEO audits"
+    ],
+    "description": "Expert SEO strategist specializing in technical SEO, content optimization, and search engine rankings. Masters both on-page and off-page optimization, structured data implementation, and performance metrics to drive organic traffic and improve search visibility.",
+    "body_length": 5029,
+    "tools_mentioned": [
+      "Ahrefs",
+      "Google Analytics",
+      "Google Search Console",
+      "Moz",
+      "SEMrush",
+      "Screaming Frog"
+    ]
+  }
+}

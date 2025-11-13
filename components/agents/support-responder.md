@@ -1,5 +1,5 @@
 ---
-description: support-responder agent - please update this description
+description: 客户支持专家，专注问题响应、用户情绪管理、自动化客服流程和反馈分析。将用户挫折转化为忠诚度，识别产品改进机会。
 model: sonnet
 name: support-responder
 ---

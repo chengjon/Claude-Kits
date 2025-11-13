@@ -95,6 +95,10 @@ class ComponentScanner:
         current_agents = {}
 
         for agent_file in agents_dir.glob("*.md"):
+            # Skip backup files
+            if agent_file.name.endswith('.bak'):
+                continue
+
             file_hash = self.calculate_file_hash(agent_file)
             agent_name = agent_file.stem
 
@@ -130,6 +134,10 @@ class ComponentScanner:
         current_commands = {}
 
         for command_file in commands_dir.glob("*.md"):
+            # Skip backup files
+            if command_file.name.endswith('.bak'):
+                continue
+
             file_hash = self.calculate_file_hash(command_file)
             command_name = command_file.stem
 

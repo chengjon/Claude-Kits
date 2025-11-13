@@ -1,5 +1,5 @@
 ---
-description: studio-coach agent - please update this description
+description: 工作室精英表现教练，专注多智能体协调、团队激励和项目成功管理。在复杂任务中协调智能体团队，激发巅峰表现，确保项目按时交付。
 model: sonnet
 name: studio-coach
 ---

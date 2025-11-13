@@ -1,5 +1,5 @@
 ---
-description: README agent - please update this description
+description: 文档管理专家，专注项目文档创建、API文档生成和知识库维护。为开发团队提供清晰的结构化文档和技术说明。
 model: sonnet
 name: README
 ---

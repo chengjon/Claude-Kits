@@ -1,15 +1,7 @@
 {
-  "last_scan": "2025-11-08T16:45:58.827481",
+  "last_scan": "2025-11-13T09:03:35.755208",
   "components": {
     "agents": {
-      "api-designer": {
-        "file": "api-designer.md",
-        "path": "components/agents/api-designer.md",
-        "hash": "456c0476a4ff36a8c406e61fc413e302",
-        "name": "api-designer",
-        "description": "Expert agent for designing RESTful APIs, GraphQL schemas, and API documentation. Use when you need to create API endpoints, design request/response formats, write OpenAPI/Swagger specs, or improve API architecture. Ensures consistency, best practices, and proper documentation.",
-        "model": "sonnet"
-      },
       "network-engineer": {
         "file": "network-engineer.md",
         "path": "components/agents/network-engineer.md",
@@ -49,14 +41,6 @@
         "name": "fastapi-pro",
         "description": "Build high-performance async APIs with FastAPI, SQLAlchemy 2.0, and Pydantic V2. Master microservices, WebSockets, and modern Python async patterns. Use PROACTIVELY for FastAPI development, async optimization, or API architecture.",
         "model": "sonnet"
-      },
-      "seo-cannibalization-detector": {
-        "file": "seo-cannibalization-detector.md",
-        "path": "components/agents/seo-cannibalization-detector.md",
-        "hash": "e2b6b7bc9169b9e3d06892e5b8ce599d",
-        "name": "seo-cannibalization-detector",
-        "description": "Analyzes multiple provided pages to identify keyword overlap and potential cannibalization issues. Suggests differentiation strategies. Use PROACTIVELY when reviewing similar content.",
-        "model": "haiku"
       },
       "deployment-engineer": {
         "file": "deployment-engineer.md",
@@ -106,22 +90,6 @@
         "description": "Build comprehensive ML pipelines, experiment tracking, and model registries with MLflow, Kubeflow, and modern MLOps tools. Implements automated training, deployment, and monitoring across cloud platforms. Use PROACTIVELY for ML infrastructure, experiment management, or pipeline automation.",
         "model": "sonnet"
       },
-      "seo-snippet-hunter": {
-        "file": "seo-snippet-hunter.md",
-        "path": "components/agents/seo-snippet-hunter.md",
-        "hash": "6bc3038d2a5a74fd687d81944f66bcfb",
-        "name": "seo-snippet-hunter",
-        "description": "Formats content to be eligible for featured snippets and SERP features. Creates snippet-optimized content blocks based on best practices. Use PROACTIVELY for question-based content.",
-        "model": "haiku"
-      },
-      "seo-structure-architect": {
-        "file": "seo-structure-architect.md",
-        "path": "components/agents/seo-structure-architect.md",
-        "hash": "b3e7534eb0d9d239ac45332c9d9ba7f8",
-        "name": "seo-structure-architect",
-        "description": "Analyzes and optimizes content structure including header hierarchy, suggests schema markup, and internal linking opportunities. Creates search-friendly content organization. Use PROACTIVELY for content structuring.",
-        "model": "haiku"
-      },
       "dx-optimizer": {
         "file": "dx-optimizer.md",
         "path": "components/agents/dx-optimizer.md",
@@ -129,14 +97,6 @@
         "name": "dx-optimizer",
         "description": "Developer Experience specialist. Improves tooling, setup, and workflows. Use PROACTIVELY when setting up new projects, after team feedback, or when development friction is noticed.",
         "model": "haiku"
-      },
-      "seo-authority-builder": {
-        "file": "seo-authority-builder.md",
-        "path": "components/agents/seo-authority-builder.md",
-        "hash": "e2678cc43dbc92bd1d2b1d12006fe077",
-        "name": "seo-authority-builder",
-        "description": "Analyzes content for E-E-A-T signals and suggests improvements to build authority and trust. Identifies missing credibility elements. Use PROACTIVELY for YMYL topics.",
-        "model": "sonnet"
       },
       "data-scientist": {
         "file": "data-scientist.md",
@@ -173,18 +133,10 @@
       "README": {
         "file": "README.md",
         "path": "components/agents/README.md",
-        "hash": "2b2111cb7002d9f67becf1111342fa93",
+        "hash": "c90492b48391c6f8b4110d65b2dc2c04",
         "name": "README",
-        "description": "README agent - please update this description",
+        "description": "文档管理专家，专注项目文档创建、API文档生成和知识库维护。为开发团队提供清晰的结构化文档和技术说明。",
         "model": "sonnet"
-      },
-      "seo-content-refresher": {
-        "file": "seo-content-refresher.md",
-        "path": "components/agents/seo-content-refresher.md",
-        "hash": "6e73676ac39a75015174822e38fd466e",
-        "name": "seo-content-refresher",
-        "description": "Identifies outdated elements in provided content and suggests updates to maintain freshness. Finds statistics, dates, and examples that need updating. Use PROACTIVELY for older content.",
-        "model": "haiku"
       },
       "test-writer": {
         "file": "test-writer.md",
@@ -234,14 +186,6 @@
         "description": "Creates step-by-step tutorials and educational content from code. Transforms complex concepts into progressive learning experiences with hands-on examples. Use PROACTIVELY for onboarding guides, feature tutorials, or concept explanations.",
         "model": "haiku"
       },
-      "backend-architect": {
-        "file": "backend-architect.md",
-        "path": "components/agents/backend-architect.md",
-        "hash": "9d2004756d90b73e475d5f3f32b906f8",
-        "name": "backend-architect",
-        "description": "Expert backend architect specializing in scalable API design, microservices architecture, and distributed systems. Masters REST/GraphQL/gRPC APIs, event-driven architectures, service mesh patterns, and modern backend frameworks. Handles service boundary definition, inter-service communication, resilience patterns, and observability. Use PROACTIVELY when creating new backend services or APIs.",
-        "model": "sonnet"
-      },
       "bash-pro": {
         "file": "bash-pro.md",
         "path": "components/agents/bash-pro.md",
@@ -256,30 +200,6 @@
         "hash": "3bc37c7e08a5d0cf6855e0137590f694",
         "name": "ruby-pro",
         "description": "Write idiomatic Ruby code with metaprogramming, Rails patterns, and performance optimization. Specializes in Ruby on Rails, gem development, and testing frameworks. Use PROACTIVELY for Ruby refactoring, optimization, or complex Ruby features.",
-        "model": "sonnet"
-      },
-      "database-admin": {
-        "file": "database-admin.md",
-        "path": "components/agents/database-admin.md",
-        "hash": "5f0801d5f972480a22867d1d570da2ec",
-        "name": "database-admin",
-        "description": "Expert database administrator specializing in modern cloud databases, automation, and reliability engineering. Masters AWS/Azure/GCP database services, Infrastructure as Code, high availability, disaster recovery, performance optimization, and compliance. Handles multi-cloud strategies, container databases, and cost optimization. Use PROACTIVELY for database architecture, operations, or reliability engineering.",
-        "model": "haiku"
-      },
-      "javascript-pro": {
-        "file": "javascript-pro.md",
-        "path": "components/agents/javascript-pro.md",
-        "hash": "fcb434716c9f6846d1fe00ca2085d895",
-        "name": "javascript-pro",
-        "description": "Master modern JavaScript with ES6+, async patterns, and Node.js APIs. Handles promises, event loops, and browser/Node compatibility. Use PROACTIVELY for JavaScript optimization, async debugging, or complex JS patterns.",
-        "model": "sonnet"
-      },
-      "database-architect": {
-        "file": "database-architect.md",
-        "path": "components/agents/database-architect.md",
-        "hash": "e638059810aa265157a0c2c2b5d8b710",
-        "name": "database-architect",
-        "description": "Expert database architect specializing in data layer design from scratch, technology selection, schema modeling, and scalable database architectures. Masters SQL/NoSQL/TimeSeries database selection, normalization strategies, migration planning, and performance-first design. Handles both greenfield architectures and re-architecture of existing systems. Use PROACTIVELY for database architecture, technology selection, or data modeling decisions.",
         "model": "sonnet"
       },
       "data-engineer": {
@@ -305,14 +225,6 @@
         "name": "observability-engineer",
         "description": "Build production-ready monitoring, logging, and tracing systems. Implements comprehensive observability strategies, SLI/SLO management, and incident response workflows. Use PROACTIVELY for monitoring infrastructure, performance optimization, or production reliability.",
         "model": "sonnet"
-      },
-      "seo-meta-optimizer": {
-        "file": "seo-meta-optimizer.md",
-        "path": "components/agents/seo-meta-optimizer.md",
-        "hash": "5f7eeab58a5c459db9ed850600950377",
-        "name": "seo-meta-optimizer",
-        "description": "Creates optimized meta titles, descriptions, and URL suggestions based on character limits and best practices. Generates compelling, keyword-rich metadata. Use PROACTIVELY for new content.",
-        "model": "haiku"
       },
       "php-pro": {
         "file": "php-pro.md",
@@ -344,14 +256,6 @@
         "hash": "445f24e912940ece77b45c11e0de2bd6",
         "name": "terraform-specialist",
         "description": "Expert Terraform/OpenTofu specialist mastering advanced IaC automation, state management, and enterprise infrastructure patterns. Handles complex module design, multi-cloud deployments, GitOps workflows, policy as code, and CI/CD integration. Covers migration strategies, security best practices, and modern IaC ecosystems. Use PROACTIVELY for advanced IaC, state management, or infrastructure automation.",
-        "model": "sonnet"
-      },
-      "seo-content-writer": {
-        "file": "seo-content-writer.md",
-        "path": "components/agents/seo-content-writer.md",
-        "hash": "1906ab8e1b134d2db67d9772e1d28a20",
-        "name": "seo-content-writer",
-        "description": "Writes SEO-optimized content based on provided keywords and topic briefs. Creates engaging, comprehensive content following best practices. Use PROACTIVELY for content creation tasks.",
         "model": "sonnet"
       },
       "reference-builder": {
@@ -394,22 +298,6 @@
         "description": "Master Rust 1.75+ with modern async patterns, advanced type system features, and production-ready systems programming. Expert in the latest Rust ecosystem including Tokio, axum, and cutting-edge crates. Use PROACTIVELY for Rust development, performance optimization, or systems programming.",
         "model": "sonnet"
       },
-      "django-pro": {
-        "file": "django-pro.md",
-        "path": "components/agents/django-pro.md",
-        "hash": "a8e93ca3518b49fb56c275015c796f0c",
-        "name": "django-pro",
-        "description": "Master Django 5.x with async views, DRF, Celery, and Django Channels. Build scalable web applications with proper architecture, testing, and deployment. Use PROACTIVELY for Django development, ORM optimization, or complex Django patterns.",
-        "model": "sonnet"
-      },
-      "seo-keyword-strategist": {
-        "file": "seo-keyword-strategist.md",
-        "path": "components/agents/seo-keyword-strategist.md",
-        "hash": "68ecea4d96ac879e405d297ebc304a8f",
-        "name": "seo-keyword-strategist",
-        "description": "Analyzes keyword usage in provided content, calculates density, suggests semantic variations and LSI keywords based on the topic. Prevents over-optimization. Use PROACTIVELY for content optimization.",
-        "model": "haiku"
-      },
       "security-auditor": {
         "file": "security-auditor.md",
         "path": "components/agents/security-auditor.md",
@@ -417,14 +305,6 @@
         "name": "security-auditor",
         "description": "Expert security auditor specializing in DevSecOps, comprehensive cybersecurity, and compliance frameworks. Masters vulnerability assessment, threat modeling, secure authentication (OAuth2/OIDC), OWASP standards, cloud security, and security automation. Handles DevSecOps integration, compliance (GDPR/HIPAA/SOC2), and incident response. Use PROACTIVELY for security audits, DevSecOps, or compliance implementation.",
         "model": "sonnet"
-      },
-      "seo-content-planner": {
-        "file": "seo-content-planner.md",
-        "path": "components/agents/seo-content-planner.md",
-        "hash": "d6c2e5932abee8a7a1beb9ab1fbbffb6",
-        "name": "seo-content-planner",
-        "description": "Creates comprehensive content outlines and topic clusters for SEO. Plans content calendars and identifies topic gaps. Use PROACTIVELY for content strategy and planning.",
-        "model": "haiku"
       },
       "c-pro": {
         "file": "c-pro.md",
@@ -514,14 +394,6 @@
         "description": "Elite AI-powered customer support specialist mastering conversational AI, automated ticketing, sentiment analysis, and omnichannel support experiences. Integrates modern support tools, chatbot platforms, and CX optimization with 2024/2025 best practices. Use PROACTIVELY for comprehensive customer experience management.",
         "model": "haiku"
       },
-      "typescript-pro": {
-        "file": "typescript-pro.md",
-        "path": "components/agents/typescript-pro.md",
-        "hash": "33acf62b84831d21cb146b1a37c4a3fa",
-        "name": "typescript-pro",
-        "description": "Master TypeScript with advanced types, generics, and strict type safety. Handles complex type systems, decorators, and enterprise-grade patterns. Use PROACTIVELY for TypeScript architecture, type inference optimization, or advanced typing patterns.",
-        "model": "sonnet"
-      },
       "python-pro": {
         "file": "python-pro.md",
         "path": "components/agents/python-pro.md",
@@ -544,14 +416,6 @@
         "hash": "3ccaec7d9949fed367294d55b5183dc1",
         "name": "legacy-modernizer",
         "description": "Refactor legacy codebases, migrate outdated frameworks, and implement gradual modernization. Handles technical debt, dependency updates, and backward compatibility. Use PROACTIVELY for legacy system updates, framework migrations, or technical debt reduction.",
-        "model": "haiku"
-      },
-      "database-optimizer": {
-        "file": "database-optimizer.md",
-        "path": "components/agents/database-optimizer.md",
-        "hash": "7c04bbed09b32c86366afe1e634e417b",
-        "name": "database-optimizer",
-        "description": "Expert database optimizer specializing in modern performance tuning, query optimization, and scalable architectures. Masters advanced indexing, N+1 resolution, multi-tier caching, partitioning strategies, and cloud database optimization. Handles complex query analysis, migration strategies, and performance monitoring. Use PROACTIVELY for database optimization, performance issues, or scalability challenges.",
         "model": "haiku"
       },
       "quant-analyst": {
@@ -586,14 +450,6 @@
         "description": "Expert web researcher using advanced search techniques and synthesis. Masters search operators, result filtering, and multi-source verification. Handles competitive analysis and fact-checking. Use PROACTIVELY for deep research, information gathering, or trend analysis.",
         "model": "haiku"
       },
-      "mobile-developer": {
-        "file": "mobile-developer.md",
-        "path": "components/agents/mobile-developer.md",
-        "hash": "1b02199b4b6e58b94ee1f0becd21c480",
-        "name": "mobile-developer",
-        "description": "Develop React Native, Flutter, or native mobile apps with modern architecture patterns. Masters cross-platform development, native integrations, offline sync, and app store optimization. Use PROACTIVELY for mobile features, cross-platform code, or app optimization.",
-        "model": "sonnet"
-      },
       "sales-automator": {
         "file": "sales-automator.md",
         "path": "components/agents/sales-automator.md",
@@ -605,17 +461,9 @@
       "code-reviewer": {
         "file": "code-reviewer.md",
         "path": "components/agents/code-reviewer.md",
-        "hash": "9d4be33b2d491355697255ae4e54250a",
+        "hash": "dc0ccd9d7df3743bf037d885a8f9c360",
         "name": "code-reviewer",
-        "description": "Elite code review expert specializing in modern AI-powered code analysis, security vulnerabilities, performance optimization, and production reliability. Masters static analysis tools, security scanning, and configuration review with 2024/2025 best practices. Use PROACTIVELY for code quality assurance.",
-        "model": "sonnet"
-      },
-      "seo-content-auditor": {
-        "file": "seo-content-auditor.md",
-        "path": "components/agents/seo-content-auditor.md",
-        "hash": "1aec49275e290c68575726a0cde16911",
-        "name": "seo-content-auditor",
-        "description": "Analyzes provided content for quality, E-E-A-T signals, and SEO best practices. Scores content and provides improvement recommendations based on established guidelines. Use PROACTIVELY for content review.",
+        "description": "Expert code review specialist for quality and security",
         "model": "sonnet"
       },
       "docs-architect": {
@@ -658,14 +506,6 @@
         "description": "Professional, ethical HR partner for hiring, onboarding/offboarding, PTO and leave, performance, compliant policies, and employee relations. Ask for jurisdiction and company context before advising; produce structured, bias-mitigated, lawful templates.",
         "model": "sonnet"
       },
-      "sql-pro": {
-        "file": "sql-pro.md",
-        "path": "components/agents/sql-pro.md",
-        "hash": "2777b5fb37d7ee056363079abce143b8",
-        "name": "sql-pro",
-        "description": "Master modern SQL with cloud-native databases, OLTP/OLAP optimization, and advanced query techniques. Expert in performance tuning, data modeling, and hybrid analytical systems. Use PROACTIVELY for database optimization or complex analysis.",
-        "model": "haiku"
-      },
       "posix-shell-pro": {
         "file": "posix-shell-pro.md",
         "path": "components/agents/posix-shell-pro.md",
@@ -706,14 +546,6 @@
         "description": "Build React components, implement responsive layouts, and handle client-side state management. Masters React 19, Next.js 15, and modern frontend architecture. Optimizes performance and ensures accessibility. Use PROACTIVELY when creating UI components or fixing frontend issues.",
         "model": "sonnet"
       },
-      "api-documenter": {
-        "file": "api-documenter.md",
-        "path": "components/agents/api-documenter.md",
-        "hash": "e260ec7533dc113b79a42dd1e67f0a3c",
-        "name": "api-documenter",
-        "description": "Master API documentation with OpenAPI 3.1, AI-powered tools, and modern developer experience practices. Create interactive docs, generate SDKs, and build comprehensive developer portals. Use PROACTIVELY for API documentation or developer portal creation.",
-        "model": "haiku"
-      },
       "arm-cortex-expert": {
         "file": "arm-cortex-expert.md",
         "path": "components/agents/arm-cortex-expert.md",
@@ -730,14 +562,6 @@
         "description": "Expert cloud architect specializing in AWS/Azure/GCP multi-cloud infrastructure design, advanced IaC (Terraform/OpenTofu/CDK), FinOps cost optimization, and modern architectural patterns. Masters serverless, microservices, security, compliance, and disaster recovery. Use PROACTIVELY for cloud architecture, cost optimization, migration planning, or multi-cloud strategies.",
         "model": "sonnet"
       },
-      "ui-visual-validator": {
-        "file": "ui-visual-validator.md",
-        "path": "components/agents/ui-visual-validator.md",
-        "hash": "8436a5c3b504a2cac0c3f4820a9d078c",
-        "name": "ui-visual-validator",
-        "description": "Rigorous visual validation expert specializing in UI testing, design system compliance, and accessibility verification. Masters screenshot analysis, visual regression testing, and component validation. Use PROACTIVELY to verify UI modifications have achieved their intended goals through comprehensive visual analysis.",
-        "model": "sonnet"
-      },
       "legal-compliance-checker": {
         "file": "legal-compliance-checker.md",
         "path": "components/agents/legal-compliance-checker.md",
@@ -749,25 +573,25 @@
       "app-store-optimizer": {
         "file": "app-store-optimizer.md",
         "path": "components/agents/app-store-optimizer.md",
-        "hash": "9360f8dd643d3103879897019e122d82",
+        "hash": "af926fa0bd51e2be26c43c84c74f21c4",
         "name": "app-store-optimizer",
-        "description": "app-store-optimizer agent - please update this description",
+        "description": "应用商店优化大师，专注ASO策略、关键词研究、元数据优化、视觉资产优化和转化率提升。精通苹果App Store和Google Play算法，提高应用自然可见度和下载量。",
         "model": "sonnet"
       },
       "tiktok-strategist": {
         "file": "tiktok-strategist.md",
         "path": "components/agents/tiktok-strategist.md",
-        "hash": "4773b4246026778444e4a3360725a945",
+        "hash": "ab4151e70a23397825743f15d6b14984",
         "name": "tiktok-strategist",
-        "description": "tiktok-strategist agent - please update this description",
+        "description": "TikTok营销策略专家，专注病毒式内容创作、算法优化、影响力者合作和用户生成内容。精通TikTok平台文化，帮助应用实现病毒式传播和增长。",
         "model": "sonnet"
       },
       "visual-storyteller": {
         "file": "visual-storyteller.md",
         "path": "components/agents/visual-storyteller.md",
-        "hash": "0bf3a26f94d26b0f8c19045cc465c6a3",
+        "hash": "6f63e42fac13b718404dd723779ecebf",
         "name": "visual-storyteller",
-        "description": "visual-storyteller agent - please update this description",
+        "description": "视觉叙事专家，专注信息设计、数据可视化、插图创作和演示文稿设计。将复杂概念转化为引人入胜的视觉故事，提升用户理解度和参与度。",
         "model": "sonnet"
       },
       "twitter-engager": {
@@ -781,41 +605,25 @@
       "test-writer-fixer": {
         "file": "test-writer-fixer.md",
         "path": "components/agents/test-writer-fixer.md",
-        "hash": "89292fce52cd64117349790d78dff985",
+        "hash": "dffb9bcec24a4bd3fa790598f2c3e82f",
         "name": "test-writer-fixer",
-        "description": "test-writer-fixer agent - please update this description",
+        "description": "测试自动化专家，专注单元测试编写、测试套件维护和故障诊断。为代码变更编写全面测试，分析失败原因，修复测试问题，确保代码质量。",
         "model": "sonnet"
       },
       "performance-optimizer": {
         "file": "performance-optimizer.md",
         "path": "components/agents/performance-optimizer.md",
-        "hash": "545ddd201a6eeb9f7f711d0b5c51b606",
+        "hash": "cca2998a476342e7f37898c7bd26066b",
         "name": "performance-optimizer",
-        "description": "每当用户报告系统缓慢、云成本高昂或存在扩展问题时，必须使用此代理。在流量高峰来临前应主动使用。它能识别瓶颈，分析工作负载，并应用优化措施，以打造极速系统。",
-        "model": "sonnet"
+        "description": "Identifies and fixes performance bottlenecks",
+        "model": "claude-3-opus"
       },
       "workflow-optimizer": {
         "file": "workflow-optimizer.md",
         "path": "components/agents/workflow-optimizer.md",
-        "hash": "9369583b4f89c0ba1a624c374aeb8561",
+        "hash": "8a3418ebfc3a633dcc708a1b0504867f",
         "name": "workflow-optimizer",
-        "description": "workflow-optimizer agent - please update this description",
-        "model": "sonnet"
-      },
-      "vue-state-manager": {
-        "file": "vue-state-manager.md",
-        "path": "components/agents/vue-state-manager.md",
-        "hash": "ad9d4c7bdfa2971ba03f2e4ac56b0f2e",
-        "name": "vue-component-architect",
-        "description": "Expert Vue.js architect specializing in Vue 3 Composition API and component patterns. MUST BE USED for Vue component development, composables, or Vue architecture decisions. Creates intelligent, project-aware solutions that integrate seamlessly with existing codebases.",
-        "model": "sonnet"
-      },
-      "rails-api-developer": {
-        "file": "rails-api-developer.md",
-        "path": "components/agents/rails-api-developer.md",
-        "hash": "44b784902a38760a3a586e0d4431182c",
-        "name": "rails-api-developer",
-        "description": "Expert Rails API developer specializing in RESTful APIs and GraphQL. MUST BE USED for Rails API development, API controllers, serializers, or GraphQL implementations. Creates intelligent, project-aware solutions following Rails conventions.",
+        "description": "工作流优化专家，专注人机协作流程优化、瓶颈识别、自动化实施和效率分析。优化开发团队流程，减少重复任务，提升协作效率。",
         "model": "sonnet"
       },
       "team-configurator": {
@@ -829,49 +637,41 @@
       "test-results-analyzer": {
         "file": "test-results-analyzer.md",
         "path": "components/agents/test-results-analyzer.md",
-        "hash": "b08bba6567a50f36c220a2f707b5c664",
+        "hash": "ed45f164bdfda6ceace3480f3cab5978",
         "name": "test-results-analyzer",
-        "description": "test-results-analyzer agent - please update this description",
+        "description": "测试结果分析专家，专注测试数据趋势分析、质量指标报告生成和缺陷模式识别。将测试数据转化为可执行的洞察，驱动质量改进决策。",
         "model": "sonnet"
       },
       "analytics-reporter": {
         "file": "analytics-reporter.md",
         "path": "components/agents/analytics-reporter.md",
-        "hash": "cc42ef876f5a369a233c2cf2c3c29330",
+        "hash": "babe48cbfee95e57f849efc8eb085106",
         "name": "analytics-reporter",
-        "description": "analytics-reporter agent - please update this description",
+        "description": "数据分析与报告专家，专注用户行为分析、性能报告生成、A/B测试和转化率优化。将原始数据转化为可执行的洞察，驱动业务增长。",
         "model": "sonnet"
       },
       "trend-researcher": {
         "file": "trend-researcher.md",
         "path": "components/agents/trend-researcher.md",
-        "hash": "3eb367ee9948509d352287c878b10e93",
+        "hash": "b73ff509953aa904dd42968c46ede619",
         "name": "trend-researcher",
-        "description": "trend-researcher agent - please update this description",
-        "model": "sonnet"
-      },
-      "api-architect": {
-        "file": "api-architect.md",
-        "path": "components/agents/api-architect.md",
-        "hash": "64b8a32df64bcbee39cb470b477b7915",
-        "name": "api-architect",
-        "description": "Universal API designer specializing in RESTful design, GraphQL schemas, and modern contract standards. **MUST BE USED** proactively whenever a project needs a new or revised API contract. Produces clear resource models, OpenAPI/GraphQL specs, and guidance on auth, versioning, pagination, and error formats—without prescribing any specific backend technology.",
+        "description": "市场趋势研究专家，专注病毒式趋势检测、应用商店情报分析和用户行为洞察。识别社交媒体趋势和应用市场机会，转化为可构建的产品功能。",
         "model": "sonnet"
       },
       "laravel-eloquent-expert": {
         "file": "laravel-eloquent-expert.md",
         "path": "components/agents/laravel-eloquent-expert.md",
-        "hash": "5a207517b3d52cad90a411e6a7fd1280",
+        "hash": "0243dbb143d1f27fe6ec661b91105065",
         "name": "laravel-eloquent-expert",
-        "description": "laravel-eloquent-expert agent - please update this description",
+        "description": "Laravel Eloquent ORM专家，专注数据建模、关系设计、查询优化和数据库性能调优。精通Laravel的模型、迁移、查询构造器和性能优化。",
         "model": "sonnet"
       },
       "support-responder": {
         "file": "support-responder.md",
         "path": "components/agents/support-responder.md",
-        "hash": "6e1690bf410f996bdb5d6df167a6e67b",
+        "hash": "f0e48b2608fe6baaf0c6eec9cfe7bb60",
         "name": "support-responder",
-        "description": "support-responder agent - please update this description",
+        "description": "客户支持专家，专注问题响应、用户情绪管理、自动化客服流程和反馈分析。将用户挫折转化为忠诚度，识别产品改进机会。",
         "model": "sonnet"
       },
       "spec-tester": {
@@ -880,14 +680,6 @@
         "hash": "48206680b1a21b8e73fe9f6301757980",
         "name": "spec-tester",
         "description": "综合测试专家，创建并执行测试套件。编写单元测试、集成测试和端到端测试。执行安全测试、性能测试，并确保代码覆盖率符合标准。与 spec-developer 紧密合作以维持质量。",
-        "model": "sonnet"
-      },
-      "django-orm-expert": {
-        "file": "django-orm-expert.md",
-        "path": "components/agents/django-orm-expert.md",
-        "hash": "b75b9b4566b97e9023c87ee7318daf38",
-        "name": "django-orm-expert",
-        "description": "Expert in Django ORM optimization, complex queries, and database performance. Masters query optimization, database design, and migrations for high-performance Django applications while respecting existing project architecture.",
         "model": "sonnet"
       },
       "laravel-backend-expert": {
@@ -901,25 +693,25 @@
       "tool-evaluator": {
         "file": "tool-evaluator.md",
         "path": "components/agents/tool-evaluator.md",
-        "hash": "d55a3817117e901204750b55c94a448b",
+        "hash": "b7b4969f3472c6e2e38922c58e468f59",
         "name": "tool-evaluator",
-        "description": "tool-evaluator agent - please update this description",
+        "description": "开发工具评估专家，专注框架对比分析、技术选型决策和成本效益评估。快速评估新工具对6天开发周期的影响，提供可执行的建议。",
         "model": "sonnet"
       },
       "studio-coach": {
         "file": "studio-coach.md",
         "path": "components/agents/studio-coach.md",
-        "hash": "9076b0adb14a89e12b3f087f5da51034",
+        "hash": "b909313d95216bcfd14a483c8d20c0d4",
         "name": "studio-coach",
-        "description": "studio-coach agent - please update this description",
+        "description": "工作室精英表现教练，专注多智能体协调、团队激励和项目成功管理。在复杂任务中协调智能体团队，激发巅峰表现，确保项目按时交付。",
         "model": "sonnet"
       },
       "experiment-tracker": {
         "file": "experiment-tracker.md",
         "path": "components/agents/experiment-tracker.md",
-        "hash": "7c72d895eab0f6586c307dd4dc87e6a4",
+        "hash": "6a525ae04b60118ba472d0b8794185ff",
         "name": "experiment-tracker",
-        "description": "experiment-tracker agent - please update this description",
+        "description": "A/B测试和实验追踪专家，专注功能标志管理、统计分析和决策支持。跟踪产品实验，分析结果，确保数据驱动的产品发布决策。",
         "model": "sonnet"
       },
       "content-creator": {
@@ -933,17 +725,17 @@
       "sprint-prioritizer": {
         "file": "sprint-prioritizer.md",
         "path": "components/agents/sprint-prioritizer.md",
-        "hash": "37c01af002cb4223c7cbe0547de58a2d",
+        "hash": "061fc5fca04d46731511a2673d2ec559",
         "name": "sprint-prioritizer",
-        "description": "sprint-prioritizer agent - please update this description",
+        "description": "敏捷冲刺规划专家，专注功能优先级排序、产品路线图管理和价值最大化。分析投资回报率，制定6天冲刺计划，优化价值交付。",
         "model": "sonnet"
       },
       "vue-nuxt-expert": {
         "file": "vue-nuxt-expert.md",
         "path": "components/agents/vue-nuxt-expert.md",
-        "hash": "968b1db0f03267162c42a0c7c0f16469",
+        "hash": "25b6dd0f81ffdfb804fc4d774006d1fa",
         "name": "vue-nuxt-expert",
-        "description": "Expert in Nuxt.js framework specializing in SSR, SSG, and full-stack Vue applications. Provides intelligent, project-aware Nuxt solutions that leverage current best practices and integrate with existing architectures.",
+        "description": "Expert in Nuxt.js framework specializing in SSR, SSG, ISR, and production-grade full-stack Vue applications. Provides intelligent, project-aware Nuxt solutions with advanced deployment strategies, multi-environment configuration, database ORM integration (Prisma, Drizzle), Redis caching, edge deployment, Docker containerization, production monitoring (Sentry, Datadog), and performance optimization. Masters Nitro server, middleware patterns, plugin architecture, and leverages current best practices for scalable Nuxt applications. Use for Nuxt 3 production deployment, advanced Nitro configuration, database integration, caching strategies, monitoring setup, Docker deployment, edge runtime optimization, and enterprise Nuxt architecture.",
         "model": "sonnet"
       },
       "tech-lead-orchestrator": {
@@ -973,33 +765,17 @@
       "studio-producer": {
         "file": "studio-producer.md",
         "path": "components/agents/studio-producer.md",
-        "hash": "1a29fe3728e04a4e2a8973e416c5b63b",
+        "hash": "547a3130c837395bf1799577fd2959ae",
         "name": "studio-producer",
-        "description": "studio-producer agent - please update this description",
+        "description": "工作室协调管理专家，专注跨团队协作、资源优化和工作流程设计。协调多团队工作流，平衡资源分配，确保6天冲刺周期的顺畅执行和高效交付。",
         "model": "sonnet"
       },
       "whimsy-injector": {
         "file": "whimsy-injector.md",
         "path": "components/agents/whimsy-injector.md",
-        "hash": "090773fc9d56159814dff3421d599d2a",
+        "hash": "6e8ad5f62cd1f3ae43b67b65c89716a4",
         "name": "whimsy-injector",
-        "description": "whimsy-injector agent - please update this description",
-        "model": "sonnet"
-      },
-      "rails-backend-expert": {
-        "file": "rails-backend-expert.md",
-        "path": "components/agents/rails-backend-expert.md",
-        "hash": "0a7232d4e35b5d77c60ac8e9a158f386",
-        "name": "rails-backend-expert",
-        "description": "rails-backend-expert agent - please update this description",
-        "model": "sonnet"
-      },
-      "react-component-architect": {
-        "file": "react-component-architect.md",
-        "path": "components/agents/react-component-architect.md",
-        "hash": "96e176f3a30924b892fa5b056d2efb04",
-        "name": "react-component-architect",
-        "description": "Expert React architect specializing in modern patterns and component design. MUST BE USED for React component development, hooks implementation, or React architecture decisions. Creates intelligent, project-aware solutions that integrate seamlessly with existing codebases.",
+        "description": "愉悦体验设计专家，专注微交互、俏皮文案和用户愉悦感设计。为应用界面注入趣味元素，创造令人难忘的用户体验瞬间和可分享的愉悦时刻。",
         "model": "sonnet"
       },
       "spec-validator": {
@@ -1021,9 +797,9 @@
       "rapid-prototyper": {
         "file": "rapid-prototyper.md",
         "path": "components/agents/rapid-prototyper.md",
-        "hash": "ef2f6d10908946c03bbf71bc7f493c11",
+        "hash": "79cf3ad5757df44ae877a1f9520b133d",
         "name": "rapid-prototyper",
-        "description": "rapid-prototyper agent - please update this description",
+        "description": "快速原型开发专家，专注MVP构建和概念验证开发。在6天周期内快速搭建功能性应用原型，整合热门功能，创建可测试的产品演示和投资者展示。",
         "model": "sonnet"
       },
       "instagram-curator": {
@@ -1037,17 +813,9 @@
       "infrastructure-maintainer": {
         "file": "infrastructure-maintainer.md",
         "path": "components/agents/infrastructure-maintainer.md",
-        "hash": "9a4c60755cb8c45b6181ed4929e44605",
+        "hash": "d3191e98760bdcfa69c6bba13f7ad132",
         "name": "infrastructure-maintainer",
-        "description": "infrastructure-maintainer agent - please update this description",
-        "model": "sonnet"
-      },
-      "ui-ux-master": {
-        "file": "ui-ux-master.md",
-        "path": "components/agents/ui-ux-master.md",
-        "hash": "9d337d8235adebfb441c4b5aef937cfc",
-        "name": "ui-ux-master",
-        "description": "经验丰富的UI/UX设计代理，拥有10年以上创建屡获殊荣用户体验的经验。专注于AI协作设计工作流，生成可立即实施的规范，实现从创意愿景到生产代码的无缝转换。精通设计思维和技术实现，弥合美学与工程之间的鸿沟。",
+        "description": "基础设施运维专家，专注系统监控、性能优化和扩展性管理。确保应用稳定运行，处理流量突增，优化成本效益，保障系统可靠性和安全性。",
         "model": "sonnet"
       },
       "spec-architect": {
@@ -1061,9 +829,9 @@
       "integration-test-fixer": {
         "file": "integration-test-fixer.md",
         "path": "components/agents/integration-test-fixer.md",
-        "hash": "09a792aa441931aadfcc9be7927f71e8",
+        "hash": "f157ba65af5239ef73e7aaf262f5e554",
         "name": "integration-test-fixer",
-        "description": "integration-test-fixer agent - please update this description",
+        "description": "集成测试自动化专家，专注前后端集成测试和跨平台验证。执行自动化集成测试，诊断和修复系统集成问题，确保全栈应用的功能完整性。",
         "model": "sonnet"
       },
       "code-archaeologist": {
@@ -1074,36 +842,12 @@
         "description": "必须用于探索和记录不熟悉、遗留或复杂的代码库。在重构、新成员上手、审计或风险评估前应主动使用。它会生成一份完整的报告——包括架构、指标、风险和一份其他子代理可以执行的优先级行动计划。",
         "model": "sonnet"
       },
-      "vue-component-architect": {
-        "file": "vue-component-architect.md",
-        "path": "components/agents/vue-component-architect.md",
-        "hash": "a872b7881d064c9a08cef46f5bd14554",
-        "name": "vue-component-architect",
-        "description": "Vue 3 expert specializing in Composition API, scalable component architecture, and modern Vue tooling. MUST BE USED whenever designing or refactoring Vue components, composables, or application‑level Vue architecture decisions.",
-        "model": "sonnet"
-      },
       "ux-researcher": {
         "file": "ux-researcher.md",
         "path": "components/agents/ux-researcher.md",
-        "hash": "fd6fd5f83d964624a25d0483606e63bf",
+        "hash": "5ff5f289e84ec2eb07f91b0c2395f303",
         "name": "ux-researcher",
-        "description": "ux-researcher agent - please update this description",
-        "model": "sonnet"
-      },
-      "rails-activerecord-expert": {
-        "file": "rails-activerecord-expert.md",
-        "path": "components/agents/rails-activerecord-expert.md",
-        "hash": "6f86086c3d1ebb0f6642b2f3db3268cb",
-        "name": "rails-activerecord-expert",
-        "description": "Expert in Rails ActiveRecord optimization, complex queries, and database performance. Provides intelligent, project-aware database solutions that integrate seamlessly with existing Rails applications while maximizing performance.",
-        "model": "sonnet"
-      },
-      "senior-backend-architect": {
-        "file": "senior-backend-architect.md",
-        "path": "components/agents/senior-backend-architect.md",
-        "hash": "7cc8fffb1521a811b013ac1baf6e0040",
-        "name": "senior-backend-architect",
-        "description": "资深后端工程师和系统架构师，拥有超过10年的谷歌工作经验，领导过多个千万级用户的产品。精通Go和TypeScript，专长于分布式系统、高性能API和生产级基础设施。兼具技术实现和系统设计能力，拥有零停机部署和极少生产事故的辉煌记录。",
+        "description": "用户体验研究专家，专注用户行为分析、用户旅程映射和可用性测试。设计精益研究方法，收集用户洞察，为产品决策提供数据驱动的指导。",
         "model": "sonnet"
       },
       "spec-reviewer": {
@@ -1114,20 +858,12 @@
         "description": "高级代码评审员，专注于代码质量、最佳实践和安全性。评审代码的可维护性、性能优化和潜在漏洞。提供可操作的反馈，并能直接重构代码。与所有专业代理协作，确保一致的质量。",
         "model": "sonnet"
       },
-      "api-tester": {
-        "file": "api-tester.md",
-        "path": "components/agents/api-tester.md",
-        "hash": "7be8eb44d5a2a8f427fbe106b01fc332",
-        "name": "api-tester",
-        "description": "api-tester agent - please update this description",
-        "model": "sonnet"
-      },
       "refactor-agent": {
         "file": "refactor-agent.md",
         "path": "components/agents/refactor-agent.md",
-        "hash": "7ce40e19814969789d403888421a8428",
+        "hash": "7ea1f2f2d5bd5e74533d7ac00f43ee9d",
         "name": "refactor-agent",
-        "description": "refactor-agent agent - please update this description",
+        "description": "代码重构专家，专注代码质量提升、结构优化和可维护性改进。清理重复代码、改进命名规范、简化复杂逻辑，提升代码的可读性和健壮性。",
         "model": "sonnet"
       },
       "spec-task-reviewer": {
@@ -1146,14 +882,6 @@
         "description": "资深前端工程师和架构师，拥有超过10年的Meta工作经验，领导过多个千万级用户的产品。精通TypeScript、React、Next.js、Vue和Astro生态系统。专长于性能优化、跨平台开发、响应式设计，并能与UI/UX设计师和后端工程师无缝协作。拥有交付像素级精准、性能卓越且用户体验出色的应用的辉煌记录。",
         "model": "sonnet"
       },
-      "django-backend-expert": {
-        "file": "django-backend-expert.md",
-        "path": "components/agents/django-backend-expert.md",
-        "hash": "ca1f1de88ed6f07250c294fcda0a5304",
-        "name": "django-backend-expert",
-        "description": "Expert Django backend developer specializing in models, views, services, and Django-specific implementations. MUST BE USED for Django backend development tasks. Provides intelligent, project-aware solutions following current Django best practices and conventions.",
-        "model": "sonnet"
-      },
       "documentation-specialist": {
         "file": "documentation-specialist.md",
         "path": "components/agents/documentation-specialist.md",
@@ -1165,17 +893,9 @@
       "finance-tracker": {
         "file": "finance-tracker.md",
         "path": "components/agents/finance-tracker.md",
-        "hash": "64c87e0908be77c2da9239856b421e78",
+        "hash": "87d326d12013b76c1b2fa37e215aa599",
         "name": "finance-tracker",
-        "description": "finance-tracker agent - please update this description",
-        "model": "sonnet"
-      },
-      "mobile-app-builder": {
-        "file": "mobile-app-builder.md",
-        "path": "components/agents/mobile-app-builder.md",
-        "hash": "5ef6e1f8f205035ea09ef283e48d1988",
-        "name": "mobile-app-builder",
-        "description": "mobile-app-builder agent - please update this description",
+        "description": "财务管理与预算规划专家，专注成本分析、收入预测和投资回报率分析。为工作室创建可持续的商业模式，优化资源配置和盈利能力。",
         "model": "sonnet"
       },
       "react-nextjs-expert": {
@@ -1197,9 +917,9 @@
       "feedback-synthesizer": {
         "file": "feedback-synthesizer.md",
         "path": "components/agents/feedback-synthesizer.md",
-        "hash": "fc4e0c859b86016d040b223e0d3c05b4",
+        "hash": "2e0433483e5b7f0161407e86060f7edc",
         "name": "feedback-synthesizer",
-        "description": "feedback-synthesizer agent - please update this description",
+        "description": "用户反馈分析专家，专注多渠道反馈收集、模式识别和情感分析。将杂乱的用户意见转化为可操作的产品洞察，驱动产品改进决策。",
         "model": "sonnet"
       },
       "spec-analyst": {
@@ -1213,17 +933,9 @@
       "performance-benchmarker": {
         "file": "performance-benchmarker.md",
         "path": "components/agents/performance-benchmarker.md",
-        "hash": "ee763c6d43810d0beb3b35e9d82219cc",
+        "hash": "798cf9d9c7177096329b4e6299fcf251",
         "name": "performance-benchmarker",
-        "description": "performance-benchmarker agent - please update this description",
-        "model": "sonnet"
-      },
-      "backend-developer": {
-        "file": "backend-developer.md",
-        "path": "components/agents/backend-developer.md",
-        "hash": "3ec5bac069434f97b7b01686fbf02c3f",
-        "name": "backend-developer",
-        "description": "MUST BE USED whenever server‑side code must be written, extended, or refactored and no framework‑specific sub‑agent exists. Use PROACTIVELY to ship production‑ready features across any language or stack, automatically detecting project tech and following best‑practice patterns.",
+        "description": "性能基准测试专家，专注应用性能分析、性能优化建议和瓶颈识别。测量加载速度，分析渲染性能，提供可行的优化策略以提升用户体验。",
         "model": "sonnet"
       },
       "project-analyst": {
@@ -1237,17 +949,17 @@
       "joker": {
         "file": "joker.md",
         "path": "components/agents/joker.md",
-        "hash": "f58442340ec77ea8e98949d0ebecee68",
+        "hash": "700ba89955edc35aa0d89a44a3c66180",
         "name": "joker",
-        "description": "joker agent - please update this description",
+        "description": "专业技术幽默代理，专门创造编程幽默、创业笑话和技术双关语。擅长活跃团队气氛、缓解紧张情绪、提升开发乐趣。在团队冲刺期间使用，营造轻松工作环境的同时保持专业性。",
         "model": "sonnet"
       },
       "devops-automator": {
         "file": "devops-automator.md",
         "path": "components/agents/devops-automator.md",
-        "hash": "6fb135351ba3bd01904d96ef1ba31ee8",
+        "hash": "3c14c0b08007b60e76a807031594f643",
         "name": "devops-automator",
-        "description": "devops-automator agent - please update this description",
+        "description": "DevOps自动化专家，专注CI/CD流水线、云基础设施和运维自动化。为快速开发周期创建无缝的部署体验，实现基础设施即代码和持续交付。",
         "model": "sonnet"
       },
       "spec-developer": {
@@ -1261,17 +973,9 @@
       "brand-guardian": {
         "file": "brand-guardian.md",
         "path": "components/agents/brand-guardian.md",
-        "hash": "ea2ec310570f2e7be3a789631658bf0b",
+        "hash": "fdbe13e7de06ad42aefaff2861e5db47",
         "name": "brand-guardian",
-        "description": "brand-guardian agent - please update this description",
-        "model": "sonnet"
-      },
-      "django-api-developer": {
-        "file": "django-api-developer.md",
-        "path": "components/agents/django-api-developer.md",
-        "hash": "341a55d4e0df45c3a13d103a59996245",
-        "name": "django-api-developer",
-        "description": "Expert Django API developer specializing in Django REST Framework and GraphQL. MUST BE USED for Django API development, DRF serializers, viewsets, or GraphQL schemas. Creates robust, scalable APIs following REST principles and Django best practices.",
+        "description": "品牌视觉管理专家，专注品牌形象设计、视觉一致性和品牌资产管理。确保跨平台品牌体验统一，建立有凝聚力的视觉识别系统。",
         "model": "sonnet"
       },
       "spec-orchestrator": {
@@ -1285,17 +989,1065 @@
       "project-shipper": {
         "file": "project-shipper.md",
         "path": "components/agents/project-shipper.md",
-        "hash": "152d7bd3e43ce13591cd7baaa22875c3",
+        "hash": "51f6a93389e26e5eb2186ca0a7d89cd5",
         "name": "project-shipper",
-        "description": "project-shipper agent - please update this description",
+        "description": "产品发布协调专家，专注发布管理、市场推广和利益相关者沟通。协调发布时间表，制定市场推广策略，确保产品成功上线和影响最大化。",
         "model": "sonnet"
       },
       "ui-designer": {
         "file": "ui-designer.md",
         "path": "components/agents/ui-designer.md",
-        "hash": "71756b7b3683b7cc4f47311b8bf011a8",
+        "hash": "33e3aa03f41c1db91af459cff23b44ed",
         "name": "ui-designer",
-        "description": "ui-designer agent - please update this description",
+        "description": "UI/UX设计专家，专注界面设计、组件系统构建和设计趋势应用。为快速开发创建美观、功能强大的用户界面，优化视觉层次和交互体验。",
+        "model": "sonnet"
+      },
+      "multi-agent-coordinator": {
+        "file": "multi-agent-coordinator.md",
+        "path": "components/agents/multi-agent-coordinator.md",
+        "hash": "22cae167129a377e8db8e3cc7aa68e4c",
+        "name": "multi-agent-coordinator",
+        "description": "Expert multi-agent coordinator specializing in complex workflow orchestration, inter-agent communication, and distributed system coordination. Masters parallel execution, dependency management, and fault tolerance with focus on achieving seamless collaboration at scale.",
+        "model": "sonnet"
+      },
+      "trend-analyst": {
+        "file": "trend-analyst.md",
+        "path": "components/agents/trend-analyst.md",
+        "hash": "5b64078c21bc436d75ca95d9830e58a4",
+        "name": "trend-analyst",
+        "description": "Expert trend analyst specializing in identifying emerging patterns, forecasting future developments, and strategic foresight. Masters trend detection, impact analysis, and scenario planning with focus on helping organizations anticipate and adapt to change.",
+        "model": "sonnet"
+      },
+      "devops-engineer": {
+        "file": "devops-engineer.md",
+        "path": "components/agents/devops-engineer.md",
+        "hash": "a3f324c0e377c228834f01f26640066b",
+        "name": "devops-engineer",
+        "description": "Expert DevOps engineer bridging development and operations with comprehensive automation, monitoring, and infrastructure management. Masters CI/CD, containerization, and cloud platforms with focus on culture, collaboration, and continuous improvement.",
+        "model": "sonnet"
+      },
+      "project-manager": {
+        "file": "project-manager.md",
+        "path": "components/agents/project-manager.md",
+        "hash": "259ad3dc9cb5fe81b41ec886d04f6ad3",
+        "name": "project-manager",
+        "description": "Expert project manager specializing in project planning, execution, and delivery. Masters resource management, risk mitigation, and stakeholder communication with focus on delivering projects on time, within budget, and exceeding expectations.",
+        "model": "sonnet"
+      },
+      "product-manager": {
+        "file": "product-manager.md",
+        "path": "components/agents/product-manager.md",
+        "hash": "7153d69c1cf7cb76b4766b9a4a587757",
+        "name": "product-manager",
+        "description": "Expert product manager specializing in product strategy, user-centric development, and business outcomes. Masters roadmap planning, feature prioritization, and cross-functional leadership with focus on delivering products that users love and drive business growth.",
+        "model": "sonnet"
+      },
+      "embedded-systems": {
+        "file": "embedded-systems.md",
+        "path": "components/agents/embedded-systems.md",
+        "hash": "596c79b50b14dd3d2e011dea3d3ab5a7",
+        "name": "embedded-systems",
+        "description": "Expert embedded systems engineer specializing in microcontroller programming, RTOS development, and hardware optimization. Masters low-level programming, real-time constraints, and resource-limited environments with focus on reliability, efficiency, and hardware-software integration.",
+        "model": "sonnet"
+      },
+      "iot-engineer": {
+        "file": "iot-engineer.md",
+        "path": "components/agents/iot-engineer.md",
+        "hash": "69f76ba38db67cfa68c6f493a325269c",
+        "name": "iot-engineer",
+        "description": "Expert IoT engineer specializing in connected device architectures, edge computing, and IoT platform development. Masters IoT protocols, device management, and data pipelines with focus on building scalable, secure, and reliable IoT solutions.",
+        "model": "sonnet"
+      },
+      "devops-incident-responder": {
+        "file": "devops-incident-responder.md",
+        "path": "components/agents/devops-incident-responder.md",
+        "hash": "a56fe0677c00062e9fa3d69bd1916e20",
+        "name": "devops-incident-responder",
+        "description": "Expert incident responder specializing in rapid detection, diagnosis, and resolution of production issues. Masters observability tools, root cause analysis, and automated remediation with focus on minimizing downtime and preventing recurrence.",
+        "model": "sonnet"
+      },
+      "java-architect": {
+        "file": "java-architect.md",
+        "path": "components/agents/java-architect.md",
+        "hash": "8a6b0d17c8e23b7b86396a47f1243c0d",
+        "name": "java-architect",
+        "description": "Senior Java architect specializing in enterprise-grade applications, Spring ecosystem, and cloud-native development. Masters modern Java features, reactive programming, and microservices patterns with focus on scalability and maintainability.",
+        "model": "sonnet"
+      },
+      "kubernetes-specialist": {
+        "file": "kubernetes-specialist.md",
+        "path": "components/agents/kubernetes-specialist.md",
+        "hash": "2a493baf40be6939d650aaa302972673",
+        "name": "kubernetes-specialist",
+        "description": "Expert Kubernetes specialist mastering container orchestration, cluster management, and cloud-native architectures. Specializes in production-grade deployments, security hardening, and performance optimization with focus on scalability and reliability.",
+        "model": "sonnet"
+      },
+      "workflow-orchestrator": {
+        "file": "workflow-orchestrator.md",
+        "path": "components/agents/workflow-orchestrator.md",
+        "hash": "1877d206f25ffbb86ccd701189ec52a1",
+        "name": "workflow-orchestrator",
+        "description": "Expert workflow orchestrator specializing in complex process design, state machine implementation, and business process automation. Masters workflow patterns, error compensation, and transaction management with focus on building reliable, flexible, and observable workflow systems.",
+        "model": "sonnet"
+      },
+      "penetration-tester": {
+        "file": "penetration-tester.md",
+        "path": "components/agents/penetration-tester.md",
+        "hash": "52ae5b735fe4b0936771e2c610443786",
+        "name": "penetration-tester",
+        "description": "Expert penetration tester specializing in ethical hacking, vulnerability assessment, and security testing. Masters offensive security techniques, exploit development, and comprehensive security assessments with focus on identifying and validating security weaknesses.",
+        "model": "sonnet"
+      },
+      "csharp-developer": {
+        "file": "csharp-developer.md",
+        "path": "components/agents/csharp-developer.md",
+        "hash": "859d972399b5ccf482ecbe5afb9c1d4f",
+        "name": "csharp-developer",
+        "description": "Expert C# developer specializing in modern .NET development, ASP.NET Core, and cloud-native applications. Masters C# 12 features, Blazor, and cross-platform development with emphasis on performance and clean architecture.",
+        "model": "sonnet"
+      },
+      "llm-architect": {
+        "file": "llm-architect.md",
+        "path": "components/agents/llm-architect.md",
+        "hash": "d32a50e494b1b08eb610a6faa9262302",
+        "name": "llm-architect",
+        "description": "Expert LLM architect specializing in large language model architecture, deployment, and optimization. Masters LLM system design, fine-tuning strategies, and production serving with focus on building scalable, efficient, and safe LLM applications.",
+        "model": "sonnet"
+      },
+      "chaos-engineer": {
+        "file": "chaos-engineer.md",
+        "path": "components/agents/chaos-engineer.md",
+        "hash": "d4b7c470f7fbe05f57d5d4388447cd84",
+        "name": "chaos-engineer",
+        "description": "Expert chaos engineer specializing in controlled failure injection, resilience testing, and building antifragile systems. Masters chaos experiments, game day planning, and continuous resilience improvement with focus on learning from failure.",
+        "model": "sonnet"
+      },
+      "cli-developer": {
+        "file": "cli-developer.md",
+        "path": "components/agents/cli-developer.md",
+        "hash": "4232106544e4ceacbbac86c95470128a",
+        "name": "cli-developer",
+        "description": "Expert CLI developer specializing in command-line interface design, developer tools, and terminal applications. Masters user experience, cross-platform compatibility, and building efficient CLI tools that developers love to use.",
+        "model": "sonnet"
+      },
+      "healthcare-engineer": {
+        "file": "healthcare-engineer.md",
+        "path": "components/agents/healthcare-engineer.md",
+        "hash": "622ed2bb2ae2cf382427c8280172a2a7",
+        "name": "healthcare-engineer",
+        "description": "医疗健康工程师，专注医疗软件系统、HIPAA合规、数据安全和分析平台开发。精通电子健康记录、远程医疗、医疗物联网和临床决策支持系统构建，确保患者数据安全和医疗质量提升。",
+        "model": "sonnet"
+      },
+      "game-developer": {
+        "file": "game-developer.md",
+        "path": "components/agents/game-developer.md",
+        "hash": "2d8dc37035a7c3957958ca2112312f79",
+        "name": "game-developer",
+        "description": "Expert game developer specializing in game engine programming, graphics optimization, and multiplayer systems. Masters game design patterns, performance optimization, and cross-platform development with focus on creating engaging, performant gaming experiences.",
+        "model": "sonnet"
+      },
+      "sales-engineer": {
+        "file": "sales-engineer.md",
+        "path": "components/agents/sales-engineer.md",
+        "hash": "54d869073564750405e6e0063a12d3a7",
+        "name": "sales-engineer",
+        "description": "Expert sales engineer specializing in technical pre-sales, solution architecture, and proof of concepts. Masters technical demonstrations, competitive positioning, and translating complex technology into business value for prospects and customers.",
+        "model": "sonnet"
+      },
+      "fintech-engineer": {
+        "file": "fintech-engineer.md",
+        "path": "components/agents/fintech-engineer.md",
+        "hash": "d2e69743208712306aef7d39133f4fd6",
+        "name": "fintech-engineer",
+        "description": "Expert fintech engineer specializing in financial systems, regulatory compliance, and secure transaction processing. Masters banking integrations, payment systems, and building scalable financial technology that meets stringent regulatory requirements.",
+        "model": "sonnet"
+      },
+      "spring-boot-engineer": {
+        "file": "spring-boot-engineer.md",
+        "path": "components/agents/spring-boot-engineer.md",
+        "hash": "25f0f9399d28287982820b0cdbfacb02",
+        "name": "spring-boot-engineer",
+        "description": "Expert Spring Boot engineer mastering Spring Boot 3+ with cloud-native patterns. Specializes in microservices, reactive programming, Spring Cloud integration, and enterprise solutions with focus on building scalable, production-ready applications.",
+        "model": "sonnet"
+      },
+      "competitive-analyst": {
+        "file": "competitive-analyst.md",
+        "path": "components/agents/competitive-analyst.md",
+        "hash": "b8141505873e4762b86e52a560d8812f",
+        "name": "competitive-analyst",
+        "description": "Expert competitive analyst specializing in competitor intelligence, strategic analysis, and market positioning. Masters competitive benchmarking, SWOT analysis, and strategic recommendations with focus on creating sustainable competitive advantages.",
+        "model": "sonnet"
+      },
+      "architect-reviewer": {
+        "file": "architect-reviewer.md",
+        "path": "components/agents/architect-reviewer.md",
+        "hash": "97cee079feabb29d203d69aa4f8ef765",
+        "name": "architect-reviewer",
+        "description": "Expert architecture reviewer specializing in system design validation, architectural patterns, and technical decision assessment. Masters scalability analysis, technology stack evaluation, and evolutionary architecture with focus on maintainability and long-term viability.",
+        "model": "sonnet"
+      },
+      "kotlin-specialist": {
+        "file": "kotlin-specialist.md",
+        "path": "components/agents/kotlin-specialist.md",
+        "hash": "c84a8c98cad8b5876684ce8b1c9155ef",
+        "name": "kotlin-specialist",
+        "description": "Expert Kotlin developer specializing in coroutines, multiplatform development, and Android applications. Masters functional programming patterns, DSL design, and modern Kotlin features with emphasis on conciseness and safety.",
+        "model": "sonnet"
+      },
+      "agent-organizer": {
+        "file": "agent-organizer.md",
+        "path": "components/agents/agent-organizer.md",
+        "hash": "5c119eceda0cd849de4174e279aaea60",
+        "name": "agent-organizer",
+        "description": "Expert agent organizer specializing in multi-agent orchestration, team assembly, and workflow optimization. Masters task decomposition, agent selection, and coordination strategies with focus on achieving optimal team performance and resource utilization.",
+        "model": "sonnet"
+      },
+      "refactoring-specialist": {
+        "file": "refactoring-specialist.md",
+        "path": "components/agents/refactoring-specialist.md",
+        "hash": "02f153df37ba61b0248cf2618e829021",
+        "name": "refactoring-specialist",
+        "description": "Expert refactoring specialist mastering safe code transformation techniques and design pattern application. Specializes in improving code structure, reducing complexity, and enhancing maintainability while preserving behavior with focus on systematic, test-driven refactoring.",
+        "model": "sonnet"
+      },
+      "wordpress-master": {
+        "file": "wordpress-master.md",
+        "path": "components/agents/wordpress-master.md",
+        "hash": "48a526f5a1d49483481adfed0422f19f",
+        "name": "wordpress-master",
+        "description": "Elite WordPress architect specializing in full-stack development, performance optimization, and enterprise solutions. Masters custom theme/plugin development, multisite management, security hardening, and scaling WordPress from small sites to enterprise platforms handling millions of visitors.",
+        "model": "sonnet"
+      },
+      "nlp-engineer": {
+        "file": "nlp-engineer.md",
+        "path": "components/agents/nlp-engineer.md",
+        "hash": "afe1cbe76bfa52c88c2f4e55f86c3639",
+        "name": "nlp-engineer",
+        "description": "Expert NLP engineer specializing in natural language processing, understanding, and generation. Masters transformer models, text processing pipelines, and production NLP systems with focus on multilingual support and real-time performance.",
+        "model": "sonnet"
+      },
+      "qa-expert": {
+        "file": "qa-expert.md",
+        "path": "components/agents/qa-expert.md",
+        "hash": "2e34bc379508e4cbff41c076ecabc138",
+        "name": "qa-expert",
+        "description": "Expert QA engineer specializing in comprehensive quality assurance, test strategy, and quality metrics. Masters manual and automated testing, test planning, and quality processes with focus on delivering high-quality software through systematic testing.",
+        "model": "sonnet"
+      },
+      "swift-expert": {
+        "file": "swift-expert.md",
+        "path": "components/agents/swift-expert.md",
+        "hash": "5d6e75203fbf72fb35f1f0f5bf0ffb48",
+        "name": "swift-expert",
+        "description": "Expert Swift developer specializing in Swift 5.9+ with async/await, SwiftUI, and protocol-oriented programming. Masters Apple platforms development, server-side Swift, and modern concurrency with emphasis on safety and expressiveness.",
+        "model": "sonnet"
+      },
+      "git-workflow-manager": {
+        "file": "git-workflow-manager.md",
+        "path": "components/agents/git-workflow-manager.md",
+        "hash": "a17c1b87c98d0e58fec350e46cea18a6",
+        "name": "git-workflow-manager",
+        "description": "Expert Git workflow manager specializing in branching strategies, automation, and team collaboration. Masters Git workflows, merge conflict resolution, and repository management with focus on enabling efficient, clear, and scalable version control practices.",
+        "model": "sonnet"
+      },
+      "dotnet-framework-4.8-expert": {
+        "file": "dotnet-framework-4.8-expert.md",
+        "path": "components/agents/dotnet-framework-4.8-expert.md",
+        "hash": "d980eadb3bec3fd2881293c8ec28bdb5",
+        "name": "dotnet-framework-4.8-expert",
+        "description": "Expert .NET Framework 4.8 specialist mastering legacy enterprise applications. Specializes in Windows-based development, Web Forms, WCF services, and Windows services with focus on maintaining and modernizing existing enterprise solutions.",
+        "model": "sonnet"
+      },
+      "error-coordinator": {
+        "file": "error-coordinator.md",
+        "path": "components/agents/error-coordinator.md",
+        "hash": "5a8cb4c6c9098a543f92d831f4ea58ba",
+        "name": "error-coordinator",
+        "description": "Expert error coordinator specializing in distributed error handling, failure recovery, and system resilience. Masters error correlation, cascade prevention, and automated recovery strategies across multi-agent systems with focus on minimizing impact and learning from failures.",
+        "model": "sonnet"
+      },
+      "accessibility-tester": {
+        "file": "accessibility-tester.md",
+        "path": "components/agents/accessibility-tester.md",
+        "hash": "8217171347514256a3fe3e1abc0a5274",
+        "name": "accessibility-tester",
+        "description": "Expert accessibility tester specializing in WCAG compliance, inclusive design, and universal access. Masters screen reader compatibility, keyboard navigation, and assistive technology integration with focus on creating barrier-free digital experiences.",
+        "model": "sonnet"
+      },
+      "websocket-engineer": {
+        "file": "websocket-engineer.md",
+        "path": "components/agents/websocket-engineer.md",
+        "hash": "394377a2cd3cf96d9d21e31c5e71693f",
+        "name": "websocket-engineer",
+        "description": "Real-time communication specialist implementing scalable WebSocket architectures. Masters bidirectional protocols, event-driven systems, and low-latency messaging for interactive applications.",
+        "model": "sonnet"
+      },
+      "mcp-developer": {
+        "file": "mcp-developer.md",
+        "path": "components/agents/mcp-developer.md",
+        "hash": "181308c3215eeeb13aea5c682ca9531a",
+        "name": "mcp-developer",
+        "description": "Expert MCP developer specializing in Model Context Protocol server and client development. Masters protocol specification, SDK implementation, and building production-ready integrations between AI systems and external tools/data sources.",
+        "model": "sonnet"
+      },
+      "market-researcher": {
+        "file": "market-researcher.md",
+        "path": "components/agents/market-researcher.md",
+        "hash": "03556a99473840afc2fadc7fdeeeb9a5",
+        "name": "market-researcher",
+        "description": "Expert market researcher specializing in market analysis, consumer insights, and competitive intelligence. Masters market sizing, segmentation, and trend analysis with focus on identifying opportunities and informing strategic business decisions.",
+        "model": "sonnet"
+      },
+      "documentation-engineer": {
+        "file": "documentation-engineer.md",
+        "path": "components/agents/documentation-engineer.md",
+        "hash": "128635521e24ea5bfeae0317385819d7",
+        "name": "documentation-engineer",
+        "description": "Expert documentation engineer specializing in technical documentation systems, API documentation, and developer-friendly content. Masters documentation-as-code, automated generation, and creating maintainable documentation that developers actually use.",
+        "model": "sonnet"
+      },
+      "scrum-master": {
+        "file": "scrum-master.md",
+        "path": "components/agents/scrum-master.md",
+        "hash": "a3a39d9f72701f8d378cbb4701aa4125",
+        "name": "scrum-master",
+        "description": "Expert Scrum Master specializing in agile transformation, team facilitation, and continuous improvement. Masters Scrum framework implementation, impediment removal, and fostering high-performing, self-organizing teams that deliver value consistently.",
+        "model": "sonnet"
+      },
+      "research-analyst": {
+        "file": "research-analyst.md",
+        "path": "components/agents/research-analyst.md",
+        "hash": "aeda82b0174a54100c170bb64592bb29",
+        "name": "research-analyst",
+        "description": "Expert research analyst specializing in comprehensive information gathering, synthesis, and insight generation. Masters research methodologies, data analysis, and report creation with focus on delivering actionable intelligence that drives informed decision-making.",
+        "model": "sonnet"
+      },
+      "nextjs-developer": {
+        "file": "nextjs-developer.md",
+        "path": "components/agents/nextjs-developer.md",
+        "hash": "808ebcc20e06336278ec59d543a2359a",
+        "name": "nextjs-developer",
+        "description": "Expert Next.js developer mastering Next.js 14+ with App Router and full-stack features. Specializes in server components, server actions, performance optimization, and production deployment with focus on building fast, SEO-friendly applications.",
+        "model": "sonnet"
+      },
+      "dependency-manager": {
+        "file": "dependency-manager.md",
+        "path": "components/agents/dependency-manager.md",
+        "hash": "f877147c28b2d3f7bacadc9bea35b8fb",
+        "name": "dependency-manager",
+        "description": "Expert dependency manager specializing in package management, security auditing, and version conflict resolution across multiple ecosystems. Masters dependency optimization, supply chain security, and automated updates with focus on maintaining stable, secure, and efficient dependency trees.",
+        "model": "sonnet"
+      },
+      "technical-writer": {
+        "file": "technical-writer.md",
+        "path": "components/agents/technical-writer.md",
+        "hash": "009adeac61a6c6a108ef9217317fae66",
+        "name": "technical-writer",
+        "description": "Expert technical writer specializing in clear, accurate documentation and content creation. Masters API documentation, user guides, and technical content with focus on making complex information accessible and actionable for diverse audiences.",
+        "model": "sonnet"
+      },
+      "angular-architect": {
+        "file": "angular-architect.md",
+        "path": "components/agents/angular-architect.md",
+        "hash": "3851902bcf8713bc4a0a2ece9282cad8",
+        "name": "angular-architect",
+        "description": "Expert Angular architect mastering Angular 15+ with enterprise patterns. Specializes in RxJS, NgRx state management, micro-frontend architecture, and performance optimization with focus on building scalable enterprise applications.",
+        "model": "sonnet"
+      },
+      "performance-monitor": {
+        "file": "performance-monitor.md",
+        "path": "components/agents/performance-monitor.md",
+        "hash": "8893794b82c49c06de9beb9173827ad9",
+        "name": "performance-monitor",
+        "description": "Expert performance monitor specializing in system-wide metrics collection, analysis, and optimization. Masters real-time monitoring, anomaly detection, and performance insights across distributed agent systems with focus on observability and continuous improvement.",
+        "model": "sonnet"
+      },
+      "task-distributor": {
+        "file": "task-distributor.md",
+        "path": "components/agents/task-distributor.md",
+        "hash": "1fb63ba3fcd02e5f2835cb59ac4c7869",
+        "name": "task-distributor",
+        "description": "Expert task distributor specializing in intelligent work allocation, load balancing, and queue management. Masters priority scheduling, capacity tracking, and fair distribution with focus on maximizing throughput while maintaining quality and meeting deadlines.",
+        "model": "sonnet"
+      },
+      "data-researcher": {
+        "file": "data-researcher.md",
+        "path": "components/agents/data-researcher.md",
+        "hash": "2f9bf252dc48c5a4b5a8afc4009cfc59",
+        "name": "data-researcher",
+        "description": "Expert data researcher specializing in discovering, collecting, and analyzing diverse data sources. Masters data mining, statistical analysis, and pattern recognition with focus on extracting meaningful insights from complex datasets to support evidence-based decisions.",
+        "model": "sonnet"
+      },
+      "build-engineer": {
+        "file": "build-engineer.md",
+        "path": "components/agents/build-engineer.md",
+        "hash": "c0cf01070ced0d109ffc53ec00e86c54",
+        "name": "build-engineer",
+        "description": "Expert build engineer specializing in build system optimization, compilation strategies, and developer productivity. Masters modern build tools, caching mechanisms, and creating fast, reliable build pipelines that scale with team growth.",
+        "model": "sonnet"
+      },
+      "compliance-auditor": {
+        "file": "compliance-auditor.md",
+        "path": "components/agents/compliance-auditor.md",
+        "hash": "819f5b2e09a0bf25c8728a979725ffa7",
+        "name": "compliance-auditor",
+        "description": "Expert compliance auditor specializing in regulatory frameworks, data privacy laws, and security standards. Masters GDPR, HIPAA, PCI DSS, SOC 2, and ISO certifications with focus on automated compliance validation and continuous monitoring.",
+        "model": "sonnet"
+      },
+      "dotnet-core-expert": {
+        "file": "dotnet-core-expert.md",
+        "path": "components/agents/dotnet-core-expert.md",
+        "hash": "51ffc4081996ebf655e5f620e01f6582",
+        "name": "dotnet-core-expert",
+        "description": "Expert .NET Core specialist mastering .NET 8 with modern C# features. Specializes in cross-platform development, minimal APIs, cloud-native applications, and microservices with focus on building high-performance, scalable solutions.",
+        "model": "sonnet"
+      },
+      "fullstack-developer": {
+        "file": "fullstack-developer.md",
+        "path": "components/agents/fullstack-developer.md",
+        "hash": "6a9acf8cbdc478aa202809f48fb70f0f",
+        "name": "fullstack-developer",
+        "description": "End-to-end feature owner with expertise across the entire stack. Delivers complete solutions from database to UI with focus on seamless integration and optimal user experience.",
+        "model": "sonnet"
+      },
+      "seo-specialist": {
+        "file": "seo-specialist.md",
+        "path": "components/agents/seo-specialist.md",
+        "hash": "0529e9cb9358821fa72eb9bc184942fd",
+        "name": "seo-specialist",
+        "description": "综合SEO专家，专注搜索引擎优化策略制定、关键词研究、技术SEO审核和网站性能优化。精通搜索引擎算法、页面优化、链接建设和数据分析，显著提升网站搜索排名和有机流量。",
+        "model": "sonnet"
+      },
+      "customer-success-manager": {
+        "file": "customer-success-manager.md",
+        "path": "components/agents/customer-success-manager.md",
+        "hash": "fa36463e48bd5c99ae9d0cfdbd0ccd14",
+        "name": "customer-success-manager",
+        "description": "Expert customer success manager specializing in customer retention, growth, and advocacy. Masters account health monitoring, strategic relationship building, and driving customer value realization to maximize satisfaction and revenue growth.",
+        "model": "sonnet"
+      },
+      "education-tech-engineer": {
+        "file": "education-tech-engineer.md",
+        "path": "components/agents/education-tech-engineer.md",
+        "hash": "11d06f437756bb493b5d5d8ff66061ce",
+        "name": "education-tech-engineer",
+        "description": "教育科技工程师，专注在线学习平台、虚拟教室、个性化学习系统和教育数据挖掘。精通LMS集成、学习分析工具、AR/VR教学应用和智能辅导系统开发，提升教育效果和学习体验。",
+        "model": "sonnet"
+      },
+      "mobile-app-developer": {
+        "file": "mobile-app-developer.md",
+        "path": "components/agents/mobile-app-developer.md",
+        "hash": "a21f5875d112540ba4cab1084f500f24",
+        "name": "mobile-app-developer",
+        "description": "Expert mobile app developer specializing in native and cross-platform development for iOS and Android. Masters performance optimization, platform guidelines, and creating exceptional mobile experiences that users love.",
+        "model": "sonnet"
+      },
+      "knowledge-synthesizer": {
+        "file": "knowledge-synthesizer.md",
+        "path": "components/agents/knowledge-synthesizer.md",
+        "hash": "e67de1a7ce30c002a7031cbc029b13f7",
+        "name": "knowledge-synthesizer",
+        "description": "Expert knowledge synthesizer specializing in extracting insights from multi-agent interactions, identifying patterns, and building collective intelligence. Masters cross-agent learning, best practice extraction, and continuous system improvement through knowledge management.",
+        "model": "sonnet"
+      },
+      "terraform-engineer": {
+        "file": "terraform-engineer.md",
+        "path": "components/agents/terraform-engineer.md",
+        "hash": "ebedc577a5f6da9efd26ea23ff816ed6",
+        "name": "terraform-engineer",
+        "description": "Expert Terraform engineer specializing in infrastructure as code, multi-cloud provisioning, and modular architecture. Masters Terraform best practices, state management, and enterprise patterns with focus on reusability, security, and automation.",
+        "model": "sonnet"
+      },
+      "rust-engineer": {
+        "file": "rust-engineer.md",
+        "path": "components/agents/rust-engineer.md",
+        "hash": "454af4e9dd006cb862739bfe5518d1a6",
+        "name": "rust-engineer",
+        "description": "Expert Rust developer specializing in systems programming, memory safety, and zero-cost abstractions. Masters ownership patterns, async programming, and performance optimization for mission-critical applications.",
+        "model": "sonnet"
+      },
+      "electron-pro": {
+        "file": "electron-pro.md",
+        "path": "components/agents/electron-pro.md",
+        "hash": "e74b05351caffc54fab5bbec8634497d",
+        "name": "electron-pro",
+        "description": "Desktop application specialist building secure cross-platform solutions. Develops Electron apps with native OS integration, focusing on security, performance, and seamless user experience.",
+        "model": "sonnet"
+      },
+      "microservices-architect": {
+        "file": "microservices-architect.md",
+        "path": "components/agents/microservices-architect.md",
+        "hash": "f9cba2e5fff74d6e6e95ce0ce4982f18",
+        "name": "microservices-architect",
+        "description": "Distributed systems architect designing scalable microservice ecosystems. Masters service boundaries, communication patterns, and operational excellence in cloud-native environments.",
+        "model": "sonnet"
+      },
+      "tooling-engineer": {
+        "file": "tooling-engineer.md",
+        "path": "components/agents/tooling-engineer.md",
+        "hash": "42e28f98268eca8389d15809ce2852c7",
+        "name": "tooling-engineer",
+        "description": "Expert tooling engineer specializing in developer tool creation, CLI development, and productivity enhancement. Masters tool architecture, plugin systems, and user experience design with focus on building efficient, extensible tools that significantly improve developer workflows.",
+        "model": "sonnet"
+      },
+      "sre-engineer": {
+        "file": "sre-engineer.md",
+        "path": "components/agents/sre-engineer.md",
+        "hash": "87d8b0b197d7d9a7f3dd898687c7d932",
+        "name": "sre-engineer",
+        "description": "Expert Site Reliability Engineer balancing feature velocity with system stability through SLOs, automation, and operational excellence. Masters reliability engineering, chaos testing, and toil reduction with focus on building resilient, self-healing systems.",
+        "model": "sonnet"
+      },
+      "security-engineer": {
+        "file": "security-engineer.md",
+        "path": "components/agents/security-engineer.md",
+        "hash": "d2246f7dc17e4bda9db62224390a7c42",
+        "name": "security-engineer",
+        "description": "Expert infrastructure security engineer specializing in DevSecOps, cloud security, and compliance frameworks. Masters security automation, vulnerability management, and zero-trust architecture with emphasis on shift-left security practices.",
+        "model": "sonnet"
+      },
+      "laravel-specialist": {
+        "file": "laravel-specialist.md",
+        "path": "components/agents/laravel-specialist.md",
+        "hash": "6b5d4d24d2bab32ef2f1002333d0ef62",
+        "name": "laravel-specialist",
+        "description": "Expert Laravel specialist mastering Laravel 10+ with modern PHP practices. Specializes in elegant syntax, Eloquent ORM, queue systems, and enterprise features with focus on building scalable web applications and APIs.",
+        "model": "sonnet"
+      },
+      "platform-engineer": {
+        "file": "platform-engineer.md",
+        "path": "components/agents/platform-engineer.md",
+        "hash": "1c4e92c35f086352567035a19d9c56e3",
+        "name": "platform-engineer",
+        "description": "Expert platform engineer specializing in internal developer platforms, self-service infrastructure, and developer experience. Masters platform APIs, GitOps workflows, and golden path templates with focus on empowering developers and accelerating delivery.",
+        "model": "sonnet"
+      },
+      "data-analyst": {
+        "file": "data-analyst.md",
+        "path": "components/agents/data-analyst.md",
+        "hash": "5db9d7b2ced7a059425c2e2bd617ae3f",
+        "name": "data-analyst",
+        "description": "Expert data analyst specializing in business intelligence, data visualization, and statistical analysis. Masters SQL, Python, and BI tools to transform raw data into actionable insights with focus on stakeholder communication and business impact.",
+        "model": "sonnet"
+      },
+      "machine-learning-engineer": {
+        "file": "machine-learning-engineer.md",
+        "path": "components/agents/machine-learning-engineer.md",
+        "hash": "7a2d657061d3b7e16f954d89acaa3ff9",
+        "name": "machine-learning-engineer",
+        "description": "Expert ML engineer specializing in production model deployment, serving infrastructure, and scalable ML systems. Masters model optimization, real-time inference, and edge deployment with focus on reliability and performance at scale.",
+        "model": "sonnet"
+      },
+      "seo-content-optimizer": {
+        "file": "seo-content-optimizer.md",
+        "path": "components/agents/seo-content-optimizer.md",
+        "hash": "4797afb13d8215a3850db13fd6ef21ee",
+        "name": "seo-content-optimizer",
+        "description": "seo-content-optimizer agent - please update this description",
+        "model": "sonnet"
+      },
+      "seo-technical-auditor": {
+        "file": "seo-technical-auditor.md",
+        "path": "components/agents/seo-technical-auditor.md",
+        "hash": "ec4354b93aa3fd5d151d546eeed519bb",
+        "name": "seo-technical-auditor",
+        "description": "seo-technical-auditor agent - please update this description",
+        "model": "sonnet"
+      },
+      "seo-technical-pro": {
+        "file": "seo-technical-pro.md",
+        "path": "components/agents/seo-technical-pro.md",
+        "hash": "25e7e9504144b8baad0acb871b6470a3",
+        "name": "seo-technical-pro",
+        "description": "Expert technical SEO specialist mastering on-page optimization, schema markup implementation, structured data, content optimization, crawlability, and technical SEO implementation. Masters title/meta optimization, internal linking strategy, featured snippet targeting, keyword cannibalization resolution, schema implementation, and technical SEO audits. Use PROACTIVELY for content optimization, on-page SEO, technical SEO implementation, schema markup, and featured snippet optimization.",
+        "model": "sonnet"
+      },
+      "spec-implementation-pro": {
+        "file": "spec-implementation-pro.md",
+        "path": "components/agents/spec-implementation-pro.md",
+        "hash": "e048d0d8fc124b0774c8fe2460bdaedc",
+        "name": "spec-implementation-pro",
+        "description": "Expert implementation and planning specialist combining code development with task orchestration. Use for translating specifications into working code, writing clean maintainable implementation, creating comprehensive implementation plans, task decomposition, complexity estimation, dependency management, test strategy planning, risk identification, team coordination, and progress tracking. Bridges architecture design with execution.",
+        "model": "sonnet"
+      },
+      "devops-core": {
+        "file": "devops-core.md",
+        "path": "components/agents/devops-core.md",
+        "hash": "2bcd4b2f4a0c1e857e4a8b5a466dfc98",
+        "name": "devops-core",
+        "description": "Expert DevOps engineer and automation specialist combining infrastructure automation, CI/CD pipelines, containerization, and deployment orchestration. Masters Infrastructure as Code, container platforms, CI/CD frameworks, and automation development. Use for DevOps strategy, infrastructure automation, CI/CD pipeline design, container orchestration, and deployment automation.",
+        "model": "sonnet"
+      },
+      "data-analytics-pro": {
+        "file": "data-analytics-pro.md",
+        "path": "components/agents/data-analytics-pro.md",
+        "hash": "b429bef2ca64b50889829d0760432453",
+        "name": "data-analytics-pro",
+        "description": "Expert business intelligence analyst and data researcher combining SQL mastery, dashboard development, exploratory analysis, and data storytelling. Use for business metrics definition, KPI frameworks, SQL query optimization, dashboard creation (Tableau, Power BI, Looker), statistical analysis, data discovery, web scraping, API exploration, pattern recognition, cohort analysis, funnel optimization, retention studies, segmentation strategies, A/B testing, and stakeholder communication. Masters data visualization, hypothesis testing, trend analysis, and translating complex insights into actionable business recommendations.",
+        "model": "sonnet"
+      },
+      "ui-visual-expert": {
+        "file": "ui-visual-expert.md",
+        "path": "components/agents/ui-visual-expert.md",
+        "hash": "31e61d643ad37ff25e72a2f1c7f2d736",
+        "name": "ui-visual-expert",
+        "description": "Expert UI visual validation and testing specialist focusing on design system compliance, visual regression testing, and accessibility verification. Masters screenshot analysis, automated visual testing, responsive design validation, and rigorous design verification. Use for visual testing, design validation, accessibility verification, responsive design testing, and visual regression detection.",
+        "model": "sonnet"
+      },
+      "project-delivery-pro": {
+        "file": "project-delivery-pro.md",
+        "path": "components/agents/project-delivery-pro.md",
+        "hash": "35a1c0ecc75b6faa708be2d8f261c1b5",
+        "name": "project-delivery-pro",
+        "description": "Expert project delivery specialist mastering release coordination, go-to-market strategy, and execution excellence. Handles release planning, team coordination, deployment orchestration, launch communications, stakeholder alignment, and post-launch optimization. Use for release management, deployment planning, go-to-market strategy, launch communications, cross-team coordination, release timing optimization, and impact measurement. Use PROACTIVELY when managing releases or coordinating launch activities.",
+        "model": "sonnet"
+      },
+      "react-component-pro": {
+        "file": "react-component-pro.md",
+        "path": "components/agents/react-component-pro.md",
+        "hash": "e48f892df3213af5f441850eb1d9caaa",
+        "name": "react-component-pro",
+        "description": "Expert React component specialist mastering modular design systems, accessible components, and reusable component libraries with React 19 and Next.js 14+. Specializes in component architecture, design system implementation, Storybook documentation, accessibility compliance, component testing, React Server Components, server-first rendering, modern hooks (useTransition, useOptimistic, useFormState), and App Router integration. Use for component design, design systems, component libraries, accessibility implementation, component documentation, RSC patterns, Server Actions, Next.js components, and shadcn/ui. Use PROACTIVELY when building component systems, design systems, or Next.js component libraries.",
+        "model": "sonnet"
+      },
+      "backend-security-pro": {
+        "file": "backend-security-pro.md",
+        "path": "components/agents/backend-security-pro.md",
+        "hash": "9ced3086f5a99abf1ca18e4c69757e8d",
+        "name": "backend-security-pro",
+        "description": "Expert backend security engineer specializing in secure coding practices, vulnerability prevention, API security, and defensive programming. Use for input validation, authentication/authorization implementation, OWASP Top 10 prevention, SQL injection prevention, CSRF/XSS protection, API security (OAuth, JWT), database security, secure error handling, secrets management, security headers, rate limiting, SSRF prevention, audit logging, and security code reviews. Masters parameterized queries, encryption, session management, and compliance (HIPAA, PCI-DSS, GDPR). Use PROACTIVELY for backend security implementations, vulnerability fixes, or security-critical code.",
+        "model": "sonnet"
+      },
+      "database-design-pro": {
+        "file": "database-design-pro.md",
+        "path": "components/agents/database-design-pro.md",
+        "hash": "ffb04126cbdc9d7d6cedf490ffb4952f",
+        "name": "database-design-pro",
+        "description": "Expert database architect and performance optimizer combining schema design, technology selection, query optimization, and scalability strategies. Use for greenfield database architecture, SQL/NoSQL/NewSQL technology selection, schema modeling (normalization, denormalization, dimensional modeling), ER diagrams, migration planning, indexing strategies (B-tree, GIN, GiST, composite, partial), query optimization (EXPLAIN ANALYZE, execution plans), N+1 query resolution, multi-tier caching (Redis, Memcached, application-level), partitioning/sharding design, ORM optimization (Django ORM, SQLAlchemy, Prisma), zero-downtime migrations, and performance tuning. Masters CAP theorem, ACID/BASE properties, replication patterns, and modern database architectures (CQRS, event sourcing, polyglot persistence).",
+        "model": "sonnet"
+      },
+      "test-engineer": {
+        "file": "test-engineer.md",
+        "path": "components/agents/test-engineer.md",
+        "hash": "cea45e43ee96373d7c0ccab020cbcc41",
+        "name": "test-engineer",
+        "description": "Full-stack test automation and quality engineering expert. Handles testing strategy, TDD/CI/CD automation, test execution, failure diagnosis, and quality metrics. Expert in test-driven development, AI-powered testing, modern frameworks (Playwright, Selenium, Appium), CI/CD automation, performance testing, test repair, failure analysis, and quality metrics. Use proactively for testing strategy and automation setup, reactively after code changes to run tests, diagnose failures, and generate quality reports.",
+        "model": "sonnet"
+      },
+      "backend-fullstack-pro": {
+        "file": "backend-fullstack-pro.md",
+        "path": "components/agents/backend-fullstack-pro.md",
+        "hash": "cf249dc02d09977bac6a32c738470f1f",
+        "name": "backend-fullstack-pro",
+        "description": "Expert backend architect and polyglot implementer combining scalable API design, microservices architecture, distributed systems, and production-ready feature delivery across any technology stack. Automatically detects project stack and follows best practices. Masters RESTful/GraphQL/gRPC API design, microservices patterns, event-driven architecture, service mesh, authentication/authorization, resilience patterns, observability, backend implementation across JavaScript/TypeScript, Python, Java, Go, C#, Ruby, Rust. Handles service boundaries, inter-service communication, caching, async processing, testing strategies, deployment, and complete feature delivery with implementation reports. Use PROACTIVELY for backend services, APIs, server-side features, or production-ready backend implementations.",
+        "model": "sonnet"
+      },
+      "seo-strategy-pro": {
+        "file": "seo-strategy-pro.md",
+        "path": "components/agents/seo-strategy-pro.md",
+        "hash": "2e53774fbffc5cb8cf95a71ba11c28e5",
+        "name": "seo-strategy-pro",
+        "description": "Expert SEO strategist specializing in comprehensive SEO strategy, keyword research, content strategy, competitive analysis, and SEO roadmap development. Masters keyword research, search intent analysis, competitor benchmarking, content planning, site architecture design, and SEO performance metrics. Use PROACTIVELY for SEO strategy, keyword research, content planning, competitive analysis, and SEO audits.",
+        "model": "sonnet"
+      },
+      "react-fullstack-pro": {
+        "file": "react-fullstack-pro.md",
+        "path": "components/agents/react-fullstack-pro.md",
+        "hash": "a85704ac7ef655b52dde9c725e1c5849",
+        "name": "react-fullstack-pro",
+        "description": "Expert React full-stack architect combining modern React patterns, Next.js 14+ mastery, and advanced full-stack development. Masters React 18+ with hooks, server components, App Router, edge runtime, ISR, PPR, performance optimization, Core Web Vitals, SEO implementation with metadata API and structured data, production deployment with multi-region CDN, monitoring setup, migration strategies, TypeScript patterns, state management (Redux Toolkit, Zustand, Jotai, Recoil), testing strategies (React Testing Library, Jest, Cypress), and full-stack development. Use for React applications, Next.js full-stack apps, server components, API integration, performance optimization, SEO optimization, edge deployment, production monitoring, incremental static regeneration, partial prerendering, class to function migration, legacy code modernization, and building blazing-fast SEO-friendly applications. Use PROACTIVELY when building React applications or modernizing legacy React code. Delegate to react-component-pro for component architecture, design systems, accessibility, and component libraries.",
+        "model": "sonnet"
+      },
+      "test-creator": {
+        "file": "test-creator.md",
+        "path": "components/agents/test-creator.md",
+        "hash": "41b1706247d3300a9e194ec6420f8af1",
+        "name": "test-creator",
+        "description": "Expert test writer creating comprehensive, maintainable test suites across all frameworks and languages. Writes unit, integration, and E2E tests with full coverage analysis, edge case identification, and framework-specific best practices. Use proactively when writing new tests, improving coverage, or creating test strategies for codebases.",
+        "model": "sonnet"
+      },
+      "ui-design-pro": {
+        "file": "ui-design-pro.md",
+        "path": "components/agents/ui-design-pro.md",
+        "hash": "a56155db66556ea732e88d79d67b44dd",
+        "name": "ui-design-pro",
+        "description": "Expert UI/UX design specialist combining rapid design conceptualization, design systems architecture, and design-to-development handoff. Masters Figma, design tokens, component libraries, accessibility, user research, and implementation-focused design. Use for UI design, design systems, component architecture, accessibility, user research, and design specifications.",
+        "model": "sonnet"
+      },
+      "project-leadership-pro": {
+        "file": "project-leadership-pro.md",
+        "path": "components/agents/project-leadership-pro.md",
+        "hash": "775abcef9b1c1b65637170bbb6779a9d",
+        "name": "project-leadership-pro",
+        "description": "Expert project leadership specialist combining strategic planning, stakeholder management, and project execution excellence. Masters project planning, resource management, risk mitigation, and team coordination with focus on delivering value on time and within budget. Use for project planning, charter development, scope management, timeline creation, risk management, stakeholder communication, team leadership, and project governance. Use PROACTIVELY when initiating projects or managing project execution.",
+        "model": "sonnet"
+      },
+      "vue-fullstack-pro": {
+        "file": "vue-fullstack-pro.md",
+        "path": "components/agents/vue-fullstack-pro.md",
+        "hash": "a13cd43b8aadb8643a6c06794e61e6d4",
+        "name": "vue-fullstack-pro",
+        "description": "Expert Vue.js specialist combining Composition API mastery, scalable component architecture, and full-stack development. Masters Vue 3, Nuxt 3, reactivity optimization, state management with Pinia, modern Vue patterns, enterprise architecture, Vue ecosystem (VueUse, Vuetify, Quasar), Vue Router 4, Vitest testing, documentation-first development, structured implementation reporting, and multi-agent collaboration protocols. Use for component development, Nuxt applications, architectural decisions, composables, Vue ecosystem integration, enterprise patterns, micro-frontends, design systems, component testing, and full-stack Vue solutions with best practices and structured workflows.",
+        "model": "sonnet"
+      },
+      "orchestrator": {
+        "file": "orchestrator.md",
+        "path": "components/agents/orchestrator.md",
+        "hash": "1183cd6c283a0dd60bf23d5a4e756fe1",
+        "name": "orchestrator",
+        "description": "Coordinates multiple subagents for complex tasks",
+        "model": "sonnet"
+      },
+      "performance-analyzer": {
+        "file": "performance-analyzer.md",
+        "path": "components/agents/performance-analyzer.md",
+        "hash": "d042eece8be4906579d9bcaadb299580",
+        "name": "performance-analyzer",
+        "description": "Expert performance analyst combining performance monitoring, metrics collection, and observability. Masters application performance, metrics platforms, distributed tracing, dashboards, and performance trends. Use for performance monitoring, observability setup, metrics analysis, and trend identification.",
+        "model": "sonnet"
+      },
+      "security-scanner": {
+        "file": "security-scanner.md",
+        "path": "components/agents/security-scanner.md",
+        "hash": "f7ee752b101749f707d9a805724b008a",
+        "name": "security-scanner",
+        "description": "Comprehensive security vulnerability detection and remediation",
+        "model": "claude-3-opus"
+      },
+      "advanced-debugger": {
+        "file": "advanced-debugger.md",
+        "path": "components/agents/advanced-debugger.md",
+        "hash": "7ae87fe7941b9101aa6aa7280460acd7",
+        "name": "advanced-debugger",
+        "description": "Expert debugging specialist for complex issues and test failures",
+        "model": "claude-3-opus"
+      },
+      "devops-reliability": {
+        "file": "devops-reliability.md",
+        "path": "components/agents/devops-reliability.md",
+        "hash": "4e66a498fa66bf77397c3a03feaf44fc",
+        "name": "devops-reliability",
+        "description": "Expert incident responder and reliability engineer combining incident management, observability, rapid diagnosis, and system resilience. Masters incident response, root cause analysis, observability platforms, and preventive monitoring. Use for incident response, troubleshooting, reliability engineering, system diagnostics, and observability setup.",
+        "model": "sonnet"
+      },
+      "database-operations-pro": {
+        "file": "database-operations-pro.md",
+        "path": "components/agents/database-operations-pro.md",
+        "hash": "a7d3deb5269ac8cbf1335652a7a614ce",
+        "name": "database-operations-pro",
+        "description": "Expert database operations and reliability engineer combining cloud database administration, high-availability systems, automation, disaster recovery, and performance monitoring. Use for AWS/Azure/GCP database services, Infrastructure as Code, automated backups, replication setup, failover automation, security hardening, compliance (HIPAA, PCI-DSS, GDPR), monitoring dashboards, cost optimization, PostgreSQL/MySQL/MongoDB/Redis operations, 99.99% uptime targets, RTO/RPO planning, container databases (Kubernetes operators), connection pooling, and proactive capacity planning. Masters multi-cloud strategies, GitOps for databases, and operational excellence.",
+        "model": "sonnet"
+      },
+      "api-designer-pro": {
+        "file": "api-designer-pro.md",
+        "path": "components/agents/api-designer-pro.md",
+        "hash": "55d611c6c152bdca179aa2fc433b066e",
+        "name": "api-designer-pro",
+        "description": "Expert API architect specializing in RESTful API design, GraphQL schemas, OpenAPI 3.1+ specifications, and API contract design. Use when designing new APIs, creating API specifications, modeling resources, defining authentication strategies, versioning policies, or improving API architecture. Ideal for API-first development, contract-driven workflows, resource modeling, HTTP semantics, pagination design, error handling, and API guidelines creation. Masters both REST and GraphQL paradigms with technology-agnostic contract design.",
+        "model": "sonnet"
+      },
+      "test-generator-pro": {
+        "file": "test-generator-pro.md",
+        "path": "components/agents/test-generator-pro.md",
+        "hash": "9166b1abb4f418ce30f1542cde5dc264",
+        "name": "test-generator-pro",
+        "description": "Creates comprehensive test suites with edge cases and mocks",
+        "model": "claude-3-sonnet"
+      },
+      "laravel-database-pro": {
+        "file": "laravel-database-pro.md",
+        "path": "components/agents/laravel-database-pro.md",
+        "hash": "d5011924e226207dcb164ed429f3ab35",
+        "name": "laravel-database-pro",
+        "description": "Expert Laravel database architect specializing in Eloquent ORM, schema design, migrations, performance optimization, and complex data modeling. Masters relationships, queries, indexing, scopes, casts, factories/seeders, and database performance tuning. Use for data modeling, Eloquent patterns, database schema design, query optimization, N+1 prevention, factory/seeder creation, and database troubleshooting. Use PROACTIVELY when working with data persistence, database architecture, or query performance in Laravel projects.",
+        "model": "sonnet"
+      },
+      "security-infrastructure-pro": {
+        "file": "security-infrastructure-pro.md",
+        "path": "components/agents/security-infrastructure-pro.md",
+        "hash": "0ddc4db2b393cf31007dfb4939c86810",
+        "name": "security-infrastructure-pro",
+        "description": "Expert infrastructure security engineer specializing in DevSecOps, cloud security, incident response, and operational security. Masters security automation, vulnerability management, zero-trust architecture, container security, secrets management, and compliance automation with emphasis on shift-left and continuous monitoring. Use PROACTIVELY for DevSecOps implementation, incident response, infrastructure hardening, cloud security, and security operations.",
+        "model": "sonnet"
+      },
+      "spec-validation-pro": {
+        "file": "spec-validation-pro.md",
+        "path": "components/agents/spec-validation-pro.md",
+        "hash": "9e0b7d84d5facfd4332fcee266adfa1d",
+        "name": "spec-validation-pro",
+        "description": "Expert testing and validation specialist combining comprehensive test strategy with final quality assurance. Use for test design and implementation, unit/integration/E2E testing, test coverage analysis, quality metrics, requirement verification, production readiness assessment, performance testing, security testing, and comprehensive validation reporting. Ensures systems meet requirements and quality standards.",
+        "model": "sonnet"
+      },
+      "laravel-fullstack-pro": {
+        "file": "laravel-fullstack-pro.md",
+        "path": "components/agents/laravel-fullstack-pro.md",
+        "hash": "3c185eff53b85adc7c1627005d14b5ce",
+        "name": "laravel-fullstack-pro",
+        "description": "Laravel full-stack specialist mastering project setup, Blade templating, Livewire reactive components, Inertia.js SPAs with Vue/React, frontend integration, PHPUnit/Pest testing, CI/CD integration, Docker deployment, Laravel Octane optimization, monitoring, debugging, and production best practices. Use when setting up Laravel projects, building UIs with Blade/Livewire/Inertia, testing applications, deploying to production, or optimizing performance.",
+        "model": "sonnet"
+      },
+      "security-auditor-pro": {
+        "file": "security-auditor-pro.md",
+        "path": "components/agents/security-auditor-pro.md",
+        "hash": "07142f55708a11103325e9c0642b43de",
+        "name": "security-auditor-pro",
+        "description": "Expert security auditor and compliance specialist mastering comprehensive cybersecurity strategy, threat modeling, vulnerability assessment, and compliance frameworks. Masters OWASP standards, secure coding, authentication/authorization design, compliance automation (GDPR/HIPAA/SOC2), and security testing. Use PROACTIVELY for security audits, threat modeling, compliance implementation, vulnerability assessment, and security strategy.",
+        "model": "sonnet"
+      },
+      "spec-requirements-pro": {
+        "file": "spec-requirements-pro.md",
+        "path": "components/agents/spec-requirements-pro.md",
+        "hash": "13b0494f173e1513ebdc19b44641ef91",
+        "name": "spec-requirements-pro",
+        "description": "Expert requirements and architecture specialist combining needs analysis with technical design. Use for requirements gathering, user story creation, system architecture design, technology selection, API specification, data modeling, system design diagrams, stakeholder analysis, scope documentation, and architectural decision-making. Bridges business requirements with technical implementation strategy.",
+        "model": "sonnet"
+      },
+      "performance-profiler": {
+        "file": "performance-profiler.md",
+        "path": "components/agents/performance-profiler.md",
+        "hash": "cd406587ea547b134eb44c72e3711324",
+        "name": "performance-profiler",
+        "description": "Expert performance optimization engineer combining benchmarking, profiling, and optimization techniques. Masters load testing, performance profiling, bottleneck identification, and optimization implementation. Use for performance testing, benchmarking, profiling, bottleneck analysis, and optimization strategies.",
+        "model": "sonnet"
+      },
+      "communication-protocol": {
+        "file": "communication-protocol.md",
+        "path": "components/agents/communication-protocol.md",
+        "hash": "a56a0b454897f6c22f7d34aac5791ee1",
+        "name": "communication-protocol",
+        "description": "智能体通信协议专家，专注代理间通信协调和消息传递标准。设计结构化通信协议，优化智能体协作效率，确保高效的信息交换和任务协调。",
+        "model": "sonnet"
+      },
+      "documentation-writer": {
+        "file": "documentation-writer.md",
+        "path": "components/agents/documentation-writer.md",
+        "hash": "a2ac80774d4e6dfa71c225673f205092",
+        "name": "documentation-writer",
+        "description": "Creates and maintains comprehensive technical documentation",
+        "model": "claude-3-sonnet"
+      },
+      "documentation-pro": {
+        "file": "documentation-pro.md",
+        "path": "components/agents/documentation-pro.md",
+        "hash": "a194dada2dcf181026f0fd7bf72fb947",
+        "name": "documentation-pro",
+        "description": "Expert documentation specialist combining technical writing, API documentation, and documentation systems engineering. Masters documentation-as-code, automated generation, developer guides, API specifications, and maintainable documentation. Use for documentation creation, API specs, developer guides, architecture documentation, and documentation systems.",
+        "model": "sonnet"
+      },
+      "vue-state-pro": {
+        "file": "vue-state-pro.md",
+        "path": "components/agents/vue-state-pro.md",
+        "hash": "a3dd65126066f4cf315d13db64dd4382",
+        "name": "vue-state-pro",
+        "description": "Expert Vue state management specialist combining Pinia store architecture, reactive state patterns, and complex application state design. Masters Pinia modules, persistence, devtools, store composition, type safety, and advanced state patterns. Use for state management architecture, store design, complex state patterns, persistence, and Vue ecosystem integration.",
+        "model": "sonnet"
+      },
+      "data-platform-pro": {
+        "file": "data-platform-pro.md",
+        "path": "components/agents/data-platform-pro.md",
+        "hash": "93686d0fbafa1cc278467aa362656133",
+        "name": "data-platform-pro",
+        "description": "Expert data platform engineer and machine learning scientist combining scalable data pipelines, modern data stack mastery, advanced statistical modeling, and production ML deployment. Use for data infrastructure design, ETL/ELT development, batch processing (Spark, Airflow, Databricks), real-time streaming (Kafka, Flink), workflow orchestration, data modeling (star schema, data vault, SCD), cloud platforms (AWS, Azure, GCP), machine learning (supervised, unsupervised, deep learning, ensemble methods), feature engineering, model deployment (MLflow, Docker, cloud serving), A/B testing, causal inference, time series forecasting, and model interpretability (SHAP, LIME). Masters modern data stack (Delta Lake, Snowflake, BigQuery, dbt), statistical rigor, and production-grade ML systems.",
+        "model": "sonnet"
+      },
+      "django-fullstack-pro": {
+        "file": "django-fullstack-pro.md",
+        "path": "components/agents/django-fullstack-pro.md",
+        "hash": "3682c8ec534f1694f768c8d4c7189d86",
+        "name": "django-fullstack-pro",
+        "description": "Comprehensive Django 5.x full-stack expert covering architecture, REST/GraphQL APIs, ORM optimization, async views, Celery, Django Channels, deployment, and production best practices. Use for Django project architecture, API development, database optimization, model design, testing, performance tuning, security, and deployment. Adapts to your codebase conventions.",
+        "model": "sonnet"
+      },
+      "rails-fullstack-pro": {
+        "file": "rails-fullstack-pro.md",
+        "path": "components/agents/rails-fullstack-pro.md",
+        "hash": "8d76245034ef2a97a944d2f4a91b25d4",
+        "name": "rails-fullstack-pro",
+        "description": "Comprehensive Ruby on Rails 7.x full-stack expert covering architecture, REST/GraphQL APIs, ActiveRecord optimization, Hotwire, Action Cable, Sidekiq, deployment, and production best practices. Use for Rails project architecture, API development, database optimization, model design, testing, performance tuning, security, and deployment. Adapts to your codebase conventions.",
+        "model": "sonnet"
+      },
+      "infrastructure-architect-pro": {
+        "file": "infrastructure-architect-pro.md",
+        "path": "components/agents/infrastructure-architect-pro.md",
+        "hash": "e244771e322b123f7f6e249475b18412",
+        "name": "infrastructure-architect-pro",
+        "description": "Elite cloud-native infrastructure architect mastering Kubernetes (EKS/AKS/GKE), multi-cloud IaC (Terraform/CDK/Pulumi), microservices patterns, GitOps (ArgoCD/Flux), service mesh (Istio/Linkerd/Cilium), platform engineering, distributed systems, AWS/Azure/GCP, serverless, container orchestration, progressive delivery, FinOps cost optimization, security (zero-trust, Pod Security Standards, compliance), observability (Prometheus/Grafana/OpenTelemetry), disaster recovery, multi-region deployment, network policies, CI/CD pipelines, Infrastructure as Code, policy as code (OPA/Gatekeeper/Kyverno), autoscaling, load balancing, event-driven architecture, CQRS, saga patterns, service boundaries, domain-driven design, chaos engineering, multi-tenancy, RBAC, secrets management, image security, supply chain security, backup strategies, cloud migration, vendor lock-in mitigation, edge computing, sustainable cloud practices, developer experience, self-service platforms. Use PROACTIVELY for any cloud infrastructure, Kubernetes architecture, microservices design, cloud migration, cost optimization, security hardening, GitOps implementation, or distributed systems challenges.",
+        "model": "sonnet"
+      },
+      "devops-sre-pro": {
+        "file": "devops-sre-pro.md",
+        "path": "components/agents/devops-sre-pro.md",
+        "hash": "dca680522ad19ef1d9529cf0fab0c257",
+        "name": "devops-sre-pro",
+        "description": "Comprehensive DevOps and SRE professional combining incident response, reliability engineering, troubleshooting, network engineering, and observability. Masters incident management, SLI/SLO/SLA, error budgets, blameless postmortems, distributed tracing, Kubernetes debugging, performance optimization, chaos engineering, service mesh, cloud networking, zero-trust security, capacity planning, automated remediation, runbook development, and continuous reliability improvement. Handles production incidents, system troubleshooting, root cause analysis, network diagnostics, monitoring enhancement, toil reduction, disaster recovery, on-call management, and preventive engineering. Use PROACTIVELY for incident response, reliability engineering, system troubleshooting, DevOps practices, SRE principles, network issues, performance optimization, observability setup, production debugging, or building resilient systems.",
+        "model": "sonnet"
+      },
+      "javascript-typescript-pro": {
+        "file": "javascript-typescript-pro.md",
+        "path": "components/agents/javascript-typescript-pro.md",
+        "hash": "453d686cd41b9fee02ad039a76f3d052",
+        "name": "javascript-typescript-pro",
+        "description": "Master modern JavaScript (ES6+, async patterns, event loop, Node.js/browser APIs) and advanced TypeScript (generics, conditional types, type inference, decorators). Expert in cross-environment development, performance optimization, type safety, and migration strategies. Use PROACTIVELY for JavaScript/TypeScript optimization, async debugging, complex type systems, or advanced language patterns.",
+        "model": "sonnet"
+      },
+      "api-tester-pro": {
+        "file": "api-tester-pro.md",
+        "path": "components/agents/api-tester-pro.md",
+        "hash": "f1fe13fa63ccb2d1b1e45fdfd1adf31b",
+        "name": "api-tester-pro",
+        "description": "Expert API testing specialist ensuring APIs are battle-tested, performant, and production-ready. Use for comprehensive API testing including performance testing, load testing, stress testing, contract validation, integration testing, chaos engineering, security vulnerability testing, and monitoring setup. Masters modern testing frameworks (k6, JMeter, Gatling), contract testing (Pact, Dredd), and observability tools (Prometheus, Grafana). Identifies bottlenecks, validates SLA compliance, and ensures APIs can handle viral growth scenarios.",
+        "model": "sonnet"
+      },
+      "api-lifecycle-pro": {
+        "file": "api-lifecycle-pro.md",
+        "path": "components/agents/api-lifecycle-pro.md",
+        "hash": "0e8d85387233f26e50051967fbccf0d8",
+        "name": "api-lifecycle-pro",
+        "description": "Complete API lifecycle expert from design through production deployment. Masters the entire flow of API development including RESTful/GraphQL design, OpenAPI specifications, resource modeling, authentication strategies, API documentation, developer portals, SDK generation, interactive docs, performance testing, load testing, contract validation, security testing, and monitoring. Use PROACTIVELY for end-to-end API projects, architecture decisions spanning multiple phases, coordinating design-implementation-testing workflows, or when you need comprehensive expertise across all API lifecycle stages. For specialized deep-dive work, delegates to api-designer-pro (design), api-implementation-pro (docs/SDK), or api-tester-pro (testing).",
+        "model": "sonnet"
+      },
+      "api-implementation-pro": {
+        "file": "api-implementation-pro.md",
+        "path": "components/agents/api-implementation-pro.md",
+        "hash": "765ea4b515f8fa1d64f54af97221a73f",
+        "name": "api-implementation-pro",
+        "description": "Expert API implementation specialist focusing on comprehensive documentation, interactive docs, SDK generation, and developer portals. Use when implementing API documentation, creating OpenAPI docs, building developer portals, generating multi-language SDKs, setting up Swagger UI/Redoc, implementing AI-powered documentation (Mintlify, ReadMe AI), creating authentication guides, migration docs, and API Explorer interfaces. Masters modern documentation platforms and SDK generation workflows for production-ready API implementations.",
+        "model": "sonnet"
+      },
+      "database-specialist-pro": {
+        "file": "database-specialist-pro.md",
+        "path": "components/agents/database-specialist-pro.md",
+        "hash": "6d297b0e03d7507d6f0ed9cab0d9a7e1",
+        "name": "database-specialist-pro",
+        "description": "Expert database technology specialist mastering PostgreSQL, MySQL, MongoDB, Redis, and advanced SQL optimization. Use for database-specific deep optimization (PostgreSQL JSONB, GIN/GiST/BRIN indexes, EXPLAIN ANALYZE, VACUUM strategies), MySQL InnoDB tuning, MongoDB aggregation pipelines and sharding, Redis cluster and persistence strategies, complex SQL query optimization (window functions, CTEs, recursive queries), OLTP/OLAP hybrid systems, time-series databases (TimescaleDB, InfluxDB), full-text search, and database-specific performance tuning. Masters database internals, technology-specific best practices, and production troubleshooting.",
+        "model": "sonnet"
+      },
+      "database-lifecycle-pro": {
+        "file": "database-lifecycle-pro.md",
+        "path": "components/agents/database-lifecycle-pro.md",
+        "hash": "1fcfff9653fc1e7fdc3ea5e923e52ef8",
+        "name": "database-lifecycle-pro",
+        "description": "Complete database lifecycle expert from design through production operations. Masters the entire flow of database development including technology selection (SQL/NoSQL/NewSQL), schema design, normalization, ER modeling, indexing strategies, migration planning, backup/recovery, high availability, performance optimization, and monitoring. Use PROACTIVELY for end-to-end database projects, architecture decisions spanning multiple phases, coordinating design-implementation-operations workflows, or when you need comprehensive expertise across all database lifecycle stages. For specialized deep-dive work, delegates to database-design-pro (complex modeling), database-operations-pro (cloud ops), or database-specialist-pro (PostgreSQL/MySQL/MongoDB).",
+        "model": "sonnet"
+      },
+      "rails-orm-pro": {
+        "file": "rails-orm-pro.md",
+        "path": "components/agents/rails-orm-pro.md",
+        "hash": "ca1b8b67174d5debf2439dc0e5eb617b",
+        "name": "rails-orm-pro",
+        "description": "Expert in Rails ActiveRecord optimization, complex queries, database performance, model design, and migrations. Masters query optimization (includes/joins/preload/eager_load), N+1 prevention, scopes, associations, bulk operations, transactions, indexes, Arel, database views, and migration strategies. Use for model architecture, QuerySet optimization, database schema design, and performance tuning.",
+        "model": "sonnet"
+      },
+      "django-orm-pro": {
+        "file": "django-orm-pro.md",
+        "path": "components/agents/django-orm-pro.md",
+        "hash": "d860e1b4635089d84eae6a1ab634f316",
+        "name": "django-orm-pro",
+        "description": "Expert in Django ORM optimization, complex queries, database performance, model design, migrations, and relationships. Masters query optimization (select_related/prefetch_related), N+1 prevention, bulk operations, database indexes, transactions, aggregations, window functions, and migration strategies. Use for model architecture, QuerySet optimization, database schema design, and performance tuning.",
+        "model": "sonnet"
+      },
+      "rails-backend-pro": {
+        "file": "rails-backend-pro.md",
+        "path": "components/agents/rails-backend-pro.md",
+        "hash": "07f03d26974cc5c3cf7ca9b6b34a093a",
+        "name": "rails-backend-pro",
+        "description": "Expert Rails backend developer specializing in REST APIs, GraphQL (graphql-ruby), Sidekiq background jobs, Action Cable (WebSockets), authentication (Devise/JWT), authorization (Pundit/CanCanCan), and service layers. Use for Rails API mode, controllers, serializers, GraphQL schemas, async jobs, real-time features, and authentication systems.",
+        "model": "sonnet"
+      },
+      "django-backend-pro": {
+        "file": "django-backend-pro.md",
+        "path": "components/agents/django-backend-pro.md",
+        "hash": "e19561511f74b8e7df6c9efc813f29ca",
+        "name": "django-backend-pro",
+        "description": "Expert Django backend developer specializing in REST APIs (DRF), GraphQL (Graphene), async views, Celery tasks, Django Channels (WebSockets), authentication, authorization, and business logic. Use for DRF ViewSets, serializers, API design, GraphQL schemas, Celery configuration, async/await patterns, JWT/OAuth2, permissions, and service layers.",
+        "model": "sonnet"
+      },
+      "mobile-development-pro": {
+        "file": "mobile-development-pro.md",
+        "path": "components/agents/mobile-development-pro.md",
+        "hash": "05541ddda56a374474f68246b471de8a",
+        "name": "mobile-development-pro",
+        "description": "Expert mobile development specialist for native and cross-platform applications. Masters React Native, Flutter, native iOS/Android development, performance optimization, platform guidelines, and exceptional user experience creation. Use PROACTIVELY for mobile app architecture, UI implementation, or mobile platform decisions.",
+        "model": "sonnet"
+      },
+      "performance-analysis": {
+        "file": "performance-analysis.md",
+        "path": "components/agents/performance-analysis.md",
+        "hash": "b797a87489fb799b3de6a3214e66b92d",
+        "name": "performance-analysis",
+        "description": "Expert performance monitoring and analysis specialist combining real-time monitoring, intelligent alerting, and capacity planning. Masters system observability, anomaly detection, trend analysis, and SLO management. Use PROACTIVELY for real-time monitoring, intelligent alerts, capacity planning, and performance optimization insights.",
+        "model": "sonnet"
+      },
+      "performance-core": {
+        "file": "performance-core.md",
+        "path": "components/agents/performance-core.md",
+        "hash": "b468bb8228d986a9ebb8edf212510d43",
+        "name": "performance-core",
+        "description": "Senior performance architect specializing in modern observability, load testing, and performance optimization. Masters OpenTelemetry, distributed tracing, APM platforms, benchmarking, and end-to-end performance engineering. Use PROACTIVELY for performance architecture, load testing, observability setup, and optimization strategies.",
+        "model": "sonnet"
+      },
+      "mobile-ios-specialist": {
+        "file": "mobile-ios-specialist.md",
+        "path": "components/agents/mobile-ios-specialist.md",
+        "hash": "4dc5d35cbdb31f77788bd5361d63fa4e",
+        "name": "mobile-ios-specialist",
+        "description": "Expert iOS and Flutter specialist mastering native iOS development (Swift/SwiftUI) and Flutter cross-platform development. Masters iOS 18, Dart 3, multi-platform deployment, performance optimization, and Apple ecosystem integrations. Use PROACTIVELY for iOS development, Flutter apps, or cross-platform mobile solutions.",
+        "model": "sonnet"
+      },
+      "distributed-systems-pro": {
+        "file": "distributed-systems-pro.md",
+        "path": "components/agents/distributed-systems-pro.md",
+        "hash": "741b336bd2b8879b9e473ab0cd10b547",
+        "name": "distributed-systems-pro",
+        "description": "Expert in distributed systems, event-driven architecture, message brokers, event sourcing, CQRS patterns, resilience (circuit breaker, bulkhead, retry), distributed tracing, saga pattern for transactions, and observability. Use when designing event-driven systems, implementing Kafka/RabbitMQ solutions, building resilient microservices, handling distributed transactions, or setting up observability across services.",
+        "model": "sonnet"
+      },
+      "backend-architect-core": {
+        "file": "backend-architect-core.md",
+        "path": "components/agents/backend-architect-core.md",
+        "hash": "0ffba78c0135b28aae37a1f4544fa51b",
+        "name": "backend-architect-core",
+        "description": "Core backend architecture principles and methodology. Master coordinator for backend system design with Google engineering experience. Handles requirements analysis, high-level design, technology stack decisions, architecture decision records (ADRs). Delegates to specialized agents for API design (REST/GraphQL/gRPC), microservices patterns, and distributed systems. Use PROACTIVELY when starting new backend projects, conducting architecture reviews, or making technical decisions. Supports English and Chinese.",
+        "model": "sonnet"
+      },
+      "laravel-backend-pro": {
+        "file": "laravel-backend-pro.md",
+        "path": "components/agents/laravel-backend-pro.md",
+        "hash": "af3c33c30ac07fda1ec1e447a6a08f47",
+        "name": "laravel-backend-pro",
+        "description": "Expert Laravel backend specialist mastering MVC architecture, Eloquent ORM, API development with Sanctum/Passport, GraphQL, queue systems with Horizon, event broadcasting with Echo, real-time WebSockets, task scheduling, authentication, authorization policies, rate limiting, and security best practices. Use when building Laravel APIs, implementing authentication/authorization, designing queue systems, setting up real-time features, or building service layers.",
+        "model": "sonnet"
+      },
+      "laravel-orm-pro": {
+        "file": "laravel-orm-pro.md",
+        "path": "components/agents/laravel-orm-pro.md",
+        "hash": "8a9edb556d249152a1abc3d179651f96",
+        "name": "laravel-orm-pro",
+        "description": "Eloquent ORM optimization specialist mastering query optimization, eager loading, N+1 prevention, relationship design, scopes, mutators, caching strategies, database indexing, read/write splitting, database sharding, and query performance analysis. Use when optimizing Laravel database performance, designing efficient queries, implementing caching layers, analyzing slow queries, or scaling database operations.",
+        "model": "sonnet"
+      },
+      "sre-pro": {
+        "file": "sre-pro.md",
+        "path": "components/agents/sre-pro.md",
+        "hash": "4a4ad1cd35000a4a825229e8d7d2791f",
+        "name": "sre-pro",
+        "description": "Site Reliability Engineering expert specializing in incident response, error budgets, SLI/SLO definition, blameless postmortems, on-call management, and reliability culture. Masters observability stack tuning, alert design, runbook creation, chaos engineering, and reliability metrics. Use when managing service reliability, responding to incidents, defining SLOs, conducting postmortems, or building reliable systems.",
+        "model": "sonnet"
+      },
+      "nuxt-pro": {
+        "file": "nuxt-pro.md",
+        "path": "components/agents/nuxt-pro.md",
+        "hash": "dfdbefeba8eb06f9118509c453f64193",
+        "name": "nuxt-pro",
+        "description": "Nuxt 3 framework expert specializing in SSR/SSG/ISR, file-based routing, Nitro server, composables, auto-imports, middleware, plugins, and full-stack development. Masters Vue 3 integration, performance optimization, deployment, and modern Nuxt patterns. Use when building Nuxt applications, implementing SSR/SSG, creating server middleware, optimizing performance, or deploying Nuxt apps.",
+        "model": "sonnet"
+      },
+      "devops-pro": {
+        "file": "devops-pro.md",
+        "path": "components/agents/devops-pro.md",
+        "hash": "1608988b7e3a7dcd4759216047ee19cd",
+        "name": "devops-pro",
+        "description": "DevOps expert specializing in infrastructure automation, CI/CD pipelines, Docker/Kubernetes, IaC, monitoring setup, and deployment automation. Masters GitHub Actions, GitLab CI, Docker, Kubernetes, Terraform, Helm, GitOps, Prometheus, and automated deployment strategies. Use when building CI/CD pipelines, containerizing applications, orchestrating Kubernetes, implementing infrastructure as code, or automating deployments.",
         "model": "sonnet"
       }
     },
@@ -2099,14 +2851,182 @@
         "hash": "57bf199ab90f72219b70f8c01843467d",
         "description": "Design microservices architectures with service boundaries, event-driven communication, and resilience patterns. Use when building distributed systems, decomposing monoliths, or implementing microservices.",
         "name": "microservices-patterns"
+      },
+      "dev-docs-workflow": {
+        "dir": "dev-docs-workflow",
+        "path": "components/skills/dev-docs-workflow",
+        "hash": "e7882d2291c526fe70e025dea61ac3bc",
+        "name": "dev-docs-workflow",
+        "description": "Brief description of what this Skill does and when to use it. Include keywords for discovery."
+      },
+      "progressive-disclosure-pattern": {
+        "dir": "progressive-disclosure-pattern",
+        "path": "components/skills/progressive-disclosure-pattern",
+        "hash": "9b5c7e6e8b7d408cc379f5e3c8928ba5",
+        "name": "progressive-disclosure-pattern",
+        "description": "Brief description of what this Skill does and when to use it. Include keywords for discovery."
+      },
+      "frontend-dev-guidelines": {
+        "dir": "frontend-dev-guidelines",
+        "path": "components/skills/frontend-dev-guidelines",
+        "hash": "49b3b74ff572dbeb94fe867c4aff06fd",
+        "name": "frontend-dev-guidelines",
+        "description": "Brief description of what this Skill does and when to use it. Include keywords for discovery."
+      },
+      "code-style-enforcer": {
+        "dir": "code-style-enforcer",
+        "path": "components/skills/code-style-enforcer",
+        "hash": "99e2c130c1fa556eb6216d7765b03f9d",
+        "name": "code-style-enforcer",
+        "description": "Expert code style and quality enforcer based on Clean Code principles.\nUse when reviewing code quality, checking naming conventions, analyzing\ncontrol flow, or enforcing code style standards. Ideal for pre-commit\nreviews, refactoring guidance, code quality audits, and ensuring team\ncoding standards. Specializes in identifying unclear variable names,\ndeep nesting, missing error handling, and code smell detection.\n"
+      },
+      "skill-developer": {
+        "dir": "skill-developer",
+        "path": "components/skills/skill-developer",
+        "hash": "538cff1997191b61154fcf9d9466b778",
+        "name": "skill-developer",
+        "description": "Brief description of what this Skill does and when to use it. Include keywords for discovery."
+      },
+      "workflow-developer": {
+        "dir": "workflow-developer",
+        "path": "components/skills/workflow-developer",
+        "hash": "6e9983fc016c564fa9dacc0b017b609b",
+        "name": "workflow-developer",
+        "description": "Brief description of what this Skill does and when to use it. Include keywords for discovery."
+      },
+      "conversational-coding-assistant": {
+        "dir": "conversational-coding-assistant",
+        "path": "components/skills/conversational-coding-assistant",
+        "hash": "9725dca800ce97b42732d32316f61c1b",
+        "name": "conversational-coding-assistant",
+        "description": "Expert conversational coding assistant specializing in natural, concise communication\nand context-aware responses. Use when engaging in dialogue with users, clarifying\nrequirements, providing explanations, answering questions about code or projects,\nor maintaining conversation flow. Excels at matching response verbosity to query\ncomplexity, avoiding unnecessary preamble, providing direct answers, and maintaining\nprofessional objectivity. Ideal for interactive coding sessions, requirement gathering,\ncode explanation, troubleshooting discussions, and iterative development conversations.\n"
+      },
+      "notification-developer": {
+        "dir": "notification-developer",
+        "path": "components/skills/notification-developer",
+        "hash": "a302abb0b2d4135c715430c3f7ab0cb7",
+        "name": "notification-developer",
+        "description": "Brief description of what this Skill does and when to use it. Include keywords for discovery."
+      },
+      "task-planning-pro": {
+        "dir": "task-planning-pro",
+        "path": "components/skills/task-planning-pro",
+        "hash": "65ec7dc6d3d479358cb3718acbcaae5a",
+        "name": "task-planning-pro",
+        "description": "Expert task planning and progress tracking using TodoWrite tool. Use when breaking down complex tasks, managing multi-step implementations, tracking progress, or coordinating parallel workflows. Ideal for feature development, refactoring projects, bug investigations, and complex system changes. Specializes in task decomposition, dependency management, and real-time progress updates.\n"
+      },
+      "backend-dev-guidelines": {
+        "dir": "backend-dev-guidelines",
+        "path": "components/skills/backend-dev-guidelines",
+        "hash": "f8ce2c4b699aa54eb1758c34f62a7d0e",
+        "name": "backend-dev-guidelines",
+        "description": "Brief description of what this Skill does and when to use it. Include keywords for discovery."
+      },
+      "parallel-execution-optimizer": {
+        "dir": "parallel-execution-optimizer",
+        "path": "components/skills/parallel-execution-optimizer",
+        "hash": "9cc3418c2fb741fcbe9f0a71f7a1e3ff",
+        "name": "parallel-execution-optimizer",
+        "description": "Expert optimizer for maximizing parallel tool execution to achieve 3-5x faster performance.\nUse when multiple tool calls are needed, gathering information from different sources, reading\nmultiple files, running multiple searches, or executing independent operations. Automatically\ndetects parallelization opportunities and prevents unnecessary sequential execution. Essential\nfor information gathering, batch file operations, multiple grep/search tasks, and any scenario\nwhere operations don't have dependencies.\n"
+      },
+      "ai-system-architecture": {
+        "dir": "ai-system-architecture",
+        "path": "components/skills/ai-system-architecture",
+        "hash": "de9d0fa7c1d57738ba26729f5d1962c4",
+        "name": "ai-system-architecture",
+        "description": "AI系统架构设计与MLOps流水线实施专家，精通微服务架构、容器编排和模型服务部署。处理云原生AI基础设施、服务网格集成、模型流水线自动化和高可用性架构设计。使用PROACTIVELY进行AI系统架构、MLOps实施或云原生AI部署规划。"
+      },
+      "model-serving-patterns": {
+        "dir": "model-serving-patterns",
+        "path": "components/skills/model-serving-patterns",
+        "hash": "a0dbeba840e2b89e9d04524cabc8ade4",
+        "name": "model-serving-patterns",
+        "description": "模型服务模式与部署策略专家，精通批处理vs实时推理、A/B测试和模型版本管理。实现微服务架构、容器化部署和弹性伸缩，处理生产环境模型服务、灰度发布和性能监控。使用PROACTIVELY进行模型部署、服务架构或ML系统扩展性优化。"
+      },
+      "ai-observability": {
+        "dir": "ai-observability",
+        "path": "components/skills/ai-observability",
+        "hash": "6ae6f200fe349507570e40b78285ad64",
+        "name": "ai-observability",
+        "description": "AI系统可观测性与监控专家，精通模型性能监控、数据漂移检测和偏差审计。构建全栈监控体系、实时告警系统和根因分析工具，处理模型性能追踪、数据质量监控和可解释性分析。使用PROACTIVELY进行AI系统监控、性能优化或模型质量保障。"
+      },
+      "ai-safety-guardrails": {
+        "dir": "ai-safety-guardrails",
+        "path": "components/skills/ai-safety-guardrails",
+        "hash": "ec29400cf8e7f3f509181835a80d3c04",
+        "name": "ai-safety-guardrails",
+        "description": "AI安全防护与合规实施专家，精通多层安全防护、实时安全检测和智能内容过滤。构建安全架构、审计追踪系统和违规检测机制，处理AI系统安全、内容审核和数据保护。使用PROACTIVELY进行AI安全实施、内容过滤或安全合规检查。"
+      },
+      "feature-engineering-automation": {
+        "dir": "feature-engineering-automation",
+        "path": "components/skills/feature-engineering-automation",
+        "hash": "2fe842ae588a1a3b9312bb19d52abd88",
+        "name": "feature-engineering-automation",
+        "description": "特征工程自动化与智能特征发现专家，精通自动化特征生成、智能特征选择和时间序列特征工程。构建特征工程流水线、特征库管理系统和特征质量评估，处理特征自动化、特征选择优化和特征工程最佳实践。使用PROACTIVELY进行特征工程、特征自动化或ML特征优化。"
+      },
+      "model-experiment-tracking": {
+        "dir": "model-experiment-tracking",
+        "path": "components/skills/model-experiment-tracking",
+        "hash": "cf8c5dce847d7d3fbdeab0911c40dffd",
+        "name": "model-experiment-tracking",
+        "description": "模型实验管理与版本控制专家，精通MLflow、模型注册和实验对比分析。构建实验管理系统、模型版本追踪和实验协作平台，处理实验记录、模型管理和团队协作。使用PROACTIVELY进行ML实验管理、模型版本控制或实验协作。"
+      },
+      "hyperparameter-optimization": {
+        "dir": "hyperparameter-optimization",
+        "path": "components/skills/hyperparameter-optimization",
+        "hash": "8d3e7b17fe021d456b21e6d1ad17614d",
+        "name": "hyperparameter-optimization",
+        "description": "超参数优化与自动调参专家，精通贝叶斯优化、网格搜索和进化算法。实现智能搜索策略、性能评估框架和并行调参，处理超参数搜索、模型调优和自动机器学习。使用PROACTIVELY进行模型调优、超参搜索或AutoML实施。"
+      },
+      "model-explainability": {
+        "dir": "model-explainability",
+        "path": "components/skills/model-explainability",
+        "hash": "ae22621b5e33cf2403a50c6fe2f48964",
+        "name": "model-explainability",
+        "description": "模型可解释性与透明度专家，精通SHAP、LIME和模型特定解释方法。构建解释性分析工具、可视化解释系统和透明度评估，处理模型可解释性、特征重要性和决策透明度。使用PROACTIVELY进行模型解释、可视化分析或AI透明度建设。"
+      },
+      "neural-architecture-search": {
+        "dir": "neural-architecture-search",
+        "path": "components/skills/neural-architecture-search",
+        "hash": "8069ec6530847bd282262e426f26b99a",
+        "name": "neural-architecture-search",
+        "description": "神经架构搜索与自动设计专家，精通搜索空间设计、强化学习搜索和进化算法。构建自动化设计系统、性能评估框架和架构生成工具，处理NAS算法、神经网络自动设计和架构优化。使用PROACTIVELY进行神经网络设计、NAS实施或模型架构优化。"
+      },
+      "federated-learning-implementation": {
+        "dir": "federated-learning-implementation",
+        "path": "components/skills/federated-learning-implementation",
+        "hash": "e8568f3ca628549baef26366f85a81f4",
+        "name": "federated-learning-implementation",
+        "description": "联邦学习与隐私保护专家，精通联邦学习架构、差分隐私和同态加密。构建分布式训练系统、隐私保护机制和联邦聚合算法，处理多方协作学习、数据隐私和安全计算。使用PROACTIVELY进行联邦学习、隐私计算或分布式ML协作。"
+      },
+      "model-versioning-deployment": {
+        "dir": "model-versioning-deployment",
+        "path": "components/skills/model-versioning-deployment",
+        "hash": "27aa100ca26927e2b7976aec9438bf78",
+        "name": "model-versioning-deployment",
+        "description": "模型版本管理与部署自动化专家，精通模型版本控制、自动化部署和蓝绿发布。构建模型生命周期管理、部署流水线和服务编排，处理模型版本管理、CI/CD集成和服务发布。使用PROACTIVELY进行模型部署、版本控制或MLOps流水线。"
+      },
+      "ai-bias-detection-audit": {
+        "dir": "ai-bias-detection-audit",
+        "path": "components/skills/ai-bias-detection-audit",
+        "hash": "d7caa680cd50aba5c2c535219f921e04",
+        "name": "ai-bias-detection-audit",
+        "description": "AI偏差检测与公平性审计专家，精通公平性度量方法、偏差检测算法和公平性优化技术。构建偏差监控体系、公平性评估工具和合规报告系统，处理AI伦理、偏差检测和公平性保障。使用PROACTIVELY进行偏差检测、公平性审计或AI伦理合规。"
+      },
+      "reinforcement-learning-implementation": {
+        "dir": "reinforcement-learning-implementation",
+        "path": "components/skills/reinforcement-learning-implementation",
+        "hash": "95124d745afb5c2daa3b167f435b8e06",
+        "name": "reinforcement-learning-implementation",
+        "description": "强化学习算法实现与训练策略专家，精通核心算法实现、环境设计和训练优化。构建强化学习系统、多智能体训练和策略优化，处理RL算法实现、策略网络训练和环境模拟。使用PROACTIVELY进行强化学习、策略优化或智能决策系统。"
       }
     },
     "hooks": {}
   },
   "metadata": {
-    "total_agents": 162,
+    "total_agents": 301,
     "total_commands": 63,
-    "total_skills": 60,
+    "total_skills": 84,
     "total_hooks": 0
   }
 }

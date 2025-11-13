@@ -1,5 +1,5 @@
 ---
-description: tiktok-strategist agent - please update this description
+description: TikTok营销策略专家，专注病毒式内容创作、算法优化、影响力者合作和用户生成内容。精通TikTok平台文化，帮助应用实现病毒式传播和增长。
 model: sonnet
 name: tiktok-strategist
 ---

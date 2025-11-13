@@ -1,5 +1,5 @@
 ---
-description: test-writer-fixer agent - please update this description
+description: 测试自动化专家，专注单元测试编写、测试套件维护和故障诊断。为代码变更编写全面测试，分析失败原因，修复测试问题，确保代码质量。
 model: sonnet
 name: test-writer-fixer
 ---

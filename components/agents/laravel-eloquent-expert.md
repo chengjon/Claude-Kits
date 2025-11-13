@@ -1,5 +1,5 @@
 ---
-description: laravel-eloquent-expert agent - please update this description
+description: Laravel Eloquent ORM专家，专注数据建模、关系设计、查询优化和数据库性能调优。精通Laravel的模型、迁移、查询构造器和性能优化。
 model: sonnet
 name: laravel-eloquent-expert
 ---

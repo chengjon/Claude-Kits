@@ -1,5 +1,5 @@
 ---
-description: devops-automator agent - please update this description
+description: DevOps自动化专家，专注CI/CD流水线、云基础设施和运维自动化。为快速开发周期创建无缝的部署体验，实现基础设施即代码和持续交付。
 model: sonnet
 name: devops-automator
 ---

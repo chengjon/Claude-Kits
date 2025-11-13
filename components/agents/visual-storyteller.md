@@ -1,5 +1,5 @@
 ---
-description: visual-storyteller agent - please update this description
+description: 视觉叙事专家，专注信息设计、数据可视化、插图创作和演示文稿设计。将复杂概念转化为引人入胜的视觉故事，提升用户理解度和参与度。
 model: sonnet
 name: visual-storyteller
 ---

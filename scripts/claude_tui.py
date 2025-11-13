@@ -891,65 +891,91 @@ def handle_checklists_actions(action):
             return
 
     elif action == "Create Custom":
-        # 创建自定义 checklist
-        clear_screen()
-        console.print(Panel("Create Custom Checklist", border_style="green"))
+        # 使用增强的自定义 Role 构建器
+        try:
+            # 导入自定义 role builder
+            sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
+            from custom_role_builder import create_custom_role
 
-        name = Prompt.ask("Checklist name")
-        if not name:
-            console.print("[red]Name is required.[/red]")
+            # 启动 Role 构建器
+            role_filepath = create_custom_role()
+
+            if role_filepath:
+                # 询问是否立即安装
+                install = Prompt.ask("\n[green]Role created successfully! Install it now?[/green]",
+                                    choices=["y", "n"], default="n")
+                if install == "y":
+                    target_path = Prompt.ask("Enter target project path")
+                    if target_path:
+                        # 使用 roles_manager.py 安装
+                        role_name = role_filepath.stem
+                        params = ["install", role_name, "--path", target_path]
+                        run_manager_script("roles_manager.py", params)
+
+        except ImportError as e:
+            console.print(f"[red]Error: Could not import custom_role_builder: {e}[/red]")
+            console.print("[yellow]Falling back to simple text-based input...[/yellow]")
             input("Press Enter to continue...")
-            return
 
-        description = Prompt.ask("Description")
+            # Fallback to simple method
+            clear_screen()
+            console.print(Panel("Create Custom Checklist", border_style="green"))
 
-        # 初始化 checklist 数据
-        checklist_data = {
-            'name': name,
-            'description': description,
-            'role': 'custom',
-            'agents': [],
-            'skills': [],
-            'commands': []
-        }
+            name = Prompt.ask("Checklist name")
+            if not name:
+                console.print("[red]Name is required.[/red]")
+                input("Press Enter to continue...")
+                return
 
-        # 添加 agents
-        console.print("\n[bold]Add Agents (enter empty name to finish)[/bold]")
-        while True:
-            agent_name = Prompt.ask("Agent name (or press Enter to skip)")
-            if not agent_name:
-                break
-            reason = Prompt.ask("Reason for including this agent")
-            checklist_data['agents'].append({'name': agent_name, 'reason': reason})
+            description = Prompt.ask("Description")
 
-        # 添加 skills
-        console.print("\n[bold]Add Skills (enter empty name to finish)[/bold]")
-        while True:
-            skill_name = Prompt.ask("Skill name (or press Enter to skip)")
-            if not skill_name:
-                break
-            reason = Prompt.ask("Reason for including this skill")
-            checklist_data['skills'].append({'name': skill_name, 'reason': reason})
+            # ���始化 checklist 数据
+            checklist_data = {
+                'name': name,
+                'description': description,
+                'role': 'custom',
+                'agents': [],
+                'skills': [],
+                'commands': []
+            }
 
-        # 添加 commands
-        console.print("\n[bold]Add Commands (enter empty name to finish)[/bold]")
-        while True:
-            command_name = Prompt.ask("Command name (or press Enter to skip)")
-            if not command_name:
-                break
-            reason = Prompt.ask("Reason for including this command")
-            checklist_data['commands'].append({'name': command_name, 'reason': reason})
+            # 添加 agents
+            console.print("\n[bold]Add Agents (enter empty name to finish)[/bold]")
+            while True:
+                agent_name = Prompt.ask("Agent name (or press Enter to skip)")
+                if not agent_name:
+                    break
+                reason = Prompt.ask("Reason for including this agent")
+                checklist_data['agents'].append({'name': agent_name, 'reason': reason})
 
-        # 保存 checklist
-        custom_dir.mkdir(parents=True, exist_ok=True)
-        checklist_file = custom_dir / f"{name.lower().replace(' ', '-')}.yaml"
+            # 添加 skills
+            console.print("\n[bold]Add Skills (enter empty name to finish)[/bold]")
+            while True:
+                skill_name = Prompt.ask("Skill name (or press Enter to skip)")
+                if not skill_name:
+                    break
+                reason = Prompt.ask("Reason for including this skill")
+                checklist_data['skills'].append({'name': skill_name, 'reason': reason})
 
-        if save_checklist(checklist_file, checklist_data):
-            console.print(f"\n[green]Checklist saved to: {checklist_file}[/green]")
-        else:
-            console.print("\n[red]Failed to save checklist.[/red]")
+            # 添加 commands
+            console.print("\n[bold]Add Commands (enter empty name to finish)[/bold]")
+            while True:
+                command_name = Prompt.ask("Command name (or press Enter to skip)")
+                if not command_name:
+                    break
+                reason = Prompt.ask("Reason for including this command")
+                checklist_data['commands'].append({'name': command_name, 'reason': reason})
 
-        input("\nPress Enter to continue...")
+            # 保存 checklist
+            custom_dir.mkdir(parents=True, exist_ok=True)
+            checklist_file = custom_dir / f"{name.lower().replace(' ', '-')}.yaml"
+
+            if save_checklist(checklist_file, checklist_data):
+                console.print(f"\n[green]Checklist saved to: {checklist_file}[/green]")
+            else:
+                console.print("\n[red]Failed to save checklist.[/red]")
+
+            input("\nPress Enter to continue...")
 
     elif action == "Edit Custom":
         # 编辑自定义 checklist

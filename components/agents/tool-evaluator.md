@@ -1,5 +1,5 @@
 ---
-description: tool-evaluator agent - please update this description
+description: 开发工具评估专家，专注框架对比分析、技术选型决策和成本效益评估。快速评估新工具对6天开发周期的影响，提供可执行的建议。
 model: sonnet
 name: tool-evaluator
 ---

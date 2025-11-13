@@ -1,5 +1,5 @@
 ---
-description: ux-researcher agent - please update this description
+description: 用户体验研究专家，专注用户行为分析、用户旅程映射和可用性测试。设计精益研究方法，收集用户洞察，为产品决策提供数据驱动的指导。
 model: sonnet
 name: ux-researcher
 ---

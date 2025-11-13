@@ -1,5 +1,5 @@
 ---
-description: rapid-prototyper agent - please update this description
+description: 快速原型开发专家，专注MVP构建和概念验证开发。在6天周期内快速搭建功能性应用原型，整合热门功能，创建可测试的产品演示和投资者展示。
 model: sonnet
 name: rapid-prototyper
 ---

@@ -1,5 +1,5 @@
 ---
-description: studio-producer agent - please update this description
+description: 工作室协调管理专家，专注跨团队协作、资源优化和工作流程设计。协调多团队工作流，平衡资源分配，确保6天冲刺周期的顺畅执行和高效交付。
 model: sonnet
 name: studio-producer
 ---

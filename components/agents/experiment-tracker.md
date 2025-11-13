@@ -1,5 +1,5 @@
 ---
-description: experiment-tracker agent - please update this description
+description: A/B测试和实验追踪专家，专注功能标志管理、统计分析和决策支持。跟踪产品实验，分析结果，确保数据驱动的产品发布决策。
 model: sonnet
 name: experiment-tracker
 ---

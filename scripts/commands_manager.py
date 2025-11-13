@@ -20,6 +20,15 @@ import yaml
 import subprocess
 from pathlib import Path
 
+# 导入 UniversalInstaller
+try:
+    from universal_installer import UniversalInstaller
+except ImportError:
+    # 如果直接运行此脚本，添加 scripts/ 到路径
+    script_dir = Path(__file__).parent
+    sys.path.insert(0, str(script_dir))
+    from universal_installer import UniversalInstaller
+
 # 默认路径
 USER_COMMANDS_DIR = Path.home() / '.claude' / 'commands'
 PROJECT_COMMANDS_DIR = Path('.claude') / 'commands'
@@ -81,61 +90,49 @@ def _list_commands_in_dir(commands_dir, scope_type):
                 print(f"Warning: Could not parse {command_file}: {e}")
     return commands
 
-def install_command(command_name, scope='project', project_path=None, template_dir=None):
-    """安装/创建一个新的 Slash Command"""
+def install_command(command_name, scope='project', project_path=None, template_dir=None, dry_run=False, interactive=True):
+    """安装一个 Slash Command（使用 UniversalInstaller）
+
+    从 components/commands/ 复制完整的 Command 模板到目标位置。
+
+    Args:
+        command_name: Command 名称（如 'review-pr'）
+        scope: 安装作用域 ('personal', 'project')
+        project_path: 项目路径（scope='project' 时使用）
+        template_dir: 已废弃（兼容性保留）
+        dry_run: 预览模式，不执行实际安装
+        interactive: 交互模式，冲突时询问用户
+
+    Returns:
+        bool: 是否安装成功
+    """
+    # 确定目标目录
     if scope == 'personal':
-        target_dir = USER_COMMANDS_DIR
+        target_dir = str(Path.home())
     elif scope == 'project':
-        project_dir = Path(project_path) if project_path else Path.cwd()
-        target_dir = project_dir / '.claude' / 'commands'
+        target_dir = project_path if project_path else str(Path.cwd())
     else:
-        raise ValueError("Scope must be 'personal' or 'project'")
-    
-    # 处理命名空间 (例如: db/migrate)
-    command_path_parts = Path(command_name).parts
-    command_file_name = command_path_parts[-1] + '.md'
-    namespace_dirs = command_path_parts[:-1]
-    
-    # 构造完整的目标文件路径
-    target_file_path = target_dir.joinpath(*namespace_dirs, command_file_name)
-    
-    if target_file_path.exists():
-        print(f"Error: Slash Command '{command_name}' already exists at {target_file_path}")
+        raise ValueError(f"Unknown scope: {scope}. Must be 'personal' or 'project'")
+
+    # 使用 UniversalInstaller 安装
+    try:
+        installer = UniversalInstaller()
+        success = installer.install_component(
+            component_type='commands',
+            component_name=command_name,
+            target_dir=target_dir,
+            scope=scope,
+            dry_run=dry_run,
+            interactive=interactive
+        )
+        return success
+    except FileNotFoundError as e:
+        print(f"Error: Slash Command '{command_name}' not found in components/commands/")
+        print(f"Available commands: run 'python scripts/commands_manager.py list'")
         return False
-        
-    # 创建必要的目录
-    target_file_path.parent.mkdir(parents=True, exist_ok=True)
-    
-    # 如果提供了模板目录，则复制模板
-    if template_dir and Path(template_dir).exists():
-        # 这里可以实现复制模板的逻辑
-        # 为简化，我们只创建基本结构
-        pass
-    
-    # 创建基本的 .md 文件
-    with open(target_file_path, 'w', encoding='utf-8') as f:
-        f.write(f"""---
-description: Brief description of what this command does.
-argument-hint: [arguments]
----
-
-# {command_name.replace('/', ' ').replace('-', ' ').title()}
-
-## Usage
-
-Describe how to use this command and what it does.
-
-## Arguments
-
-Explain the arguments this command accepts.
-
-## Examples
-
-Provide examples of how to use this command.
-""")
-    
-    print(f"Successfully created new Slash Command '{command_name}' at {target_file_path}")
-    return True
+    except Exception as e:
+        print(f"Error installing command: {e}")
+        return False
 
 def edit_command(command_name, scope='project', project_path=None):
     """编辑一个现有的 Slash Command"""
@@ -285,8 +282,10 @@ def main():
     parser.add_argument('command_name', nargs='?', help='Name of the command (can include namespace, e.g., db/migrate)')
     parser.add_argument('--scope', choices=['personal', 'project', 'all'], default='project', help='Scope of the command')
     parser.add_argument('--path', help='Path to the project directory')
-    parser.add_argument('--template', help='Path to a template directory for new commands')
-    
+    parser.add_argument('--template', help='Path to a template directory for new commands (deprecated)')
+    parser.add_argument('--dry-run', action='store_true', help='Preview installation without making changes')
+    parser.add_argument('--non-interactive', action='store_true', help='Non-interactive mode (skip conflicts automatically)')
+
     args = parser.parse_args()
     
     if args.action == 'list':
@@ -315,7 +314,15 @@ def main():
         if not args.command_name:
             print("Error: command_name is required for install action")
             sys.exit(1)
-        install_command(args.command_name, scope=args.scope, project_path=args.path, template_dir=args.template)
+        success = install_command(
+            args.command_name,
+            scope=args.scope,
+            project_path=args.path,
+            template_dir=args.template,
+            dry_run=args.dry_run,
+            interactive=not args.non_interactive
+        )
+        sys.exit(0 if success else 1)
         
     elif args.action == 'edit':
         if not args.command_name:

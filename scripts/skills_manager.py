@@ -21,6 +21,15 @@ import json
 import subprocess
 from pathlib import Path
 
+# 导入 UniversalInstaller
+try:
+    from universal_installer import UniversalInstaller
+except ImportError:
+    # 如果直接运行此脚本，添加 scripts/ 到路径
+    script_dir = Path(__file__).parent
+    sys.path.insert(0, str(script_dir))
+    from universal_installer import UniversalInstaller
+
 # 默认路径
 USER_SKILLS_DIR = Path.home() / '.claude' / 'skills'
 PROJECT_SKILLS_DIR = Path('.claude') / 'skills'
@@ -85,56 +94,58 @@ def _list_skills_in_dir(skills_dir, scope_type):
                         print(f"Warning: Could not parse {skill_md}: {e}")
     return skills
 
-def install_skill(skill_name, scope='project', project_path=None, template_dir=None):
-    """安装/创建一个新的 Skill
+def install_skill(skill_name, scope='project', project_path=None, template_dir=None, dry_run=False, interactive=True):
+    """安装一个 Skill（使用 UniversalInstaller）
+
+    从 components/skills/ 复制完整的 Skill 模板到目标位置。
 
     支持的 scope:
     - user: 用户级 (~/.claude/skills/)
-    - project: 项目级 (.claude/skills/)
+    - project: 项目级 ({project_path}/.claude/skills/)
     - plugin: 插件级 (不支持直接安装，由插件管理)
+
+    Args:
+        skill_name: Skill 名称（如 'task-planning-pro'）
+        scope: 安装作用域
+        project_path: 项目路径（scope='project' 时使用）
+        template_dir: 已废弃（兼容性保留）
+        dry_run: 预览模式，不执行实际安装
+        interactive: 交互模式，冲突时询问用户
+
+    Returns:
+        bool: 是否安装成功
     """
-    if scope in ['user', 'personal']:
-        target_dir = USER_SKILLS_DIR / skill_name
-    elif scope == 'project':
-        project_dir = Path(project_path) if project_path else Path.cwd()
-        target_dir = project_dir / '.claude' / 'skills' / skill_name
-    elif scope == 'plugin':
+    if scope == 'plugin':
         print("Error: Cannot directly install skills at plugin scope. Use plugin manager instead.")
         return False
+
+    # 确定目标目录
+    if scope in ['user', 'personal']:
+        target_dir = str(Path.home())
+    elif scope == 'project':
+        target_dir = project_path if project_path else str(Path.cwd())
     else:
-        raise ValueError("Scope must be 'user', 'personal', or 'project'")
-    
-    if target_dir.exists():
-        print(f"Error: Skill '{skill_name}' already exists at {target_dir}")
+        raise ValueError(f"Unknown scope: {scope}. Must be 'user', 'personal', or 'project'")
+
+    # 使用 UniversalInstaller 安装
+    try:
+        installer = UniversalInstaller()
+        success = installer.install_component(
+            component_type='skills',
+            component_name=skill_name,
+            target_dir=target_dir,
+            scope=scope,
+            dry_run=dry_run,
+            interactive=interactive
+        )
+        return success
+    except FileNotFoundError as e:
+        print(f"Error: Skill '{skill_name}' not found in components/skills/")
+        print(f"Available skills: run 'python scripts/skills_manager.py list'")
         return False
-        
-    target_dir.mkdir(parents=True, exist_ok=True)
-    
-    # 如果提供了模板目录，则复制模板
-    if template_dir and Path(template_dir).exists():
-        # 这里可以实现复制模板的逻辑
-        # 为简化，我们只创建基本结构
-        pass
-    
-    # 创建基本的 SKILL.md 文件
-    skill_md_path = target_dir / 'SKILL.md'
-    with open(skill_md_path, 'w', encoding='utf-8') as f:
-        f.write(f"""---
-name: {skill_name}
-description: Brief description of what this Skill does and when to use it. Include keywords for discovery.
----
-
-# {skill_name.replace('-', ' ').title()}
-
-## Instructions
-Provide clear, step-by-step guidance for Claude.
-
-## Examples
-Show concrete examples of using this Skill.
-""")
-    
-    print(f"Successfully created new Skill '{skill_name}' at {target_dir}")
-    return True
+    except Exception as e:
+        print(f"Error installing skill: {e}")
+        return False
 
 def edit_skill(skill_name, scope='project', project_path=None):
     """编辑一个现有的 Skill"""
@@ -280,10 +291,12 @@ def main():
     parser.add_argument('--scope', choices=['user', 'personal', 'project', 'plugin', 'all'], default='project',
                        help='Scope of the skill (user: ~/.claude/skills/, project: .claude/skills/, plugin: from plugins)')
     parser.add_argument('--path', help='Path to the project directory')
-    parser.add_argument('--template', help='Path to a template directory for new skills')
-    
+    parser.add_argument('--template', help='Path to a template directory for new skills (deprecated)')
+    parser.add_argument('--dry-run', action='store_true', help='Preview installation without making changes')
+    parser.add_argument('--non-interactive', action='store_true', help='Non-interactive mode (skip conflicts automatically)')
+
     args = parser.parse_args()
-    
+
     if args.action == 'list':
         skills = get_skills(scope=args.scope, project_path=args.path)
         if not skills:
@@ -292,12 +305,20 @@ def main():
             print(f"Found {len(skills)} skill(s):")
             for name, info in skills.items():
                 print(f"  - {name}: {info['description']} ({info['scope']})")
-                
+
     elif args.action == 'install':
         if not args.skill_name:
             print("Error: skill_name is required for install action")
             sys.exit(1)
-        install_skill(args.skill_name, scope=args.scope, project_path=args.path, template_dir=args.template)
+        success = install_skill(
+            args.skill_name,
+            scope=args.scope,
+            project_path=args.path,
+            template_dir=args.template,
+            dry_run=args.dry_run,
+            interactive=not args.non_interactive
+        )
+        sys.exit(0 if success else 1)
         
     elif args.action == 'edit':
         if not args.skill_name:

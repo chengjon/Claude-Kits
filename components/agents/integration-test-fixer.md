@@ -1,5 +1,5 @@
 ---
-description: integration-test-fixer agent - please update this description
+description: 集成测试自动化专家，专注前后端集成测试和跨平台验证。执行自动化集成测试，诊断和修复系统集成问题，确保全栈应用的功能完整性。
 model: sonnet
 name: integration-test-fixer
 ---

@@ -1,5 +1,5 @@
 ---
-description: trend-researcher agent - please update this description
+description: 市场趋势研究专家，专注病毒式趋势检测、应用商店情报分析和用户行为洞察。识别社交媒体趋势和应用市场机会，转化为可构建的产品功能。
 model: sonnet
 name: trend-researcher
 ---

@@ -1,5 +1,5 @@
 ---
-description: whimsy-injector agent - please update this description
+description: 愉悦体验设计专家，专注微交互、俏皮文案和用户愉悦感设计。为应用界面注入趣味元素，创造令人难忘的用户体验瞬间和可分享的愉悦时刻。
 model: sonnet
 name: whimsy-injector
 ---

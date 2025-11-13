@@ -1,8 +1,51 @@
-# Reddit-Case 安装指南
+# Claude-Kits 安装指南
 
-本指南说明如何安全地将 Reddit-Case 组件安装到你的项目中。
+> **⚠️ 重要提示**: 本文档介绍的是传统的 Reddit-Case 安装脚本。对于大多数用户，我们推荐使用新的**统一安装系统**，它提供更灵活的组件选择和更好的管理体验。
+>
+> **推荐阅读**: [QUICK_INSTALL_GUIDE.md](QUICK_INSTALL_GUIDE.md) - 使用统一安装系统安装任何组件或 Role 集合
 
-## 🛡️ 安全保证
+---
+
+## 统一安装系统（推荐）⭐
+
+### 快速开始 - 批量安装 Role 集合
+
+```bash
+# 查看所有可用的 Role
+python scripts/roles_manager.py list
+
+# 安装 Reddit-Case 完整工具链
+python scripts/roles_manager.py install reddit-case --path /path/to/project
+
+# 安装后端开发工具集
+python scripts/roles_manager.py install backend-developer --path /path/to/project
+
+# 预览模式
+python scripts/roles_manager.py install reddit-case --path /path/to/project --dry-run
+```
+
+### 快速开始 - 安装单个组件
+
+```bash
+# 安装 Skill
+python scripts/skills_manager.py install task-planning-pro --path /path/to/project
+
+# 安装 Agent
+python scripts/subagents_manager.py install api-architect --path /path/to/project
+
+# 安装 Slash Command
+python scripts/commands_manager.py install api-mock --path /path/to/project
+```
+
+**详细指南**: 查看 [QUICK_INSTALL_GUIDE.md](QUICK_INSTALL_GUIDE.md)
+
+---
+
+## 传统 Reddit-Case 安装脚本
+
+以下内容介绍传统的 `install_reddit_case.py` 安装脚本。此脚本专门用于安装完整的 Reddit-Case 工具链。
+
+### 🛡️ 安全保证
 
 **本安装器遵循严格的安全原则：**
 
@@ -11,11 +54,7 @@
 3. ✅ **完全透明** - 安装前会显示详细的操作列表
 4. ✅ **支持 dry-run** - 可以预览而不执行实际操作
 
----
-
-## 快速开始
-
-### 方法 1: 使用安全安装脚本（推荐）
+### 使用方法
 
 ```bash
 # 1. 克隆或导航到 Claude-Kits 仓库
@@ -27,7 +66,7 @@ python scripts/install_reddit_case.py /path/to/your/project
 # 3. 按照提示进行操作
 ```
 
-### 方法 2: 预览模式（先查看再安装）
+### 预览模式（先查看再安装）
 
 ```bash
 # 使用 --dry-run 查看将要执行的操作
@@ -488,7 +527,7 @@ python scripts/install_reddit_case.py --help
 ```
 
 如有问题，请参考：
-- [Reddit Case Study](docs/REDDIT_CASE_IMPLEMENTATION_SUMMARY.md)
+- [Role 集合指南](docs/CASE_IMPLEMENTATION_SUMMARY.md) - 所有 Role 配置和使用指南
 - [Architecture Design](docs/ARCHITECTURE_DESIGN.md)
 - [GitHub Issues](https://github.com/your-repo/Claude-Kits/issues)
 

@@ -20,6 +20,15 @@ import yaml
 import subprocess
 from pathlib import Path
 
+# 导入 UniversalInstaller
+try:
+    from universal_installer import UniversalInstaller
+except ImportError:
+    # 如果直接运行此脚本，添加 scripts/ 到路径
+    script_dir = Path(__file__).parent
+    sys.path.insert(0, str(script_dir))
+    from universal_installer import UniversalInstaller
+
 # 默认路径
 USER_AGENTS_DIR = Path.home() / '.claude' / 'agents'
 PROJECT_AGENTS_DIR = Path('.claude') / 'agents'
@@ -85,59 +94,58 @@ def _list_agents_in_dir(agents_dir, scope_type):
                     print(f"Warning: Could not parse {agent_file}: {e}")
     return subagents
 
-def install_subagent(subagent_name, scope='project', project_path=None, template_dir=None):
-    """安装/创建一个新的 Subagent
+def install_subagent(subagent_name, scope='project', project_path=None, template_dir=None, dry_run=False, interactive=True):
+    """安装一个 Subagent（使用 UniversalInstaller）
+
+    从 components/agents/ 复制完整的 Agent 模板到目标位置。
 
     支持的 scope:
     - user: 用户级 (~/.claude/agents/)
-    - project: 项目级 (.claude/agents/)
+    - project: 项目级 ({project_path}/.claude/agents/)
     - plugin: 插件级 (不支持直接安装，由插件管理)
+
+    Args:
+        subagent_name: Subagent 名称（如 'code-reviewer'）
+        scope: 安装作用域
+        project_path: 项目路径（scope='project' 时使用）
+        template_dir: 已废弃（兼容性保留）
+        dry_run: 预览模式，不执行实际安装
+        interactive: 交互模式，冲突时询问用户
+
+    Returns:
+        bool: 是否安装成功
     """
-    if scope in ['user', 'personal']:
-        target_dir = USER_AGENTS_DIR
-    elif scope == 'project':
-        project_dir = Path(project_path) if project_path else Path.cwd()
-        target_dir = project_dir / '.claude' / 'agents'
-    elif scope == 'plugin':
+    if scope == 'plugin':
         print("Error: Cannot directly install agents at plugin scope. Use plugin manager instead.")
         return False
+
+    # 确定目标目录
+    if scope in ['user', 'personal']:
+        target_dir = str(Path.home())
+    elif scope == 'project':
+        target_dir = project_path if project_path else str(Path.cwd())
     else:
-        raise ValueError("Scope must be 'user', 'personal', or 'project'")
-    
-    target_dir.mkdir(parents=True, exist_ok=True)
-    agent_md_path = target_dir / f'{subagent_name}.md'
-    
-    if agent_md_path.exists():
-        print(f"Error: Subagent '{subagent_name}' already exists at {agent_md_path}")
+        raise ValueError(f"Unknown scope: {scope}. Must be 'user', 'personal', or 'project'")
+
+    # 使用 UniversalInstaller 安装
+    try:
+        installer = UniversalInstaller()
+        success = installer.install_component(
+            component_type='agents',
+            component_name=subagent_name,
+            target_dir=target_dir,
+            scope=scope,
+            dry_run=dry_run,
+            interactive=interactive
+        )
+        return success
+    except FileNotFoundError as e:
+        print(f"Error: Subagent '{subagent_name}' not found in components/agents/")
+        print(f"Available agents: run 'python scripts/subagents_manager.py list'")
         return False
-        
-    # 如果提供了模板目录，则复制模板
-    if template_dir and Path(template_dir).exists():
-        # 这里可以实现复制模板的逻辑
-        # 为简化，我们只创建基本结构
-        pass
-    
-    # 创建基本的 .md 文件
-    with open(agent_md_path, 'w', encoding='utf-8') as f:
-        f.write(f"""---
-name: {subagent_name}
-description: Brief description of what this Subagent does and when to use it.
----
-
-# {subagent_name.replace('-', ' ').title()}
-
-## Role
-Define the specific role and responsibilities of this Subagent.
-
-## Instructions
-Provide clear, step-by-step guidance for the Subagent on how to perform its tasks.
-
-## Best Practices
-List any specific best practices or constraints this Subagent should follow.
-""")
-    
-    print(f"Successfully created new Subagent '{subagent_name}' at {agent_md_path}")
-    return True
+    except Exception as e:
+        print(f"Error installing subagent: {e}")
+        return False
 
 def edit_subagent(subagent_name, scope='project', project_path=None):
     """编辑一个现有的 Subagent"""
@@ -267,8 +275,10 @@ def main():
     parser.add_argument('--scope', choices=['user', 'personal', 'project', 'plugin', 'all'], default='project',
                        help='Scope of the subagent (user: ~/.claude/agents/, project: .claude/agents/, plugin: from plugins)')
     parser.add_argument('--path', help='Path to the project directory')
-    parser.add_argument('--template', help='Path to a template directory for new subagents')
-    
+    parser.add_argument('--template', help='Path to a template directory for new subagents (deprecated)')
+    parser.add_argument('--dry-run', action='store_true', help='Preview installation without making changes')
+    parser.add_argument('--non-interactive', action='store_true', help='Non-interactive mode (skip conflicts automatically)')
+
     args = parser.parse_args()
     
     if args.action == 'list':
@@ -285,7 +295,15 @@ def main():
         if not args.subagent_name:
             print("Error: subagent_name is required for install action")
             sys.exit(1)
-        install_subagent(args.subagent_name, scope=args.scope, project_path=args.path, template_dir=args.template)
+        success = install_subagent(
+            args.subagent_name,
+            scope=args.scope,
+            project_path=args.path,
+            template_dir=args.template,
+            dry_run=args.dry_run,
+            interactive=not args.non_interactive
+        )
+        sys.exit(0 if success else 1)
         
     elif args.action == 'edit':
         if not args.subagent_name:

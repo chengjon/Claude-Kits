@@ -1,5 +1,5 @@
 ---
-description: workflow-optimizer agent - please update this description
+description: 工作流优化专家，专注人机协作流程优化、瓶颈识别、自动化实施和效率分析。优化开发团队流程，减少重复任务，提升协作效率。
 model: sonnet
 name: workflow-optimizer
 ---

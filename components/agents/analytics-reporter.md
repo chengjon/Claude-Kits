@@ -1,5 +1,5 @@
 ---
-description: analytics-reporter agent - please update this description
+description: 数据分析与报告专家，专注用户行为分析、性能报告生成、A/B测试和转化率优化。将原始数据转化为可执行的洞察，驱动业务增长。
 model: sonnet
 name: analytics-reporter
 ---

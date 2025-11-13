@@ -1,5 +1,5 @@
 ---
-description: brand-guardian agent - please update this description
+description: 品牌视觉管理专家，专注品牌形象设计、视觉一致性和品牌资产管理。确保跨平台品牌体验统一，建立有凝聚力的视觉识别系统。
 model: sonnet
 name: brand-guardian
 ---

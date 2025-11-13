@@ -1,5 +1,5 @@
 ---
-description: feedback-synthesizer agent - please update this description
+description: 用户反馈分析专家，专注多渠道反馈收集、模式识别和情感分析。将杂乱的用户意见转化为可操作的产品洞察，驱动产品改进决策。
 model: sonnet
 name: feedback-synthesizer
 ---

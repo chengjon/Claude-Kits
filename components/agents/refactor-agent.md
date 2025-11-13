@@ -1,5 +1,5 @@
 ---
-description: refactor-agent agent - please update this description
+description: 代码重构专家，专注代码质量提升、结构优化和可维护性改进。清理重复代码、改进命名规范、简化复杂逻辑，提升代码的可读性和健壮性。
 model: sonnet
 name: refactor-agent
 ---

@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+本文件为 Claude Code (claude.ai/code) 提供在此仓库中工作的指导说明。
 
 ## 🛡️ 安全原则 - CRITICAL
 
@@ -31,6 +31,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## 仓库概述
 
 Claude-Kits 是一个用于管理 Claude Code 自定义组件的基础设施工具集。它提供基于 Python 的工具（CLI 和 TUI）来管理 Skills（技能）、Subagents（子代理）、Hooks（钩子）、Slash Commands（斜杠命令）、Plugins（插件）和 MCP Servers（MCP 服务器）。该架构严格遵循 Claude Code 的官方最佳实践，包括 500 行规则、渐进式披露模式和模块化技能结构。
+
+### 最近重大更新 (2025-11-11)
+
+**1. Agents 批量优化 (已完成)**
+- 从 76 agents → 38 agents (-50%)
+- 19 个 agent 组完成整合，创建了 38 个 -pro 后缀的合并 agent
+- 整合模式：Implementation vs Validation、Full-Stack vs Specialization、Strategy vs Operations
+- 备份位置：`components/reference/BAK/agents_optimization_backup/`
+
+**2. Hooks 系统迁移 (已完成)**
+- 从 `/tmp/hooks/` → `components/hooks/`
+- 新增 7 个 hook 脚本：user-prompt-submit, post-tool-use (3个), stop, session-start, session-end
+- 新增 3 个配置文件：settings.json, skill-rules.json, build-checker-python.json
+- 通过 Claude Code 官方 9 Event 规范验证
+- 特性：双语支持、非阻塞+阻塞混合设计、JSON-LD 输出、JSONL 日志
+
+**3. 组件注册更新**
+- 当前统计：279 agents + 71 skills + 63 commands = 413 components
+- components_registry.json 已更新并验证
 
 ## 核心架构
 
@@ -100,6 +119,14 @@ python scripts/claude_tui.py
 # - 方向键（↑/↓）或 W/S 键导航菜单
 # - Enter 键选择
 # - 'q' 键退出
+# - 支持实时搜索和过滤
+# - 多选功能（部分操作）
+
+# 使用 tmux 运行（推荐，避免终端问题）
+bash scripts/run_tui_with_tmux.sh
+
+# 查看 TUI 日志（调试用）
+bash scripts/view_tui_logs.sh
 ```
 
 ### 使用独立管理脚本
@@ -124,6 +151,13 @@ python scripts/plugins_manager.py list
 
 # MCP Servers 管理
 python scripts/mcps_manager.py list --scope user
+
+# 组件扫描和注册
+python scripts/components_scanner.py  # 扫描并更新 components_registry.json
+
+# 检查组件描述
+python scripts/check_missing_descriptions.py  # 检查缺失的 description 字段
+python scripts/force_update_descriptions.py   # 强制更新所有组件的 description
 ```
 
 ## 组件作用域
@@ -200,14 +234,32 @@ description: Expert code review for quality, security, and maintainability. Use 
 - 与 shell hooks 相同的输入/输出行为
 - 依赖项定义在 `components/hooks/package.json`
 
-### Hook 类型
-- **必需的钩子**（位于 `components/hooks/essential/`）：
-  - 技能激活提示（UserPromptSubmit）
-  - 工具使用后跟踪（PostToolUse）
+### Hook 类型和 9 Event 规范
 
-- **可选的钩子**（位于 `components/hooks/optional/`）：
-  - TypeScript 检查
-  - 自定义验证
+Claude Code 定义了 9 种标准 Event 类型：
+1. **PreToolUse** - 工具使用前（可阻止）
+2. **PostToolUse** - 工具使用后（非阻塞记录）
+3. **Notification** - 自定义通知
+4. **UserPromptSubmit** - 用户提示提交（技能激活）
+5. **Stop** - 停止前检查（质量门禁）
+6. **SubagentStop** - 子代理停止前
+7. **PreCompact** - 上下文压缩前
+8. **SessionStart** - 会话开始（上下文恢复）
+9. **SessionEnd** - 会话结束（清理）
+
+**当前已实现的 Hooks** (`components/hooks/`):
+- `user-prompt-submit-skill-activation.sh` - 技能自动激活（基于 skill-rules.json）
+- `post-tool-use-file-edit-tracker.sh` - 文件编辑追踪（JSONL 格式）
+- `post-tool-use-database-schema-validator.sh` - 数据库架构验证
+- `post-tool-use-document-organizer.sh` - 文档自动整理
+- `stop-python-quality-gate.sh` - Python 质量门禁（批量检查，阻塞）
+- `session-start-task-master-injector.sh` - Task Master 上下文恢复
+- `session-end-cleanup.sh` - 会话结束清理
+
+**配置文件**:
+- `settings.json` - Hook 注册配置（定义触发时机和超时）
+- `skill-rules.json` - Skill 激活规则（16KB，支持中英文关键词、路径模式、内容模式）
+- `build-checker-python.json` - Python 质量检查配置（语法检查、类型提示、测试）
 
 ## 集成到用户项目
 
@@ -237,3 +289,110 @@ description: Expert code review for quality, security, and maintainability. Use 
 - TUI 需要 `rich` 库：`pip install rich`
 - 修改技能时，始终保持 500 行限制，确保 `description` 字段包含充分的触发关键词
 - 所有管理脚本都位于 `scripts/` 目录且具有可执行权限（`chmod +x`）
+- Hook 脚本必须具有可执行权限才能正常工作：`chmod +x components/hooks/**/*.sh`
+- 组件注册表 `components_registry.json` 由 `components_scanner.py` 自动生成，包含所有可用组件的元数据
+
+## 开发和测试
+
+### 测试工具
+
+```bash
+# 测试 TUI（简单测试）
+bash scripts/simple_test_tui.sh
+
+# 检查 TTY 支持
+bash scripts/test_tty.sh
+
+# 测试冲突检测
+python scripts/check_conflicts.py /path/to/project
+
+# 验证安装（dry-run）
+python scripts/install_reddit_case.py /path/to/project --dry-run
+```
+
+### 脚本权限设置
+
+所有脚本必须具有可执行权限：
+
+```bash
+# 设置所有 Python 脚本可执行
+chmod +x scripts/*.py
+
+# 设置所有 Shell 脚本可执行
+chmod +x scripts/*.sh
+
+# 设置所有 Hook 脚本可执行
+chmod +x components/hooks/**/*.sh
+
+# 验证权限
+ls -la scripts/
+ls -la components/hooks/
+```
+
+## 常见工作流
+
+### 创建新的 Skill
+
+1. 复制模板：`cp -r components/skills/skill-template components/skills/my-new-skill`
+2. 编辑 `SKILL.md`，添加 YAML frontmatter（name 和 description）
+3. 确保 description 包含所有触发关键词和使用场景
+4. 保持主文件 < 500 行，详细内容放入 `resources/` 目录
+5. 运行 `python scripts/components_scanner.py` 更新注册表
+6. 测试：将技能部署到测试项目并验证激活
+
+### 创建新的 Subagent
+
+1. 复制模板：`cp components/agents/agent-template.md components/agents/my-agent.md`
+2. 编辑 agent 定义，清晰描述功能和使用场景
+3. 运行 `python scripts/components_scanner.py` 更新注册表
+4. 使用 `python scripts/subagents_manager.py install my-agent --scope project` 部署
+
+### 添加新的 Hook
+
+1. 选择 hook 类型：shell (`.sh`) 或 TypeScript (`.ts`)
+2. 复制模板：`cp components/hooks/hook-template/hook-template.sh my-hook.sh`
+3. 实现业务逻辑，确保正确处理 JSON 输入输出
+4. 设置可执行权限：`chmod +x my-hook.sh`
+5. 使用 `hooks_manager.py add` 注册 hook，注意选择正确的事件类型和作用域
+6. 测试 hook：准备测试 JSON 输入，手动执行脚本验证行为
+
+### 部署到用户项目
+
+1. **检查冲突**：`python scripts/check_conflicts.py /path/to/project`
+2. **预览安装**：`python scripts/install_reddit_case.py /path/to/project --dry-run`
+3. **执行安装**：`python scripts/install_reddit_case.py /path/to/project`
+4. **自定义配置**：
+   - 更新 `build-checker.json` 中的构建命令和路径
+   - 更新 `skill-rules.json` 中的路径模式
+   - 编辑各 skill 的 description 添加项目特定关键词
+5. **设置权限**：`chmod +x .claude/hooks/*.sh`
+6. **验证**：重启 Claude Code，测试技能激活和 hooks 执行
+
+## 故障排查
+
+### Skill 未自动激活
+
+- **检查 description 字段**：确保包含相关的触发关键词和使用场景描述
+- **YAML 语法错误**：验证 frontmatter 格式是否正确
+- **文件位置错误**：确认 SKILL.md 在正确的目录结构中
+- **重启 Claude Code**：修改后需要重新加载
+
+### Hook 未执行
+
+- **权限问题**：`chmod +x hook-file.sh`
+- **配置文件错误**：检查 `.claude/settings.json` 语法
+- **路径错误**：使用绝对路径或相对于项目根目录的路径
+- **事件类型错误**：确认使用正确的 hook 事件名称
+- **需要重启**：除非在 `/hooks` 菜单中修改，否则需要重启 Claude Code
+
+### TUI 显示问题
+
+- **终端不支持**：使用 `bash scripts/run_tui_with_tmux.sh` 在 tmux 中运行
+- **依赖缺失**：`pip install rich`
+- **查看日志**：`bash scripts/view_tui_logs.sh` 查看详细错误信息
+
+### 安装冲突
+
+- **首选 skip**：遇到冲突时选择 `skip`，保留现有文件，然后手动合并
+- **使用 backup**：如果确定要替换，选择 `backup` 保留原文件副本
+- **手动合并**：对于配置文件（如 settings.json），手动合并两个版本的内容

@@ -1,5 +1,5 @@
 ---
-description: test-results-analyzer agent - please update this description
+description: 测试结果分析专家，专注测试数据趋势分析、质量指标报告生成和缺陷模式识别。将测试数据转化为可执行的洞察，驱动质量改进决策。
 model: sonnet
 name: test-results-analyzer
 ---

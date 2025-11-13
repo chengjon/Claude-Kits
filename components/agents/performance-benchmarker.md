@@ -1,5 +1,5 @@
 ---
-description: performance-benchmarker agent - please update this description
+description: 性能基准测试专家，专注应用性能分析、性能优化建议和瓶颈识别。测量加载速度，分析渲染性能，提供可行的优化策略以提升用户体验。
 model: sonnet
 name: performance-benchmarker
 ---

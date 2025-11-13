@@ -1,5 +1,5 @@
 ---
-description: infrastructure-maintainer agent - please update this description
+description: 基础设施运维专家，专注系统监控、性能优化和扩展性管理。确保应用稳定运行，处理流量突增，优化成本效益，保障系统可靠性和安全性。
 model: sonnet
 name: infrastructure-maintainer
 ---

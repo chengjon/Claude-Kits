@@ -1,5 +1,5 @@
 ---
-description: sprint-prioritizer agent - please update this description
+description: 敏捷冲刺规划专家，专注功能优先级排序、产品路线图管理和价值最大化。分析投资回报率，制定6天冲刺计划，优化价值交付。
 model: sonnet
 name: sprint-prioritizer
 ---

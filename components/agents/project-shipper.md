@@ -1,5 +1,5 @@
 ---
-description: project-shipper agent - please update this description
+description: 产品发布协调专家，专注发布管理、市场推广和利益相关者沟通。协调发布时间表，制定市场推广策略，确保产品成功上线和影响最大化。
 model: sonnet
 name: project-shipper
 ---
