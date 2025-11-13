@@ -1,6 +1,6 @@
 # Claude-Kits
 
-Claude Code 自定义组件管理工具集 - 提供统一的安装系统和 413 个专业组件
+Claude Code 自定义组件管理工具集 - 提供统一的安装系统和 403+ 个专业组件
 
 ## 🛡️ 安全第一
 
@@ -75,7 +75,7 @@ python scripts/roles_manager.py install your-custom-role --path /path/to/project
 - **test-engineer** - 测试工程师工具集
 - **security-engineer** - 安全工程师工具集
 
-### 📚 71 个 Agent Skills
+### 📚 84 个 Agent Skills
 
 **最近更新 (2025-11-11)**:
 - 完成 Agents 大规模优化：76 → 38 agents (-50%)
@@ -102,7 +102,7 @@ python scripts/roles_manager.py install your-custom-role --path /path/to/project
 
 **查看完整列表**: `ls /opt/claude/Claude-Kits/components/skills/`
 
-### 🤖 279 个 Agents (子代理)
+### 🤖 256 个 Agents (子代理)
 **包含 38 个新的 -pro 整合 Agents (2025-11-11)**
 
 按类别分类，包括：
@@ -154,6 +154,32 @@ python scripts/roles_manager.py install your-custom-role --path /path/to/project
 
 ## 🔥 核心功能
 
+### 5. 交互式 TUI 界面 🖥️ (NEW)
+**问题**: 命令行操作复杂，需要记忆各种参数和路径
+
+**解决**: 提供直观的文本用户界面，支持键盘导航和鼠标式操作
+
+**功能特性**:
+- ✅ **跨平台键盘支持** - Windows/Linux/Unix ESC键和箭头键兼容
+- ✅ **三级架构优化** - 用户友好的作用域显示（📁 user scope, 📁 project scope, 📁 plugin scope）
+- ✅ **模板化浏览** - 从JSON模板库浏览所有可用组件
+- ✅ **详情页面增强** - 显示完整信息并支持直接安装
+- ✅ **批量安装支持** - Role集合一键批量安装所有组件
+- ✅ **模板编辑功能** - 支持修改、删除、新增组件模板
+
+**操作流程**:
+1. **浏览模板** → 查看JSON模板库中的所有组件
+2. **查看详情** → 了解组件功能、路径、描述
+3. **直接安装** → 选择作用域，自动处理目录结构
+4. **管理已安装** → 查看、卸载、验证已安装组件
+5. **批量操作** → Role集合一次性安装多个工具
+
+**使用示例**:
+```bash
+python scripts/claude_tui.py
+# 选择: 1. Agent Skills → View Templates → 选择组件 → 详情页面 → [1] 安装
+```
+
 ### 1. 统一安装系统 🎯 (NEW)
 **特性**:
 - ✅ 单一数据源：所有组件从 `components/` 目录安装
@@ -196,6 +222,8 @@ python scripts/roles_manager.py install your-custom-role --path /path/to/project
 - **[QUICK_INSTALL_GUIDE.md](QUICK_INSTALL_GUIDE.md)** - 快速安装指南（推荐从这里开始）
 - [CLAUDE.md](CLAUDE.md) - Claude Code 使用指南
 - **[Role 集合指南](docs/CASE_IMPLEMENTATION_SUMMARY.md)** - 所有 Role 配置和使用指南（包含 Reddit-Case）
+- **[TUI 新工作流指南](docs/TUI_NEW_WORKFLOW.md)** - 交互式TUI界面使用指南（2025-11-13新增）
+- **[三级架构设计](docs/THREE_TIER_ARCHITECTURE.md)** - user/project/plugin 三层级架构详解
 - [架构设计](docs/ARCHITECTURE_DESIGN.md) - 设计原则和标准流程
 - [安装系统实施](docs/INSTALLATION_SYSTEM_IMPLEMENTATION.md) - 统一安装系统技术文档
 
@@ -234,13 +262,49 @@ python scripts/install_reddit_case.py /path/to/project --dry-run
 python scripts/check_conflicts.py /path/to/project
 ```
 
-### 交互式管理器
+### 交互式 TUI 界面（推荐）
 ```bash
-# 统一 CLI 管理器（旧版）
-python scripts/claude_manager.py skills list --scope project
-
-# 交互式 TUI
+# 启动交互式文本用户界面
 python scripts/claude_tui.py
+```
+
+**新功能亮点 (2025-11-13)**:
+- ✅ **ESC键支持** - 除q键外，ESC键也能返回上级菜单
+- ✅ **模板化浏览** - 从JSON模板库浏览所有可用组件
+- ✅ **详情页面增强** - 显示完整信息并支持直接安装
+- ✅ **三级架构优化** - 用户友好的作用域显示（user/project/plugin）
+- ✅ **批量安装** - Role集合一键批量安装
+- ✅ **交叉平台兼容** - Windows和Linux键盘输入处理
+
+**菜单结构**:
+```
+1. Agent Skills → View Templates → 查看详情 → 直接安装
+2. Subagents → 同上流程
+3. Hooks → 配置文件管理方式
+4. Slash Commands → 同上流程  
+5. Plugins → 插件管理系统
+6. MCP Servers → 服务器管理
+7. Role Checklists → 批量安装工具集
+8. Exit → 退出程序
+```
+
+**键盘导航**:
+- ↑/↓ 箭头键：导航菜单选项
+- Enter：确认选择进入下一级
+- q 或 ESC：返回上级菜单
+- 数字键1-8：快速选择菜单项
+
+**操作流程**:
+1. 选择组件类型（如 Agent Skills）
+2. 选择操作方式（推荐 View Templates）
+3. 浏览组件列表，选择感兴趣的项
+4. 查看详情页面，了解功能描述
+5. 直接安装到项目（支持三级架构选择）
+
+**批量安装示例**:
+```
+Role Checklists → View Role Templates → 选择 backend-developer
+→ 查看工具清单 → 一键安装所有相关组件
 ```
 
 ## ⚠️ 安装前必读
@@ -389,13 +453,16 @@ checklists/roles/       # Role 定义
 
 ---
 
-**版本**: v3.0.0 (2025-11-10)
+**版本**: v3.1.0 (2025-11-13)
 
 **更新内容**:
-- ✅ Phase 1: 创建 UniversalInstaller 核心引擎
-- ✅ Phase 2: Skills/Agents/Commands 管理器统一
-- ✅ Phase 3: Roles Manager 批量安装系统
-- ✅ 72+ Skills 可用
-- ✅ 7 个预定义 Role 集合
+- ✅ TUI 界面重大优化：ESC键支持、菜单结构改进、模板化浏览
+- ✅ 三层级架构优化：用户友好的作用域显示（user/project/plugin）
+- ✅ 详情页面增强：显示完整信息并支持直接安装
+- ✅ 键盘导航改进：q键或ESC键双重返回支持
+- ✅ 256 个 Agents、84 个 Skills、63 个 Commands 可用
+- ✅ 7 个预定义 Role 集合 + 自定义Role构建器
+- ✅ 零错误容忍系统 + 上下文持久化
+- ✅ 跨平台兼容（Windows/Linux键盘处理）
 
 **记住：永远不会覆盖你的文件，所有操作都需要你的确认！** 🛡️
