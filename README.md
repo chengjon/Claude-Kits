@@ -1,6 +1,36 @@
 # Claude-Kits
 
-Claude Code 自定义组件管理工具集 - 提供统一的安装系统和 403+ 个专业组件
+<div align="center">
+
+![Claude-Kits Logo](https://img.shields.io/badge/Claude--Kits-v3.1.0-blue?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/chengjon/Claude-Kits?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/chengjon/Claude-Kits?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
+
+**专业的 Claude Code 自定义组件管理工具集**
+
+基于 Reddit 工程师 30 万行代码实践经验，提供 434+ 个高质量专业组件
+
+[GitHub 仓库](https://github.com/chengjon/Claude-Kits) • [快速开始](#-快速开始) • [文档](#-文档) • [贡献](#-贡献)
+
+</div>
+
+## 📋 目录
+
+- [🛡️ 安全第一](#-安全第一)
+- [🚀 快速开始](#-快速开始)
+- [📦 可用组件](#-可用组件)
+- [🔥 核心功能](#-核心功能)
+- [📖 文档](#-文档)
+- [🔗 GitHub 相关](#-github-相关)
+- [🛠️ 管理工具](#️-管理工具)
+- [⚠️ 安装前必读](#️-安装前必读)
+- [🎯 使用场景](#-使用场景)
+- [💡 最佳实践](#-最佳实践)
+- [🏗️ 系统架构](#️-系统架构)
+- [🤝 贡献](#-贡献)
+- [📄 许可证](#-许可证)
+- [🙏 致谢](#-致谢)
 
 ## 🛡️ 安全第一
 
@@ -13,10 +43,54 @@ Claude Code 自定义组件管理工具集 - 提供统一的安装系统和 403+
 
 ## 🚀 快速开始
 
-### 方法 1: 安装单个组件
+### 💡 推荐方式：使用交互式 TUI 界面
 
 ```bash
-# 安装 Skill
+# 启动 TUI 界面（推荐新手使用）
+python scripts/claude_tui.py
+
+# Skills 浏览流程：
+# Agent Skills → View Details → 选择分类 → 选择skill → 操作选择
+```
+
+### 方法 1: TUI 界面安装（推荐）
+
+**优势**: 直观易用，支持三层分类浏览和智能路径检测
+
+```bash
+python scripts/claude_tui.py
+# 1. 选择组件类型（Agent Skills/Subagents/Slash Commands）
+# 2. 选择操作方式（View Details/Install/Edit等）
+# 3. 按分类浏览或直接搜索
+# 4. 查看详情后选择安装/修改/删除
+```
+
+### 方法 2: 命令行批量安装 Role 集合
+
+**优势**: 快速部署完整工具链，适合有经验的用户
+
+```bash
+# 查看所有可用的 Role 集合
+python scripts/roles_manager.py list
+
+# 查看特定 Role 详情
+python scripts/roles_manager.py info backend-developer
+
+# 批量安装完整工具链
+python scripts/roles_manager.py install backend-developer --path /path/to/project
+
+# 选择性安装（只安装特定组件类型）
+python scripts/roles_manager.py install backend-developer \
+    --path /path/to/project \
+    --components skills,agents  # 不安装commands和hooks
+```
+
+### 方法 3: 单个组件精确安装
+
+**优势**: 精确控制，只安装需要的组件
+
+```bash
+# 安装 Skill（支持智能路径检测）
 python scripts/skills_manager.py install task-planning-pro --path /path/to/project
 
 # 安装 Agent
@@ -25,37 +99,20 @@ python scripts/subagents_manager.py install api-architect --path /path/to/projec
 # 安装 Slash Command
 python scripts/commands_manager.py install api-mock --path /path/to/project
 
-# 预览模式（推荐先预览）
+# 预览模式（强烈推荐先使用）
 python scripts/skills_manager.py install task-planning-pro --path /path/to/project --dry-run
 ```
 
-### 方法 2: 批量安装预定义 Role 集合（推荐）
+### 方法 4: 创建自定义 Role 集合
+
+**优势**: 根据项目需求定制专属工具集
 
 ```bash
-# 查看所有可用的 Role
-python scripts/roles_manager.py list
-
-# 查看 Role 详情
-python scripts/roles_manager.py info backend-developer
-
-# 安装完整的 Role（包括 Reddit-Case）
-python scripts/roles_manager.py install backend-developer --path /path/to/project
-
-# 只安装特定类型的组件
-python scripts/roles_manager.py install backend-developer \
-    --path /path/to/project \
-    --components skills,agents
-```
-
-### 方法 3: 创建并安装自定义 Role 集合（NEW）
-
-```bash
-# 方法 3A: 使用 TUI 图形化构建器（推荐）
+# 使用 TUI 界面创建（推荐）
 python scripts/claude_tui.py
-# 导航到 "Role Checklists" → "Create Custom"
-# 使用多选界面浏览和选择组件（≤15 个，推荐 ≤10 个）
+# 导航到: Role Checklists → Create Custom
 
-# 方法 3B: 直接使用命令行工具
+# 或使用命令行工具
 python scripts/custom_role_builder.py
 
 # 安装自定义 Role
@@ -77,28 +134,29 @@ python scripts/roles_manager.py install your-custom-role --path /path/to/project
 
 ### 📚 84 个 Agent Skills
 
-**最近更新 (2025-11-11)**:
-- 完成 Agents 大规模优化：76 → 38 agents (-50%)
-- 新增 7 个 Hooks 脚本 + 3 个配置文件到 components/hooks/
-- 通过 9 Event 规范验证，确保符合 Claude Code 标准
-**Reddit Case Skills (11 个)**:
+**最新更新 (2025-11-14)**:
+- ✨ **新增三层分类浏览系统** - 按9个主要分类智能浏览skills
+- ✨ **智能路径检测功能** - 自动检测已安装skills的安装路径
+- 🚀 **TUI界面优化** - ESC键支持和模板化浏览体验
+
+**技能分类体系**:
+- **开发与编程** (13个) - 核心开发技能、语言特定模式、性能优化
+- **架构与设计** (8个) - 架构模式、API与数据库、分布式系统
+- **AI与机器学习** (18个) - AI系统、LLM架构、模型工程
+- **测试与质量保证** (7个) - 代码审查、测试模式
+- **DevOps与部署** (10个) - CI/CD、基础设施、监控运维
+- **安全技能** (5个) - 安全审计、区块链安全
+- **云与基础设施** (6个) - 云架构、Kubernetes、Terraform
+- **区块链与Web3** (7个) - DeFi协议、Web3标准
+- **开发工具与工作流** (5个) - 项目管理、自动化工具
+
+**热门 Skills**:
 - `backend-dev-guidelines` - 后端开发指南
 - `frontend-dev-guidelines` - 前端开发指南
-- `dev-docs-workflow` - Dev Docs 工作流
 - `task-planning-pro` - 任务规划专家
-- `code-style-enforcer` - 代码风格执行器
-- ... 以及更多
-
-**通用 Skills (60 个)**:
-- `code-reviewer` - 代码审查
 - `debugging-strategies` - 调试策略
-- `async-python-patterns` - Python 异步模式
-- `typescript-advanced-types` - TypeScript 高级类型
-- `architecture-patterns` - 架构模式
+- `code-review-excellence` - 代码审查卓越
 - `api-design-principles` - API 设计原则
-- `microservices-patterns` - 微服务模式
-- `gitops-workflow` - GitOps 工作流
-- ... 以及更多
 
 **查看完整列表**: `ls /opt/claude/Claude-Kits/components/skills/`
 
@@ -159,25 +217,33 @@ python scripts/roles_manager.py install your-custom-role --path /path/to/project
 
 **解决**: 提供直观的文本用户界面，支持键盘导航和鼠标式操作
 
-**功能特性**:
+**核心特性**:
+- ✨ **Skills 三层分类浏览** - 9个一级分类 → 18个二级分类 → 84个skills
+- ✨ **智能路径检测** - 自动检测已安装skills的安装路径，避免手动输入
 - ✅ **跨平台键盘支持** - Windows/Linux/Unix ESC键和箭头键兼容
-- ✅ **三级架构优化** - 用户友好的作用域显示（📁 user scope, 📁 project scope, 📁 plugin scope）
 - ✅ **模板化浏览** - 从JSON模板库浏览所有可用组件
 - ✅ **详情页面增强** - 显示完整信息并支持直接安装
 - ✅ **批量安装支持** - Role集合一键批量安装所有组件
-- ✅ **模板编辑功能** - 支持修改、删除、新增组件模板
+- ✅ **四种操作选项** - 安装、修改、删除、返回
 
-**操作流程**:
-1. **浏览模板** → 查看JSON模板库中的所有组件
-2. **查看详情** → 了解组件功能、路径、描述
-3. **直接安装** → 选择作用域，自动处理目录结构
-4. **管理已安装** → 查看、卸载、验证已安装组件
-5. **批量操作** → Role集合一次性安装多个工具
+**浏览流程示例 (Skills)**:
+1. **进入 Agent Skills** → 选择 "View Details"
+2. **一级分类选择** - 从9个主要分类中选择（如：开发与编程）
+3. **二级分类选择** - 在选定分类下选择子分类（如：核心开发技能）
+4. **三级技能列表** - 查看该分类下的具体skills列表
+5. **详情查看** - 显示技能描述、文件路径等信息
+6. **四种操作** - 选择安装/修改/删除/返回
+
+**智能修改功能**:
+- 自动检测已安装skills的安装路径
+- 按优先级检查：项目级 → 用户级
+- 支持手动输入路径作为备选方案
 
 **使用示例**:
 ```bash
 python scripts/claude_tui.py
-# 选择: 1. Agent Skills → View Templates → 选择组件 → 详情页面 → [1] 安装
+# Agent Skills → View Details → 选择分类 → 选择skill → [2]修改
+# 系统自动检测安装路径或让用户手动输入
 ```
 
 ### 1. 统一安装系统 🎯 (NEW)
@@ -219,13 +285,41 @@ python scripts/claude_tui.py
 
 ## 📖 文档
 
+### 🚀 快速入门
 - **[QUICK_INSTALL_GUIDE.md](QUICK_INSTALL_GUIDE.md)** - 快速安装指南（推荐从这里开始）
-- [CLAUDE.md](CLAUDE.md) - Claude Code 使用指南
-- **[Role 集合指南](docs/CASE_IMPLEMENTATION_SUMMARY.md)** - 所有 Role 配置和使用指南（包含 Reddit-Case）
-- **[TUI 新工作流指南](docs/TUI_NEW_WORKFLOW.md)** - 交互式TUI界面使用指南（2025-11-13新增）
+- **[TUI 新工作流指南](docs/TUI_NEW_WORKFLOW.md)** - 交互式TUI界面使用指南
+
+### 🔧 技术文档
 - **[三级架构设计](docs/THREE_TIER_ARCHITECTURE.md)** - user/project/plugin 三层级架构详解
+- **[Role 集合指南](docs/ROLE_CHECKLISTS_IMPLEMENTATION.md)** - 所有 Role 配置和使用指南
 - [架构设计](docs/ARCHITECTURE_DESIGN.md) - 设计原则和标准流程
-- [安装系统实施](docs/INSTALLATION_SYSTEM_IMPLEMENTATION.md) - 统一安装系统技术文档
+- [安装系统实施](docs/COMPONENT_MANAGEMENT_SYSTEM.md) - 统一安装系统技术文档
+
+### 📊 项目分析
+- **[组件覆盖面分析](docs/COMPONENT_COVERAGE_ANALYSIS.md)** - 组件分类和覆盖统计
+- **[实现完成报告](docs/IMPLEMENTATION_COMPLETION_REPORT.md)** - 项目实施进度报告
+
+### 📋 使用指南
+- [CLAUDE.md](CLAUDE.md) - Claude Code 使用指南
+
+## 🔗 GitHub 相关
+
+**仓库信息**:
+- **GitHub**: [https://github.com/chengjon/Claude-Kits](https://github.com/chengjon/Claude-Kits)
+- **问题反馈**: [GitHub Issues](https://github.com/chengjon/Claude-Kits/issues)
+- **功能建议**: [GitHub Discussions](https://github.com/chengjon/Claude-Kits/discussions)
+- **贡献指南**: 请查看 [CONTRIBUTING.md](CONTRIBUTING.md)
+
+**统计数据**:
+- ⭐ Stars: [GitHub Stars](https://github.com/chengjon/Claude-Kits/stargazers)
+- 🍴 Forks: [GitHub Forks](https://github.com/chengjon/Claude-Kits/network/members)
+- 🐛 Issues: [GitHub Issues](https://github.com/chengjon/Claude-Kits/issues)
+- 📦 Releases: [GitHub Releases](https://github.com/chengjon/Claude-Kits/releases)
+
+**社区**:
+- 欢迎提交 Issue 反馈问题
+- 欢迎提交 PR 贡献代码
+- 欢迎参与 Discussions 讨论功能建议
 
 ## 🛠️ 管理工具
 
@@ -432,37 +526,63 @@ checklists/roles/       # Role 定义
 
 ## 🤝 贡献
 
-欢迎贡献！请确保：
+欢迎贡献代码、报告问题或提出功能建议！
 
-1. 遵循安全原则（永不覆盖用户文件）
-2. 添加测试
-3. 更新文档
-4. 遵循 500 行规则
-5. 更新 `components_registry.json`（运行 `python scripts/components_scanner.py`）
+**贡献方式**:
+
+1. **Fork 项目**: [https://github.com/chengjon/Claude-Kits/fork](https://github.com/chengjon/Claude-Kits/fork)
+2. **创建分支**: `git checkout -b feature/amazing-feature`
+3. **提交变更**: `git commit -m 'Add amazing feature'`
+4. **推送分支**: `git push origin feature/amazing-feature`
+5. **提交 PR**: 在 GitHub 上创建 Pull Request
+
+**贡献要求**:
+
+1. ✅ 遵循安全原则（永不覆盖用户文件）
+2. ✅ 添加适当的测试覆盖
+3. ✅ 更新相关文档
+4. ✅ 遵循 500 行规则（技能文档）
+5. ✅ 更新组件注册表（运行 `python scripts/components_scanner.py`）
+6. ✅ 保持代码风格一致性
+
+**开发环境设置**:
+```bash
+# 克隆仓库
+git clone https://github.com/chengjon/Claude-Kits.git
+cd Claude-Kits
+
+# 安装依赖
+pip install rich pyyaml
+
+# 运行测试
+python scripts/check_conflicts.py /path/to/test-project --dry-run
+```
 
 ## 📄 许可证
 
-[MIT License](LICENSE)
+本项目采用 [MIT License](LICENSE) 开源许可证。
 
 ## 🙏 致谢
 
-本项目基于 Reddit 工程师 30 万行代码实践经验，感谢：
-- Reddit 工程团队的最佳实践分享
-- Claude Code 官方文档和指南
-- 开源社区的贡献
+本项目基于 Reddit 工程师 30 万行代码实践经验构建，感谢：
+
+- **Reddit 工程团队** - 最佳实践和零错误容忍系统
+- **Claude Code 团队** - 优秀的 AI 编程助手平台
+- **开源社区** - 持续的贡献和反馈
+
+特别感谢所有贡献者的支持！
 
 ---
 
-**版本**: v3.1.0 (2025-11-13)
+**🚀 版本**: v3.1.0 (2025-11-14)
 
-**更新内容**:
-- ✅ TUI 界面重大优化：ESC键支持、菜单结构改进、模板化浏览
-- ✅ 三层级架构优化：用户友好的作用域显示（user/project/plugin）
-- ✅ 详情页面增强：显示完整信息并支持直接安装
-- ✅ 键盘导航改进：q键或ESC键双重返回支持
-- ✅ 256 个 Agents、84 个 Skills、63 个 Commands 可用
-- ✅ 7 个预定义 Role 集合 + 自定义Role构建器
-- ✅ 零错误容忍系统 + 上下文持久化
-- ✅ 跨平台兼容（Windows/Linux键盘处理）
+**📋 最新更新**:
+- ✨ **Skills 三层分类浏览** - 9个一级分类，18个二级分类，84个skills
+- ✨ **智能路径检测** - 自动检测已安装skills的安装路径
+- 🚀 **TUI界面增强** - ESC键支持，详情页面优化，键盘导航改进
+- ✅ **跨平台兼容** - Windows/Linux/Unix 全平台键盘支持
+- ✅ **组件统计** - 256个Agents、84个Skills、63个Commands、10个Hooks
+- ✅ **7个预定义Role** + 自定义Role构建器
+- ✅ **零错误容忍系统** + 上下文持久化机制
 
-**记住：永远不会覆盖你的文件，所有操作都需要你的确认！** 🛡️
+**🛡️ 安全承诺**: 永远不会覆盖你的文件，所有操作都需要你的确认！
