@@ -258,7 +258,7 @@ def get_common_params(component_type="general"):
     return params
 
 def view_component_details(component_type):
-    """查看组件详情"""
+    """查看组件详情（增强版，支持直接安装）"""
     clear_screen()
 
     if not COMPONENTS_REGISTRY:
@@ -297,29 +297,144 @@ def view_component_details(component_type):
             name, info = component_list[index]
 
             # 显示详细信息
-            clear_screen()
-            console.print(Panel(f"[bold]{name}[/bold]", border_style="cyan"))
+            while True:
+                clear_screen()
+                console.print(Panel(f"[bold]{name}[/bold]", border_style="cyan"))
 
-            table = Table(show_header=False, box=None)
-            table.add_column("Field", style="cyan", width=15)
-            table.add_column("Value", style="white")
+                table = Table(show_header=False, box=None)
+                table.add_column("Field", style="cyan", width=15)
+                table.add_column("Value", style="white")
 
-            table.add_row("名称", info.get('name', name))
-            table.add_row("类型", component_type)
-            table.add_row("文件", info.get('file', info.get('dir', 'N/A')))
-            table.add_row("路径", info.get('path', 'N/A'))
+                table.add_row("名称", info.get('name', name))
+                table.add_row("类型", component_type)
+                table.add_row("文件", info.get('file', info.get('dir', 'N/A')))
+                table.add_row("路径", info.get('path', 'N/A'))
 
-            if 'model' in info:
-                table.add_row("模型", info.get('model', 'N/A'))
+                if 'model' in info:
+                    table.add_row("模型", info.get('model', 'N/A'))
 
-            if 'description' in info:
-                # 分行显示长描述
-                desc = info.get('description', '')
-                table.add_row("描述", desc)
+                if 'description' in info:
+                    # 分行显示长描述
+                    desc = info.get('description', '')
+                    table.add_row("描述", desc)
 
-            console.print(table)
+                console.print(table)
 
-            input("\n按 Enter 返回...")
+                # 提供操作选项
+                console.print("\n[yellow]操作选项:[/yellow]")
+                console.print("  [1] 安装到项目")
+                console.print("  [2] 查看更多信息")
+                console.print("  [0] 返回列表")
+
+                action = input("\n选择: ").strip()
+
+                if action == "1":
+                    # 调用 install 操作
+                    install_component_from_details(component_type, name)
+                    break
+                elif action == "2":
+                    # 尝试显示源文件内容
+                    try:
+                        file_path = Path(info.get('path', ''))
+                        if file_path.exists():
+                            console.print("\n[cyan]=== 组件源文件预览 ===[/cyan]")
+                            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                                lines = f.readlines()[:20]
+                                for line in lines:
+                                    console.print(line.rstrip())
+                            input("\n按 Enter 返回详情...")
+                    except Exception as e:
+                        console.print(f"[red]无法读取文件: {e}[/red]")
+                        input("按 Enter 返回...")
+                elif action == "0":
+                    break
+                else:
+                    console.print("[red]无效的选择[/red]")
+                    input("按 Enter 继续...")
+        else:
+            console.print("[red]无效的选择[/red]")
+            input("Press Enter to continue...")
+    except ValueError:
+        console.print("[red]无效的输入[/red]")
+        input("Press Enter to continue...")
+
+def install_component_from_details(component_type, component_name):
+    """从详情页面直接安装组件"""
+    clear_screen()
+    console.print(Panel(f"安装 {component_name}", border_style="cyan"))
+
+    # 获取目标项目路径
+    project_path = Prompt.ask(
+        "输入目标项目路径（留空则使用当前目录）",
+        default="."
+    )
+
+    # 获取作用域
+    scope_choices = ["user", "project"]
+    scope = Prompt.ask(
+        "选择安装作用域",
+        choices=scope_choices,
+        default="project"
+    )
+
+    # 构建安装命令参数
+    params = ["install", component_name]
+    if project_path != ".":
+        params.extend(["--path", project_path])
+    params.extend(["--scope", scope])
+
+    # 调用相应的管理脚本
+    manager_script = {
+        "skills": "skills_manager.py",
+        "agents": "subagents_manager.py",
+        "hooks": "hooks_manager.py",
+        "commands": "commands_manager.py"
+    }.get(component_type, "skills_manager.py")
+
+    console.print(f"\n[cyan]执行安装...[/cyan]")
+    run_manager_script(manager_script, params)
+
+    input("\n按 Enter 返回...")
+
+def quick_install_component(component_type):
+    """快速安装组件 - 显示列表供用户选择"""
+    clear_screen()
+
+    if not COMPONENTS_REGISTRY:
+        console.print("[yellow]组件注册表未加载，请稍后重试[/yellow]")
+        input("\nPress Enter to continue...")
+        return
+
+    components = COMPONENTS_REGISTRY.get("components", {}).get(component_type, {})
+
+    if not components:
+        console.print(f"[yellow]没有找到 {component_type} 组件[/yellow]")
+        input("\nPress Enter to continue...")
+        return
+
+    # 创建组件列表
+    component_list = [(name, info) for name, info in sorted(components.items())]
+
+    # 显示组件列表
+    console.print(Panel(f"快速安装 {component_type.title()}", border_style="green"))
+    console.print(f"\n共 {len(component_list)} 个组件\n")
+
+    for i, (name, info) in enumerate(component_list, 1):
+        desc = info.get('description', 'No description')
+        console.print(f"{i}. [cyan]{name}[/cyan] - {desc[:60]}...")
+
+    # 选择要安装的组件
+    console.print("\n输入编号选择要安装的组件，或按 Enter 返回")
+    choice = input("选择: ").strip()
+
+    if not choice:
+        return
+
+    try:
+        index = int(choice) - 1
+        if 0 <= index < len(component_list):
+            name, info = component_list[index]
+            install_component_from_details(component_type, name)
         else:
             console.print("[red]无效的选择[/red]")
             input("Press Enter to continue...")
@@ -338,14 +453,7 @@ def handle_skills_actions(action):
         run_manager_script("skills_manager.py", params)
 
     elif action == "Install":
-        name = Prompt.ask("Enter skill name")
-        if not name:
-            console.print("[red]Skill name is required.[/red]")
-            input("Press Enter to continue...")
-            return
-        params = ["install", name]
-        params.extend(get_common_params(component_type="skills"))
-        run_manager_script("skills_manager.py", params)
+        quick_install_component("skills")
 
     elif action == "Edit":
         name = Prompt.ask("Enter skill name to edit")
@@ -388,14 +496,7 @@ def handle_subagents_actions(action):
         run_manager_script("subagents_manager.py", params)
 
     elif action == "Install":
-        name = Prompt.ask("Enter subagent name")
-        if not name:
-            console.print("[red]Subagent name is required.[/red]")
-            input("Press Enter to continue...")
-            return
-        params = ["install", name]
-        params.extend(get_common_params(component_type="agents"))
-        run_manager_script("subagents_manager.py", params)
+        quick_install_component("agents")
 
     elif action == "Edit":
         name = Prompt.ask("Enter subagent name to edit")
@@ -530,14 +631,7 @@ def handle_commands_actions(action):
         run_manager_script("commands_manager.py", params)
 
     elif action == "Install":
-        name = Prompt.ask("Enter command name (can include namespace, e.g., db/migrate)")
-        if not name:
-            console.print("[red]Command name is required.[/red]")
-            input("Press Enter to continue...")
-            return
-        params = ["install", name]
-        params.extend(get_common_params(component_type="commands"))
-        run_manager_script("commands_manager.py", params)
+        quick_install_component("commands")
 
     elif action == "Edit":
         name = Prompt.ask("Enter command name to edit")
