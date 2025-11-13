@@ -55,6 +55,8 @@ if os.name == 'nt':  # Windows
                 return 'UP'
             elif key == b'P':
                 return 'DOWN'
+        elif key == b'\x1b':  # ESC key
+            return 'ESC'
         return key.decode('utf-8', errors='ignore')
 else:  # Linux/Unix
     import tty
@@ -68,7 +70,10 @@ else:  # Linux/Unix
             tty.setraw(fd)
             ch = sys.stdin.read(1)
             if ch == '\x1b':  # ESC 序列
+                # 尝试读取更多字符
                 ch2 = sys.stdin.read(1)
+                if not ch2:  # 如果没有更多字符，说明是单独的 ESC 键
+                    return 'ESC'
                 if ch2 == '[':
                     ch3 = sys.stdin.read(1)
                     if ch3 == 'A':
@@ -87,9 +92,11 @@ else:  # Linux/Unix
 SCRIPT_DIR = Path(__file__).parent.resolve()
 PROJECT_ROOT = SCRIPT_DIR.parent
 REGISTRY_FILE = PROJECT_ROOT / "components_registry.json"
+CATALOG_FILE = PROJECT_ROOT / ".claude" / "component_catalog.json"
 
-# 全局组件注册表
+# 全局组件注册表和目录
 COMPONENTS_REGISTRY = None
+COMPONENT_CATALOG = None
 
 # Claude-Kits LOGO
 LOGO = """
@@ -117,6 +124,18 @@ def load_components_registry():
             }
         }
     return COMPONENTS_REGISTRY
+
+def load_component_catalog():
+    """加载组件目录（带分类信息）"""
+    global COMPONENT_CATALOG
+    if CATALOG_FILE.exists():
+        try:
+            with open(CATALOG_FILE, 'r', encoding='utf-8') as f:
+                COMPONENT_CATALOG = json.load(f)
+                return COMPONENT_CATALOG
+        except Exception as e:
+            console.print(f"[yellow]警告：无法加载组件目录: {e}[/yellow]")
+    return None
 
 def run_component_scanner():
     """运行组件扫描器"""
@@ -396,6 +415,273 @@ def install_component_from_details(component_type, component_name):
 
     input("\n按 Enter 返回...")
 
+# ============================================================================
+# 新增：基于目录的层级化导航（使用 component_catalog.json）
+# ============================================================================
+
+def browse_agents_by_category():
+    """按分类浏览 Agents（从目录读取）"""
+    global COMPONENT_CATALOG
+
+    if not COMPONENT_CATALOG:
+        console.print("[yellow]组件目录未加载[/yellow]")
+        input("\nPress Enter to continue...")
+        return
+
+    clear_screen()
+    agents_data = COMPONENT_CATALOG.get('components', {}).get('agents', {})
+
+    if not agents_data.get('categories'):
+        console.print("[yellow]没有找到分类信息[/yellow]")
+        input("\nPress Enter to continue...")
+        return
+
+    categories = sorted(agents_data['categories'].keys())
+
+    # 显示分类列表
+    console.print(Panel(f"Agent Categories ({len(categories)} 个分类)", border_style="green"))
+    console.print()
+
+    for i, cat in enumerate(categories, 1):
+        count = agents_data['categories'][cat]['count']
+        console.print(f"{i}. [cyan]{cat}[/cyan] ({count} agents)")
+
+    # 选择分类
+    console.print("\n输入编号选择分类，或按 Enter 返回")
+    choice = input("选择: ").strip()
+
+    if not choice:
+        return
+
+    try:
+        idx = int(choice) - 1
+        if 0 <= idx < len(categories):
+            selected_cat = categories[idx]
+            browse_agents_in_category(selected_cat, agents_data['categories'][selected_cat]['items'])
+    except ValueError:
+        console.print("[red]无效的输入[/red]")
+        input("Press Enter to continue...")
+
+def browse_agents_in_category(category, agent_list):
+    """浏览特定分类中的 Agents"""
+    clear_screen()
+
+    console.print(Panel(f"Agents in {category} ({len(agent_list)} 个)", border_style="green"))
+    console.print()
+
+    # 显示分类中的 agents
+    for i, agent in enumerate(agent_list, 1):
+        console.print(f"{i}. [cyan]{agent}[/cyan]")
+
+    # 选择 agent
+    console.print("\n输入编号查看详情，或按 Enter 返回")
+    choice = input("选择: ").strip()
+
+    if not choice:
+        return
+
+    try:
+        idx = int(choice) - 1
+        if 0 <= idx < len(agent_list):
+            show_component_detail("agents", agent_list[idx])
+    except ValueError:
+        console.print("[red]无效的输入[/red]")
+        input("Press Enter to continue...")
+
+def show_component_detail(component_type, component_name):
+    """显示组件详情（4个操作选项：安装、修改、删除、返回）"""
+    clear_screen()
+
+    # 从注册表获取组件信息
+    components = COMPONENTS_REGISTRY.get('components', {}).get(component_type, {})
+    info = components.get(component_name, {})
+
+    while True:
+        clear_screen()
+        console.print(Panel(f"[bold]{component_name}[/bold]", border_style="cyan"))
+
+        table = Table(show_header=False, box=None)
+        table.add_column("Field", style="cyan", width=15)
+        table.add_column("Value", style="white")
+
+        table.add_row("Name", info.get('name', component_name))
+        table.add_row("Type", component_type)
+        table.add_row("File", info.get('file', info.get('dir', 'N/A')))
+        table.add_row("Path", info.get('path', 'N/A'))
+
+        if 'model' in info:
+            table.add_row("Model", info.get('model', 'N/A'))
+
+        if 'description' in info:
+            desc = info.get('description', '')
+            # 如果描述太长，截断显示
+            if len(desc) > 100:
+                desc = desc[:97] + "..."
+            table.add_row("Description", desc)
+
+        console.print(table)
+
+        # 4 个操作选项
+        console.print("\n[yellow]操作选项:[/yellow]")
+        console.print("  [1] 安装 (Install)")
+        console.print("  [2] 修改 (Edit)")
+        console.print("  [3] 删除 (Delete)")
+        console.print("  [0] 返回 (Back)")
+
+        action = input("\n选择: ").strip()
+
+        if action == "1":
+            # 安装
+            install_component_action(component_type, component_name)
+            break
+        elif action == "2":
+            # 修改
+            edit_component_action(component_type, component_name)
+            break
+        elif action == "3":
+            # 删除
+            delete_component_action(component_type, component_name)
+            break
+        elif action == "0":
+            # 返回
+            break
+        else:
+            console.print("[red]无效的选择[/red]")
+            input("Press Enter to continue...")
+
+def install_component_action(component_type, component_name):
+    """安装组件"""
+    clear_screen()
+    console.print(Panel(f"安装 {component_name}", border_style="cyan"))
+
+    project_path = Prompt.ask(
+        "输入目标项目路径（留空则使用当前目录）",
+        default="."
+    )
+
+    scope = Prompt.ask(
+        "选择安装作用域",
+        choices=["user", "project"],
+        default="project"
+    )
+
+    params = ["install", component_name]
+    if project_path != ".":
+        params.extend(["--path", project_path])
+    params.extend(["--scope", scope])
+
+    manager_script = {
+        "skills": "skills_manager.py",
+        "agents": "subagents_manager.py",
+        "hooks": "hooks_manager.py",
+        "commands": "commands_manager.py"
+    }.get(component_type, "skills_manager.py")
+
+    run_manager_script(manager_script, params)
+
+def edit_component_action(component_type, component_name):
+    """修改组件"""
+    clear_screen()
+    console.print(Panel(f"修改 {component_name}", border_style="cyan"))
+
+    project_path = Prompt.ask(
+        "输入项目路径（留空则使用当前目录）",
+        default="."
+    )
+
+    scope = Prompt.ask(
+        "选择作用域",
+        choices=["user", "project"],
+        default="project"
+    )
+
+    params = ["edit", component_name]
+    if project_path != ".":
+        params.extend(["--path", project_path])
+    params.extend(["--scope", scope])
+
+    manager_script = {
+        "skills": "skills_manager.py",
+        "agents": "subagents_manager.py",
+        "hooks": "hooks_manager.py",
+        "commands": "commands_manager.py"
+    }.get(component_type, "skills_manager.py")
+
+    run_manager_script(manager_script, params)
+
+def delete_component_action(component_type, component_name):
+    """删除组件"""
+    clear_screen()
+    console.print(Panel(f"删除 {component_name}", border_style="cyan"))
+
+    confirm = Prompt.ask(
+        f"确定要删除 {component_name} 吗？",
+        choices=["yes", "no"],
+        default="no"
+    )
+
+    if confirm == "yes":
+        scope = Prompt.ask(
+            "选择作用域",
+            choices=["user", "project"],
+            default="project"
+        )
+
+        params = ["delete", component_name, "--scope", scope]
+
+        manager_script = {
+            "skills": "skills_manager.py",
+            "agents": "subagents_manager.py",
+            "hooks": "hooks_manager.py",
+            "commands": "commands_manager.py"
+        }.get(component_type, "skills_manager.py")
+
+        run_manager_script(manager_script, params)
+
+def browse_skills_list():
+    """浏览 Skills 列表（显示所有 skills）"""
+    global COMPONENT_CATALOG
+
+    clear_screen()
+
+    if not COMPONENT_CATALOG:
+        console.print("[yellow]组件目录未加载[/yellow]")
+        input("\nPress Enter to continue...")
+        return
+
+    skills_data = COMPONENT_CATALOG.get('components', {}).get('skills', {})
+    skills_list = skills_data.get('items', [])
+
+    if not skills_list:
+        console.print("[yellow]没有找到 Skills[/yellow]")
+        input("\nPress Enter to continue...")
+        return
+
+    # 显示 Skills 列表
+    console.print(Panel(f"可用的 Skills ({len(skills_list)} 个)", border_style="green"))
+    console.print()
+
+    for i, skill in enumerate(skills_list, 1):
+        # 获取 skill 的描述信息
+        skill_info = COMPONENTS_REGISTRY.get('components', {}).get('skills', {}).get(skill, {})
+        desc = skill_info.get('description', 'No description')
+        console.print(f"{i}. [cyan]{skill}[/cyan] - {desc[:60]}...")
+
+    # 选择要查看的 skill
+    console.print("\n输入编号查看详情，或按 Enter 返回")
+    choice = input("选择: ").strip()
+
+    if not choice:
+        return
+
+    try:
+        idx = int(choice) - 1
+        if 0 <= idx < len(skills_list):
+            show_component_detail("skills", skills_list[idx])
+    except ValueError:
+        console.print("[red]无效的输入[/red]")
+        input("Press Enter to continue...")
+
 def quick_install_component(component_type):
     """快速安装组件 - 显示列表供用户选择"""
     clear_screen()
@@ -445,7 +731,7 @@ def quick_install_component(component_type):
 def handle_skills_actions(action):
     """处理 Agent Skills 的操作"""
     if action == "View Details":
-        view_component_details("skills")
+        browse_skills_list()
 
     elif action == "List":
         params = ["list"]
@@ -488,7 +774,7 @@ def handle_skills_actions(action):
 def handle_subagents_actions(action):
     """处理 Subagents 的操作"""
     if action == "View Details":
-        view_component_details("agents")
+        browse_agents_by_category()
 
     elif action == "List":
         params = ["list"]
@@ -1148,7 +1434,7 @@ def show_actions_menu(component_type):
             else:
                 console.print(f"   {i+1}. {action}")
 
-        console.print("\n[green]↑/↓ 箭头键导航，Enter 选择，数字快捷键，q 返回[/green]")
+        console.print("\n[green]↑/↓ 箭头键导航，Enter 选择，数字快捷键，q/ESC 返回[/green]")
 
         try:
             key = get_key()
@@ -1157,7 +1443,7 @@ def show_actions_menu(component_type):
                 selected_index = (selected_index - 1) % len(actions)
             elif key == 'DOWN':
                 selected_index = (selected_index + 1) % len(actions)
-            elif key in ['q', 'Q']:
+            elif key in ['q', 'Q'] or key == 'ESC':
                 break
             elif key == '\r' or key == '\n':  # Enter
                 selected_action = actions[selected_index]
@@ -1227,7 +1513,7 @@ def main():
             else:
                 console.print(f"   {i+1}. {item}")
 
-        console.print("\n[green]↑/↓ 箭头键导航，Enter 选择，数字快捷键，q 退出[/green]")
+        console.print("\n[green]↑/↓ 箭头键导航，Enter 选择，数字快捷键，q/ESC 退出[/green]")
 
         try:
             key = get_key()
@@ -1236,7 +1522,7 @@ def main():
                 selected_index = (selected_index - 1) % len(MAIN_MENU_ITEMS)
             elif key == 'DOWN':
                 selected_index = (selected_index + 1) % len(MAIN_MENU_ITEMS)
-            elif key in ['q', 'Q']:
+            elif key in ['q', 'Q'] or key == 'ESC':
                 console.print("[yellow]Goodbye![/yellow]")
                 break
             elif key == '\r' or key == '\n':  # Enter
@@ -1300,6 +1586,10 @@ if __name__ == "__main__":
     # 加载组件注册表
     console.print("[cyan]加载组件注册表...[/cyan]")
     load_components_registry()
+
+    # 加载组件目录（分类信息）
+    console.print("[cyan]加载组件分类目录...[/cyan]")
+    load_component_catalog()
 
     if COMPONENTS_REGISTRY:
         metadata = COMPONENTS_REGISTRY.get("metadata", {})

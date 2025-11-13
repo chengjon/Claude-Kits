@@ -1,0 +1,583 @@
+{
+  "version": "1.0",
+  "updated": "2025-11-13",
+  "description": "Component catalog with categorized grouping for TUI navigation",
+  "components": {
+    "agents": {
+      "total": 255,
+      "categories": {
+        "ai-ml-research": {
+          "count": 6,
+          "items": [
+            "ai-engineer",
+            "context-manager",
+            "machine-learning-engineer",
+            "ml-engineer",
+            "nlp-engineer",
+            "prompt-engineer"
+          ]
+        },
+        "api-development": {
+          "count": 5,
+          "items": [
+            "api-designer-pro",
+            "api-implementation-pro",
+            "api-lifecycle-pro",
+            "api-tester-pro",
+            "graphql-architect"
+          ]
+        },
+        "architecture-patterns": {
+          "count": 14,
+          "items": [
+            "agent-organizer",
+            "architect-review",
+            "architect-reviewer",
+            "distributed-systems-pro",
+            "docs-architect",
+            "error-coordinator",
+            "llm-architect",
+            "microservices-architect",
+            "multi-agent-coordinator",
+            "orchestrator",
+            "senior-frontend-architect",
+            "tdd-orchestrator",
+            "tech-lead-orchestrator",
+            "workflow-orchestrator"
+          ]
+        },
+        "backend-frameworks": {
+          "count": 19,
+          "items": [
+            "backend-architect-core",
+            "backend-fullstack-pro",
+            "backend-security-coder",
+            "backend-security-pro",
+            "django-backend-pro",
+            "django-fullstack-pro",
+            "django-orm-pro",
+            "laravel-backend-expert",
+            "laravel-backend-pro",
+            "laravel-database-pro",
+            "laravel-eloquent-expert",
+            "laravel-fullstack-pro",
+            "laravel-orm-pro",
+            "laravel-specialist",
+            "payment-integration",
+            "rails-backend-pro",
+            "rails-fullstack-pro",
+            "rails-orm-pro",
+            "spring-boot-engineer"
+          ]
+        },
+        "business-product": {
+          "count": 16,
+          "items": [
+            "app-store-optimizer",
+            "brand-guardian",
+            "business-analyst",
+            "competitive-analyst",
+            "finance-tracker",
+            "growth-hacker",
+            "hr-pro",
+            "market-researcher",
+            "product-manager",
+            "quant-analyst",
+            "research-analyst",
+            "sales-automator",
+            "sales-engineer",
+            "search-specialist",
+            "trend-analyst",
+            "trend-researcher"
+          ]
+        },
+        "cloud-infrastructure": {
+          "count": 8,
+          "items": [
+            "cloud-architect",
+            "hybrid-cloud-architect",
+            "infrastructure-architect-pro",
+            "infrastructure-maintainer",
+            "kubernetes-architect",
+            "kubernetes-specialist",
+            "terraform-engineer",
+            "terraform-specialist"
+          ]
+        },
+        "code-quality-refactoring": {
+          "count": 5,
+          "items": [
+            "code-archaeologist",
+            "code-reviewer",
+            "legacy-modernizer",
+            "refactor-agent",
+            "refactoring-specialist"
+          ]
+        },
+        "creative-entertainment": {
+          "count": 3,
+          "items": [
+            "joker",
+            "visual-storyteller",
+            "whimsy-injector"
+          ]
+        },
+        "customer-support": {
+          "count": 4,
+          "items": [
+            "customer-success-manager",
+            "customer-support",
+            "feedback-synthesizer",
+            "support-responder"
+          ]
+        },
+        "data-analytics": {
+          "count": 6,
+          "items": [
+            "data-analyst",
+            "data-analytics-pro",
+            "data-engineer",
+            "data-platform-pro",
+            "data-researcher",
+            "data-scientist"
+          ]
+        },
+        "database-systems": {
+          "count": 4,
+          "items": [
+            "database-design-pro",
+            "database-lifecycle-pro",
+            "database-operations-pro",
+            "database-specialist-pro"
+          ]
+        },
+        "debugging-troubleshooting": {
+          "count": 4,
+          "items": [
+            "advanced-debugger",
+            "debugger",
+            "error-detective",
+            "integration-test-fixer"
+          ]
+        },
+        "development-tools": {
+          "count": 8,
+          "items": [
+            "agent-template",
+            "build-engineer",
+            "cli-developer",
+            "communication-protocol",
+            "dependency-manager",
+            "git-workflow-manager",
+            "mcp-developer",
+            "tooling-engineer"
+          ]
+        },
+        "devops-infrastructure": {
+          "count": 11,
+          "items": [
+            "devops-automator",
+            "devops-core",
+            "devops-engineer",
+            "devops-incident-responder",
+            "devops-pro",
+            "devops-reliability",
+            "devops-sre-pro",
+            "devops-troubleshooter",
+            "platform-engineer",
+            "sre-engineer",
+            "sre-pro"
+          ]
+        },
+        "documentation-content": {
+          "count": 12,
+          "items": [
+            "content-creator",
+            "content-marketer",
+            "documentation-engineer",
+            "documentation-pro",
+            "documentation-specialist",
+            "documentation-writer",
+            "knowledge-synthesizer",
+            "mermaid-expert",
+            "reference-builder",
+            "seo-content-optimizer",
+            "technical-writer",
+            "tutorial-engineer"
+          ]
+        },
+        "domain-specific": {
+          "count": 7,
+          "items": [
+            "blockchain-developer",
+            "education-tech-engineer",
+            "embedded-systems",
+            "fintech-engineer",
+            "game-developer",
+            "healthcare-engineer",
+            "iot-engineer"
+          ]
+        },
+        "frontend-frameworks": {
+          "count": 10,
+          "items": [
+            "electron-pro",
+            "fastapi-pro",
+            "flutter-expert",
+            "ios-developer",
+            "julia-pro",
+            "minecraft-bukkit-pro",
+            "tailwind-css-expert",
+            "unity-developer",
+            "websocket-engineer",
+            "wordpress-master"
+          ]
+        },
+        "fullstack-prototyping": {
+          "count": 3,
+          "items": [
+            "dx-optimizer",
+            "fullstack-developer",
+            "rapid-prototyper"
+          ]
+        },
+        "legal-compliance": {
+          "count": 5,
+          "items": [
+            "compliance-auditor",
+            "legal-advisor",
+            "legal-compliance-checker",
+            "penetration-tester",
+            "risk-manager"
+          ]
+        },
+        "marketing-seo": {
+          "count": 8,
+          "items": [
+            "instagram-curator",
+            "reddit-community-builder",
+            "seo-specialist",
+            "seo-strategy-pro",
+            "seo-technical-auditor",
+            "seo-technical-pro",
+            "tiktok-strategist",
+            "twitter-engager"
+          ]
+        },
+        "mobile-development": {
+          "count": 4,
+          "items": [
+            "mobile-app-developer",
+            "mobile-development-pro",
+            "mobile-ios-specialist",
+            "mobile-security-coder"
+          ]
+        },
+        "observability-reliability": {
+          "count": 6,
+          "items": [
+            "analytics-reporter",
+            "chaos-engineer",
+            "experiment-tracker",
+            "incident-responder",
+            "mlops-engineer",
+            "observability-engineer"
+          ]
+        },
+        "operations-deployment": {
+          "count": 2,
+          "items": [
+            "deployment-engineer",
+            "network-engineer"
+          ]
+        },
+        "performance-optimization": {
+          "count": 8,
+          "items": [
+            "performance-analysis",
+            "performance-analyzer",
+            "performance-benchmarker",
+            "performance-core",
+            "performance-engineer",
+            "performance-monitor",
+            "performance-optimizer",
+            "performance-profiler"
+          ]
+        },
+        "programming-languages": {
+          "count": 22,
+          "items": [
+            "bash-pro",
+            "c-pro",
+            "cpp-pro",
+            "csharp-developer",
+            "csharp-pro",
+            "dotnet-core-expert",
+            "dotnet-framework-4.8-expert",
+            "elixir-pro",
+            "golang-pro",
+            "java-architect",
+            "java-pro",
+            "javascript-typescript-pro",
+            "kotlin-specialist",
+            "php-pro",
+            "posix-shell-pro",
+            "python-pro",
+            "ruby-pro",
+            "rust-engineer",
+            "rust-pro",
+            "scala-pro",
+            "swift-expert",
+            "tool-evaluator"
+          ]
+        },
+        "project-management": {
+          "count": 8,
+          "items": [
+            "project-analyst",
+            "project-delivery-pro",
+            "project-leadership-pro",
+            "project-manager",
+            "project-shipper",
+            "scrum-master",
+            "sprint-prioritizer",
+            "task-distributor"
+          ]
+        },
+        "qa-testing": {
+          "count": 9,
+          "items": [
+            "accessibility-tester",
+            "qa-expert",
+            "test-automator",
+            "test-creator",
+            "test-engineer",
+            "test-generator-pro",
+            "test-results-analyzer",
+            "test-writer",
+            "test-writer-fixer"
+          ]
+        },
+        "security-compliance": {
+          "count": 6,
+          "items": [
+            "frontend-security-coder",
+            "security-auditor",
+            "security-auditor-pro",
+            "security-engineer",
+            "security-infrastructure-pro",
+            "security-scanner"
+          ]
+        },
+        "specification-design": {
+          "count": 12,
+          "items": [
+            "spec-analyst",
+            "spec-architect",
+            "spec-developer",
+            "spec-implementation-pro",
+            "spec-orchestrator",
+            "spec-planner",
+            "spec-requirements-pro",
+            "spec-reviewer",
+            "spec-task-reviewer",
+            "spec-tester",
+            "spec-validation-pro",
+            "spec-validator"
+          ]
+        },
+        "team-leadership": {
+          "count": 4,
+          "items": [
+            "studio-coach",
+            "studio-producer",
+            "team-configurator",
+            "workflow-optimizer"
+          ]
+        },
+        "ux-design": {
+          "count": 6,
+          "items": [
+            "arm-cortex-expert",
+            "ui-design-pro",
+            "ui-designer",
+            "ui-ux-designer",
+            "ui-visual-expert",
+            "ux-researcher"
+          ]
+        },
+        "web-frontend": {
+          "count": 10,
+          "items": [
+            "angular-architect",
+            "frontend-developer",
+            "nextjs-developer",
+            "nuxt-pro",
+            "react-component-pro",
+            "react-fullstack-pro",
+            "react-nextjs-expert",
+            "vue-fullstack-pro",
+            "vue-nuxt-expert",
+            "vue-state-pro"
+          ]
+        }
+      }
+    },
+    "skills": {
+      "total": 84,
+      "items": [
+        "ai-bias-detection-audit",
+        "ai-observability",
+        "ai-safety-guardrails",
+        "ai-system-architecture",
+        "angular-migration",
+        "api-design-principles",
+        "architecture-patterns",
+        "async-python-patterns",
+        "auth-implementation-patterns",
+        "backend-dev-guidelines",
+        "bash-defensive-patterns",
+        "bats-testing-patterns",
+        "billing-automation",
+        "code-review-excellence",
+        "code-reviewer",
+        "code-style-enforcer",
+        "conversational-coding-assistant",
+        "cost-optimization",
+        "database-migration",
+        "debugging-strategies",
+        "defi-protocol-templates",
+        "dependency-upgrade",
+        "deployment-pipeline-design",
+        "dev-docs-workflow",
+        "distributed-tracing",
+        "e2e-testing-patterns",
+        "error-handling-patterns",
+        "fastapi-templates",
+        "feature-engineering-automation",
+        "federated-learning-implementation",
+        "frontend-dev-guidelines",
+        "git-advanced-workflows",
+        "github-actions-templates",
+        "gitlab-ci-patterns",
+        "gitops-workflow",
+        "grafana-dashboards",
+        "helm-chart-scaffolding",
+        "hybrid-cloud-networking",
+        "hyperparameter-optimization",
+        "javascript-testing-patterns",
+        "k8s-manifest-generator",
+        "k8s-security-policies",
+        "langchain-architecture",
+        "llm-evaluation",
+        "microservices-patterns",
+        "ml-pipeline-workflow",
+        "model-experiment-tracking",
+        "model-explainability",
+        "model-serving-patterns",
+        "model-versioning-deployment",
+        "modern-javascript-patterns",
+        "monorepo-management",
+        "multi-cloud-architecture",
+        "neural-architecture-search",
+        "nft-standards",
+        "nodejs-backend-patterns",
+        "notification-developer",
+        "parallel-execution-optimizer",
+        "paypal-integration",
+        "pci-compliance",
+        "progressive-disclosure-pattern",
+        "prometheus-configuration",
+        "prompt-engineering-patterns",
+        "python-packaging",
+        "python-performance-optimization",
+        "python-testing-patterns",
+        "rag-implementation",
+        "react-modernization",
+        "reinforcement-learning-implementation",
+        "sast-configuration",
+        "secrets-management",
+        "shellcheck-configuration",
+        "skill-developer",
+        "skill-template",
+        "slo-implementation",
+        "solidity-security",
+        "sql-optimization-patterns",
+        "stripe-integration",
+        "task-planning-pro",
+        "terraform-module-library",
+        "typescript-advanced-types",
+        "uv-package-manager",
+        "web3-testing",
+        "workflow-developer"
+      ]
+    },
+    "commands": {
+      "total": 62,
+      "items": [
+        "accessibility-audit",
+        "ai-assistant",
+        "ai-review",
+        "api-mock",
+        "code-explain",
+        "code-migrate",
+        "command-template",
+        "compliance-check",
+        "component-scaffold",
+        "config-validate",
+        "context-restore",
+        "context-save",
+        "cost-optimize",
+        "data-driven-feature",
+        "data-pipeline",
+        "debug-trace",
+        "deps-audit",
+        "deps-upgrade",
+        "doc-generate",
+        "docs",
+        "error-analysis",
+        "error-trace",
+        "feature-development",
+        "full-review",
+        "full-stack-feature",
+        "git-workflow",
+        "improve-agent",
+        "incident-response",
+        "issue",
+        "langchain-agent",
+        "legacy-modernize",
+        "migration-observability",
+        "ml-pipeline",
+        "monitor-setup",
+        "multi-agent-optimize",
+        "multi-agent-review",
+        "multi-platform",
+        "onboard",
+        "performance-optimization",
+        "pr-enhance",
+        "prompt-optimize",
+        "python-scaffold",
+        "refactor-clean",
+        "review",
+        "rust-project",
+        "security-dependencies",
+        "security-hardening",
+        "security-sast",
+        "slo-implement",
+        "smart-debug",
+        "smart-fix",
+        "sql-migrations",
+        "standup-notes",
+        "tdd-cycle",
+        "tdd-green",
+        "tdd-red",
+        "tdd-refactor",
+        "tech-debt",
+        "test-generate",
+        "typescript-scaffold",
+        "workflow-automate",
+        "xss-scan"
+      ]
+    }
+  }
+}
