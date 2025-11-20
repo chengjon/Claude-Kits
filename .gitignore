@@ -41,6 +41,7 @@ env/
 # Claude Code Sensitive Files
 .claude/settings.local.json
 .claude/dev/
+.claude/component_catalog_*.json
 
 # Environment Variables
 .env
@@ -69,6 +70,8 @@ node_modules/
 .coverage
 htmlcov/
 .pytest_cache/
+test_report.html
+test_timing.csv
 
 # Reference Directory (documentation/examples)
 reference/

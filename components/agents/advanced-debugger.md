@@ -11,7 +11,7 @@ tools: Read, Grep, Glob, Bash, Edit
 
 # OPTIONAL: Which Claude model to use (defaults to project setting)
 # Options: claude-3-haiku, claude-3-sonnet, claude-3-opus
-model: claude-3-opus
+model: sonnet
 
 # OPTIONAL: Maximum context window size (defaults to model maximum)
 max_tokens: 100000

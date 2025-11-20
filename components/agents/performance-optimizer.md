@@ -2,7 +2,7 @@
 name: performance-optimizer  
 description: Identifies and fixes performance bottlenecks
 tools: Read, Edit, Grep, Glob, Bash
-model: claude-3-opus
+model: sonnet
 temperature: 0.3
 ---
 

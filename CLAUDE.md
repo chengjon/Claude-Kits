@@ -47,8 +47,16 @@ Claude-Kits 是一个用于管理 Claude Code 自定义组件的基础设施工�
 - 通过 Claude Code 官方 9 Event 规范验证
 - 特性：双语支持、非阻塞+阻塞混合设计、JSON-LD 输出、JSONL 日志
 
-**3. 组件注册更新**
-- 当前统计：279 agents + 71 skills + 63 commands = 413 components
+**3. Code Compliance Hooks 新增 (2025-11-18)**
+- 从 `/opt/claude/mystocks_nice/temp/hooks/` Git pre-commit hooks 迁移
+- 新增 3 个 Code Compliance Hooks：Python 头部验证、Markdown frontmatter 验证、中文文件名检测
+- **零硬编码原则**：所有配置项通过环境变量自定义
+- **Python 导入路径检查**：自动检测移动文件后的导入路径问题
+- 文档：CODE_COMPLIANCE_HOOKS.md (14KB) + CONFIGURATION_GUIDE.md (8.8KB)
+- 特性：warning/blocking 双模式、完全可配置、符合官方规范
+
+**4. 组件注册更新**
+- 当前统计：279 agents + 71 skills + 63 commands + 13 hooks = 426 components
 - components_registry.json 已更新并验证
 
 ## 核心架构
@@ -248,6 +256,8 @@ Claude Code 定义了 9 种标准 Event 类型：
 9. **SessionEnd** - 会话结束（清理）
 
 **当前已实现的 Hooks** (`components/hooks/`):
+
+**核心 Hooks (7个)**:
 - `user-prompt-submit-skill-activation.sh` - 技能自动激活（基于 skill-rules.json）
 - `post-tool-use-file-edit-tracker.sh` - 文件编辑追踪（JSONL 格式）
 - `post-tool-use-database-schema-validator.sh` - 数据库架构验证
@@ -255,6 +265,15 @@ Claude Code 定义了 9 种标准 Event 类型：
 - `stop-python-quality-gate.sh` - Python 质量门禁（批量检查，阻塞）
 - `session-start-task-master-injector.sh` - Task Master 上下文恢复
 - `session-end-cleanup.sh` - 会话结束清理
+
+**Code Compliance Hooks (3个)** - NEW 2025-11-18:
+- `post-tool-use-python-header-validator.sh` - Python 文件头部注释验证（零硬编码，可配置）
+- `post-tool-use-md-frontmatter-validator.sh` - Markdown YAML frontmatter 验证（零硬编码，可配置）
+- `post-tool-use-chinese-filename-checker.sh` - 中文/非ASCII 文件名检测（跨平台兼容性）
+
+详细文档：
+- [CODE_COMPLIANCE_HOOKS.md](components/hooks/CODE_COMPLIANCE_HOOKS.md) - Code Compliance Hooks 使用指南
+- [CONFIGURATION_GUIDE.md](components/hooks/CONFIGURATION_GUIDE.md) - 零硬编码配置指南
 
 **配置文件**:
 - `settings.json` - Hook 注册配置（定义触发时机和超时）

@@ -2,7 +2,7 @@
 name: tech-lead-orchestrator
 description: 高级技术主管，负责分析复杂的软件项目并提供战略性建议。必须用于任何多步骤开发任务、功能实现或架构决策。返回结构化发现和任务分解，以实现最佳的代理协调。
 tools: Read, Grep, Glob, LS, Bash
-model: opus
+model: sonnet
 ---
 
 # 技术主管编排器

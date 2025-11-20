@@ -259,14 +259,14 @@ else
     ACTIVATION_MESSAGE="💡 SKILL ACTIVATION SUGGESTED: The following skills may be helpful for this request: $SKILL_LIST. Consider reviewing: $SKILL_FILES"
 fi
 
-# ===== 输出 JSON（stdout 会被注入到 Claude 上下文）=====
-cat <<EOF
-{
-  "hookSpecificOutput": {
-    "hookEventName": "UserPromptSubmit",
-    "additionalContext": "$ACTIVATION_MESSAGE"
-  }
-}
-EOF
+# ===== 输出 JSON（使用 jq 确保正确转义）=====
+jq -n \
+    --arg context "$ACTIVATION_MESSAGE" \
+    '{
+        hookSpecificOutput: {
+            hookEventName: "UserPromptSubmit",
+            additionalContext: $context
+        }
+    }'
 
 exit 0

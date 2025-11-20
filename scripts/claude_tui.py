@@ -92,7 +92,7 @@ else:  # Linux/Unix
 SCRIPT_DIR = Path(__file__).parent.resolve()
 PROJECT_ROOT = SCRIPT_DIR.parent
 REGISTRY_FILE = PROJECT_ROOT / "components_registry.json"
-CATALOG_FILE = PROJECT_ROOT / ".claude" / "component_catalog.json"
+CATALOG_FILE = PROJECT_ROOT / ".claude" / "component_catalog_v3_final.json"
 
 # 全局组件注册表和目录
 COMPONENTS_REGISTRY = None
@@ -416,11 +416,11 @@ def install_component_from_details(component_type, component_name):
     input("\n按 Enter 返回...")
 
 # ============================================================================
-# 新增：基于目录的层级化导航（使用 component_catalog.json）
+# 3级分类层级化导航（使用 component_catalog_v3_final.json）
 # ============================================================================
 
 def browse_agents_by_category():
-    """按分类浏览 Agents（从目录读取）"""
+    """按3级分类浏览 Agents（从目录读取）"""
     global COMPONENT_CATALOG
 
     if not COMPONENT_CATALOG:
@@ -436,18 +436,23 @@ def browse_agents_by_category():
         input("\nPress Enter to continue...")
         return
 
-    categories = sorted(agents_data['categories'].keys())
+    browse_agents_level1(agents_data['categories'])
 
-    # 显示分类列表
-    console.print(Panel(f"Agent Categories ({len(categories)} 个分类)", border_style="green"))
+def browse_agents_level1(categories):
+    """浏览一级分类"""
+    clear_screen()
+    
+    category_keys = sorted(categories.keys())
+    console.print(Panel(f"Agent 一级分类 ({len(category_keys)} 个分类)", border_style="green"))
     console.print()
 
-    for i, cat in enumerate(categories, 1):
-        count = agents_data['categories'][cat]['count']
-        console.print(f"{i}. [cyan]{cat}[/cyan] ({count} agents)")
+    for i, cat_key in enumerate(category_keys, 1):
+        cat_data = categories[cat_key]
+        console.print(f"{i}. [cyan]{cat_key}[/cyan]")
+        console.print(f"   └─ {cat_data['name']} ({cat_data['count']} agents)")
+        console.print()
 
-    # 选择分类
-    console.print("\n输入编号选择分类，或按 Enter 返回")
+    console.print("输入编号选择一级分类，或按 Enter 返回")
     choice = input("选择: ").strip()
 
     if not choice:
@@ -455,27 +460,74 @@ def browse_agents_by_category():
 
     try:
         idx = int(choice) - 1
-        if 0 <= idx < len(categories):
-            selected_cat = categories[idx]
-            browse_agents_in_category(selected_cat, agents_data['categories'][selected_cat]['items'])
+        if 0 <= idx < len(category_keys):
+            selected_cat_key = category_keys[idx]
+            selected_cat = categories[selected_cat_key]
+            
+            if 'subcategories' in selected_cat:
+                browse_agents_level2(selected_cat_key, selected_cat)
+            else:
+                # 如果没有子分类，直接显示agents
+                browse_agents_level3(selected_cat_key, selected_cat_key, selected_cat['items'])
     except ValueError:
         console.print("[red]无效的输入[/red]")
         input("Press Enter to continue...")
 
-def browse_agents_in_category(category, agent_list):
-    """浏览特定分类中的 Agents"""
+def browse_agents_level2(parent_key, parent_data):
+    """浏览二级分类"""
     clear_screen()
-
-    console.print(Panel(f"Agents in {category} ({len(agent_list)} 个)", border_style="green"))
+    
+    subcategories = parent_data['subcategories']
+    console.print(Panel(f"{parent_data['name']} - 二级分类", border_style="green"))
     console.print()
 
-    # 显示分类中的 agents
+    subcat_keys = sorted(subcategories.keys())
+    for i, subcat_key in enumerate(subcat_keys, 1):
+        subcat_data = subcategories[subcat_key]
+        console.print(f"{i}. [cyan]{subcat_key}[/cyan]")
+        console.print(f"   └─ {subcat_data['name']} ({subcat_data['count']} agents)")
+        console.print()
+
+    console.print("输入编号选择二级分类，或按 0 返回，或按 Enter 展开所有")
+    choice = input("选择: ").strip()
+
+    if choice == "0":
+        global COMPONENT_CATALOG
+        browse_agents_level1(COMPONENT_CATALOG['components']['agents']['categories'])
+        return
+    
+    if not choice:
+        # 展开显示所有三级内容
+        for subcat_key, subcat_data in subcategories.items():
+            browse_agents_level3(parent_key, subcat_key, subcat_data['items'])
+        return
+
+    try:
+        idx = int(choice) - 1
+        if 0 <= idx < len(subcat_keys):
+            selected_subcat_key = subcat_keys[idx]
+            selected_subcat = subcategories[selected_subcat_key]
+            browse_agents_level3(parent_key, selected_subcat_key, selected_subcat['items'])
+    except ValueError:
+        console.print("[red]无效的输入[/red]")
+        input("Press Enter to continue...")
+
+def browse_agents_level3(parent_key, category_key, agent_list):
+    """浏览三级分类（具体agents）"""
+    clear_screen()
+
+    console.print(Panel(f"Agents in {category_key} ({len(agent_list)} 个)", border_style="green"))
+    console.print()
+
+    # 显示agents列表
     for i, agent in enumerate(agent_list, 1):
         console.print(f"{i}. [cyan]{agent}[/cyan]")
 
-    # 选择 agent
-    console.print("\n输入编号查看详情，或按 Enter 返回")
+    console.print("\n输入编号查看详情，或按 0 返回，或按 Enter 继续浏览")
     choice = input("选择: ").strip()
+
+    if choice == "0":
+        return
 
     if not choice:
         return
@@ -580,20 +632,77 @@ def install_component_action(component_type, component_name):
     run_manager_script(manager_script, params)
 
 def edit_component_action(component_type, component_name):
-    """修改组件"""
+    """修改组件（增强版，支持智能路径检测）"""
     clear_screen()
     console.print(Panel(f"修改 {component_name}", border_style="cyan"))
 
-    project_path = Prompt.ask(
-        "输入项目路径（留空则使用当前目录）",
-        default="."
-    )
+    # 如果是skills，使用智能路径检测
+    if component_type == "skills":
+        # 首先尝试自动检测安装路径
+        auto_detected_path = find_skill_install_path(component_name, ".")
+        
+        if auto_detected_path:
+            console.print(f"[green]✓ 检测到已安装的 {component_name}[/green]")
+            console.print(f"[cyan]安装路径: {auto_detected_path}[/cyan]")
+            
+            # 显示检测到的路径并询问是否使用
+            use_auto = Prompt.ask(
+                "是否使用检测到的路径？",
+                choices=["y", "n"],
+                default="y"
+            )
+            
+            if use_auto == "y":
+                # 使用自动检测的路径
+                project_path = auto_detected_path
+                scope = "project"  # 检测到的通常是项目级
+            else:
+                # 让用户手动输入路径
+                project_path = Prompt.ask(
+                    "输入项目路径（留空则使用当前目录）",
+                    default="."
+                )
+                scope = Prompt.ask(
+                    "选择作用域",
+                    choices=["user", "project"],
+                    default="project"
+                )
+        else:
+            console.print("[yellow]⚠ 未检测到已安装的组件[/yellow]")
+            console.print("\n请选择操作：")
+            console.print("  1. 手动指定安装路径")
+            console.print("  2. 取消操作")
+            
+            action_choice = Prompt.ask(
+                "选择操作",
+                choices=["1", "2"],
+                default="1"
+            )
+            
+            if action_choice == "2":
+                return
+            
+            project_path = Prompt.ask(
+                "输入项目路径（留空则使用当前目录）",
+                default="."
+            )
+            scope = Prompt.ask(
+                "选择作用域",
+                choices=["user", "project"],
+                default="project"
+            )
+    else:
+        # 其他组件类型保持原有逻辑
+        project_path = Prompt.ask(
+            "输入项目路径（留空则使用当前目录）",
+            default="."
+        )
 
-    scope = Prompt.ask(
-        "选择作用域",
-        choices=["user", "project"],
-        default="project"
-    )
+        scope = Prompt.ask(
+            "选择作用域",
+            choices=["user", "project"],
+            default="project"
+        )
 
     params = ["edit", component_name]
     if project_path != ".":
@@ -638,6 +747,470 @@ def delete_component_action(component_type, component_name):
 
         run_manager_script(manager_script, params)
 
+def get_skills_categories():
+    """构建 Skills 的三层分类结构"""
+    skills_data = COMPONENT_CATALOG.get('components', {}).get('skills', {})
+    skills_list = skills_data.get('items', [])
+    
+    categories = {
+        "01-development-programming": {
+            "name": "开发与编程 (Development & Programming)",
+            "count": 0,
+            "subcategories": {
+                "core-development": {
+                    "name": "核心开发技能",
+                    "count": 0,
+                    "items": []
+                },
+                "language-specific": {
+                    "name": "语言特定模式",
+                    "count": 0,
+                    "items": []
+                },
+                "performance-optimization": {
+                    "name": "性能优化",
+                    "count": 0,
+                    "items": []
+                }
+            }
+        },
+        "02-architecture-design": {
+            "name": "架构与设计 (Architecture & Design)",
+            "count": 0,
+            "subcategories": {
+                "architecture-patterns": {
+                    "name": "架构模式",
+                    "count": 0,
+                    "items": []
+                },
+                "api-database": {
+                    "name": "API与数据库",
+                    "count": 0,
+                    "items": []
+                },
+                "distributed-systems": {
+                    "name": "分布式系统",
+                    "count": 0,
+                    "items": []
+                }
+            }
+        },
+        "03-ai-ml": {
+            "name": "AI与机器学习 (AI & Machine Learning)",
+            "count": 0,
+            "subcategories": {
+                "ai-system": {
+                    "name": "AI系统",
+                    "count": 0,
+                    "items": []
+                },
+                "llm-architecture": {
+                    "name": "LLM架构",
+                    "count": 0,
+                    "items": []
+                },
+                "model-engineering": {
+                    "name": "模型工程",
+                    "count": 0,
+                    "items": []
+                }
+            }
+        },
+        "04-testing-quality": {
+            "name": "测试与质量保证 (Testing & Quality Assurance)",
+            "count": 0,
+            "subcategories": {
+                "code-review": {
+                    "name": "代码审查",
+                    "count": 0,
+                    "items": []
+                },
+                "testing-patterns": {
+                    "name": "测试模式",
+                    "count": 0,
+                    "items": []
+                }
+            }
+        },
+        "05-devops-deployment": {
+            "name": "DevOps与部署 (DevOps & Deployment)",
+            "count": 0,
+            "subcategories": {
+                "ci-cd": {
+                    "name": "持续集成/部署",
+                    "count": 0,
+                    "items": []
+                },
+                "infrastructure": {
+                    "name": "基础设施",
+                    "count": 0,
+                    "items": []
+                },
+                "monitoring": {
+                    "name": "监控与运维",
+                    "count": 0,
+                    "items": []
+                }
+            }
+        },
+        "06-security": {
+            "name": "安全技能 (Security)",
+            "count": 0,
+            "subcategories": {
+                "security-audit": {
+                    "name": "安全审计",
+                    "count": 0,
+                    "items": []
+                },
+                "blockchain-security": {
+                    "name": "区块链安全",
+                    "count": 0,
+                    "items": []
+                }
+            }
+        },
+        "07-cloud-infrastructure": {
+            "name": "云与基础设施 (Cloud & Infrastructure)",
+            "count": 0,
+            "subcategories": {
+                "cloud-architecture": {
+                    "name": "云架构",
+                    "count": 0,
+                    "items": []
+                },
+                "kubernetes": {
+                    "name": "Kubernetes",
+                    "count": 0,
+                    "items": []
+                },
+                "terraform": {
+                    "name": "Terraform",
+                    "count": 0,
+                    "items": []
+                }
+            }
+        },
+        "08-blockchain-web3": {
+            "name": "区块链与Web3 (Blockchain & Web3)",
+            "count": 0,
+            "subcategories": {
+                "defi-protocols": {
+                    "name": "DeFi协议",
+                    "count": 0,
+                    "items": []
+                },
+                "web3-standards": {
+                    "name": "Web3标准",
+                    "count": 0,
+                    "items": []
+                }
+            }
+        },
+        "09-development-tools": {
+            "name": "开发工具与工作流 (Development Tools & Workflow)",
+            "count": 0,
+            "subcategories": {
+                "project-management": {
+                    "name": "项目管理",
+                    "count": 0,
+                    "items": []
+                },
+                "automation": {
+                    "name": "自动化工具",
+                    "count": 0,
+                    "items": []
+                }
+            }
+        }
+    }
+    
+    # 将skills分类到各个类别
+    skill_mapping = {
+        # 01-development-programming -> core-development
+        "backend-dev-guidelines": ("01-development-programming", "core-development"),
+        "frontend-dev-guidelines": ("01-development-programming", "core-development"),
+        "error-handling-patterns": ("01-development-programming", "core-development"),
+        "progressive-disclosure-pattern": ("01-development-programming", "core-development"),
+        
+        # 01-development-programming -> language-specific
+        "async-python-patterns": ("01-development-programming", "language-specific"),
+        "nodejs-backend-patterns": ("01-development-programming", "language-specific"),
+        "modern-javascript-patterns": ("01-development-programming", "language-specific"),
+        "python-packaging": ("01-development-programming", "language-specific"),
+        "uv-package-manager": ("01-development-programming", "language-specific"),
+        "typescript-advanced-types": ("01-development-programming", "language-specific"),
+        
+        # 01-development-programming -> performance-optimization
+        "python-performance-optimization": ("01-development-programming", "performance-optimization"),
+        "parallel-execution-optimizer": ("01-development-programming", "performance-optimization"),
+        "cost-optimization": ("01-development-programming", "performance-optimization"),
+        
+        # 02-architecture-design -> architecture-patterns
+        "architecture-patterns": ("02-architecture-design", "architecture-patterns"),
+        "microservices-patterns": ("02-architecture-design", "architecture-patterns"),
+        "monorepo-management": ("02-architecture-design", "architecture-patterns"),
+        
+        # 02-architecture-design -> api-database
+        "api-design-principles": ("02-architecture-design", "api-database"),
+        "database-migration": ("02-architecture-design", "api-database"),
+        "sql-optimization-patterns": ("02-architecture-design", "api-database"),
+        "fastapi-templates": ("02-architecture-design", "api-database"),
+        
+        # 02-architecture-design -> distributed-systems
+        "distributed-tracing": ("02-architecture-design", "distributed-systems"),
+        "multi-cloud-architecture": ("02-architecture-design", "distributed-systems"),
+        "hybrid-cloud-networking": ("02-architecture-design", "distributed-systems"),
+        
+        # 03-ai-ml -> ai-system
+        "ai-system-architecture": ("03-ai-ml", "ai-system"),
+        "ai-safety-guardrails": ("03-ai-ml", "ai-system"),
+        "ai-observability": ("03-ai-ml", "ai-system"),
+        "ai-bias-detection-audit": ("03-ai-ml", "ai-system"),
+        
+        # 03-ai-ml -> llm-architecture
+        "langchain-architecture": ("03-ai-ml", "llm-architecture"),
+        "prompt-engineering-patterns": ("03-ai-ml", "llm-architecture"),
+        "llm-evaluation": ("03-ai-ml", "llm-architecture"),
+        "rag-implementation": ("03-ai-ml", "llm-architecture"),
+        
+        # 03-ai-ml -> model-engineering
+        "ml-pipeline-workflow": ("03-ai-ml", "model-engineering"),
+        "model-experiment-tracking": ("03-ai-ml", "model-engineering"),
+        "model-explainability": ("03-ai-ml", "model-engineering"),
+        "model-serving-patterns": ("03-ai-ml", "model-engineering"),
+        "model-versioning-deployment": ("03-ai-ml", "model-engineering"),
+        "feature-engineering-automation": ("03-ai-ml", "model-engineering"),
+        "hyperparameter-optimization": ("03-ai-ml", "model-engineering"),
+        "federated-learning-implementation": ("03-ai-ml", "model-engineering"),
+        "neural-architecture-search": ("03-ai-ml", "model-engineering"),
+        "reinforcement-learning-implementation": ("03-ai-ml", "model-engineering"),
+        
+        # 04-testing-quality -> code-review
+        "code-review-excellence": ("04-testing-quality", "code-review"),
+        "code-reviewer": ("04-testing-quality", "code-review"),
+        "code-style-enforcer": ("04-testing-quality", "code-review"),
+        
+        # 04-testing-quality -> testing-patterns
+        "testing-patterns": ("04-testing-quality", "testing-patterns"),
+        "javascript-testing-patterns": ("04-testing-quality", "testing-patterns"),
+        "python-testing-patterns": ("04-testing-quality", "testing-patterns"),
+        "e2e-testing-patterns": ("04-testing-quality", "testing-patterns"),
+        "bats-testing-patterns": ("04-testing-quality", "testing-patterns"),
+        
+        # 05-devops-deployment -> ci-cd
+        "deployment-pipeline-design": ("05-devops-deployment", "ci-cd"),
+        "gitops-workflow": ("05-devops-deployment", "ci-cd"),
+        "github-actions-templates": ("05-devops-deployment", "ci-cd"),
+        "gitlab-ci-patterns": ("05-devops-deployment", "ci-cd"),
+        
+        # 05-devops-deployment -> infrastructure
+        "workflow-developer": ("05-devops-deployment", "infrastructure"),
+        "task-planning-pro": ("05-devops-deployment", "infrastructure"),
+        "dependency-upgrade": ("05-devops-deployment", "infrastructure"),
+        "secrets-management": ("05-devops-deployment", "infrastructure"),
+        
+        # 05-devops-deployment -> monitoring
+        "grafana-dashboards": ("05-devops-deployment", "monitoring"),
+        "prometheus-configuration": ("05-devops-deployment", "monitoring"),
+        "slo-implementation": ("05-devops-deployment", "monitoring"),
+        
+        # 06-security -> security-audit
+        "security-hardening": ("06-security", "security-audit"),
+        "sast-configuration": ("06-security", "security-audit"),
+        "shellcheck-configuration": ("06-security", "security-audit"),
+        "pci-compliance": ("06-security", "security-audit"),
+        "bash-defensive-patterns": ("06-security", "security-audit"),
+        
+        # 06-security -> blockchain-security
+        "solidity-security": ("06-security", "blockchain-security"),
+        
+        # 07-cloud-infrastructure -> cloud-architecture
+        "multi-cloud-architecture": ("07-cloud-infrastructure", "cloud-architecture"),
+        "hybrid-cloud-networking": ("07-cloud-infrastructure", "cloud-architecture"),
+        
+        # 07-cloud-infrastructure -> kubernetes
+        "k8s-manifest-generator": ("07-cloud-infrastructure", "kubernetes"),
+        "k8s-security-policies": ("07-cloud-infrastructure", "kubernetes"),
+        "helm-chart-scaffolding": ("07-cloud-infrastructure", "kubernetes"),
+        
+        # 07-cloud-infrastructure -> terraform
+        "terraform-module-library": ("07-cloud-infrastructure", "terraform"),
+        
+        # 08-blockchain-web3 -> defi-protocols
+        "defi-protocol-templates": ("08-blockchain-web3", "defi-protocols"),
+        "billing-automation": ("08-blockchain-web3", "defi-protocols"),
+        "paypal-integration": ("08-blockchain-web3", "defi-protocols"),
+        "stripe-integration": ("08-blockchain-web3", "defi-protocols"),
+        "notification-developer": ("08-blockchain-web3", "defi-protocols"),
+        
+        # 08-blockchain-web3 -> web3-standards
+        "nft-standards": ("08-blockchain-web3", "web3-standards"),
+        "web3-testing": ("08-blockchain-web3", "web3-standards"),
+        
+        # 09-development-tools -> project-management
+        "task-planning-pro": ("09-development-tools", "project-management"),
+        "dev-docs-workflow": ("09-development-tools", "project-management"),
+        "git-advanced-workflows": ("09-development-tools", "project-management"),
+        
+        # 09-development-tools -> automation
+        "conversational-coding-assistant": ("09-development-tools", "automation"),
+        "debugging-strategies": ("09-development-tools", "automation"),
+    }
+    
+    # 计算分类并分配skills
+    for skill in skills_list:
+        if skill in skill_mapping:
+            cat_key, subcat_key = skill_mapping[skill]
+            categories[cat_key]["subcategories"][subcat_key]["items"].append(skill)
+    
+    # 计算计数
+    for cat_key, cat_data in categories.items():
+        total_count = 0
+        for subcat_key, subcat_data in cat_data["subcategories"].items():
+            subcat_count = len(subcat_data["items"])
+            subcat_data["count"] = subcat_count
+            total_count += subcat_count
+        cat_data["count"] = total_count
+    
+    return categories
+
+def browse_skills_by_category():
+    """按3级分类浏览 Skills（从分类读取）"""
+    global COMPONENT_CATALOG
+
+    if not COMPONENT_CATALOG:
+        console.print("[yellow]组件目录未加载[/yellow]")
+        input("\nPress Enter to continue...")
+        return
+
+    clear_screen()
+    skills_categories = get_skills_categories()
+    browse_skills_level1(skills_categories)
+
+def browse_skills_level1(categories):
+    """浏览 Skills 一级分类"""
+    clear_screen()
+    
+    category_keys = sorted(categories.keys())
+    console.print(Panel(f"Skill 一级分类 ({len(category_keys)} 个分类)", border_style="green"))
+    console.print()
+
+    for i, cat_key in enumerate(category_keys, 1):
+        cat_data = categories[cat_key]
+        console.print(f"{i}. [cyan]{cat_key}[/cyan]")
+        console.print(f"   └─ {cat_data['name']} ({cat_data['count']} skills)")
+        console.print()
+
+    console.print("输入编号选择一级分类，或按 Enter 返回")
+    choice = input("选择: ").strip()
+
+    if not choice:
+        return
+
+    try:
+        idx = int(choice) - 1
+        if 0 <= idx < len(category_keys):
+            selected_cat_key = category_keys[idx]
+            selected_cat = categories[selected_cat_key]
+            
+            if 'subcategories' in selected_cat:
+                browse_skills_level2(selected_cat_key, selected_cat)
+    except ValueError:
+        console.print("[red]无效的输入[/red]")
+        input("Press Enter to continue...")
+
+def browse_skills_level2(parent_key, parent_data):
+    """浏览 Skills 二级分类"""
+    clear_screen()
+    
+    subcategories = parent_data['subcategories']
+    console.print(Panel(f"{parent_data['name']} - 二级分类", border_style="green"))
+    console.print()
+
+    subcat_keys = sorted(subcategories.keys())
+    for i, subcat_key in enumerate(subcat_keys, 1):
+        subcat_data = subcategories[subcat_key]
+        console.print(f"{i}. [cyan]{subcat_key}[/cyan]")
+        console.print(f"   └─ {subcat_data['name']} ({subcat_data['count']} skills)")
+        console.print()
+
+    console.print("输入编号选择二级分类，或按 0 返回，或按 Enter 展开所有")
+    choice = input("选择: ").strip()
+
+    if choice == "0":
+        browse_skills_level1(get_skills_categories())
+        return
+    
+    if not choice:
+        # 展开显示所有三级内容
+        for subcat_key, subcat_data in subcategories.items():
+            if subcat_data['items']:
+                browse_skills_level3(parent_key, subcat_key, subcat_data['items'])
+        return
+
+    try:
+        idx = int(choice) - 1
+        if 0 <= idx < len(subcat_keys):
+            selected_subcat_key = subcat_keys[idx]
+            selected_subcat = subcategories[selected_subcat_key]
+            if selected_subcat['items']:
+                browse_skills_level3(parent_key, selected_subcat_key, selected_subcat['items'])
+    except ValueError:
+        console.print("[red]无效的输入[/red]")
+        input("Press Enter to continue...")
+
+def browse_skills_level3(parent_key, category_key, skill_list):
+    """浏览 Skills 三级分类（具体skills）"""
+    clear_screen()
+
+    console.print(Panel(f"Skills in {category_key} ({len(skill_list)} 个)", border_style="green"))
+    console.print()
+
+    # 显示skills列表
+    for i, skill in enumerate(skill_list, 1):
+        console.print(f"{i}. [cyan]{skill}[/cyan]")
+
+    console.print("\n输入编号查看详情，或按 0 返回，或按 Enter 继续浏览")
+    choice = input("选择: ").strip()
+
+    if choice == "0":
+        return
+
+    if not choice:
+        return
+
+    try:
+        idx = int(choice) - 1
+        if 0 <= idx < len(skill_list):
+            show_component_detail("skills", skill_list[idx])
+    except ValueError:
+        console.print("[red]无效的输入[/red]")
+        input("Press Enter to continue...")
+
+def find_skill_install_path(skill_name, project_path="."):
+    """查找skill的安装路径（按三层级优先级）"""
+    import os
+    from pathlib import Path
+    
+    # Claude Code三层级存储路径（按优先级从高到低）
+    search_paths = [
+        # 项目级（最高优先级）
+        Path(project_path) / ".claude" / "skills" / skill_name,
+        # 用户级（最低优先级）
+        Path.home() / ".claude" / "skills" / skill_name,
+    ]
+    
+    # 检查每个路径
+    for search_path in search_paths:
+        # 检查目录是否存在
+        if search_path.exists() and search_path.is_dir():
+            # 检查SKILL.md文件
+            skill_file = search_path / "SKILL.md"
+            if skill_file.exists():
+                return str(search_path)
+    
+    return None
+
 def browse_skills_list():
     """浏览 Skills 列表（显示所有 skills）"""
     global COMPONENT_CATALOG
@@ -681,6 +1254,7 @@ def browse_skills_list():
     except ValueError:
         console.print("[red]无效的输入[/red]")
         input("Press Enter to continue...")
+
 
 def quick_install_component(component_type):
     """快速安装组件 - 显示列表供用户选择"""
@@ -731,7 +1305,7 @@ def quick_install_component(component_type):
 def handle_skills_actions(action):
     """处理 Agent Skills 的操作"""
     if action == "View Details":
-        browse_skills_list()
+        browse_skills_by_category()
 
     elif action == "List":
         params = ["list"]

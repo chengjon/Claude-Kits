@@ -41,6 +41,36 @@
           }
         ],
         "timeout": 5
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/post-tool-use-python-header-validator.sh"
+          }
+        ],
+        "timeout": 5
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/post-tool-use-md-frontmatter-validator.sh"
+          }
+        ],
+        "timeout": 5
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/post-tool-use-chinese-filename-checker.sh"
+          }
+        ],
+        "timeout": 3
       }
     ],
     "Stop": [

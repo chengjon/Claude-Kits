@@ -171,3 +171,48 @@ class BaseManager:
         except Exception as e:
             print(f"Error executing script: {e}")
             return 1
+    
+    @staticmethod
+    def execute_script_static(component_type, script_args, unknown_args):
+        """静态方法：执行子脚本
+        
+        参数:
+            component_type: 组件类型（如'skills', 'subagents', 'hooks', 'commands', 'plugins', 'mcps'）
+            script_args: 传递给子脚本的参数列表
+            unknown_args: 未知参数列表
+            
+        返回:
+            int: 子脚本的返回码
+        """
+        # 组件类型与对应脚本的映射
+        COMPONENT_TYPES = {
+            'skills': 'skills_manager.py',
+            'subagents': 'subagents_manager.py',
+            'hooks': 'hooks_manager.py',
+            'commands': 'commands_manager.py',
+            'plugins': 'plugins_manager.py',
+            'mcps': 'mcps_manager.py'
+        }
+        
+        script_name = COMPONENT_TYPES.get(component_type)
+        if not script_name:
+            print(f"Error: Unknown component type '{component_type}'")
+            return 1
+        
+        # 获取脚本路径
+        script_dir = Path(__file__).parent
+        script_path = script_dir / script_name
+        
+        if not script_path.exists():
+            print(f"Error: Management script '{script_name}' not found at '{script_path}'")
+            return 1
+        
+        # 构造完整的命令
+        cmd = [sys.executable, str(script_path)] + script_args + unknown_args
+        
+        try:
+            result = subprocess.run(cmd, text=True)
+            return result.returncode
+        except Exception as e:
+            print(f"Error executing script: {e}")
+            return 1

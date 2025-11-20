@@ -1,5 +1,5 @@
 {
-  "last_scan": "2025-11-13T17:17:14.512849",
+  "last_scan": "2025-11-19T23:08:40.210678",
   "components": {
     "agents": {
       "network-engineer": {
@@ -45,10 +45,10 @@
       "deployment-engineer": {
         "file": "deployment-engineer.md",
         "path": "components/agents/deployment-engineer.md",
-        "hash": "3e2404712a493eaabc9036cc8a6860b5",
+        "hash": "c00997545cf2019862fcf75c12c94b3f",
         "name": "deployment-engineer",
-        "description": "Expert deployment engineer specializing in modern CI/CD pipelines, GitOps workflows, and advanced deployment automation. Masters GitHub Actions, ArgoCD/Flux, progressive delivery, container security, and platform engineering. Handles zero-downtime deployments, security scanning, and developer experience optimization. Use PROACTIVELY for CI/CD design, GitOps implementation, or deployment automation.",
-        "model": "haiku"
+        "description": "Expert deployment engineer specializing in modern GitOps workflows, progressive delivery, and advanced deployment automation. Masters GitHub Actions, ArgoCD/Flux, progressive delivery (canary/blue-green/rolling), container security, platform engineering, and zero-downtime deployments. Focuses on deployment workflow design, infrastructure-as-Git, and deployment automation. Use PROACTIVELY for GitOps implementation, progressive delivery setup, GitHub Actions workflow design, ArgoCD/Flux configuration, or deployment automation.",
+        "model": "sonnet"
       },
       "golang-pro": {
         "file": "golang-pro.md",
@@ -613,10 +613,10 @@
       "performance-optimizer": {
         "file": "performance-optimizer.md",
         "path": "components/agents/performance-optimizer.md",
-        "hash": "cca2998a476342e7f37898c7bd26066b",
+        "hash": "10a159c755ad6f20f00b33c189fb68e3",
         "name": "performance-optimizer",
         "description": "Identifies and fixes performance bottlenecks",
-        "model": "claude-3-opus"
+        "model": "sonnet"
       },
       "workflow-optimizer": {
         "file": "workflow-optimizer.md",
@@ -733,7 +733,7 @@
       "vue-nuxt-expert": {
         "file": "vue-nuxt-expert.md",
         "path": "components/agents/vue-nuxt-expert.md",
-        "hash": "25b6dd0f81ffdfb804fc4d774006d1fa",
+        "hash": "934a7b0ec1dce67c05e1d77b673d6e5d",
         "name": "vue-nuxt-expert",
         "description": "Expert in Nuxt.js framework specializing in SSR, SSG, ISR, and production-grade full-stack Vue applications. Provides intelligent, project-aware Nuxt solutions with advanced deployment strategies, multi-environment configuration, database ORM integration (Prisma, Drizzle), Redis caching, edge deployment, Docker containerization, production monitoring (Sentry, Datadog), and performance optimization. Masters Nitro server, middleware patterns, plugin architecture, and leverages current best practices for scalable Nuxt applications. Use for Nuxt 3 production deployment, advanced Nitro configuration, database integration, caching strategies, monitoring setup, Docker deployment, edge runtime optimization, and enterprise Nuxt architecture.",
         "model": "sonnet"
@@ -741,10 +741,10 @@
       "tech-lead-orchestrator": {
         "file": "tech-lead-orchestrator.md",
         "path": "components/agents/tech-lead-orchestrator.md",
-        "hash": "c16d2a3e1e93f4e272aa8645ac1d1277",
+        "hash": "b7ba22cb45256ee479291f595eee80ed",
         "name": "tech-lead-orchestrator",
         "description": "高级技术主管，负责分析复杂的软件项目并提供战略性建议。必须用于任何多步骤开发任务、功能实现或架构决策。返回结构化发现和任务分解，以实现最佳的代理协调。",
-        "model": "opus"
+        "model": "sonnet"
       },
       "growth-hacker": {
         "file": "growth-hacker.md",
@@ -877,7 +877,7 @@
       "senior-frontend-architect": {
         "file": "senior-frontend-architect.md",
         "path": "components/agents/senior-frontend-architect.md",
-        "hash": "b183e3881b41ce5bb9737b268bfcec82",
+        "hash": "771d75ac3245f8847bd00cc1a5035907",
         "name": "senior-frontend-architect",
         "description": "资深前端工程师和架构师，拥有超过10年的Meta工作经验，领导过多个千万级用户的产品。精通TypeScript、React、Next.js、Vue和Astro生态系统。专长于性能优化、跨平台开发、响应式设计，并能与UI/UX设计师和后端工程师无缝协作。拥有交付像素级精准、性能卓越且用户体验出色的应用的辉煌记录。",
         "model": "sonnet"
@@ -965,7 +965,7 @@
       "spec-developer": {
         "file": "spec-developer.md",
         "path": "components/agents/spec-developer.md",
-        "hash": "c8499783e534f9ef9b039e91bd61c190",
+        "hash": "ee25d2226bb0b92b9c533fa4b4b99fdc",
         "name": "spec-developer",
         "description": "专门根据规范实现功能的专家开发人员。编写遵循架构模式和最佳实践的干净、可维护的代码。创建单元测试，处理错误情况，并确保代码满足性能要求。",
         "model": "sonnet"
@@ -1589,7 +1589,7 @@
       "ui-visual-expert": {
         "file": "ui-visual-expert.md",
         "path": "components/agents/ui-visual-expert.md",
-        "hash": "31e61d643ad37ff25e72a2f1c7f2d736",
+        "hash": "af91f5e40e794ee04303a4485412632f",
         "name": "ui-visual-expert",
         "description": "Expert UI visual validation and testing specialist focusing on design system compliance, visual regression testing, and accessibility verification. Masters screenshot analysis, automated visual testing, responsive design validation, and rigorous design verification. Use for visual testing, design validation, accessibility verification, responsive design testing, and visual regression detection.",
         "model": "sonnet"
@@ -1605,7 +1605,7 @@
       "react-component-pro": {
         "file": "react-component-pro.md",
         "path": "components/agents/react-component-pro.md",
-        "hash": "e48f892df3213af5f441850eb1d9caaa",
+        "hash": "8cde59cb9a62a0bba6109c1ce9bfdf82",
         "name": "react-component-pro",
         "description": "Expert React component specialist mastering modular design systems, accessible components, and reusable component libraries with React 19 and Next.js 14+. Specializes in component architecture, design system implementation, Storybook documentation, accessibility compliance, component testing, React Server Components, server-first rendering, modern hooks (useTransition, useOptimistic, useFormState), and App Router integration. Use for component design, design systems, component libraries, accessibility implementation, component documentation, RSC patterns, Server Actions, Next.js components, and shadcn/ui. Use PROACTIVELY when building component systems, design systems, or Next.js component libraries.",
         "model": "sonnet"
@@ -1653,7 +1653,7 @@
       "react-fullstack-pro": {
         "file": "react-fullstack-pro.md",
         "path": "components/agents/react-fullstack-pro.md",
-        "hash": "a85704ac7ef655b52dde9c725e1c5849",
+        "hash": "508595aefd081ee17227f87051b6e729",
         "name": "react-fullstack-pro",
         "description": "Expert React full-stack architect combining modern React patterns, Next.js 14+ mastery, and advanced full-stack development. Masters React 18+ with hooks, server components, App Router, edge runtime, ISR, PPR, performance optimization, Core Web Vitals, SEO implementation with metadata API and structured data, production deployment with multi-region CDN, monitoring setup, migration strategies, TypeScript patterns, state management (Redux Toolkit, Zustand, Jotai, Recoil), testing strategies (React Testing Library, Jest, Cypress), and full-stack development. Use for React applications, Next.js full-stack apps, server components, API integration, performance optimization, SEO optimization, edge deployment, production monitoring, incremental static regeneration, partial prerendering, class to function migration, legacy code modernization, and building blazing-fast SEO-friendly applications. Use PROACTIVELY when building React applications or modernizing legacy React code. Delegate to react-component-pro for component architecture, design systems, accessibility, and component libraries.",
         "model": "sonnet"
@@ -1685,7 +1685,7 @@
       "vue-fullstack-pro": {
         "file": "vue-fullstack-pro.md",
         "path": "components/agents/vue-fullstack-pro.md",
-        "hash": "a13cd43b8aadb8643a6c06794e61e6d4",
+        "hash": "e77bd45b6a4b02017049c26fd09c6702",
         "name": "vue-fullstack-pro",
         "description": "Expert Vue.js specialist combining Composition API mastery, scalable component architecture, and full-stack development. Masters Vue 3, Nuxt 3, reactivity optimization, state management with Pinia, modern Vue patterns, enterprise architecture, Vue ecosystem (VueUse, Vuetify, Quasar), Vue Router 4, Vitest testing, documentation-first development, structured implementation reporting, and multi-agent collaboration protocols. Use for component development, Nuxt applications, architectural decisions, composables, Vue ecosystem integration, enterprise patterns, micro-frontends, design systems, component testing, and full-stack Vue solutions with best practices and structured workflows.",
         "model": "sonnet"
@@ -1709,18 +1709,18 @@
       "security-scanner": {
         "file": "security-scanner.md",
         "path": "components/agents/security-scanner.md",
-        "hash": "f7ee752b101749f707d9a805724b008a",
+        "hash": "05f0da57ec9fc774518ccdc399079f45",
         "name": "security-scanner",
         "description": "Comprehensive security vulnerability detection and remediation",
-        "model": "claude-3-opus"
+        "model": "sonnet"
       },
       "advanced-debugger": {
         "file": "advanced-debugger.md",
         "path": "components/agents/advanced-debugger.md",
-        "hash": "7ae87fe7941b9101aa6aa7280460acd7",
+        "hash": "7995746dae711070e7d74bc2f92d4c28",
         "name": "advanced-debugger",
         "description": "Expert debugging specialist for complex issues and test failures",
-        "model": "claude-3-opus"
+        "model": "sonnet"
       },
       "devops-reliability": {
         "file": "devops-reliability.md",
@@ -1765,7 +1765,7 @@
       "security-infrastructure-pro": {
         "file": "security-infrastructure-pro.md",
         "path": "components/agents/security-infrastructure-pro.md",
-        "hash": "0ddc4db2b393cf31007dfb4939c86810",
+        "hash": "1db88e58bd4a02b9734d92de6ff41bb8",
         "name": "security-infrastructure-pro",
         "description": "Expert infrastructure security engineer specializing in DevSecOps, cloud security, incident response, and operational security. Masters security automation, vulnerability management, zero-trust architecture, container security, secrets management, and compliance automation with emphasis on shift-left and continuous monitoring. Use PROACTIVELY for DevSecOps implementation, incident response, infrastructure hardening, cloud security, and security operations.",
         "model": "sonnet"
@@ -1837,7 +1837,7 @@
       "vue-state-pro": {
         "file": "vue-state-pro.md",
         "path": "components/agents/vue-state-pro.md",
-        "hash": "a3dd65126066f4cf315d13db64dd4382",
+        "hash": "c4c4238b9b386b1c0632b9f619734259",
         "name": "vue-state-pro",
         "description": "Expert Vue state management specialist combining Pinia store architecture, reactive state patterns, and complex application state design. Masters Pinia modules, persistence, devtools, store composition, type safety, and advanced state patterns. Use for state management architecture, store design, complex state patterns, persistence, and Vue ecosystem integration.",
         "model": "sonnet"
@@ -1869,7 +1869,7 @@
       "infrastructure-architect-pro": {
         "file": "infrastructure-architect-pro.md",
         "path": "components/agents/infrastructure-architect-pro.md",
-        "hash": "e244771e322b123f7f6e249475b18412",
+        "hash": "5d37b939af6e6e56d639547506791fa2",
         "name": "infrastructure-architect-pro",
         "description": "Elite cloud-native infrastructure architect mastering Kubernetes (EKS/AKS/GKE), multi-cloud IaC (Terraform/CDK/Pulumi), microservices patterns, GitOps (ArgoCD/Flux), service mesh (Istio/Linkerd/Cilium), platform engineering, distributed systems, AWS/Azure/GCP, serverless, container orchestration, progressive delivery, FinOps cost optimization, security (zero-trust, Pod Security Standards, compliance), observability (Prometheus/Grafana/OpenTelemetry), disaster recovery, multi-region deployment, network policies, CI/CD pipelines, Infrastructure as Code, policy as code (OPA/Gatekeeper/Kyverno), autoscaling, load balancing, event-driven architecture, CQRS, saga patterns, service boundaries, domain-driven design, chaos engineering, multi-tenancy, RBAC, secrets management, image security, supply chain security, backup strategies, cloud migration, vendor lock-in mitigation, edge computing, sustainable cloud practices, developer experience, self-service platforms. Use PROACTIVELY for any cloud infrastructure, Kubernetes architecture, microservices design, cloud migration, cost optimization, security hardening, GitOps implementation, or distributed systems challenges.",
         "model": "sonnet"
@@ -1877,7 +1877,7 @@
       "devops-sre-pro": {
         "file": "devops-sre-pro.md",
         "path": "components/agents/devops-sre-pro.md",
-        "hash": "dca680522ad19ef1d9529cf0fab0c257",
+        "hash": "e37b9e231d5c4c55f99666843f5102ac",
         "name": "devops-sre-pro",
         "description": "Comprehensive DevOps and SRE professional combining incident response, reliability engineering, troubleshooting, network engineering, and observability. Masters incident management, SLI/SLO/SLA, error budgets, blameless postmortems, distributed tracing, Kubernetes debugging, performance optimization, chaos engineering, service mesh, cloud networking, zero-trust security, capacity planning, automated remediation, runbook development, and continuous reliability improvement. Handles production incidents, system troubleshooting, root cause analysis, network diagnostics, monitoring enhancement, toil reduction, disaster recovery, on-call management, and preventive engineering. Use PROACTIVELY for incident response, reliability engineering, system troubleshooting, DevOps practices, SRE principles, network issues, performance optimization, observability setup, production debugging, or building resilient systems.",
         "model": "sonnet"
@@ -1885,7 +1885,7 @@
       "javascript-typescript-pro": {
         "file": "javascript-typescript-pro.md",
         "path": "components/agents/javascript-typescript-pro.md",
-        "hash": "453d686cd41b9fee02ad039a76f3d052",
+        "hash": "046f2203ca1fd89a1802914d768544ba",
         "name": "javascript-typescript-pro",
         "description": "Master modern JavaScript (ES6+, async patterns, event loop, Node.js/browser APIs) and advanced TypeScript (generics, conditional types, type inference, decorators). Expert in cross-environment development, performance optimization, type safety, and migration strategies. Use PROACTIVELY for JavaScript/TypeScript optimization, async debugging, complex type systems, or advanced language patterns.",
         "model": "sonnet"
@@ -2048,6 +2048,46 @@
         "hash": "1608988b7e3a7dcd4759216047ee19cd",
         "name": "devops-pro",
         "description": "DevOps expert specializing in infrastructure automation, CI/CD pipelines, Docker/Kubernetes, IaC, monitoring setup, and deployment automation. Masters GitHub Actions, GitLab CI, Docker, Kubernetes, Terraform, Helm, GitOps, Prometheus, and automated deployment strategies. Use when building CI/CD pipelines, containerizing applications, orchestrating Kubernetes, implementing infrastructure as code, or automating deployments.",
+        "model": "sonnet"
+      },
+      "devops-infrastructure-core": {
+        "file": "devops-infrastructure-core.md",
+        "path": "components/agents/devops-infrastructure-core.md",
+        "hash": "4488d830a302b74048edce73bbd93583",
+        "name": "devops-infrastructure-core",
+        "description": "Expert DevOps engineer specializing in infrastructure automation, CI/CD pipelines, containerization, and deployment orchestration. Masters Infrastructure as Code, container platforms, CI/CD frameworks, and automation development. Use PROACTIVELY for infrastructure automation, CI/CD pipeline design, Kubernetes orchestration, container management, IaC design, and deployment pipelines.",
+        "model": "sonnet"
+      },
+      "test-implementation-pro": {
+        "file": "test-implementation-pro.md",
+        "path": "components/agents/test-implementation-pro.md",
+        "hash": "372e38e9962fa43ac63cb756219de9d0",
+        "name": "test-implementation-pro",
+        "description": "Master AI-powered test automation with modern frameworks, self-healing tests, and comprehensive quality engineering. Build scalable testing strategies with advanced CI/CD integration. Use PROACTIVELY for testing automation or quality assurance.",
+        "model": "sonnet"
+      },
+      "api-documentation-pro": {
+        "file": "api-documentation-pro.md",
+        "path": "components/agents/api-documentation-pro.md",
+        "hash": "ecaa22433faa5f932ed6255582bd5ca9",
+        "name": "api-documentation-pro",
+        "description": "Expert API implementation specialist focusing on comprehensive documentation, interactive docs, SDK generation, and developer portals. Use when implementing API documentation, creating OpenAPI docs, building developer portals, generating multi-language SDKs, setting up Swagger UI/Redoc, implementing AI-powered documentation (Mintlify, ReadMe AI), creating authentication guides, migration docs, and API Explorer interfaces. Masters modern documentation platforms and SDK generation workflows for production-ready API implementations.",
+        "model": "sonnet"
+      },
+      "documentation-architect-pro": {
+        "file": "documentation-architect-pro.md",
+        "path": "components/agents/documentation-architect-pro.md",
+        "hash": "f27fe8ffc6d570b02aa736318d2455f5",
+        "name": "documentation-architect-pro",
+        "description": "Creates comprehensive technical documentation from existing codebases. Analyzes architecture, design patterns, and implementation details to produce long-form technical manuals and ebooks. Use PROACTIVELY for system documentation, architecture guides, or technical deep-dives.",
+        "model": "sonnet"
+      },
+      "test-strategy-pro": {
+        "file": "test-strategy-pro.md",
+        "path": "components/agents/test-strategy-pro.md",
+        "hash": "94e093a1c0293b7520045eece77ca3e7",
+        "name": "test-strategy-pro",
+        "description": "Expert testing and validation specialist combining comprehensive test strategy with final quality assurance. Use for test design and implementation, unit/integration/E2E testing, test coverage analysis, quality metrics, requirement verification, production readiness assessment, performance testing, security testing, and comprehensive validation reporting. Ensures systems meet requirements and quality standards.",
         "model": "sonnet"
       }
     },
@@ -3024,7 +3064,7 @@
     "hooks": {}
   },
   "metadata": {
-    "total_agents": 256,
+    "total_agents": 261,
     "total_commands": 63,
     "total_skills": 84,
     "total_hooks": 0

@@ -2,7 +2,7 @@
 name: security-scanner
 description: Comprehensive security vulnerability detection and remediation
 tools: Read, Grep, Glob
-model: claude-3-opus
+model: sonnet
 ---
 
 You are a senior security engineer specializing in application security, penetration testing, and vulnerability assessment.

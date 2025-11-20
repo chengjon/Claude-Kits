@@ -271,53 +271,59 @@ if [ "$TOTAL_ERRORS" -lt "$ERROR_THRESHOLD" ]; then
     # 错误数低于阈值，警告但不阻断
     debug_log "⚠ Found $TOTAL_ERRORS errors, below threshold ($ERROR_THRESHOLD)"
 
-    # 构建错误详情 JSON
-    ERROR_DETAILS="{"
+    # 构建错误详情 JSON 数组（使用 jq 确保正确转义）
+    ERROR_DETAILS_ARRAY="[]"
     for check_name in "${!CHECK_ERRORS[@]}"; do
-        ERROR_DETAILS="$ERROR_DETAILS\"$check_name\": ${CHECK_ERRORS[$check_name]},"
+        ERROR_DETAILS_ARRAY=$(echo "$ERROR_DETAILS_ARRAY" | jq --arg name "$check_name" --argjson count "${CHECK_ERRORS[$check_name]}" '. += [{name: $name, errors: $count}]')
     done
-    ERROR_DETAILS="${ERROR_DETAILS%,}}"  # 移除最后的逗号
 
-    cat <<EOF
-{
-  "hookSpecificOutput": {
-    "hookEventName": "Stop",
-    "decision": "allow",
-    "reason": "⚠️ 发现 $TOTAL_ERRORS 个错误，低于阈值 ($ERROR_THRESHOLD)。建议修复后再继续。",
-    "errorDetails": $ERROR_DETAILS
-  }
-}
-EOF
+    # 使用 jq 生成有效的 JSON（确保所有字符正确转义）
+    jq -n \
+        --arg decision "allow" \
+        --arg reason "⚠️ 发现 $TOTAL_ERRORS 个错误，低于阈值 ($ERROR_THRESHOLD)。建议修复后再继续。" \
+        --argjson errorDetails "$ERROR_DETAILS_ARRAY" \
+        '{
+            hookSpecificOutput: {
+                hookEventName: "Stop",
+                decision: $decision,
+                reason: $reason,
+                errorDetails: $errorDetails
+            }
+        }'
     exit 0
 fi
 
 # ===== 错误 ≥ 阈值，阻断 Stop =====
 debug_log "✗ Found $TOTAL_ERRORS errors (threshold: $ERROR_THRESHOLD), blocking stop"
 
-# 构建错误详情 JSON
-ERROR_DETAILS="{"
+# 构建错误详情 JSON 数组（使用 jq 确保正确转义）
+ERROR_DETAILS_ARRAY="[]"
 for check_name in "${!CHECK_ERRORS[@]}"; do
-    ERROR_DETAILS="$ERROR_DETAILS\"$check_name\": ${CHECK_ERRORS[$check_name]},"
+    ERROR_DETAILS_ARRAY=$(echo "$ERROR_DETAILS_ARRAY" | jq --arg name "$check_name" --argjson count "${CHECK_ERRORS[$check_name]}" '. += [{name: $name, errors: $count}]')
 done
-ERROR_DETAILS="${ERROR_DETAILS%,}}"
 
-# 构建原因字符串（转义换行符和引号）
-REASON="❌ Python 质量检查失败: 发现 $TOTAL_ERRORS 个错误（阈值: $ERROR_THRESHOLD）\n\n"
-REASON="${REASON}请修复以下错误后再停止：\n\n"
-REASON="${REASON}$(echo -e "$ERROR_SUMMARY" | sed 's/"/\\"/g' | tr '\n' '\\' | sed 's/\\/\\n/g')"
+# 构建原因字符串（限制长度避免过长）
+REASON="❌ Python 质量检查失败: 发现 $TOTAL_ERRORS 个错误（阈值: $ERROR_THRESHOLD）
 
-# 输出 JSON（阻断 Stop）
-cat <<EOF
-{
-  "hookSpecificOutput": {
-    "hookEventName": "Stop",
-    "decision": "block",
-    "reason": "$(echo -e "$REASON" | sed 's/"/\\"/g' | head -c 1000)",
-    "errorDetails": $ERROR_DETAILS,
-    "suggestion": "使用 Task Master 创建修复任务: task-master add-task --prompt='修复质量检查错误'"
-  }
-}
-EOF
+请修复以下错误后再停止：
+
+$(echo -e "$ERROR_SUMMARY" | head -c 800)"
+
+# 使用 jq 生成有效的 JSON（确保所有字符正确转义）
+jq -n \
+    --arg decision "block" \
+    --arg reason "$REASON" \
+    --argjson errorDetails "$ERROR_DETAILS_ARRAY" \
+    --arg suggestion "使用 Task Master 创建修复任务: task-master add-task --prompt='修复质量检查错误'" \
+    '{
+        hookSpecificOutput: {
+            hookEventName: "Stop",
+            decision: $decision,
+            reason: $reason,
+            errorDetails: $errorDetails,
+            suggestion: $suggestion
+        }
+    }'
 
 # 退出码 2 = 阻止停止
 exit 2

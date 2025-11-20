@@ -1,53 +1,27 @@
 #!/usr/bin/env python3
 """
-Claude Code 组件统一管理脚本 (增强版)
-
-此脚本提供了一个统一的入口来管理 Claude Code 的所有自定义组件：
-1. Agent Skills
-2. Subagents
-3. Hooks
-4. Slash Commands
-5. Plugins
-6. MCP Servers
-
-使用方法：
-python claude_manager.py [skills|subagents|hooks|commands|plugins|mcps] [action] [name] [...options]
-或者
-python claude_manager.py --type [component_type] [action] [name] [...options]
+Unified manager for Claude Code components: skills, subagents, hooks, commands, plugins, mcps
 """
 
 import argparse
 import sys
-import subprocess
 import os
+import subprocess
 from pathlib import Path
 
-# 获取当前脚本所在目录，用于定位各个管理脚本
-SCRIPT_DIR = Path(__file__).parent.resolve()
+# 定义组件类型与对应脚本的映射
+COMPONENT_TYPES = {
+    'skills': 'skills_manager.py',
+    'subagents': 'subagents_manager.py',
+    'hooks': 'hooks_manager.py',
+    'commands': 'commands_manager.py',
+    'plugins': 'plugins_manager.py',
+    'mcps': 'mcps_manager.py'
+}
 
-def run_manager_script(script_name, args):
-    """运行指定的管理脚本"""
-    script_path = SCRIPT_DIR / script_name
-    if not script_path.exists():
-        print(f"Error: Management script {script_name} not found at {script_path}")
-        return False
-        
-    # 构造完整的命令
-    cmd = [sys.executable, str(script_path)] + args
-    
-    try:
-        # 使用 subprocess.run 运行命令并捕获输出
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        if result.stdout:
-            print(result.stdout)
-        if result.stderr:
-            print(result.stderr, file=sys.stderr)
-        return result.returncode == 0
-    except Exception as e:
-        print(f"Error: Failed to run {script_name}: {e}")
-        return False
 
-def main():
+def create_arg_parser():
+    """创建命令行解析器"""
     parser = argparse.ArgumentParser(
         description='Unified manager for Claude Code components: skills, subagents, hooks, commands, plugins, mcps',
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -69,17 +43,12 @@ Examples:
         metavar='{skills,subagents,hooks,commands,plugins,mcps}'
     )
     
-    # 为每种组件类型创建通用的子命令解析器
-    component_types = {
-        'skills': 'skills_manager.py',
-        'subagents': 'subagents_manager.py',
-        'hooks': 'hooks_manager.py',
-        'commands': 'commands_manager.py',
-        'plugins': 'plugins_manager.py',
-        'mcps': 'mcps_manager.py'
-    }
-    
-    for comp_type, script_name in component_types.items():
+    return parser, subparsers
+
+
+def add_component_parsers(subparsers):
+    """为每种组件类型创建子命令解析器"""
+    for comp_type, script_name in COMPONENT_TYPES.items():
         comp_parser = subparsers.add_parser(comp_type, help=f'Manage {comp_type}')
         
         # 添加动作参数 (对 plugins 和 mcps 稍作调整)
@@ -139,7 +108,10 @@ Examples:
             comp_parser.add_argument('--env-vars', 
                                    help='Environment variables as KEY1=VALUE1,KEY2=VALUE2')
             comp_parser.add_argument('--config-path', help='Path to the MCP configuration file')
-            
+
+
+def parse_args(parser):
+    """解析命令行参数"""
     # 也支持旧的 --type 参数格式
     parser.add_argument('--type', choices=['skills', 'subagents', 'hooks', 'commands', 'plugins', 'mcps'],
                        help='Type of Claude Code component to manage (alternative to subcommands)')
@@ -147,66 +119,116 @@ Examples:
     # 解析已知参数，以便将剩余参数传递给子脚本
     args, unknown_args = parser.parse_known_args()
     
-    # 确定组件类型
-    component_type = args.component_type
-    if not component_type and args.type:
-        component_type = args.type
-        
-    if not component_type:
-        parser.print_help()
-        return 1
-        
-    if component_type not in component_types:
-        print(f"Error: Unknown component type '{component_type}'")
-        return 1
-        
-    # 构造传递给子脚本的参数
+    return args, unknown_args
+
+
+def construct_script_args(args):
+    """构造传递给子脚本的参数"""
     script_args = []
     
     # 添加动作
     if hasattr(args, 'action') and args.action:
         script_args.append(args.action)
-        
+    
     # 添加名称
     if hasattr(args, 'name') and args.name:
         script_args.append(args.name)
-        
-    # 添加所有已知参数
-    for arg, value in vars(args).items():
-        # 跳过我们已经处理过的参数
-        if arg in ['component_type', 'type', 'name', 'action']:
-            continue
-        # 跳过为特定组件类型添加但不适用于当前组件的参数
-        if component_type not in ['hooks', 'plugins', 'mcps']:
-            if arg in ['event', 'matcher', 'command', 'timeout', 'index', 'settings_path', 
-                      'source', 'marketplace', 'url', 'transport', 'uri', 'description', 
-                      'env_vars', 'config_path']:
-                continue
-        elif component_type != 'hooks':
-            if arg in ['event', 'matcher', 'command', 'timeout', 'index', 'settings_path']:
-                continue
-        elif component_type != 'plugins':
-            if arg in ['source', 'marketplace', 'url']:
-                continue
-        elif component_type != 'mcps':
-            if arg in ['transport', 'uri', 'description', 'env_vars', 'config_path']:
-                continue
-                
-        if value is not None:
-            if isinstance(value, bool):
-                if value:
-                    script_args.append(f"--{arg.replace('_', '-')}")
-            else:
-                script_args.extend([f"--{arg.replace('_', '-')}", str(value)])
-                
-    # 添加未知参数（通常是布尔标志）
-    script_args.extend(unknown_args)
     
-    # 运行相应的管理脚本
-    script_name = component_types[component_type]
-    success = run_manager_script(script_name, script_args)
+    # 添加通用选项
+    if hasattr(args, 'scope') and args.scope:
+        script_args.extend(['--scope', args.scope])
     
-    return 0 if success else 1
+    if hasattr(args, 'path') and args.path:
+        script_args.extend(['--path', args.path])
+    
+    if hasattr(args, 'template') and args.template:
+        script_args.extend(['--template', args.template])
+    
+    # 添加 hooks 特定选项
+    if hasattr(args, 'event') and args.event:
+        script_args.extend(['--event', args.event])
+    
+    if hasattr(args, 'matcher') and args.matcher:
+        script_args.extend(['--matcher', args.matcher])
+    
+    if hasattr(args, 'command') and args.command:
+        script_args.extend(['--command', args.command])
+    
+    if hasattr(args, 'timeout') and args.timeout is not None:
+        script_args.extend(['--timeout', str(args.timeout)])
+    
+    if hasattr(args, 'index') and args.index is not None:
+        script_args.extend(['--index', str(args.index)])
+    
+    if hasattr(args, 'settings_path') and args.settings_path:
+        script_args.extend(['--settings-path', args.settings_path])
+    
+    # 添加 plugins 特定选项
+    if hasattr(args, 'source') and args.source:
+        script_args.extend(['--source', args.source])
+    
+    if hasattr(args, 'marketplace') and args.marketplace:
+        script_args.extend(['--marketplace', args.marketplace])
+    
+    if hasattr(args, 'url') and args.url:
+        script_args.extend(['--url', args.url])
+    
+    # 添加 mcps 特定选项
+    if hasattr(args, 'transport') and args.transport:
+        script_args.extend(['--transport', args.transport])
+    
+    if hasattr(args, 'uri') and args.uri:
+        script_args.extend(['--uri', args.uri])
+    
+    if hasattr(args, 'description') and args.description:
+        script_args.extend(['--description', args.description])
+    
+    if hasattr(args, 'env_vars') and args.env_vars:
+        script_args.extend(['--env-vars', args.env_vars])
+    
+    if hasattr(args, 'config_path') and args.config_path:
+        script_args.extend(['--config-path', args.config_path])
+    
+    return script_args
+
+
+def execute_script(component_type, script_args, unknown_args):
+    """执行子脚本"""
+    # 导入BaseManager并调用静态方法
+    from base_manager import BaseManager
+    return BaseManager.execute_script_static(component_type, script_args, unknown_args)
+
+
+def main():
+    """主函数"""
+    # 创建命令行解析器
+    parser, subparsers = create_arg_parser()
+    
+    # 为每种组件类型创建子命令解析器
+    add_component_parsers(subparsers)
+    
+    # 解析命令行参数
+    args, unknown_args = parse_args(parser)
+    
+    # 确定组件类型
+    component_type = args.component_type
+    if not component_type and args.type:
+        component_type = args.type
+    
+    if not component_type:
+        parser.print_help()
+        return 1
+    
+    if component_type not in COMPONENT_TYPES:
+        print(f"Error: Unknown component type '{component_type}'")
+        return 1
+    
+    # 构造传递给子脚本的参数
+    script_args = construct_script_args(args)
+    
+    # 执行子脚本
+    return execute_script(component_type, script_args, unknown_args)
+
 
 if __name__ == '__main__':
     sys.exit(main())

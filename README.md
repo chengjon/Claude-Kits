@@ -184,8 +184,8 @@ python scripts/roles_manager.py install your-custom-role --path /path/to/project
 
 **查看完整列表**: `ls /opt/claude/Claude-Kits/components/commands/`
 
-### 🪝 10 个 Hooks (自动化管道)
-**新增 7 个核心 Hooks + 3 个配置文件 (2025-11-11)**
+### 🪝 13 个 Hooks (自动化管道)
+**新增 7 个核心 Hooks + 3 个 Code Compliance Hooks + 3 个配置文件 (2025-11-18)**
 
 **核心 Hooks**:
 - `user-prompt-submit-skill-activation.sh` - **Skills 自动激活**（最重要）
@@ -195,6 +195,11 @@ python scripts/roles_manager.py install your-custom-role --path /path/to/project
 - `post-tool-use-document-organizer.sh` - 文档自动整理
 - `session-start-task-master-injector.sh` - Task Master 上下文恢复
 - `session-end-cleanup.sh` - 会话结束清理
+
+**Code Compliance Hooks** (NEW - 2025-11-18):
+- `post-tool-use-python-header-validator.sh` - Python 文件头部注释验证（零硬编码，可配置）
+- `post-tool-use-md-frontmatter-validator.sh` - Markdown YAML frontmatter 验证（零硬编码，可配置）
+- `post-tool-use-chinese-filename-checker.sh` - 中文/非ASCII文件名检测（跨平台兼容性）
 
 **配置文件**:
 - `settings.json` - Hook 注册配置（9 Event 类型）
@@ -207,6 +212,12 @@ python scripts/roles_manager.py install your-custom-role --path /path/to/project
 - ✅ 非阻塞 + 阻塞混合设计（编辑追踪非阻塞，质量门禁阻塞）
 - ✅ JSON-LD 结构化输出
 - ✅ JSONL 格式日志（自动限制 10,000 条）
+- ✅ **零硬编码配置** - 所有 Code Compliance Hooks 完全可通过环境变量自定义
+- ✅ **Python 导入路径检查** - 自动检测移动文件后的导入路径问题
+
+**详细文档**:
+- [CODE_COMPLIANCE_HOOKS.md](components/hooks/CODE_COMPLIANCE_HOOKS.md) - Code Compliance Hooks 使用指南
+- [CONFIGURATION_GUIDE.md](components/hooks/CONFIGURATION_GUIDE.md) - 完整配置指南
 
 **查看完整列表**: `ls /opt/claude/Claude-Kits/components/hooks/`
 
